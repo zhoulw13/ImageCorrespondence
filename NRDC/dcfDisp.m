@@ -1,4 +1,4 @@
-function [ DCF_disp ] = dispDCF( DCF, refSize, Confidence)
+function [ DCF_disp, Corr_Confidence ] = dispDCF( DCF, refSize, Confidence, Ref)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -9,17 +9,24 @@ function [ DCF_disp ] = dispDCF( DCF, refSize, Confidence)
     
     [DCF, Corr_Confidence] = moveToCenter(DCF, patch_w, Confidence);
     
-    DCF_disp = double(zeros(size(DCF,1),size(DCF,2),3));
-    DCF_disp(:,:,1:2) = DCF(:,:,1:2);
+    DCF_disp = zeros(size(DCF,1),size(DCF,2),3);
+    DCF_disp(:,:,1:2) = int32(DCF(:,:,1:2));
     
-    DCF_disp(:,:,1) = DCF_disp(:,:,1) / refSize(2);
-    DCF_disp(:,:,2) = DCF_disp(:,:,2) / refSize(1);
+    %DCF_disp(:,:,1) = DCF_disp(:,:,1) / refSize(2);
+    %DCF_disp(:,:,2) = DCF_disp(:,:,2) / refSize(1);
     DCF_disp(:,:,3)=0;
+%     for i = patch_w/2+1:size(DCF,1)-patch_w/2+1
+%        for j = patch_w/2+1:size(DCF,2)-patch_w/2+1
+%           DCF_disp(i,j,:) = Ref(int32(DCF(i,j,2)),int32(DCF(i,j,1)),:); 
+%        end
+%     end
+    
+    %DCF_disp(:,:,3)=0;
         
     if exist('Corr_Confidence', 'var') && ~isempty(Corr_Confidence)
-        Corr_Confidence(Corr_Confidence >= 0.5) = 1;
-        Corr_Confidence(Corr_Confidence < 0.5) = 0;
-        DCF_disp = DCF_disp .*  repmat(Corr_Confidence, [1,1,3]);
+        %Corr_Confidence(Corr_Confidence >= 0.5) = 1;
+        %Corr_Confidence(Corr_Confidence < 0.5) = 0;
+        %DCF_disp = DCF_disp .* repmat(Corr_Confidence, [1,1,3]);
     end
 end
 

@@ -97,6 +97,7 @@ end
 if isempty(DCF)
     disp('No matching has been found.')
 else
+    [DCF, Confidence] = dcfDisp(DCF, size(Ref), Confidence, Ref);
     % Display Dense correspondence field:
     %figure; imshow(dcfDisp(DCF, size(Ref), Confidence));
 
