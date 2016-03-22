@@ -104,7 +104,7 @@ sp_val = sp_val2;
 bspline_set = bspline_set2;
 error = sum(error_set)/size(error_set,1);
 ref_set = ref_set2;
-mask_set = mask_set2;
+%mask_set = mask_set2;
 
        
 %{

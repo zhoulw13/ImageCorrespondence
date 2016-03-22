@@ -35,7 +35,6 @@ Ay = Ay*basic_matrix;
 
 point_amount = size(src, 1);
 A = [];
-masks = [];
 
 for i=1:point_amount
     xi = Ax(i, :);
@@ -43,19 +42,10 @@ for i=1:point_amount
     param_matrix = zeros(4+down, 4+right, 1);
     param_matrix(1+floor(x(i)):4+floor(x(i)), 1+floor(y(i)):4+floor(y(i))) = xi'*yi;
     param_matrix = param_matrix(:)';
-    masks = union(masks, find(param_matrix~=0));
+    %masks = union(masks, find(param_matrix~=0));
     A = [A; param_matrix];
 end
 
-masks = sort(masks);
-temp = sort(setdiff(masks, (1:((4+down)*(4+right)))));
-size_t = size(temp, 1);
-for i=1:size_t
-    A(:, temp(i)) = [];
-    temp = temp - 1;
-end
-
-size(A);
 %A = [A, repmat(Ax(:,1), 1, 4) .* Ay];
 %A = [A, repmat(Ax(:,2), 1, 4) .* Ay];
 %A = [A, repmat(Ax(:,3), 1, 4) .* Ay];

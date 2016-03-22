@@ -18,7 +18,7 @@ for i=1:surface_amount
 end
 
 %% merge superpixels with similiar bspline
-pairs = find(adjacency_graph==1);
+pairs = find(adjacency_graph~=0);
 while sum(pairs) > 0
     surface_amount = size(sp_set, 1);
     i = mod(pairs(1), surface_amount);
@@ -28,8 +28,8 @@ while sum(pairs) > 0
     [control_p, error] = bspline_inv(union_ij, ref_union);
     
     size_i = size(sp_set{i}, 1);
-    ref_it = int32(bspline(sp_set{i}, control_p));
-    ref_i = int32(bspline(sp_set{i}, bspline_set{i}));
+    ref_it = int32(bspline(sp_set{i}, control_p, 0,0,0,0));
+    ref_i = int32(bspline(sp_set{i}, bspline_set{i}, 0,0,0,0));
     
     ref_it(ref_it<1)=1;
     ref_it(ref_it(:, 1)>x, 1)=x;
@@ -50,8 +50,8 @@ while sum(pairs) > 0
     end
     
     size_j = size(sp_set{j}, 1);
-    ref_jt = int32(bspline(sp_set{j}, control_p));
-    ref_j = int32(bspline(sp_set{j}, bspline_set{j}));
+    ref_jt = int32(bspline(sp_set{j}, control_p, 0,0,0,0));
+    ref_j = int32(bspline(sp_set{j}, bspline_set{j}, 0,0,0,0));
     
     ref_jt(ref_jt<1)=1;
     ref_jt(ref_jt(:, 1)>x, 1)=x;
@@ -86,5 +86,5 @@ while sum(pairs) > 0
     else
         adjacency_graph(i, j) = 0;
     end
-    pairs = find(adjacency_graph==1);
+    pairs = find(adjacency_graph~=0);
 end
