@@ -8,11 +8,18 @@ for i=1:surface_amount
     for j=1:point_amount
         Sp_new(sp_set{i}(j, 1), sp_set{i}(j, 2)) = i;
     end    
-end    
+end
+
+%% adjacent patch
+patch = zeros(3, 49, 1);
+patch(1, :) = repmat((-3:3), 1, 7);
+patch(2, :) = sort(repmat((-3:3),1,7));
+patch(3, :) = ones(1, 49);
 
 %% extension
 for i=1:surface_amount
     modified = false;
+    ref_set = bspline(sp_set{i}, bspline_set{i}, 0,0,0,0);
     while modified == false
         %% find adjacency area within 5 pixels
         omega = [];
@@ -26,12 +33,60 @@ for i=1:surface_amount
         temp = omega(:, 1)+(omega(:, 2)-1)*x;
         omega(Sp_new(temp)~=0, :) = [];
         
+        %% for all adjacent pixels ... 
         size_o = size(omega, 1);
         point_amount = size(sp_set{i}, 1);
         for j=1:size_o
+            %% find nearest pixel q from surface i
             temp = abs(repmat(omega(j, :), point_amout, 1) - sp_set{i});
             [val, ind] = min(temp(:, 1) + temp(:, 2));
             
+            %% compute temp correspondence
+            ref_q = ref_set(ind, :);
+            ref_p = ref_q + bspline(sp_set{i}(ind, :), bspline_set{i}, 1,0,0,1).*(omega(j, :) - sp_set{i}(ind,:));    
+            offset_p = ref_p - omega(j, :);
+            
+            %% compute patch transformation jacobian matirx
+            [temp1] = bspline(sp_set{i}(ind, :), bspline_set{i},1,0,1,0);
+            [temp2] = bspline(sp_set{i}(ind, :), bspline_set{i},0,1,0,1);
+            jacobian = [temp1(1, 1), temp2(1, 1); temp1(1, 2), temp2(1, 2)];
+            
+            %% minimize error            
+            error = 10000000;
+            for s=[0.9, 1.0, 1.1]
+                for theta=[-pi/36, pi/36]
+                    scale = [s, 0; 0, s];
+                    rotate = [cos(theta), -sin(theta); sin(theta), cos(theta)];
+                    jacobian_d = rotate*scale*jacobian;
+                    for delta_x=[-1,0,1]
+                        for delta_y=[-1,0,1]
+                            M = [jacobian_d, offset_p'+[delta_x; delta_y]; 0,0,1];
+                            Np = patch+repmat([omega(j,:)';0], 1, 49);
+                            Nrefp = M*Np;
+                            Ps = getPixelsValue(Src_lab, Np');
+                            Pt = getPixelsValue(Ref_lab, refp');
+                            Ps = Ps';
+                            Pt = Pt';
+                            Ps = (Ps - repmat(mean(Ps), 49, 1))./(repmat(std(Ps), 49, 1));
+                            Pt = (Pt - repmat(mean(Pt), 49, 1))./(repmat(std(Pt), 49, 1));
+                            e = sum(sum((Ps - Pt).^2));
+                            if e < error
+                                error = e;
+                                refp = Nrefp(1:2, 25);
+                            end
+                        end
+                    end
+                end
+            end                
+            if error < 0.1
+                modified = true;
+                sp_set{i} = [sp_set{i}; omega(j,:)];
+                Sp_new(omega(j,1), omega(j,2)) = i;
+                ref_set = [ref_set; refp'];
+            end
+        end
+        if modified == true
+            [bspline_set{i}, error] = bspline_inv(sp_set{i}, ref_set);
         end
     end
 end

@@ -38,16 +38,8 @@ while sum(pairs) > 0
     ref_i(ref_i(:, 1)>x, 1)=x;
     ref_i(ref_i(:, 2)>y, 2)=y;
     
-    val_it = [];
-    val_i = [];
-    for k=1:size_i
-        
-        temp = Ref(ref_i(k,1), ref_i(k,2), :);
-        val_i = [val_i; temp(1), temp(2), temp(3)];
-        
-        temp = Ref(ref_it(k,1), ref_it(k,2), :);
-        val_it = [val_it; temp(1), temp(2), temp(3)];
-    end
+    val_it = getPixelsValue(Ref, ref_it);
+    val_i = getPixelsValue(Ref, ref_i);
     
     size_j = size(sp_set{j}, 1);
     ref_jt = int32(bspline(sp_set{j}, control_p, 0,0,0,0));
@@ -60,15 +52,8 @@ while sum(pairs) > 0
     ref_j(ref_j(:, 1)>x, 1)=x;
     ref_j(ref_j(:, 2)>y, 2)=y;
     
-    val_jt = [];
-    val_j = [];
-    for k=1:size_j
-        temp = Ref(ref_j(k,1), ref_j(k,2), :);
-        val_j = [val_j; temp(1), temp(2), temp(3)];
-        
-        temp = Ref(ref_jt(k,1), ref_jt(k,2), :);
-        val_jt = [val_jt; temp(1), temp(2), temp(3)];
-    end
+    val_jt = getPixelsValue(Ref, ref_jt);
+    val_j = getPixelsValue(Ref, ref_j);
     
     D_sp1 = sum(sum((val_it-val_i).^2));
     D_sp2 = sum(sum((val_jt-val_j).^2));
