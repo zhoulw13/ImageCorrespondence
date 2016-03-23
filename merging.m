@@ -58,18 +58,18 @@ while sum(pairs) > 0
     D_sp1 = sum(sum((val_it-val_i).^2));
     D_sp2 = sum(sum((val_jt-val_j).^2));
     D_sp = (D_sp1+D_sp2)/size(union_ij, 1);
+    adjacency_graph(i, j) = 0;
     if D_sp < 10
-        adjacency_graph(:, j) = [];
-        adjacency_graph(i, :) = adjacency_graph(i, :) + adjacency_graph(j, :); 
+        adjacency_graph(i, i:j) = adjacency_graph(i, i:j) + adjacency_graph(i:j, j)';
+        adjacency_graph(1:i, i) = adjacency_graph(1:i, i) + adjacency_graph(1:i, j);
         adjacency_graph(j, :) = [];
+        adjacency_graph(:, j) = [];
         sp_set{i} = union_ij;
         sp_set(j) = [];
         ref_set{i} = ref_union;
         ref_set(j) = [];
         bspline_set{i} = control_p;
         bspline_set(j) = [];
-    else
-        adjacency_graph(i, j) = 0;
     end
     pairs = find(adjacency_graph~=0);
 end

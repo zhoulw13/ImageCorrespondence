@@ -18,17 +18,19 @@ patch(3, :) = ones(1, 49);
 
 %% extension
 for i=1:surface_amount
-    modified = false;
+    modified = true;
     ref_set = bspline(sp_set{i}, bspline_set{i}, 0,0,0,0);
-    while modified == false
+    while modified == true
+        modified = false;
+        
         %% find adjacency area within 5 pixels
-        omega = [];
+        omega = zeros(1, 2, 1);
         for j= -5:5
             for k= abs(j)-5:5-abs(j)
-                omega = union(omega, (sp_set{i}+repmat([i, j], size(sp_set{i}, 1), 1)), 'rows');
+                omega = union(omega, (sp_set{i}+repmat([j, k], size(sp_set{i}, 1), 1)), 'rows');
             end
         end
-        omega = sediff(omega, sp_set{i}, 'rows');
+        omega = setdiff(omega, sp_set{i}, 'rows');
         omega(omega(:,1)<1 | omega(:,2)<1 | omega(:, 1)>x | omega(:, 2)>y, :) = [];
         temp = omega(:, 1)+(omega(:, 2)-1)*x;
         omega(Sp_new(temp)~=0, :) = [];
@@ -38,7 +40,7 @@ for i=1:surface_amount
         point_amount = size(sp_set{i}, 1);
         for j=1:size_o
             %% find nearest pixel q from surface i
-            temp = abs(repmat(omega(j, :), point_amout, 1) - sp_set{i});
+            temp = abs(repmat(omega(j, :), point_amount, 1) - sp_set{i});
             [val, ind] = min(temp(:, 1) + temp(:, 2));
             
             %% compute temp correspondence
@@ -63,10 +65,19 @@ for i=1:surface_amount
                             M = [jacobian_d, offset_p'+[delta_x; delta_y]; 0,0,1];
                             Np = patch+repmat([omega(j,:)';0], 1, 49);
                             Nrefp = M*Np;
+                            
+                            Np = int32(Np);
+                            Np(Np<1)=1;
+                            Np(1, Np(1, :)>x)=x;
+                            Np(2, Np(2, :)>y)=y;
+                            
+                            Nrefp = int32(Nrefp);
+                            Nrefp(Nrefp<1)=1;
+                            Nrefp(1, Nrefp(1, :)>x)=x;
+                            Nrefp(2, Nrefp(2, :)>y)=y;
+    
                             Ps = getPixelsValue(Src_lab, Np');
-                            Pt = getPixelsValue(Ref_lab, refp');
-                            Ps = Ps';
-                            Pt = Pt';
+                            Pt = getPixelsValue(Ref_lab, Nrefp');
                             Ps = (Ps - repmat(mean(Ps), 49, 1))./(repmat(std(Ps), 49, 1));
                             Pt = (Pt - repmat(mean(Pt), 49, 1))./(repmat(std(Pt), 49, 1));
                             e = sum(sum((Ps - Pt).^2));

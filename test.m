@@ -12,7 +12,6 @@ for i=1:surface_amount
         result(sp_set{i}(j,1), sp_set{i}(j,2), :) = Src(sp_set{i}(j,1), sp_set{i}(j,2), :);
     end
     %subplot(1,surface_amount+1,i+1);
-    
 end 
 
 figure;

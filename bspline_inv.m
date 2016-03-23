@@ -23,7 +23,6 @@ Ax(:, 2) = tx;
 Ax(:, 3) = tx.^2;
 Ax(:, 4) = tx.^3;
 Ax = Ax*basic_matrix;
-%Ax = [Ax; [-1,1,0,0;0,-1,1,0;0,0,-1,1]];
 
 Ay = [];
 Ay(:, 1) = ones(size(ty,1), 1);
@@ -31,7 +30,6 @@ Ay(:, 2) = ty;
 Ay(:, 3) = ty.^2;
 Ay(:, 4) = ty.^3;
 Ay = Ay*basic_matrix;
-%Ay = [Ay; [-1,1,0,0;0,-1,1,0;0,0,-1,1]];
 
 point_amount = size(src, 1);
 A = [];
@@ -42,14 +40,9 @@ for i=1:point_amount
     param_matrix = zeros(4+down, 4+right, 1);
     param_matrix(1+floor(x(i)):4+floor(x(i)), 1+floor(y(i)):4+floor(y(i))) = xi'*yi;
     param_matrix = param_matrix(:)';
-    %masks = union(masks, find(param_matrix~=0));
     A = [A; param_matrix];
 end
 
-%A = [A, repmat(Ax(:,1), 1, 4) .* Ay];
-%A = [A, repmat(Ax(:,2), 1, 4) .* Ay];
-%A = [A, repmat(Ax(:,3), 1, 4) .* Ay];
-%A = [A, repmat(Ax(:,4), 1, 4) .* Ay];
 
 control_p = [];
 control_p(:, :,1) = reshape(((A'*A)\A')*ref(:,1), 4+down, 4+right);
