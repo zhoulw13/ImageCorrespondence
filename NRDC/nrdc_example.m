@@ -1,15 +1,12 @@
 %% Read files
 Src_path        = 'src.png'; % src filename
 Ref_path        = 'ref.png'; % ref filename    
-Src             = imread(Src_path);
-Ref             = imread(Ref_path);
+Src             = double(imread(Src_path)) / 255.0;
+Ref             = double(imread(Ref_path)) / 255.0;
 
 labTransformation = makecform('srgb2lab');
 Src_lab = applycform(Src,labTransformation);
 Ref_lab = applycform(Ref,labTransformation);
-
-Src = double(Src) / 255.0;
-Ref = double(Ref) / 255.0;
 
 
 %% Reduce size if source image is too big

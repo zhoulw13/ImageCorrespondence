@@ -10,8 +10,8 @@ basic_matrix = [1,4,1,0;
 
 top = min(src(:,1));
 left = min(src(:,2));
-x = (src(:,1) - top)./30;
-y = (src(:,2) - left)./30;
+x = (src(:,1) - top + 1)./30;
+y = (src(:,2) - left + 1)./30;
 down = floor(max(x));
 right = floor(max(y));
 tx = x - floor(x);
@@ -45,8 +45,11 @@ end
 
 
 control_p = [];
-control_p(:, :,1) = reshape(((A'*A)\A')*ref(:,1), 4+down, 4+right);
-control_p(:, :,2) = reshape(((A'*A)\A')*ref(:,2), 4+down, 4+right);
+
+control_p(:, :,1) = reshape((pinv(A'*A)*A')*ref(:,1), 4+down, 4+right);
+control_p(:, :,2) = reshape((pinv(A'*A)*A')*ref(:,2), 4+down, 4+right);
+
+control_p(find(isnan(control_p))) = 0;
 
 temp1 = control_p(:, :, 1);
 temp2 = control_p(:, :, 2);

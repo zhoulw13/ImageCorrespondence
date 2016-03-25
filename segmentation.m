@@ -52,6 +52,13 @@ for i = 1:surface_amount
        ref_pos = DCF(sp_set{i}(j,1), sp_set{i}(j,2), : );
        ref_point = [ref_point;[ref_pos(2), ref_pos(1)]];
    end
+   
+   if i==60
+       i=60;
+   end
+   ref_point(ref_point<1)=1;
+   ref_point(ref_point(:, 1)>x, 1)=x;
+   ref_point(ref_point(:, 2)>y, 2)=y;
    ref_set{i} = ref_point;
    
    [control_p, error] = bspline_inv(sp_set{i}, ref_point);
@@ -62,6 +69,7 @@ for i = 1:surface_amount
 end
 
 %% remove surfaces with too big error
+
 
 error_set2 = [];
 sp_set2 = cell(0);

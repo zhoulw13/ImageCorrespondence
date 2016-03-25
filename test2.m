@@ -1,3 +1,4 @@
+%{
 omega = zeros(1, 2, 1);
 i = 1;
 for j= -5:5
@@ -7,6 +8,7 @@ for j= -5:5
 end
 omega = setdiff(omega, sp_set{i}, 'rows');
 omega(omega(:,1)<1 | omega(:,2)<1 | omega(:, 1)>x | omega(:, 2)>y, :) = [];
+%}
 
 point_amount = size(sp_set{i}, 1);
 [x, y] = size(Sp2);
