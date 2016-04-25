@@ -1,13 +1,6 @@
-%% Read files
-Src_path        = 'src.png'; % src filename
-Ref_path        = 'ref.png'; % ref filename    
-Src             = double(imread(Src_path)) / 255.0;
-Ref             = double(imread(Ref_path)) / 255.0;
-
-labTransformation = makecform('srgb2lab');
-Src_lab = applycform(Src,labTransformation);
-Ref_lab = applycform(Ref,labTransformation);
-
+%% Read files   
+Src             = imread(Src_path);
+Ref             = imread(Ref_path);
 
 %% Reduce size if source image is too big
 OriginalSource = Src; % Keep the original source before changing its size.
@@ -17,6 +10,14 @@ if (rf > 1)
     Src = imresize(Src, 1.0/rf);
     Ref = imresize(Ref, 1.0/rf);
 end
+
+Src = double(Src) / 255.0;
+Ref = double(Ref) / 255.0;
+
+labTransformation = makecform('srgb2lab');
+Src_lab = applycform(Src,labTransformation);
+Ref_lab = applycform(Ref,labTransformation);
+
 
 %% Set an empty options struct
 NRDC_Options = [];

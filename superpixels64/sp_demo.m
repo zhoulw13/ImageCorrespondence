@@ -4,7 +4,8 @@
 
 
 
-I = im2double(imread('src.png'));
+%I = im2double(imread('img1.ppm'));
+I = im2double(Src);
 
 N = size(I,1);
 M = size(I,2);

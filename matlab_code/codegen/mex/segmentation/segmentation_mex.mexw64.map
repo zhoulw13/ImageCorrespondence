@@ -1,0 +1,878 @@
+ segmentation_mex
+
+ Timestamp is 571caca5 (Sun Apr 24 19:23:17 2016)
+
+ Preferred load address is 0000000180000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00043a22H .text                   CODE
+ 0001:00043a30 00000092H .text$x                 CODE
+ 0002:00000000 00000360H .idata$5                DATA
+ 0002:00000360 00000008H .CRT$XCA                DATA
+ 0002:00000368 00000008H .CRT$XCZ                DATA
+ 0002:00000370 00000008H .CRT$XIA                DATA
+ 0002:00000378 00000008H .CRT$XIAA               DATA
+ 0002:00000380 00000008H .CRT$XIZ                DATA
+ 0002:00000390 000044c8H .rdata                  DATA
+ 0002:00004858 00000008H .rtc$IAA                DATA
+ 0002:00004860 00000008H .rtc$IZZ                DATA
+ 0002:00004868 00000008H .rtc$TAA                DATA
+ 0002:00004870 00000008H .rtc$TZZ                DATA
+ 0002:00004878 00000ab8H .xdata                  DATA
+ 0002:00005330 0000008cH .idata$2                DATA
+ 0002:000053bc 00000014H .idata$3                DATA
+ 0002:000053d0 00000360H .idata$4                DATA
+ 0002:00005730 000008baH .idata$6                DATA
+ 0002:00005ff0 000000eeH .edata                  DATA
+ 0003:00000000 000048f8H .data                   DATA
+ 0003:00004900 000005c0H .bss                    DATA
+ 0004:00000000 000007bcH .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       __ImageBase                0000000180000000     <linker-defined>
+ 0001:00000000       error                      0000000180001000 f   segmentation_mexutil.obj
+ 0001:00000040       message                    0000000180001040 f   segmentation_mexutil.obj
+ 0001:00000090       segmentation_initialize    0000000180001090 f   segmentation_initialize.obj
+ 0001:00000100       segmentation_atexit        0000000180001100 f   segmentation_terminate.obj
+ 0001:00000160       segmentation_terminate     0000000180001160 f   segmentation_terminate.obj
+ 0001:00000c60       segmentation               0000000180001c60 f   segmentation.obj
+ 0001:00006530       check_forloop_overflow_error 0000000180007530 f   eml_int_forloop_overflow_check.obj
+ 0001:000066f0       b_sum                      00000001800076f0 f   sum.obj
+ 0001:00006a20       sum                        0000000180007a20 f   sum.obj
+ 0001:00006c60       b_mod                      0000000180007c60 f   mod.obj
+ 0001:00006e30       rdivide                    0000000180007e30 f   rdivide.obj
+ 0001:00006f50       b_ceil                     0000000180007f50 f   ceil.obj
+ 0001:00006fb0       b_floor                    0000000180007fb0 f   floor.obj
+ 0001:00006fd0       c_floor                    0000000180007fd0 f   floor.obj
+ 0001:00007410       bspline_inv                0000000180008410 f   bspline_inv.obj
+ 0001:0000f510       b_power                    0000000180010510 f   power.obj
+ 0001:0000f600       c_power                    0000000180010600 f   power.obj
+ 0001:0000f760       power                      0000000180010760 f   power.obj
+ 0001:00012e30       pinv                       0000000180013e30 f   pinv.obj
+ 0001:00013240       b_eml_error                0000000180014240 f   eml_error.obj
+ 0001:00013260       c_eml_error                0000000180014260 f   eml_error.obj
+ 0001:000132a0       d_eml_error                00000001800142a0 f   eml_error.obj
+ 0001:000132c0       eml_error                  00000001800142c0 f   eml_error.obj
+ 0001:000132e0       b_abs                      00000001800142e0 f   abs.obj
+ 0001:000132f0       b_sqrt                     00000001800142f0 f   sqrt.obj
+ 0001:00013340       eml_xgemm                  0000000180014340 f   bspline.obj
+ 0001:00013420       bspline                    0000000180014420 f   bspline.obj
+ 0001:00016bb0       getPixelsValue             0000000180017bb0 f   getPixelsValue.obj
+ 0001:00017890       segmentation_api           0000000180018890 f   segmentation_api.obj
+ 0001:00017bb0       emxEnsureCapacity          0000000180018bb0 f   segmentation_emxutil.obj
+ 0001:00017cb0       emxFree_real_T             0000000180018cb0 f   segmentation_emxutil.obj
+ 0001:00017cb0       emxFree_int32_T            0000000180018cb0 f   segmentation_emxutil.obj
+ 0001:00017cb0       emxFreeStruct_struct_T     0000000180018cb0 f   segmentation_emxutil.obj
+ 0001:00017cb0       emxFree_boolean_T          0000000180018cb0 f   segmentation_emxutil.obj
+ 0001:00017cf0       c_emxInit_real_T           0000000180018cf0 f   segmentation_emxutil.obj
+ 0001:00017cf0       b_emxInit_real_T           0000000180018cf0 f   segmentation_emxutil.obj
+ 0001:00017cf0       emxInit_boolean_T          0000000180018cf0 f   segmentation_emxutil.obj
+ 0001:00017cf0       emxInit_int32_T            0000000180018cf0 f   segmentation_emxutil.obj
+ 0001:00017cf0       emxInit_real_T             0000000180018cf0 f   segmentation_emxutil.obj
+ 0001:00017cf0       b_emxInit_int32_T          0000000180018cf0 f   segmentation_emxutil.obj
+ 0001:00017cf0       b_emxInit_boolean_T        0000000180018cf0 f   segmentation_emxutil.obj
+ 0001:00018020       b_emxCopyStruct_struct_T   0000000180019020 f   segmentation_emxutil.obj
+ 0001:00018070       b_emxFreeStruct_struct_T   0000000180019070 f   segmentation_emxutil.obj
+ 0001:000180f0       b_emxFree_struct_T         00000001800190f0 f   segmentation_emxutil.obj
+ 0001:00018220       b_emxInitStruct_struct_T   0000000180019220 f   segmentation_emxutil.obj
+ 0001:00018290       b_emxInit_struct_T         0000000180019290 f   segmentation_emxutil.obj
+ 0001:00018360       emxCopyStruct_struct_T     0000000180019360 f   segmentation_emxutil.obj
+ 0001:00018370       emxFree_struct_T           0000000180019370 f   segmentation_emxutil.obj
+ 0001:00018460       emxInitStruct_struct_T     0000000180019460 f   segmentation_emxutil.obj
+ 0001:00018480       emxInit_struct_T           0000000180019480 f   segmentation_emxutil.obj
+ 0001:000188d0       b_emxEnsureCapacity_struct_T 00000001800198d0 f   segmentation_emxutil.obj
+ 0001:00018a00       emxEnsureCapacity_struct_T 0000000180019a00 f   segmentation_emxutil.obj
+ 0001:00018c90       segmentation_atexit_wrapper 0000000180019c90 f   segmentation_mex.obj
+ 0001:00018cc0       mexFunction                0000000180019cc0 f   segmentation_mex.obj
+ 0001:00042d20       emlrtMexFcnResolvedFunctionsInfo 0000000180043d20 f   _coder_segmentation_info.obj
+ 0001:00042da0       emlrtMexFcnProperties      0000000180043da0 f   _coder_segmentation_info.obj
+ 0001:00042f10       mxCreateString             0000000180043f10 f   libmx:libmx.dll
+ 0001:00042f16       mxCreateCharArray_700      0000000180043f16 f   libmx:libmx.dll
+ 0001:00042f1c       mxGetData                  0000000180043f1c f   libmx:libmx.dll
+ 0001:00042f22       mxCreateNumericMatrix_700  0000000180043f22 f   libmx:libmx.dll
+ 0001:00042f28       mxSetDimensions_700        0000000180043f28 f   libmx:libmx.dll
+ 0001:00042f2e       mxSetData                  0000000180043f2e f   libmx:libmx.dll
+ 0001:00042f34       mxCreateNumericArray_700   0000000180043f34 f   libmx:libmx.dll
+ 0001:00042f3a       mxGetPr                    0000000180043f3a f   libmx:libmx.dll
+ 0001:00042f40       mxCreateStructArray_700    0000000180043f40 f   libmx:libmx.dll
+ 0001:00042f46       mxCreateStructMatrix_700   0000000180043f46 f   libmx:libmx.dll
+ 0001:00042f4c       mxCreateDoubleScalar       0000000180043f4c f   libmx:libmx.dll
+ 0001:00042f52       mxSetFieldByNumber_700     0000000180043f52 f   libmx:libmx.dll
+ 0001:00042f58       mxCreateLogicalMatrix_700  0000000180043f58 f   libmx:libmx.dll
+ 0001:00042f5e       mexAtExit                  0000000180043f5e f   libmex:libmex.dll
+ 0001:00042f64       emlrtCallMATLABR2012b      0000000180043f64 f   libemlrt:libemlrt.dll
+ 0001:00042f6a       emlrtFirstTimeR2012b       0000000180043f6a f   libemlrt:libemlrt.dll
+ 0001:00042f70       emlrtEnterRtStackR2012b    0000000180043f70 f   libemlrt:libemlrt.dll
+ 0001:00042f76       emlrtClearAllocCountR2012b 0000000180043f76 f   libemlrt:libemlrt.dll
+ 0001:00042f7c       emlrtCreateRootTLS         0000000180043f7c f   libemlrt:libemlrt.dll
+ 0001:00042f82       emlrtGetBreakCheckFlagAddressR2012b 0000000180043f82 f   libemlrt:libemlrt.dll
+ 0001:00042f88       emlrtDestroyRootTLS        0000000180043f88 f   libemlrt:libemlrt.dll
+ 0001:00042f8e       emlrtLeaveRtStackR2012b    0000000180043f8e f   libemlrt:libemlrt.dll
+ 0001:00042f94       emlrtNonNegativeCheckR2012b 0000000180043f94 f   libemlrt:libemlrt.dll
+ 0001:00042f9a       emlrtAssign                0000000180043f9a f   libemlrt:libemlrt.dll
+ 0001:00042fa0       emlrtHeapReferenceStackLeaveFcnR2012b 0000000180043fa0 f   libemlrt:libemlrt.dll
+ 0001:00042fa6       emlrtInitCharArrayR2013a   0000000180043fa6 f   libemlrt:libemlrt.dll
+ 0001:00042fac       emlrtHeapReferenceStackEnterFcnR2012b 0000000180043fac f   libemlrt:libemlrt.dll
+ 0001:00042fb2       emlrtSizeEqCheckNDR2012b   0000000180043fb2 f   libemlrt:libemlrt.dll
+ 0001:00042fb8       emlrtDimSizeEqCheckR2012b  0000000180043fb8 f   libemlrt:libemlrt.dll
+ 0001:00042fbe       emlrtIntegerCheckR2012b    0000000180043fbe f   libemlrt:libemlrt.dll
+ 0001:00042fc4       emlrtBreakCheckR2012b      0000000180043fc4 f   libemlrt:libemlrt.dll
+ 0001:00042fca       emlrtSubAssignSizeCheckR2012b 0000000180043fca f   libemlrt:libemlrt.dll
+ 0001:00042fd0       emlrtDynamicBoundsCheckR2012b 0000000180043fd0 f   libemlrt:libemlrt.dll
+ 0001:00042fd6       emlrtErrorWithMessageIdR2012b 0000000180043fd6 f   libemlrt:libemlrt.dll
+ 0001:00042fdc       emlrtSizeEqCheck1DR2012b   0000000180043fdc f   libemlrt:libemlrt.dll
+ 0001:00042fe2       emlrtDestroyArray          0000000180043fe2 f   libemlrt:libemlrt.dll
+ 0001:00042fe8       emlrtCheckVsBuiltInR2012b  0000000180043fe8 f   libemlrt:libemlrt.dll
+ 0001:00042fee       emlrtAddField              0000000180043fee f   libemlrt:libemlrt.dll
+ 0001:00042ff4       emlrtAlias                 0000000180043ff4 f   libemlrt:libemlrt.dll
+ 0001:00042ffa       emlrtFreeMex               0000000180043ffa f   libemlrt:libemlrt.dll
+ 0001:00043000       emlrtHeapAllocationErrorR2012b 0000000180044000 f   libemlrt:libemlrt.dll
+ 0001:00043006       emlrtCallocMex             0000000180044006 f   libemlrt:libemlrt.dll
+ 0001:0004300c       emlrtSizeMulR2012b         000000018004400c f   libemlrt:libemlrt.dll
+ 0001:00043012       emlrtPushHeapReferenceStackR2012b 0000000180044012 f   libemlrt:libemlrt.dll
+ 0001:00043018       emlrtMallocMex             0000000180044018 f   libemlrt:libemlrt.dll
+ 0001:0004301e       emlrtReturnArrayR2009a     000000018004401e f   libemlrt:libemlrt.dll
+ 0001:00043024       emlrtErrMsgIdAndTxt        0000000180044024 f   libemlrt:libemlrt.dll
+ 0001:0004302a       emlrtAliasP                000000018004402a f   libemlrt:libemlrt.dll
+ 0001:00043030       emlrtCreateCellArray       0000000180044030 f   libemlrt:libemlrt.dll
+ 0001:00043036       emlrtNameCapturePostProcessR2013b 0000000180044036 f   libemlrt:libemlrt.dll
+ 0001:0004303c       dgemm                      000000018004403c f   libmwblas:libmwblas.dll
+ 0001:00043042       daxpy                      0000000180044042 f   libmwblas:libmwblas.dll
+ 0001:00043048       dnrm2                      0000000180044048 f   libmwblas:libmwblas.dll
+ 0001:0004304e       dscal                      000000018004404e f   libmwblas:libmwblas.dll
+ 0001:00043054       ddot                       0000000180044054 f   libmwblas:libmwblas.dll
+ 0001:0004305a       drot                       000000018004405a f   libmwblas:libmwblas.dll
+ 0001:00043060       drotg                      0000000180044060 f   libmwblas:libmwblas.dll
+ 0001:00043066       muDoubleScalarRound        0000000180044066 f   libmwmathutil:libmwmathutil.dll
+ 0001:0004306c       muDoubleScalarIsNaN        000000018004406c f   libmwmathutil:libmwmathutil.dll
+ 0001:00043072       muDoubleScalarAbs          0000000180044072 f   libmwmathutil:libmwmathutil.dll
+ 0001:00043078       muDoubleScalarFloor        0000000180044078 f   libmwmathutil:libmwmathutil.dll
+ 0001:0004307e       muDoubleScalarCeil         000000018004407e f   libmwmathutil:libmwmathutil.dll
+ 0001:00043084       muDoubleScalarIsInf        0000000180044084 f   libmwmathutil:libmwmathutil.dll
+ 0001:0004308a       muDoubleScalarPower        000000018004408a f   libmwmathutil:libmwmathutil.dll
+ 0001:00043090       muDoubleScalarMax          0000000180044090 f   libmwmathutil:libmwmathutil.dll
+ 0001:00043096       muIntScalarMax_sint32      0000000180044096 f   libmwmathutil:libmwmathutil.dll
+ 0001:0004309c       muIntScalarMin_sint32      000000018004409c f   libmwmathutil:libmwmathutil.dll
+ 0001:000430a2       muDoubleScalarSqrt         00000001800440a2 f   libmwmathutil:libmwmathutil.dll
+ 0001:000430a8       __GSHandlerCheckCommon     00000001800440a8 f   MSVCRT:gshandler.obj
+ 0001:0004310c       __GSHandlerCheck           000000018004410c f   MSVCRT:gshandler.obj
+ 0001:00043140       __security_check_cookie    0000000180044140 f   MSVCRT:amdsecgs.obj
+ 0001:00043160       memset                     0000000180044160 f   MSVCRT:MSVCR100.dll
+ 0001:00043166       memcpy                     0000000180044166 f   MSVCRT:MSVCR100.dll
+ 0001:000431cc       _CRT_INIT                  00000001800441cc f   MSVCRT:crtdll.obj
+ 0001:00043564       _DllMainCRTStartup         0000000180044564 f   MSVCRT:crtdll.obj
+ 0001:000435a4       __report_gsfailure         00000001800445a4 f   MSVCRT:gs_report.obj
+ 0001:000436f0       __clean_type_info_names    00000001800446f0 f   MSVCRT:tncleanup.obj
+ 0001:000436fc       _onexit                    00000001800446fc f   MSVCRT:atonexit.obj
+ 0001:000437ac       atexit                     00000001800447ac f   MSVCRT:atonexit.obj
+ 0001:000437c4       _RTC_Initialize            00000001800447c4 f   MSVCRT:_initsect_.obj
+ 0001:000437fc       _RTC_Terminate             00000001800447fc f   MSVCRT:_initsect_.obj
+ 0001:00043840       _ValidateImageBase         0000000180044840 f   MSVCRT:pesect.obj
+ 0001:00043870       _FindPESection             0000000180044870 f   MSVCRT:pesect.obj
+ 0001:000438c0       _IsNonwritableInCurrentImage 00000001800448c0 f   MSVCRT:pesect.obj
+ 0001:00043902       _initterm                  0000000180044902 f   MSVCRT:MSVCR100.dll
+ 0001:00043908       _initterm_e                0000000180044908 f   MSVCRT:MSVCR100.dll
+ 0001:0004390e       _amsg_exit                 000000018004490e f   MSVCRT:MSVCR100.dll
+ 0001:00043914       __C_specific_handler       0000000180044914 f   MSVCRT:MSVCR100.dll
+ 0001:0004391a       __CppXcptFilter            000000018004491a f   MSVCRT:MSVCR100.dll
+ 0001:00043920       DllMain                    0000000180044920 f   MSVCRT:dllmain.obj
+ 0001:00043944       __security_init_cookie     0000000180044944 f   MSVCRT:gs_support.obj
+ 0001:000439f8       __crt_debugger_hook        00000001800449f8 f   MSVCRT:MSVCR100.dll
+ 0001:000439fe       __clean_type_info_names_internal 00000001800449fe f   MSVCRT:MSVCR100.dll
+ 0001:00043a04       _unlock                    0000000180044a04 f   MSVCRT:MSVCR100.dll
+ 0001:00043a0a       __dllonexit                0000000180044a0a f   MSVCRT:MSVCR100.dll
+ 0001:00043a10       _lock                      0000000180044a10 f   MSVCRT:MSVCR100.dll
+ 0001:00043a16       RtlVirtualUnwind           0000000180044a16 f   kernel32:KERNEL32.dll
+ 0001:00043a1c       RtlLookupFunctionEntry     0000000180044a1c f   kernel32:KERNEL32.dll
+ 0002:00000000       __imp_GetSystemTimeAsFileTime 0000000180045000     kernel32:KERNEL32.dll
+ 0002:00000008       __imp_GetCurrentProcessId  0000000180045008     kernel32:KERNEL32.dll
+ 0002:00000010       __imp_GetCurrentThreadId   0000000180045010     kernel32:KERNEL32.dll
+ 0002:00000018       __imp_GetTickCount         0000000180045018     kernel32:KERNEL32.dll
+ 0002:00000020       __imp_QueryPerformanceCounter 0000000180045020     kernel32:KERNEL32.dll
+ 0002:00000028       __imp_DisableThreadLibraryCalls 0000000180045028     kernel32:KERNEL32.dll
+ 0002:00000030       __imp_RtlCaptureContext    0000000180045030     kernel32:KERNEL32.dll
+ 0002:00000038       __imp_RtlLookupFunctionEntry 0000000180045038     kernel32:KERNEL32.dll
+ 0002:00000040       __imp_RtlVirtualUnwind     0000000180045040     kernel32:KERNEL32.dll
+ 0002:00000048       __imp_IsDebuggerPresent    0000000180045048     kernel32:KERNEL32.dll
+ 0002:00000050       __imp_SetUnhandledExceptionFilter 0000000180045050     kernel32:KERNEL32.dll
+ 0002:00000058       __imp_UnhandledExceptionFilter 0000000180045058     kernel32:KERNEL32.dll
+ 0002:00000060       __imp_GetCurrentProcess    0000000180045060     kernel32:KERNEL32.dll
+ 0002:00000068       __imp_Sleep                0000000180045068     kernel32:KERNEL32.dll
+ 0002:00000070       __imp_DecodePointer        0000000180045070     kernel32:KERNEL32.dll
+ 0002:00000078       __imp_EncodePointer        0000000180045078     kernel32:KERNEL32.dll
+ 0002:00000080       __imp_TerminateProcess     0000000180045080     kernel32:KERNEL32.dll
+ 0002:00000088       \177KERNEL32_NULL_THUNK_DATA 0000000180045088     kernel32:KERNEL32.dll
+ 0002:00000090       __imp__initterm            0000000180045090     MSVCRT:MSVCR100.dll
+ 0002:00000098       __imp__malloc_crt          0000000180045098     MSVCRT:MSVCR100.dll
+ 0002:000000a0       __imp_memcpy               00000001800450a0     MSVCRT:MSVCR100.dll
+ 0002:000000a8       __imp_memset               00000001800450a8     MSVCRT:MSVCR100.dll
+ 0002:000000b0       __imp___CppXcptFilter      00000001800450b0     MSVCRT:MSVCR100.dll
+ 0002:000000b8       __imp___crt_debugger_hook  00000001800450b8     MSVCRT:MSVCR100.dll
+ 0002:000000c0       __imp___clean_type_info_names_internal 00000001800450c0     MSVCRT:MSVCR100.dll
+ 0002:000000c8       __imp__unlock              00000001800450c8     MSVCRT:MSVCR100.dll
+ 0002:000000d0       __imp___dllonexit          00000001800450d0     MSVCRT:MSVCR100.dll
+ 0002:000000d8       __imp__lock                00000001800450d8     MSVCRT:MSVCR100.dll
+ 0002:000000e0       __imp__onexit              00000001800450e0     MSVCRT:MSVCR100.dll
+ 0002:000000e8       __imp_free                 00000001800450e8     MSVCRT:MSVCR100.dll
+ 0002:000000f0       __imp__encoded_null        00000001800450f0     MSVCRT:MSVCR100.dll
+ 0002:000000f8       __imp__amsg_exit           00000001800450f8     MSVCRT:MSVCR100.dll
+ 0002:00000100       __imp__initterm_e          0000000180045100     MSVCRT:MSVCR100.dll
+ 0002:00000108       __imp___C_specific_handler 0000000180045108     MSVCRT:MSVCR100.dll
+ 0002:00000110       \177MSVCR100_NULL_THUNK_DATA 0000000180045110     MSVCRT:MSVCR100.dll
+ 0002:00000118       __imp_emlrtErrorWithMessageIdR2012b 0000000180045118     libemlrt:libemlrt.dll
+ 0002:00000120       __imp_emlrtSizeEqCheck1DR2012b 0000000180045120     libemlrt:libemlrt.dll
+ 0002:00000128       __imp_emlrtDestroyArray    0000000180045128     libemlrt:libemlrt.dll
+ 0002:00000130       __imp_emlrtCheckVsBuiltInR2012b 0000000180045130     libemlrt:libemlrt.dll
+ 0002:00000138       __imp_emlrtAddField        0000000180045138     libemlrt:libemlrt.dll
+ 0002:00000140       __imp_emlrtAlias           0000000180045140     libemlrt:libemlrt.dll
+ 0002:00000148       __imp_emlrtDynamicBoundsCheckR2012b 0000000180045148     libemlrt:libemlrt.dll
+ 0002:00000150       __imp_emlrtHeapAllocationErrorR2012b 0000000180045150     libemlrt:libemlrt.dll
+ 0002:00000158       __imp_emlrtCallocMex       0000000180045158     libemlrt:libemlrt.dll
+ 0002:00000160       __imp_emlrtSizeMulR2012b   0000000180045160     libemlrt:libemlrt.dll
+ 0002:00000168       __imp_emlrtPushHeapReferenceStackR2012b 0000000180045168     libemlrt:libemlrt.dll
+ 0002:00000170       __imp_emlrtMallocMex       0000000180045170     libemlrt:libemlrt.dll
+ 0002:00000178       __imp_emlrtReturnArrayR2009a 0000000180045178     libemlrt:libemlrt.dll
+ 0002:00000180       __imp_emlrtErrMsgIdAndTxt  0000000180045180     libemlrt:libemlrt.dll
+ 0002:00000188       __imp_emlrtAliasP          0000000180045188     libemlrt:libemlrt.dll
+ 0002:00000190       __imp_emlrtCreateCellArray 0000000180045190     libemlrt:libemlrt.dll
+ 0002:00000198       __imp_emlrtNameCapturePostProcessR2013b 0000000180045198     libemlrt:libemlrt.dll
+ 0002:000001a0       __imp_emlrtCallMATLABR2012b 00000001800451a0     libemlrt:libemlrt.dll
+ 0002:000001a8       __imp_emlrtFirstTimeR2012b 00000001800451a8     libemlrt:libemlrt.dll
+ 0002:000001b0       __imp_emlrtEnterRtStackR2012b 00000001800451b0     libemlrt:libemlrt.dll
+ 0002:000001b8       __imp_emlrtClearAllocCountR2012b 00000001800451b8     libemlrt:libemlrt.dll
+ 0002:000001c0       __imp_emlrtCreateRootTLS   00000001800451c0     libemlrt:libemlrt.dll
+ 0002:000001c8       __imp_emlrtFreeMex         00000001800451c8     libemlrt:libemlrt.dll
+ 0002:000001d0       __imp_emlrtGetBreakCheckFlagAddressR2012b 00000001800451d0     libemlrt:libemlrt.dll
+ 0002:000001d8       __imp_emlrtDestroyRootTLS  00000001800451d8     libemlrt:libemlrt.dll
+ 0002:000001e0       __imp_emlrtSubAssignSizeCheckR2012b 00000001800451e0     libemlrt:libemlrt.dll
+ 0002:000001e8       __imp_emlrtBreakCheckR2012b 00000001800451e8     libemlrt:libemlrt.dll
+ 0002:000001f0       __imp_emlrtIntegerCheckR2012b 00000001800451f0     libemlrt:libemlrt.dll
+ 0002:000001f8       __imp_emlrtDimSizeEqCheckR2012b 00000001800451f8     libemlrt:libemlrt.dll
+ 0002:00000200       __imp_emlrtSizeEqCheckNDR2012b 0000000180045200     libemlrt:libemlrt.dll
+ 0002:00000208       __imp_emlrtHeapReferenceStackEnterFcnR2012b 0000000180045208     libemlrt:libemlrt.dll
+ 0002:00000210       __imp_emlrtInitCharArrayR2013a 0000000180045210     libemlrt:libemlrt.dll
+ 0002:00000218       __imp_emlrtHeapReferenceStackLeaveFcnR2012b 0000000180045218     libemlrt:libemlrt.dll
+ 0002:00000220       __imp_emlrtAssign          0000000180045220     libemlrt:libemlrt.dll
+ 0002:00000228       __imp_emlrtNonNegativeCheckR2012b 0000000180045228     libemlrt:libemlrt.dll
+ 0002:00000230       __imp_emlrtLeaveRtStackR2012b 0000000180045230     libemlrt:libemlrt.dll
+ 0002:00000238       \177libemlrt_NULL_THUNK_DATA 0000000180045238     libemlrt:libemlrt.dll
+ 0002:00000240       __imp_mexAtExit            0000000180045240     libmex:libmex.dll
+ 0002:00000248       \177libmex_NULL_THUNK_DATA 0000000180045248     libmex:libmex.dll
+ 0002:00000250       __imp_dscal                0000000180045250     libmwblas:libmwblas.dll
+ 0002:00000258       __imp_dnrm2                0000000180045258     libmwblas:libmwblas.dll
+ 0002:00000260       __imp_daxpy                0000000180045260     libmwblas:libmwblas.dll
+ 0002:00000268       __imp_dgemm                0000000180045268     libmwblas:libmwblas.dll
+ 0002:00000270       __imp_ddot                 0000000180045270     libmwblas:libmwblas.dll
+ 0002:00000278       __imp_drotg                0000000180045278     libmwblas:libmwblas.dll
+ 0002:00000280       __imp_drot                 0000000180045280     libmwblas:libmwblas.dll
+ 0002:00000288       \177libmwblas_NULL_THUNK_DATA 0000000180045288     libmwblas:libmwblas.dll
+ 0002:00000290       __imp_muDoubleScalarSqrt   0000000180045290     libmwmathutil:libmwmathutil.dll
+ 0002:00000298       __imp_muIntScalarMin_sint32 0000000180045298     libmwmathutil:libmwmathutil.dll
+ 0002:000002a0       __imp_muIntScalarMax_sint32 00000001800452a0     libmwmathutil:libmwmathutil.dll
+ 0002:000002a8       __imp_muDoubleScalarMax    00000001800452a8     libmwmathutil:libmwmathutil.dll
+ 0002:000002b0       __imp_muDoubleScalarPower  00000001800452b0     libmwmathutil:libmwmathutil.dll
+ 0002:000002b8       __imp_muDoubleScalarIsInf  00000001800452b8     libmwmathutil:libmwmathutil.dll
+ 0002:000002c0       __imp_muDoubleScalarCeil   00000001800452c0     libmwmathutil:libmwmathutil.dll
+ 0002:000002c8       __imp_muDoubleScalarFloor  00000001800452c8     libmwmathutil:libmwmathutil.dll
+ 0002:000002d0       __imp_muDoubleScalarAbs    00000001800452d0     libmwmathutil:libmwmathutil.dll
+ 0002:000002d8       __imp_muDoubleScalarIsNaN  00000001800452d8     libmwmathutil:libmwmathutil.dll
+ 0002:000002e0       __imp_muDoubleScalarRound  00000001800452e0     libmwmathutil:libmwmathutil.dll
+ 0002:000002e8       \177libmwmathutil_NULL_THUNK_DATA 00000001800452e8     libmwmathutil:libmwmathutil.dll
+ 0002:000002f0       __imp_mxCreateLogicalMatrix_700 00000001800452f0     libmx:libmx.dll
+ 0002:000002f8       __imp_mxSetFieldByNumber_700 00000001800452f8     libmx:libmx.dll
+ 0002:00000300       __imp_mxCreateDoubleScalar 0000000180045300     libmx:libmx.dll
+ 0002:00000308       __imp_mxCreateStructMatrix_700 0000000180045308     libmx:libmx.dll
+ 0002:00000310       __imp_mxCreateStructArray_700 0000000180045310     libmx:libmx.dll
+ 0002:00000318       __imp_mxGetPr              0000000180045318     libmx:libmx.dll
+ 0002:00000320       __imp_mxCreateNumericArray_700 0000000180045320     libmx:libmx.dll
+ 0002:00000328       __imp_mxSetData            0000000180045328     libmx:libmx.dll
+ 0002:00000330       __imp_mxSetDimensions_700  0000000180045330     libmx:libmx.dll
+ 0002:00000338       __imp_mxCreateNumericMatrix_700 0000000180045338     libmx:libmx.dll
+ 0002:00000340       __imp_mxGetData            0000000180045340     libmx:libmx.dll
+ 0002:00000348       __imp_mxCreateCharArray_700 0000000180045348     libmx:libmx.dll
+ 0002:00000350       __imp_mxCreateString       0000000180045350     libmx:libmx.dll
+ 0002:00000358       \177libmx_NULL_THUNK_DATA  0000000180045358     libmx:libmx.dll
+ 0002:00000360       __xc_a                     0000000180045360     MSVCRT:cinitexe.obj
+ 0002:00000368       __xc_z                     0000000180045368     MSVCRT:cinitexe.obj
+ 0002:00000370       __xi_a                     0000000180045370     MSVCRT:cinitexe.obj
+ 0002:00000380       __xi_z                     0000000180045380     MSVCRT:cinitexe.obj
+ 0002:00000390       ??_C@_05KKCIMGE@error?$AA@ 0000000180045390     segmentation_mexutil.obj
+ 0002:00000398       ??_C@_07ONPBMBOP@message?$AA@ 0000000180045398     segmentation_mexutil.obj
+ 0002:000003a0       ??_C@_05FKHKFDID@index?$AA@ 00000001800453a0     segmentation_data.obj
+ 0002:000003a8       ??_C@_03PCCGDNHJ@img?$AA@  00000001800453a8     segmentation_data.obj
+ 0002:000003b0       ??_C@_0DD@EHGAHANM@F?3?1Git?1correspondence?1matlab_cod@ 00000001800453b0     segmentation_data.obj
+ 0002:000003e8       ??_C@_0P@HIKJAFDG@getPixelsValue?$AA@ 00000001800453e8     segmentation_data.obj
+ 0002:000003f8       ??_C@_03BALCFKBP@val?$AA@  00000001800453f8     segmentation_data.obj
+ 0002:00000400       ??_C@_0EL@EEJPKOHC@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045400     segmentation_data.obj
+ 0002:00000450       ??_C@_09BNIPEHJD@eml_xswap?$AA@ 0000000180045450     segmentation_data.obj
+ 0002:00000460       ??_C@_0EO@GBLOCDLN@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045460     segmentation_data.obj
+ 0002:000004b0       ??_C@_0BC@JEELAMCJ@eml_scalexp_alloc?$AA@ 00000001800454b0     segmentation_data.obj
+ 0002:000004d0       ??_C@_0ED@HHBILEDM@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800454d0     segmentation_data.obj
+ 0002:00000514       ??_C@_04CKFJHKAP@find?$AA@ 0000000180045514     segmentation_data.obj
+ 0002:00000520       ??_C@_0FG@POMOGJMD@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045520     segmentation_data.obj
+ 0002:00000578       ??_C@_08FAALJPNL@prodsize?$AA@ 0000000180045578     segmentation_data.obj
+ 0002:00000590       ??_C@_0EL@COBFFGME@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045590     segmentation_data.obj
+ 0002:000005e0       ??_C@_0P@JNIGDCNL@eml_index_prod?$AA@ 00000001800455e0     segmentation_data.obj
+ 0002:000005f0       ??_C@_0FG@EMKGHNEE@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800455f0     segmentation_data.obj
+ 0002:00000648       ??_C@_0BK@POIJPMHI@eml_assert_valid_size_arg?$AA@ 0000000180045648     segmentation_data.obj
+ 0002:00000670       ??_C@_0FK@JIDEOHPI@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045670     segmentation_data.obj
+ 0002:000006d0       ??_C@_0BB@HGCMOCGE@eml_refblas_xrot?$AA@ 00000001800456d0     segmentation_data.obj
+ 0002:000006f0       ??_C@_0FI@ENCHNCAL@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800456f0     segmentation_data.obj
+ 0002:00000748       ??_C@_0O@PKOLFAIN@eml_blas_xrot?$AA@ 0000000180045748     segmentation_data.obj
+ 0002:00000760       ??_C@_0EK@OJPNKLLO@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045760     segmentation_data.obj
+ 0002:000007b0       ??_C@_08PFGOPFJF@eml_xrot?$AA@ 00000001800457b0     segmentation_data.obj
+ 0002:000007c0       ??_C@_0FL@PHGNHPAN@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800457c0     segmentation_data.obj
+ 0002:00000820       ??_C@_0BC@GABFHEMD@eml_refblas_xrotg?$AA@ 0000000180045820     segmentation_data.obj
+ 0002:00000840       ??_C@_0FJ@NDAMMPJO@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045840     segmentation_data.obj
+ 0002:000008a0       ??_C@_0P@LJEPOJKN@eml_blas_xrotg?$AA@ 00000001800458a0     segmentation_data.obj
+ 0002:000008b0       ??_C@_0EL@GIKDFCOE@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800458b0     segmentation_data.obj
+ 0002:00000900       ??_C@_09KKCMPEFO@eml_xrotg?$AA@ 0000000180045900     segmentation_data.obj
+ 0002:00000910       ??_C@_0ED@GMPIMEIG@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045910     segmentation_data.obj
+ 0002:00000954       ??_C@_04EIAKFFMI@sqrt?$AA@ 0000000180045954     segmentation_data.obj
+ 0002:00000960       ??_C@_0FL@PKMOENBB@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045960     segmentation_data.obj
+ 0002:000009c0       ??_C@_0BC@FJNDGBLE@eml_refblas_xaxpy?$AA@ 00000001800459c0     segmentation_data.obj
+ 0002:000009e0       ??_C@_0FJ@NOKPPNIC@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800459e0     segmentation_data.obj
+ 0002:00000a40       ??_C@_0P@IAIJPMNK@eml_blas_xaxpy?$AA@ 0000000180045a40     segmentation_data.obj
+ 0002:00000a50       ??_C@_0EL@GFAAGAPI@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045a50     segmentation_data.obj
+ 0002:00000aa0       ??_C@_09JDOKOBCJ@eml_xaxpy?$AA@ 0000000180045aa0     segmentation_data.obj
+ 0002:00000ab0       ??_C@_0FL@PLBJJBDA@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045ab0     segmentation_data.obj
+ 0002:00000b10       ??_C@_0BC@ECOPBIHP@eml_refblas_xdotx?$AA@ 0000000180045b10     segmentation_data.obj
+ 0002:00000b30       ??_C@_0FK@ENLLAGHO@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045b30     segmentation_data.obj
+ 0002:00000b90       ??_C@_0BB@DFOOKCH@eml_refblas_xdot?$AA@ 0000000180045b90     segmentation_data.obj
+ 0002:00000bb0       ??_C@_0FI@JIKIDDIN@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045bb0     segmentation_data.obj
+ 0002:00000c08       ??_C@_0O@IPJJFIMO@eml_blas_xdot?$AA@ 0000000180045c08     segmentation_data.obj
+ 0002:00000c20       ??_C@_0EK@DMHCEKDI@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045c20     segmentation_data.obj
+ 0002:00000c70       ??_C@_08IABMPNNG@eml_xdot?$AA@ 0000000180045c70     segmentation_data.obj
+ 0002:00000c80       ??_C@_0EL@ODMPGMEH@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045c80     segmentation_data.obj
+ 0002:00000cd0       ??_C@_09CBOAFDHI@eml_xdotc?$AA@ 0000000180045cd0     segmentation_data.obj
+ 0002:00000ce0       ??_C@_0FL@FJNJCLDB@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045ce0     segmentation_data.obj
+ 0002:00000d40       ??_C@_0BC@OOLKFKJL@eml_refblas_xscal?$AA@ 0000000180045d40     segmentation_data.obj
+ 0002:00000d60       ??_C@_0FJ@HNLIJLKC@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045d60     segmentation_data.obj
+ 0002:00000dc0       ??_C@_0P@DHOAMHPF@eml_blas_xscal?$AA@ 0000000180045dc0     segmentation_data.obj
+ 0002:00000dd0       ??_C@_0EL@MGBHAGNI@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045dd0     segmentation_data.obj
+ 0002:00000e20       ??_C@_09CEIDNKAG@eml_xscal?$AA@ 0000000180045e20     segmentation_data.obj
+ 0002:00000e30       ??_C@_0EC@KGMPOILG@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045e30     segmentation_data.obj
+ 0002:00000e74       ??_C@_03BCGAIFPO@abs?$AA@  0000000180045e74     segmentation_data.obj
+ 0002:00000e80       ??_C@_0FL@HJHIJCJB@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045e80     segmentation_data.obj
+ 0002:00000ee0       ??_C@_0BC@LDENLAOM@eml_refblas_xnrm2?$AA@ 0000000180045ee0     segmentation_data.obj
+ 0002:00000f00       ??_C@_0FJ@FNBJCCAC@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045f00     segmentation_data.obj
+ 0002:00000f60       ??_C@_0P@GKBHCNIC@eml_blas_xnrm2?$AA@ 0000000180045f60     segmentation_data.obj
+ 0002:00000f70       ??_C@_0EL@OGLGLPHI@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045f70     segmentation_data.obj
+ 0002:00000fc0       ??_C@_09HJHEDAHB@eml_xnrm2?$AA@ 0000000180045fc0     segmentation_data.obj
+ 0002:00000fd0       ??_C@_0EG@LCDHGJIL@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180045fd0     segmentation_data.obj
+ 0002:00001018       ??_C@_09NODCPLED@eml_relop?$AA@ 0000000180046018     segmentation_data.obj
+ 0002:00001030       ??_C@_0FL@FFBMILEB@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046030     segmentation_data.obj
+ 0002:00001090       ??_C@_0BB@NPNGANKF@eml_matlab_zsvdc?$AA@ 0000000180046090     segmentation_data.obj
+ 0002:000010b0       ??_C@_0EH@IKMJDHGM@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800460b0     segmentation_data.obj
+ 0002:000010f8       ??_C@_08CHCKEDFL@isfinite?$AA@ 00000001800460f8     segmentation_data.obj
+ 0002:00001110       ??_C@_0FL@GBFNPKJF@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046110     segmentation_data.obj
+ 0002:00001170       ??_C@_0BC@EOLAPMCA@eml_refblas_xgemm?$AA@ 0000000180046170     segmentation_data.obj
+ 0002:00001190       ??_C@_0FJ@EFDMEKAG@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046190     segmentation_data.obj
+ 0002:000011f0       ??_C@_0P@JHOKGBEO@eml_blas_xgemm?$AA@ 00000001800461f0     segmentation_data.obj
+ 0002:00001200       ??_C@_0EL@POJDNHHM@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046200     segmentation_data.obj
+ 0002:00001250       ??_C@_09IEIJHMLN@eml_xgemm?$AA@ 0000000180046250     segmentation_data.obj
+ 0002:00001260       ??_C@_0ED@OHEONNML@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046260     segmentation_data.obj
+ 0002:000012a4       ??_C@_06PCBFLGP@mtimes?$AA@ 00000001800462a4     segmentation_data.obj
+ 0002:000012b0       ??_C@_0EC@DMMGNLAM@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800462b0     segmentation_data.obj
+ 0002:000012f4       ??_C@_05PLIADJJL@power?$AA@ 00000001800462f4     segmentation_data.obj
+ 0002:00001300       ??_C@_0EL@MDBCGIOK@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046300     segmentation_data.obj
+ 0002:00001350       ??_C@_0P@PAOJKEOI@eml_min_or_max?$AA@ 0000000180046350     segmentation_data.obj
+ 0002:00001360       ??_C@_0EE@BDAMDLMM@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046360     segmentation_data.obj
+ 0002:000013a4       ??_C@_03KLIPLJLL@min?$AA@  00000001800463a4     segmentation_data.obj
+ 0002:000013b0       ??_C@_0EE@LNMJDNCP@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800463b0     segmentation_data.obj
+ 0002:000013f4       ??_C@_05PBJFFIGL@floor?$AA@ 00000001800463f4     segmentation_data.obj
+ 0002:00001400       ??_C@_0FL@BGPLNOJI@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046400     segmentation_data.obj
+ 0002:00001460       ??_C@_0O@LFDEJHKC@indexIntRelop?$AA@ 0000000180046460     segmentation_data.obj
+ 0002:00001470       ??_C@_0FA@CDEDNHCH@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046470     segmentation_data.obj
+ 0002:000014c0       ??_C@_0BE@BNDDFGBF@eml_null_assignment?$AA@ 00000001800464c0     segmentation_data.obj
+ 0002:000014e0       ??_C@_0ED@BBPMMBCG@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800464e0     segmentation_data.obj
+ 0002:00001524       ??_C@_04GFPJNGEK@ceil?$AA@ 0000000180046524     segmentation_data.obj
+ 0002:00001530       ??_C@_0EE@HKFDGICO@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046530     segmentation_data.obj
+ 0002:00001578       ??_C@_07KHOFHKNM@eml_div?$AA@ 0000000180046578     segmentation_data.obj
+ 0002:00001580       ??_C@_0EE@FIHFHHGD@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046580     segmentation_data.obj
+ 0002:000015c8       ??_C@_07EDECNBOH@rdivide?$AA@ 00000001800465c8     segmentation_data.obj
+ 0002:000015d0       ??_C@_0EF@JGBHADPN@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800465d0     segmentation_data.obj
+ 0002:00001618       ??_C@_08GNEFHMND@mrdivide?$AA@ 0000000180046618     segmentation_data.obj
+ 0002:00001630       ??_C@_0EC@OEFDIDFK@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046630     segmentation_data.obj
+ 0002:00001674       ??_C@_03FFONCNID@mod?$AA@  0000000180046674     segmentation_data.obj
+ 0002:00001680       ??_C@_0EN@MMMHFMFD@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046680     segmentation_data.obj
+ 0002:000016d0       ??_C@_0BB@PACNMNAE@eml_isequal_core?$AA@ 00000001800466d0     segmentation_data.obj
+ 0002:000016f0       ??_C@_0EG@COBEPALK@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800466f0     segmentation_data.obj
+ 0002:00001738       ??_C@_07MIMONDDE@isequal?$AA@ 0000000180046738     segmentation_data.obj
+ 0002:00001740       ??_C@_0FL@NBBAGBIN@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046740     segmentation_data.obj
+ 0002:000017a0       ??_C@_0BP@OEONONCM@eml_int_forloop_overflow_check?$AA@ 00000001800467a0     segmentation_data.obj
+ 0002:000017c0       ??_C@_07FGJDCOHF@new_set?$AA@ 00000001800467c0     segmentation.obj
+ 0002:000017c8       ??_C@_03LOICLMIO@Sp2?$AA@  00000001800467c8     segmentation.obj
+ 0002:000017d0       ??_C@_0L@CMGAELOG@Confidence?$AA@ 00000001800467d0     segmentation.obj
+ 0002:000017dc       ??_C@_05PJHLCAP@ref_p?$AA@ 00000001800467dc     segmentation.obj
+ 0002:000017e8       ??_C@_09GEFADJKJ@ref_point?$AA@ 00000001800467e8     segmentation.obj
+ 0002:000017f8       ??_C@_07LFANNLCP@ref_set?$AA@ 00000001800467f8     segmentation.obj
+ 0002:00001800       ??_C@_06MAHLMFBA@sp_val?$AA@ 0000000180046800     segmentation.obj
+ 0002:00001808       ??_C@_0M@OBAPPIEN@bspline_set?$AA@ 0000000180046808     segmentation.obj
+ 0002:00001818       ??_C@_09OGAJFHJE@error_set?$AA@ 0000000180046818     segmentation.obj
+ 0002:00001824       ??_C@_03BODCDEJD@DCF?$AA@  0000000180046824     segmentation.obj
+ 0002:00001828       ??_C@_01CBDEGOCN@j?$AA@    0000000180046828     segmentation.obj
+ 0002:0000182c       ??_C@_06HCLHAFKH@sp_set?$AA@ 000000018004682c     segmentation.obj
+ 0002:00001840       ??_C@_0EO@IANDIMLH@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046840     segmentation.obj
+ 0002:00001890       ??_C@_0BC@KFDFJODE@eml_matrix_npages?$AA@ 0000000180046890     segmentation.obj
+ 0002:000018b0       ??_C@_0EI@EODCEDNJ@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800468b0     segmentation.obj
+ 0002:000018f8       ??_C@_0M@LOJNOHOD@eml_li_find?$AA@ 00000001800468f8     segmentation.obj
+ 0002:00001908       ??_C@_0DB@KODDIPJI@F?3?1Git?1correspondence?1matlab_cod@ 0000000180046908     segmentation.obj
+ 0002:00001940       ??_C@_0N@OACBNEED@segmentation?$AA@ 0000000180046940     segmentation.obj
+ 0002:00001a00       ??_C@_0BC@DHBLDLOI@Assertion?5failed?4?$AA@ 0000000180046a00     segmentation.obj
+ 0002:00001a18       __real@4059000000000000    0000000180046a18     segmentation.obj
+ 0002:00001a20       __real@c1e0000000000000    0000000180046a20     segmentation.obj
+ 0002:00001a28       __real@41e0000000000000    0000000180046a28     segmentation.obj
+ 0002:00001a30       __real@3ff0000000000000    0000000180046a30     segmentation.obj
+ 0002:00001a38       __real@3fe999999999999a    0000000180046a38     segmentation.obj
+ 0002:00001a90       ??_C@_0EE@JNHFINEK@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046a90     sum.obj
+ 0002:00001ad4       ??_C@_03CFFIJAMA@sum?$AA@  0000000180046ad4     sum.obj
+ 0002:00001b88       __real@3cb0000000000000    0000000180046b88     mod.obj
+ 0002:00001b90       ??_C@_0N@EIEDKOI@param_matrix?$AA@ 0000000180046b90     bspline_inv.obj
+ 0002:00001ba0       ??_C@_01EANLCPLP@y?$AA@    0000000180046ba0     bspline_inv.obj
+ 0002:00001ba4       ??_C@_01FJMABOPO@x?$AA@    0000000180046ba4     bspline_inv.obj
+ 0002:00001ba8       ??_C@_03LOJEKLML@src?$AA@  0000000180046ba8     bspline_inv.obj
+ 0002:00001bac       ??_C@_02JGAADCOE@Ax?$AA@   0000000180046bac     bspline_inv.obj
+ 0002:00001bb0       ??_C@_02IPBLADKF@Ay?$AA@   0000000180046bb0     bspline_inv.obj
+ 0002:00001bb4       ??_C@_01FHEEJDEE@A?$AA@    0000000180046bb4     bspline_inv.obj
+ 0002:00001bc0       ??_C@_0EG@NONNOBNK@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046bc0     bspline_inv.obj
+ 0002:00001c08       ??_C@_07EGDDPBAO@reshape?$AA@ 0000000180046c08     bspline_inv.obj
+ 0002:00001c10       ??_C@_0EE@FGAOHIEO@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046c10     bspline_inv.obj
+ 0002:00001c54       ??_C@_03LJAEFNNE@max?$AA@  0000000180046c54     bspline_inv.obj
+ 0002:00001c58       ??_C@_0DA@FOHBPLNB@F?3?1Git?1correspondence?1matlab_cod@ 0000000180046c58     bspline_inv.obj
+ 0002:00001c88       ??_C@_0M@OAMIMCNF@bspline_inv?$AA@ 0000000180046c88     bspline_inv.obj
+ 0002:00001e70       __real@41dfffffffc00000    0000000180046e70     bspline_inv.obj
+ 0002:00001e78       ??_C@_0DO@PCBINGDL@EMLRT?3runTime?3RepeatedExprWithDi@ 0000000180046e78     bspline_inv.obj
+ 0002:00001eb8       __real@4010000000000000    0000000180046eb8     bspline_inv.obj
+ 0002:00001ec0       __real@403e000000000000    0000000180046ec0     bspline_inv.obj
+ 0002:00001ec8       __real@4008000000000000    0000000180046ec8     power.obj
+ 0002:00001ed0       ??_C@_0FL@NLFBIDJL@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046ed0     pinv.obj
+ 0002:00001f30       ??_C@_0BC@NHLGMHAO@eml_refblas_xswap?$AA@ 0000000180046f30     pinv.obj
+ 0002:00001f50       ??_C@_0FJ@PPDADDAI@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046f50     pinv.obj
+ 0002:00001fb0       ??_C@_0P@OOMFKGA@eml_blas_xswap?$AA@ 0000000180046fb0     pinv.obj
+ 0002:00001fc0       ??_C@_0FO@CPJAPFEH@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180046fc0     pinv.obj
+ 0002:00002020       ??_C@_0BC@KFICGMOK@eml_lapack_xgesvd?$AA@ 0000000180047020     pinv.obj
+ 0002:00002040       ??_C@_0EO@GOLLFHN@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180047040     pinv.obj
+ 0002:00002090       ??_C@_0L@BEHAIEND@eml_xgesvd?$AA@ 0000000180047090     pinv.obj
+ 0002:000020a0       ??_C@_0ED@FFNBJMKM@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800470a0     pinv.obj
+ 0002:000020e4       ??_C@_03PGNMJFNA@svd?$AA@  00000001800470e4     pinv.obj
+ 0002:000020f0       ??_C@_0EE@PKNLINBD@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 00000001800470f0     pinv.obj
+ 0002:00002134       ??_C@_04LNANGIPO@pinv?$AA@ 0000000180047134     pinv.obj
+ 0002:00002140       __real@4000000000000000    0000000180047140     pinv.obj
+ 0002:00002148       __real@bff0000000000000    0000000180047148     pinv.obj
+ 0002:00002150       __real@0010000000000000    0000000180047150     pinv.obj
+ 0002:00002160       __mask@@NegDouble@         0000000180047160     pinv.obj
+ 0002:00002170       ??_C@_0EG@PFOFFIJJ@D?3?1Program?5Files?1MATLAB?1R2013b?1t@ 0000000180047170     eml_error.obj
+ 0002:000021b8       ??_C@_09JANBMANM@eml_error?$AA@ 00000001800471b8     eml_error.obj
+ 0002:000021c8       ??_C@_0BP@KGHOLAIN@Coder?3MATLAB?3svd_NoConvergence?$AA@ 00000001800471c8     eml_error.obj
+ 0002:000021e8       ??_C@_0BP@KBACPONM@Coder?3toolbox?3ElFunDomainError?$AA@ 00000001800471e8     eml_error.obj
+ 0002:00002208       ??_C@_0CI@BHGKFKAI@Coder?3toolbox?3reshape_emptyResha@ 0000000180047208     eml_error.obj
+ 0002:00002230       ??_C@_0CC@PHBEIKAA@Coder?3MATLAB?3svd_matrixWithNaNIn@ 0000000180047230     eml_error.obj
+ 0002:00002254       ??_C@_05PFKAILG@bound?$AA@ 0000000180047254     bspline.obj
+ 0002:00002260       ??_C@_0CM@COBCLLKG@F?3?1Git?1correspondence?1matlab_cod@ 0000000180047260     bspline.obj
+ 0002:00002290       ??_C@_07JOJOBLCK@bspline?$AA@ 0000000180047290     bspline.obj
+ 0002:00002390       ??_C@_00CNPNBAHC@?$AA@     0000000180047390     segmentation_api.obj
+ 0002:00002398       ??_C@_0BB@PGKDONGG@segmentation_api?$AA@ 0000000180047398     segmentation_api.obj
+ 0002:000023c0       ??_C@_06BNJCAIGJ@double?$AA@ 00000001800473c0     segmentation_api.obj
+ 0002:000023c8       ??_C@_03MCAECCCA@Ref?$AA@  00000001800473c8     segmentation_api.obj
+ 0002:000023d0       ??_C@_0CF@OIONOIOI@EMLRT?3runTime?3TooManyOutputArgum@ 00000001800473d0     segmentation_mex.obj
+ 0002:000023f8       ??_C@_0CC@IMHDKEMC@EMLRT?3runTime?3WrongNumberOfInput@ 00000001800473f8     segmentation_mex.obj
+ 0002:00002420       ??_C@_0FH@BDMJPNAA@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047420     _coder_segmentation_info.obj
+ 0002:00002480       ??_C@_0FA@HLMNPFDP@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047480     _coder_segmentation_info.obj
+ 0002:000024d0       ??_C@_0DI@JIPJFLJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800474d0     _coder_segmentation_info.obj
+ 0002:00002510       ??_C@_0EP@DKNAOIDF@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047510     _coder_segmentation_info.obj
+ 0002:00002560       ??_C@_0FC@KAGKIDFL@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047560     _coder_segmentation_info.obj
+ 0002:000025c0       ??_C@_0EC@CEPHODGG@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800475c0     _coder_segmentation_info.obj
+ 0002:00002608       ??_C@_0DK@JGMDEBEG@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047608     _coder_segmentation_info.obj
+ 0002:00002648       ??_C@_0DI@IEIPGFNC@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047648     _coder_segmentation_info.obj
+ 0002:00002680       ??_C@_05OIHEAIFD@isinf?$AA@ 0000000180047680     _coder_segmentation_info.obj
+ 0002:00002688       ??_C@_0DL@JMMGNODA@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047688     _coder_segmentation_info.obj
+ 0002:000026c8       ??_C@_0DH@MKLJELI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800476c8     _coder_segmentation_info.obj
+ 0002:00002700       ??_C@_0EB@JGGFMEAJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047700     _coder_segmentation_info.obj
+ 0002:00002748       ??_C@_0DI@OAFICDGG@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047748     _coder_segmentation_info.obj
+ 0002:00002780       ??_C@_0DJ@LELBHOFI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047780     _coder_segmentation_info.obj
+ 0002:000027bc       ??_C@_06DHCFJIMK@intmin?$AA@ 00000001800477bc     _coder_segmentation_info.obj
+ 0002:000027d0       ??_C@_0HF@KHPAKDPE@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800477d0     _coder_segmentation_info.obj
+ 0002:00002850       ??_C@_0EA@NHKEHCBE@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047850     _coder_segmentation_info.obj
+ 0002:00002890       ??_C@_0BA@DCOEOBGC@eml_index_times?$AA@ 0000000180047890     _coder_segmentation_info.obj
+ 0002:000028a0       ??_C@_0EA@FCCELNDI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800478a0     _coder_segmentation_info.obj
+ 0002:000028e0       ??_C@_0BA@BIKOLOKP@eml_index_minus?$AA@ 00000001800478e0     _coder_segmentation_info.obj
+ 0002:000028f0       ??_C@_0EP@OJBJJOB@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800478f0     _coder_segmentation_info.obj
+ 0002:00002940       ??_C@_0EN@INEGCLMI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047940     _coder_segmentation_info.obj
+ 0002:00002990       ??_C@_0EF@OACOOKJN@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047990     _coder_segmentation_info.obj
+ 0002:000029d8       ??_C@_0BA@OPOLJENJ@eml_blas_inline?$AA@ 00000001800479d8     _coder_segmentation_info.obj
+ 0002:000029e8       ??_C@_0DP@KKDHCFNH@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800479e8     _coder_segmentation_info.obj
+ 0002:00002a28       ??_C@_0DH@LODENFNP@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047a28     _coder_segmentation_info.obj
+ 0002:00002a60       ??_C@_0EJ@ICIFOOJM@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047a60     _coder_segmentation_info.obj
+ 0002:00002ab0       ??_C@_0EC@EDKCHFKG@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047ab0     _coder_segmentation_info.obj
+ 0002:00002af8       ??_C@_0DO@FIFFNPJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047af8     _coder_segmentation_info.obj
+ 0002:00002b38       ??_C@_0O@DGEIFEHG@eml_scalar_eg?$AA@ 0000000180047b38     _coder_segmentation_info.obj
+ 0002:00002b48       ??_C@_0DP@JAKKLAFJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047b48     _coder_segmentation_info.obj
+ 0002:00002b88       ??_C@_0DG@PFPDNIHA@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047b88     _coder_segmentation_info.obj
+ 0002:00002bc0       ??_C@_0DI@KHEKJDFK@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047bc0     _coder_segmentation_info.obj
+ 0002:00002bf8       ??_C@_0DP@JHLGJKEB@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047bf8     _coder_segmentation_info.obj
+ 0002:00002c38       ??_C@_04ENMBGAPA@char?$AA@ 0000000180047c38     _coder_segmentation_info.obj
+ 0002:00002c40       ??_C@_0DI@EMINNGDL@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047c40     _coder_segmentation_info.obj
+ 0002:00002c78       ??_C@_0DI@ECPGNJBG@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047c78     _coder_segmentation_info.obj
+ 0002:00002cb0       ??_C@_0DD@MPEGEKC@?$FLE?$FNF?3?1Git?1correspondence?1matlab_@ 0000000180047cb0     _coder_segmentation_info.obj
+ 0002:00002ce8       ??_C@_0DK@NBBBHAFE@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047ce8     _coder_segmentation_info.obj
+ 0002:00002d28       ??_C@_0BA@DMFOHEOD@function_handle?$AA@ 0000000180047d28     _coder_segmentation_info.obj
+ 0002:00002d40       ??_C@_0EP@LONMACPJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047d40     _coder_segmentation_info.obj
+ 0002:00002d90       ??_C@_0DP@KEPDCHIB@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047d90     _coder_segmentation_info.obj
+ 0002:00002dd0       ??_C@_0BI@MOBBIOAA@coder?4internal?4indexInt?$AA@ 0000000180047dd0     _coder_segmentation_info.obj
+ 0002:00002de8       ??_C@_0P@DJHCLAEH@eml_index_plus?$AA@ 0000000180047de8     _coder_segmentation_info.obj
+ 0002:00002e00       ??_C@_0FB@CNDLNLEB@?$FLIXE?$FN$matlabroot$?1toolbox?1shared@ 0000000180047e00     _coder_segmentation_info.obj
+ 0002:00002e58       ??_C@_0CA@GGIPMLJM@coder?4internal?4isBuiltInNumeric?$AA@ 0000000180047e58     _coder_segmentation_info.obj
+ 0002:00002e78       ??_C@_0DI@NOGOOKFE@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047e78     _coder_segmentation_info.obj
+ 0002:00002eb0       ??_C@_05LGCGPNNP@isnan?$AA@ 0000000180047eb0     _coder_segmentation_info.obj
+ 0002:00002eb8       ??_C@_03ONJNNIPF@lhs?$AA@  0000000180047eb8     _coder_segmentation_info.obj
+ 0002:00002ebc       ??_C@_03FNFLPIFJ@rhs?$AA@  0000000180047ebc     _coder_segmentation_info.obj
+ 0002:00002ec0       ??_C@_0M@FMAJFPGC@mFileTimeHi?$AA@ 0000000180047ec0     _coder_segmentation_info.obj
+ 0002:00002ed0       ??_C@_0M@NFKFADI@mFileTimeLo?$AA@ 0000000180047ed0     _coder_segmentation_info.obj
+ 0002:00002ee0       ??_C@_0L@HMDKMKNA@fileTimeHi?$AA@ 0000000180047ee0     _coder_segmentation_info.obj
+ 0002:00002ef0       ??_C@_0L@CNGJMFIK@fileTimeLo?$AA@ 0000000180047ef0     _coder_segmentation_info.obj
+ 0002:00002f00       ??_C@_08CGJBBLIA@resolved?$AA@ 0000000180047f00     _coder_segmentation_info.obj
+ 0002:00002f10       ??_C@_0EA@GLIAMHNI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047f10     _coder_segmentation_info.obj
+ 0002:00002f50       ??_C@_0N@IGLAPNJK@dominantType?$AA@ 0000000180047f50     _coder_segmentation_info.obj
+ 0002:00002f60       ??_C@_04MEMAJGDJ@name?$AA@ 0000000180047f60     _coder_segmentation_info.obj
+ 0002:00002f68       ??_C@_0BA@LGKKDMEL@eml_index_class?$AA@ 0000000180047f68     _coder_segmentation_info.obj
+ 0002:00002f78       ??_C@_07JKKCBBMM@context?$AA@ 0000000180047f78     _coder_segmentation_info.obj
+ 0002:00002f80       ??_C@_0FA@NLJKFOCK@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047f80     _coder_segmentation_info.obj
+ 0002:00002fd0       ??_C@_0DG@KPMKIFH@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180047fd0     _coder_segmentation_info.obj
+ 0002:00003008       ??_C@_03ICKAGFLH@eps?$AA@  0000000180048008     _coder_segmentation_info.obj
+ 0002:00003010       ??_C@_0DN@PMMHPPNL@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048010     _coder_segmentation_info.obj
+ 0002:00003050       ??_C@_0N@DLHLLFPN@eml_isa_uint?$AA@ 0000000180048050     _coder_segmentation_info.obj
+ 0002:00003060       ??_C@_0EP@JFACCOGF@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048060     _coder_segmentation_info.obj
+ 0002:000030b0       ??_C@_0EN@BGNFJMEM@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800480b0     _coder_segmentation_info.obj
+ 0002:00003100       ??_C@_0DP@DBKEJCFD@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048100     _coder_segmentation_info.obj
+ 0002:00003140       ??_C@_0FH@FFMAOMLE@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048140     _coder_segmentation_info.obj
+ 0002:000031a0       ??_C@_0EP@JENFPCEE@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800481a0     _coder_segmentation_info.obj
+ 0002:000031f0       ??_C@_0EO@DBKPJDKI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800481f0     _coder_segmentation_info.obj
+ 0002:00003240       ??_C@_0EM@DFJIHNLP@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048240     _coder_segmentation_info.obj
+ 0002:00003290       ??_C@_0DO@EGNHMIMO@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048290     _coder_segmentation_info.obj
+ 0002:000032d0       ??_C@_0DP@LHGLJOOM@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800482d0     _coder_segmentation_info.obj
+ 0002:00003310       ??_C@_0EP@DGBFEIEF@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048310     _coder_segmentation_info.obj
+ 0002:00003360       ??_C@_0EN@LFMCPKGM@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048360     _coder_segmentation_info.obj
+ 0002:000033b0       ??_C@_0DP@JCLDPEHD@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800483b0     _coder_segmentation_info.obj
+ 0002:000033f0       ??_C@_0DI@GANAMGFL@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800483f0     _coder_segmentation_info.obj
+ 0002:00003430       ??_C@_0EA@BFEKENJA@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048430     _coder_segmentation_info.obj
+ 0002:00003470       ??_C@_0BA@PBHEJPIB@eml_float_model?$AA@ 0000000180048470     _coder_segmentation_info.obj
+ 0002:00003480       ??_C@_0DM@IBJBHDMD@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048480     _coder_segmentation_info.obj
+ 0002:000034c0       ??_C@_0M@BEAOLJKK@eml_realmin?$AA@ 00000001800484c0     _coder_segmentation_info.obj
+ 0002:000034d0       ??_C@_0DK@LKBJFIMJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800484d0     _coder_segmentation_info.obj
+ 0002:00003510       ??_C@_07EHHIAKNC@realmin?$AA@ 0000000180048510     _coder_segmentation_info.obj
+ 0002:00003520       ??_C@_0EB@JMHDJNBF@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048520     _coder_segmentation_info.obj
+ 0002:00003568       ??_C@_0P@DEOLODNE@eml_scalar_abs?$AA@ 0000000180048568     _coder_segmentation_info.obj
+ 0002:00003578       ??_C@_0DG@GPPKOLMK@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048578     _coder_segmentation_info.obj
+ 0002:000035b0       ??_C@_0EP@BGLEPBOF@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800485b0     _coder_segmentation_info.obj
+ 0002:00003600       ??_C@_0EN@JFGDEDMM@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048600     _coder_segmentation_info.obj
+ 0002:00003650       ??_C@_0DP@LCBCENND@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048650     _coder_segmentation_info.obj
+ 0002:00003690       ??_C@_0EO@OCDIBMGI@?$FLIXE?$FN$matlabroot$?1toolbox?1shared@ 0000000180048690     _coder_segmentation_info.obj
+ 0002:000036e0       ??_C@_0BN@EIMLBOBO@coder?4internal?4indexIntRelop?$AA@ 00000001800486e0     _coder_segmentation_info.obj
+ 0002:00003700       ??_C@_0EF@MJHDOJL@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048700     _coder_segmentation_info.obj
+ 0002:00003748       ??_C@_0BF@ILCPNKP@eml_assert_valid_dim?$AA@ 0000000180048748     _coder_segmentation_info.obj
+ 0002:00003760       ??_C@_0EM@LIFKDPLC@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048760     _coder_segmentation_info.obj
+ 0002:000037b0       ??_C@_0DE@GHGNCKIB@?$FLE?$FNF?3?1Git?1correspondence?1matlab_@ 00000001800487b0     _coder_segmentation_info.obj
+ 0002:000037e8       ??_C@_0DI@IHPGCDDP@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800487e8     _coder_segmentation_info.obj
+ 0002:00003820       ??_C@_0DP@HKLBKEGP@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048820     _coder_segmentation_info.obj
+ 0002:00003860       ??_C@_0FJ@NLDFBDAC@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048860     _coder_segmentation_info.obj
+ 0002:000038c0       ??_C@_0DJ@PBLDDNNK@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800488c0     _coder_segmentation_info.obj
+ 0002:000038fc       ??_C@_06CFKOHMKF@intmax?$AA@ 00000001800488fc     _coder_segmentation_info.obj
+ 0002:00003910       ??_C@_0EF@DPCDEFCH@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048910     _coder_segmentation_info.obj
+ 0002:00003958       ??_C@_0BF@NDLHKLNB@eml_is_integer_class?$AA@ 0000000180048958     _coder_segmentation_info.obj
+ 0002:00003970       ??_C@_0FF@HJMFBFKK@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048970     _coder_segmentation_info.obj
+ 0002:000039d0       ??_C@_0FF@BHCOHPII@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800489d0     _coder_segmentation_info.obj
+ 0002:00003a30       ??_C@_0EK@OCGHDCDA@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048a30     _coder_segmentation_info.obj
+ 0002:00003a80       ??_C@_0EK@JNKAINMC@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048a80     _coder_segmentation_info.obj
+ 0002:00003ad0       ??_C@_0DK@LNPLPIAF@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048ad0     _coder_segmentation_info.obj
+ 0002:00003b10       ??_C@_0EP@LEJNOAOP@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048b10     _coder_segmentation_info.obj
+ 0002:00003b60       ??_C@_0EN@DHEKFCMG@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048b60     _coder_segmentation_info.obj
+ 0002:00003bb0       ??_C@_0DP@BADLFMNJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048bb0     _coder_segmentation_info.obj
+ 0002:00003bf0       ??_C@_0EO@OECAHCCO@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048bf0     _coder_segmentation_info.obj
+ 0002:00003c40       ??_C@_0EM@OABHJMDJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048c40     _coder_segmentation_info.obj
+ 0002:00003c90       ??_C@_0DO@JDFICJEI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048c90     _coder_segmentation_info.obj
+ 0002:00003cd0       ??_C@_0FN@JMEPLDJD@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048cd0     _coder_segmentation_info.obj
+ 0002:00003d30       ??_C@_0DJ@LGGCAFOA@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048d30     _coder_segmentation_info.obj
+ 0002:00003d70       ??_C@_0EP@JIKBBMHJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048d70     _coder_segmentation_info.obj
+ 0002:00003dc0       ??_C@_0EN@BLHGKOFA@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048dc0     _coder_segmentation_info.obj
+ 0002:00003e10       ??_C@_0DP@DMAHKAEP@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048e10     _coder_segmentation_info.obj
+ 0002:00003e50       ??_C@_0EC@CDBNIKKB@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048e50     _coder_segmentation_info.obj
+ 0002:00003e98       ??_C@_0BA@JDJHBHHI@eml_scalar_sqrt?$AA@ 0000000180048e98     _coder_segmentation_info.obj
+ 0002:00003ea8       ??_C@_0DH@DFICMMJC@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048ea8     _coder_segmentation_info.obj
+ 0002:00003ee0       ??_C@_0DG@HKNMEHPN@?$FLE?$FNF?3?1Git?1correspondence?1matlab_@ 0000000180048ee0     _coder_segmentation_info.obj
+ 0002:00003f18       ??_C@_05GIMEPBJB@int32?$AA@ 0000000180048f18     _coder_segmentation_info.obj
+ 0002:00003f20       ??_C@_0CP@FKMDLEGI@?$FLE?$FNF?3?1Git?1correspondence?1matlab_@ 0000000180048f20     _coder_segmentation_info.obj
+ 0002:00003f50       ??_C@_06PBJBIPGK@struct?$AA@ 0000000180048f50     _coder_segmentation_info.obj
+ 0002:00003f60       ??_C@_0EF@MHCOAOPO@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048f60     _coder_segmentation_info.obj
+ 0002:00003fb0       ??_C@_0EC@KCMPNKKM@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180048fb0     _coder_segmentation_info.obj
+ 0002:00004000       ??_C@_0EJ@HLMHKLKO@?$FLIXE?$FN$matlabroot$?1toolbox?1shared@ 0000000180049000     _coder_segmentation_info.obj
+ 0002:00004050       ??_C@_0BI@LDCJGPIC@coder?4internal?4prodsize?$AA@ 0000000180049050     _coder_segmentation_info.obj
+ 0002:00004070       ??_C@_0ED@JIBDCDEA@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049070     _coder_segmentation_info.obj
+ 0002:000040b8       ??_C@_0BD@PIJOPFN@eml_matrix_vstride?$AA@ 00000001800490b8     _coder_segmentation_info.obj
+ 0002:000040d0       ??_C@_0ED@BIIMGNAK@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800490d0     _coder_segmentation_info.obj
+ 0002:00004118       ??_C@_0BB@DKCPHGKF@eml_scalar_floor?$AA@ 0000000180049118     _coder_segmentation_info.obj
+ 0002:00004130       ??_C@_0FL@GPBDMKGF@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049130     _coder_segmentation_info.obj
+ 0002:00004190       ??_C@_0GG@OHNAOPF@?$FLIXE?$FN$matlabroot$?1toolbox?1shared@ 0000000180049190     _coder_segmentation_info.obj
+ 0002:00004200       ??_C@_0HB@PKGEOBOK@?$FLIXE?$FN$matlabroot$?1toolbox?1shared@ 0000000180049200     _coder_segmentation_info.obj
+ 0002:00004280       ??_C@_0FB@BNILGHPG@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049280     _coder_segmentation_info.obj
+ 0002:000042e0       ??_C@_0EE@IHNMKGA@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800492e0     _coder_segmentation_info.obj
+ 0002:00004330       ??_C@_0EK@DAIIEKFK@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049330     _coder_segmentation_info.obj
+ 0002:00004380       ??_C@_0DM@CMPJFBOP@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049380     _coder_segmentation_info.obj
+ 0002:000043c0       ??_C@_0EC@FOBJIPAB@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800493c0     _coder_segmentation_info.obj
+ 0002:00004408       ??_C@_0BA@LOGEJEPK@eml_scalar_ceil?$AA@ 0000000180049408     _coder_segmentation_info.obj
+ 0002:00004418       ??_C@_0DH@EIIGMJDC@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049418     _coder_segmentation_info.obj
+ 0002:00004450       ??_C@_0EH@ELBOGDPJ@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049450     _coder_segmentation_info.obj
+ 0002:00004498       ??_C@_0BH@LFDIDDBI@eml_scalexp_compatible?$AA@ 0000000180049498     _coder_segmentation_info.obj
+ 0002:000044b0       ??_C@_0DI@PBKCBADP@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800494b0     _coder_segmentation_info.obj
+ 0002:000044e8       ??_C@_07HBNJHBAD@eml_eps?$AA@ 00000001800494e8     _coder_segmentation_info.obj
+ 0002:000044f0       ??_C@_0ED@NGEOFMII@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800494f0     _coder_segmentation_info.obj
+ 0002:00004538       ??_C@_0BD@EACIBKCB@eml_is_float_class?$AA@ 0000000180049538     _coder_segmentation_info.obj
+ 0002:00004550       ??_C@_0ED@DLMKEIEI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049550     _coder_segmentation_info.obj
+ 0002:00004598       ??_C@_0BB@MHDGCEOD@eml_scalar_round?$AA@ 0000000180049598     _coder_segmentation_info.obj
+ 0002:000045b0       ??_C@_0DP@MAHEJPGM@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800495b0     _coder_segmentation_info.obj
+ 0002:000045f0       ??_C@_0DG@CNGGIACG@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800495f0     _coder_segmentation_info.obj
+ 0002:00004630       ??_C@_0EL@PHDBKCJB@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049630     _coder_segmentation_info.obj
+ 0002:00004680       ??_C@_0BL@CDOFOJKC@eml_const_nonsingleton_dim?$AA@ 0000000180049680     _coder_segmentation_info.obj
+ 0002:000046a0       ??_C@_0EB@NCIHPOOF@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800496a0     _coder_segmentation_info.obj
+ 0002:000046e8       ??_C@_0DK@ENDCOJGF@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 00000001800496e8     _coder_segmentation_info.obj
+ 0002:00004730       ??_C@_0EA@MGDACNOI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049730     _coder_segmentation_info.obj
+ 0002:00004770       ??_C@_0DH@COGCLMCI@?$FLILXE?$FN$matlabroot$?1toolbox?1eml?1l@ 0000000180049770     _coder_segmentation_info.obj
+ 0002:000047a8       ??_C@_07EIHKFOOB@logical?$AA@ 00000001800497a8     _coder_segmentation_info.obj
+ 0002:000047b0       ??_C@_0BD@OBCMJNNI@8?42?40?4701?5?$CIR2013b?$CJ?$AA@ 00000001800497b0     _coder_segmentation_info.obj
+ 0002:000047c8       ??_C@_0P@FDPDNMBC@ConstantInputs?$AA@ 00000001800497c8     _coder_segmentation_info.obj
+ 0002:000047d8       ??_C@_0BA@HBLCOFA@NumberOfOutputs?$AA@ 00000001800497d8     _coder_segmentation_info.obj
+ 0002:000047e8       ??_C@_0P@DJPKAEOC@NumberOfInputs?$AA@ 00000001800497e8     _coder_segmentation_info.obj
+ 0002:000047f8       ??_C@_04FABLJDN@Name?$AA@  00000001800497f8     _coder_segmentation_info.obj
+ 0002:00004800       ??_C@_0N@HPEKDNOD@CoverageInfo?$AA@ 0000000180049800     _coder_segmentation_info.obj
+ 0002:00004810       ??_C@_0M@HOOGCLMJ@EntryPoints?$AA@ 0000000180049810     _coder_segmentation_info.obj
+ 0002:00004820       ??_C@_0BC@PFKIGKIM@ResolvedFunctions?$AA@ 0000000180049820     _coder_segmentation_info.obj
+ 0002:00004838       ??_C@_07NGFJPNPN@Version?$AA@ 0000000180049838     _coder_segmentation_info.obj
+ 0002:00004840       _pDefaultRawDllMain        0000000180049840     MSVCRT:crtdll.obj
+ 0002:00004840       _pRawDllMain               0000000180049840     MSVCRT:crtdll.obj
+ 0002:00004858       __rtc_iaa                  0000000180049858     MSVCRT:_initsect_.obj
+ 0002:00004860       __rtc_izz                  0000000180049860     MSVCRT:_initsect_.obj
+ 0002:00004868       __rtc_taa                  0000000180049868     MSVCRT:_initsect_.obj
+ 0002:00004870       __rtc_tzz                  0000000180049870     MSVCRT:_initsect_.obj
+ 0002:00005330       __IMPORT_DESCRIPTOR_libmx  000000018004a330     libmx:libmx.dll
+ 0002:00005344       __IMPORT_DESCRIPTOR_libmex 000000018004a344     libmex:libmex.dll
+ 0002:00005358       __IMPORT_DESCRIPTOR_libemlrt 000000018004a358     libemlrt:libemlrt.dll
+ 0002:0000536c       __IMPORT_DESCRIPTOR_libmwblas 000000018004a36c     libmwblas:libmwblas.dll
+ 0002:00005380       __IMPORT_DESCRIPTOR_libmwmathutil 000000018004a380     libmwmathutil:libmwmathutil.dll
+ 0002:00005394       __IMPORT_DESCRIPTOR_MSVCR100 000000018004a394     MSVCRT:MSVCR100.dll
+ 0002:000053a8       __IMPORT_DESCRIPTOR_KERNEL32 000000018004a3a8     kernel32:KERNEL32.dll
+ 0002:000053bc       __NULL_IMPORT_DESCRIPTOR   000000018004a3bc     libmx:libmx.dll
+ 0003:00000000       eb_emlrtRSI                000000018004c000     segmentation_data.obj
+ 0003:00000018       fb_emlrtRSI                000000018004c018     segmentation_data.obj
+ 0003:00000030       ib_emlrtRSI                000000018004c030     segmentation_data.obj
+ 0003:00000048       jb_emlrtRSI                000000018004c048     segmentation_data.obj
+ 0003:00000060       kb_emlrtRSI                000000018004c060     segmentation_data.obj
+ 0003:00000078       nb_emlrtRSI                000000018004c078     segmentation_data.obj
+ 0003:00000090       ob_emlrtRSI                000000018004c090     segmentation_data.obj
+ 0003:000000a8       pb_emlrtRSI                000000018004c0a8     segmentation_data.obj
+ 0003:000000c0       qb_emlrtRSI                000000018004c0c0     segmentation_data.obj
+ 0003:000000d8       rb_emlrtRSI                000000018004c0d8     segmentation_data.obj
+ 0003:000000f0       sb_emlrtRSI                000000018004c0f0     segmentation_data.obj
+ 0003:00000108       tb_emlrtRSI                000000018004c108     segmentation_data.obj
+ 0003:00000120       ub_emlrtRSI                000000018004c120     segmentation_data.obj
+ 0003:00000138       vb_emlrtRSI                000000018004c138     segmentation_data.obj
+ 0003:00000150       fc_emlrtRSI                000000018004c150     segmentation_data.obj
+ 0003:00000168       hc_emlrtRSI                000000018004c168     segmentation_data.obj
+ 0003:00000180       ic_emlrtRSI                000000018004c180     segmentation_data.obj
+ 0003:00000198       gd_emlrtRSI                000000018004c198     segmentation_data.obj
+ 0003:000001b0       hd_emlrtRSI                000000018004c1b0     segmentation_data.obj
+ 0003:000001c8       jd_emlrtRSI                000000018004c1c8     segmentation_data.obj
+ 0003:000001e0       kd_emlrtRSI                000000018004c1e0     segmentation_data.obj
+ 0003:000001f8       ld_emlrtRSI                000000018004c1f8     segmentation_data.obj
+ 0003:00000210       md_emlrtRSI                000000018004c210     segmentation_data.obj
+ 0003:00000228       nd_emlrtRSI                000000018004c228     segmentation_data.obj
+ 0003:00000240       sd_emlrtRSI                000000018004c240     segmentation_data.obj
+ 0003:00000258       td_emlrtRSI                000000018004c258     segmentation_data.obj
+ 0003:00000270       ud_emlrtRSI                000000018004c270     segmentation_data.obj
+ 0003:00000288       wd_emlrtRSI                000000018004c288     segmentation_data.obj
+ 0003:000002a0       yd_emlrtRSI                000000018004c2a0     segmentation_data.obj
+ 0003:000002b8       ae_emlrtRSI                000000018004c2b8     segmentation_data.obj
+ 0003:000002d0       be_emlrtRSI                000000018004c2d0     segmentation_data.obj
+ 0003:000002e8       ce_emlrtRSI                000000018004c2e8     segmentation_data.obj
+ 0003:00000300       de_emlrtRSI                000000018004c300     segmentation_data.obj
+ 0003:00000318       ee_emlrtRSI                000000018004c318     segmentation_data.obj
+ 0003:00000330       fe_emlrtRSI                000000018004c330     segmentation_data.obj
+ 0003:00000348       ge_emlrtRSI                000000018004c348     segmentation_data.obj
+ 0003:00000360       he_emlrtRSI                000000018004c360     segmentation_data.obj
+ 0003:00000378       oe_emlrtRSI                000000018004c378     segmentation_data.obj
+ 0003:00000390       pe_emlrtRSI                000000018004c390     segmentation_data.obj
+ 0003:000003a8       ff_emlrtRSI                000000018004c3a8     segmentation_data.obj
+ 0003:000003c0       xi_emlrtRSI                000000018004c3c0     segmentation_data.obj
+ 0003:000003d8       yi_emlrtRSI                000000018004c3d8     segmentation_data.obj
+ 0003:000003f0       pl_emlrtRSI                000000018004c3f0     segmentation_data.obj
+ 0003:00000408       ql_emlrtRSI                000000018004c408     segmentation_data.obj
+ 0003:00000420       rl_emlrtRSI                000000018004c420     segmentation_data.obj
+ 0003:00000438       sl_emlrtRSI                000000018004c438     segmentation_data.obj
+ 0003:00000450       tl_emlrtRSI                000000018004c450     segmentation_data.obj
+ 0003:00000468       ul_emlrtRSI                000000018004c468     segmentation_data.obj
+ 0003:00000480       vl_emlrtRSI                000000018004c480     segmentation_data.obj
+ 0003:00000498       wl_emlrtRSI                000000018004c498     segmentation_data.obj
+ 0003:000004b0       xl_emlrtRSI                000000018004c4b0     segmentation_data.obj
+ 0003:000004c8       yl_emlrtRSI                000000018004c4c8     segmentation_data.obj
+ 0003:000004e0       am_emlrtRSI                000000018004c4e0     segmentation_data.obj
+ 0003:000004f8       bm_emlrtRSI                000000018004c4f8     segmentation_data.obj
+ 0003:00000510       cm_emlrtRSI                000000018004c510     segmentation_data.obj
+ 0003:00000528       dm_emlrtRSI                000000018004c528     segmentation_data.obj
+ 0003:00000540       em_emlrtRSI                000000018004c540     segmentation_data.obj
+ 0003:00000558       fm_emlrtRSI                000000018004c558     segmentation_data.obj
+ 0003:00000570       gm_emlrtRSI                000000018004c570     segmentation_data.obj
+ 0003:00000588       hm_emlrtRSI                000000018004c588     segmentation_data.obj
+ 0003:000005a0       im_emlrtRSI                000000018004c5a0     segmentation_data.obj
+ 0003:000005b8       jm_emlrtRSI                000000018004c5b8     segmentation_data.obj
+ 0003:000005d0       km_emlrtRSI                000000018004c5d0     segmentation_data.obj
+ 0003:000005e8       lm_emlrtRSI                000000018004c5e8     segmentation_data.obj
+ 0003:00000600       mm_emlrtRSI                000000018004c600     segmentation_data.obj
+ 0003:00000618       nm_emlrtRSI                000000018004c618     segmentation_data.obj
+ 0003:00000630       om_emlrtRSI                000000018004c630     segmentation_data.obj
+ 0003:00000648       pm_emlrtRSI                000000018004c648     segmentation_data.obj
+ 0003:00000660       qm_emlrtRSI                000000018004c660     segmentation_data.obj
+ 0003:00000678       rm_emlrtRSI                000000018004c678     segmentation_data.obj
+ 0003:00000690       sm_emlrtRSI                000000018004c690     segmentation_data.obj
+ 0003:000006a8       tm_emlrtRSI                000000018004c6a8     segmentation_data.obj
+ 0003:000006c0       um_emlrtRSI                000000018004c6c0     segmentation_data.obj
+ 0003:000006d8       vm_emlrtRSI                000000018004c6d8     segmentation_data.obj
+ 0003:000006f0       wm_emlrtRSI                000000018004c6f0     segmentation_data.obj
+ 0003:00000708       xm_emlrtRSI                000000018004c708     segmentation_data.obj
+ 0003:00000720       ym_emlrtRSI                000000018004c720     segmentation_data.obj
+ 0003:00000738       an_emlrtRSI                000000018004c738     segmentation_data.obj
+ 0003:00000750       bn_emlrtRSI                000000018004c750     segmentation_data.obj
+ 0003:00000768       cn_emlrtRSI                000000018004c768     segmentation_data.obj
+ 0003:00000780       dn_emlrtRSI                000000018004c780     segmentation_data.obj
+ 0003:00000798       en_emlrtRSI                000000018004c798     segmentation_data.obj
+ 0003:000007b0       fn_emlrtRSI                000000018004c7b0     segmentation_data.obj
+ 0003:000007c8       gn_emlrtRSI                000000018004c7c8     segmentation_data.obj
+ 0003:000007e0       hn_emlrtRSI                000000018004c7e0     segmentation_data.obj
+ 0003:000007f8       in_emlrtRSI                000000018004c7f8     segmentation_data.obj
+ 0003:00000810       jn_emlrtRSI                000000018004c810     segmentation_data.obj
+ 0003:00000828       kn_emlrtRSI                000000018004c828     segmentation_data.obj
+ 0003:00000840       ln_emlrtRSI                000000018004c840     segmentation_data.obj
+ 0003:00000858       mn_emlrtRSI                000000018004c858     segmentation_data.obj
+ 0003:00000870       nn_emlrtRSI                000000018004c870     segmentation_data.obj
+ 0003:00000888       on_emlrtRSI                000000018004c888     segmentation_data.obj
+ 0003:000008a0       pn_emlrtRSI                000000018004c8a0     segmentation_data.obj
+ 0003:000008b8       rn_emlrtRSI                000000018004c8b8     segmentation_data.obj
+ 0003:000008d0       sn_emlrtRSI                000000018004c8d0     segmentation_data.obj
+ 0003:000008e8       tn_emlrtRSI                000000018004c8e8     segmentation_data.obj
+ 0003:00000900       un_emlrtRSI                000000018004c900     segmentation_data.obj
+ 0003:00000918       vn_emlrtRSI                000000018004c918     segmentation_data.obj
+ 0003:00000930       wn_emlrtRSI                000000018004c930     segmentation_data.obj
+ 0003:00000948       xn_emlrtRSI                000000018004c948     segmentation_data.obj
+ 0003:00000960       yn_emlrtRSI                000000018004c960     segmentation_data.obj
+ 0003:00000978       ao_emlrtRSI                000000018004c978     segmentation_data.obj
+ 0003:00000990       bo_emlrtRSI                000000018004c990     segmentation_data.obj
+ 0003:000009a8       co_emlrtRSI                000000018004c9a8     segmentation_data.obj
+ 0003:000009c0       do_emlrtRSI                000000018004c9c0     segmentation_data.obj
+ 0003:000009d8       eo_emlrtRSI                000000018004c9d8     segmentation_data.obj
+ 0003:000009f0       fo_emlrtRSI                000000018004c9f0     segmentation_data.obj
+ 0003:00000a08       go_emlrtRSI                000000018004ca08     segmentation_data.obj
+ 0003:00000a20       ho_emlrtRSI                000000018004ca20     segmentation_data.obj
+ 0003:00000a38       io_emlrtRSI                000000018004ca38     segmentation_data.obj
+ 0003:00000a50       jo_emlrtRSI                000000018004ca50     segmentation_data.obj
+ 0003:00000a68       ko_emlrtRSI                000000018004ca68     segmentation_data.obj
+ 0003:00000a80       lo_emlrtRSI                000000018004ca80     segmentation_data.obj
+ 0003:00000a98       mo_emlrtRSI                000000018004ca98     segmentation_data.obj
+ 0003:00000ab0       no_emlrtRSI                000000018004cab0     segmentation_data.obj
+ 0003:00000ac8       oo_emlrtRSI                000000018004cac8     segmentation_data.obj
+ 0003:00000ae0       po_emlrtRSI                000000018004cae0     segmentation_data.obj
+ 0003:00000af8       qo_emlrtRSI                000000018004caf8     segmentation_data.obj
+ 0003:00000b10       wo_emlrtRSI                000000018004cb10     segmentation_data.obj
+ 0003:00000b28       xo_emlrtRSI                000000018004cb28     segmentation_data.obj
+ 0003:00000b40       yo_emlrtRSI                000000018004cb40     segmentation_data.obj
+ 0003:00000b58       ap_emlrtRSI                000000018004cb58     segmentation_data.obj
+ 0003:00000b70       bp_emlrtRSI                000000018004cb70     segmentation_data.obj
+ 0003:00000b88       cp_emlrtRSI                000000018004cb88     segmentation_data.obj
+ 0003:00000ba0       dp_emlrtRSI                000000018004cba0     segmentation_data.obj
+ 0003:00000bb8       lp_emlrtRSI                000000018004cbb8     segmentation_data.obj
+ 0003:00000bd0       mp_emlrtRSI                000000018004cbd0     segmentation_data.obj
+ 0003:00000be8       np_emlrtRSI                000000018004cbe8     segmentation_data.obj
+ 0003:00000c00       op_emlrtRSI                000000018004cc00     segmentation_data.obj
+ 0003:00000c18       pp_emlrtRSI                000000018004cc18     segmentation_data.obj
+ 0003:00000c30       qp_emlrtRSI                000000018004cc30     segmentation_data.obj
+ 0003:00000c48       rp_emlrtRSI                000000018004cc48     segmentation_data.obj
+ 0003:00000c60       cq_emlrtRSI                000000018004cc60     segmentation_data.obj
+ 0003:00000c78       emlrtMCI                   000000018004cc78     segmentation_data.obj
+ 0003:00000c90       q_emlrtMCI                 000000018004cc90     segmentation_data.obj
+ 0003:00000ca8       r_emlrtMCI                 000000018004cca8     segmentation_data.obj
+ 0003:00000cc0       s_emlrtMCI                 000000018004ccc0     segmentation_data.obj
+ 0003:00000cd8       t_emlrtMCI                 000000018004ccd8     segmentation_data.obj
+ 0003:00000cf0       u_emlrtMCI                 000000018004ccf0     segmentation_data.obj
+ 0003:00000d08       v_emlrtMCI                 000000018004cd08     segmentation_data.obj
+ 0003:00000d20       c_emlrtRTEI                000000018004cd20     segmentation_data.obj
+ 0003:00000d38       o_emlrtRTEI                000000018004cd38     segmentation_data.obj
+ 0003:00000d50       q_emlrtRTEI                000000018004cd50     segmentation_data.obj
+ 0003:00000d68       gb_emlrtRTEI               000000018004cd68     segmentation_data.obj
+ 0003:00000d80       hb_emlrtRTEI               000000018004cd80     segmentation_data.obj
+ 0003:00000d98       sb_emlrtRTEI               000000018004cd98     segmentation_data.obj
+ 0003:00000db0       tb_emlrtRTEI               000000018004cdb0     segmentation_data.obj
+ 0003:00000dc8       ub_emlrtRTEI               000000018004cdc8     segmentation_data.obj
+ 0003:00000de0       vb_emlrtRTEI               000000018004cde0     segmentation_data.obj
+ 0003:00000df8       u_emlrtBCI                 000000018004cdf8     segmentation_data.obj
+ 0003:00000e28       lb_emlrtBCI                000000018004ce28     segmentation_data.obj
+ 0003:00000e58       mb_emlrtBCI                000000018004ce58     segmentation_data.obj
+ 0003:00000e88       nb_emlrtBCI                000000018004ce88     segmentation_data.obj
+ 0003:00000eb8       ob_emlrtBCI                000000018004ceb8     segmentation_data.obj
+ 0003:00000ee8       cr_emlrtRSI                000000018004cee8     segmentation_data.obj
+ 0003:00000f00       dr_emlrtRSI                000000018004cf00     segmentation_data.obj
+ 0003:00000f18       er_emlrtRSI                000000018004cf18     segmentation_data.obj
+ 0003:00000f30       or_emlrtRSI                000000018004cf30     segmentation_data.obj
+ 0003:00000f48       pr_emlrtRSI                000000018004cf48     segmentation_data.obj
+ 0003:00000f60       sr_emlrtRSI                000000018004cf60     segmentation_data.obj
+ 0003:00004890       emlrtContextGlobal         0000000180050890     segmentation_mex.obj
+ 0003:000048d0       _fltused                   00000001800508d0     MSVCRT:dllsupp.obj
+ 0003:000048d8       __security_cookie          00000001800508d8     MSVCRT:gs_cookie.obj
+ 0003:000048e0       __security_cookie_complement 00000001800508e0     MSVCRT:gs_cookie.obj
+ 0003:000048f0       __native_dllmain_reason    00000001800508f0     MSVCRT:natstart.obj
+ 0003:000048f4       __native_vcclrit_reason    00000001800508f4     MSVCRT:natstart.obj
+ 0003:00004900       emlrtRootTLSGlobal         0000000180050900     segmentation_mex.obj
+ 0003:00004e80       ?__type_info_root_node@@3U__type_info_node@@A 0000000180050e80     MSVCRT:tncleanup.obj
+ 0003:00004e90       emlrtBreakCheckR2012bFlagVar 0000000180050e90     <common>
+ 0003:00004e98       __native_startup_state     0000000180050e98     <common>
+ 0003:00004ea0       __native_startup_lock      0000000180050ea0     <common>
+ 0003:00004ea8       __onexitend                0000000180050ea8     <common>
+ 0003:00004eb0       __onexitbegin              0000000180050eb0     <common>
+ 0003:00004eb8       __dyn_tls_init_callback    0000000180050eb8     <common>
+
+ entry point at        0001:00043564
+
+ Static symbols
+
+ 0001:00000180       b_eml_li_find              0000000180001180 f   segmentation.obj
+ 0001:00000370       b_eml_null_assignment      0000000180001370 f   segmentation.obj
+ 0001:00000700       eml_li_find                0000000180001700 f   segmentation.obj
+ 0001:000008d0       eml_null_assignment        00000001800018d0 f   segmentation.obj
+ 0001:00007030       b_eml_xgemm                0000000180008030 f   bspline_inv.obj
+ 0001:00007130       eml_assert_valid_size_arg  0000000180008130 f   bspline_inv.obj
+ 0001:0000f8b0       c_eml_xgemm                00000001800108b0 f   pinv.obj
+ 0001:0000f9a0       eml_xswap                  00000001800109a0 f   pinv.obj
+ 0001:0000fb50       eml_xgesvd                 0000000180010b50 f   pinv.obj
+ 0001:00012720       eml_pinv                   0000000180013720 f   pinv.obj
+ 0001:00016e50       d_emlrt_marshallOut        0000000180017e50 f   segmentation_api.obj
+ 0001:00016f20       emlrt_marshallOut          0000000180017f20 f   segmentation_api.obj
+ 0001:00017260       f_emlrt_marshallIn         0000000180018260 f   segmentation_api.obj
+ 0001:00017370       c_emlrt_marshallOut        0000000180018370 f   segmentation_api.obj
+ 0001:00017780       emlrt_marshallIn           0000000180018780 f   segmentation_api.obj
+ 0001:00017dc0       emxCopy_real_T             0000000180018dc0 f   segmentation_emxutil.obj
+ 0001:00018550       b_emxExpand_struct_T       0000000180019550 f   segmentation_emxutil.obj
+ 0001:000186a0       b_emxTrim_struct_T         00000001800196a0 f   segmentation_emxutil.obj
+ 0001:00018770       emxExpand_struct_T         0000000180019770 f   segmentation_emxutil.obj
+ 0001:00018840       emxTrim_struct_T           0000000180019840 f   segmentation_emxutil.obj
+ 0001:00018b40       segmentation_mexFunction   0000000180019b40 f   segmentation_mex.obj
+ 0001:00018d10       b_emlrt_marshallOut        0000000180019d10 f   _coder_segmentation_info.obj
+ 0001:00018d70       b_info_helper              0000000180019d70 f   _coder_segmentation_info.obj
+ 0001:00021e80       c_info_helper              0000000180022e80 f   _coder_segmentation_info.obj
+ 0001:0002b490       d_info_helper              000000018002c490 f   _coder_segmentation_info.obj
+ 0001:00034aa0       e_info_helper              0000000180035aa0 f   _coder_segmentation_info.obj
+ 0001:00039c10       info_helper                000000018003ac10 f   _coder_segmentation_info.obj
+ 0001:0004316c       pre_c_init                 000000018004416c f   MSVCRT:crtdll.obj
+ 0001:00043428       __DllMainCRTStartup        0000000180044428 f   MSVCRT:crtdll.obj
+ 0001:00043a30       __DllMainCRTStartup$filt$0 0000000180044a30 f   MSVCRT:crtdll.obj
+ 0001:00043a60       __DllMainCRTStartup$fin$1  0000000180044a60 f   MSVCRT:crtdll.obj
+ 0001:00043a7a       _onexit$fin$0              0000000180044a7a f   MSVCRT:atonexit.obj
+ 0001:00043aa0       _IsNonwritableInCurrentImage$filt$0 0000000180044aa0 f   MSVCRT:pesect.obj
