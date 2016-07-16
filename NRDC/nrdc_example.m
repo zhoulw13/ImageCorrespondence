@@ -1,7 +1,10 @@
+function [Corr, Con, Src, Ref] = nrdc_example(Src_path, Ref_path)
+
 %% Read files   
 Src             = imread(Src_path);
 Ref             = imread(Ref_path);
 
+%{
 %% Reduce size if source image is too big
 OriginalSource = Src; % Keep the original source before changing its size.
 rf = max(max(size(Src)))  / 640;
@@ -11,13 +14,18 @@ if (rf > 1)
     Ref = imresize(Ref, 1.0/rf);
 end
 
+Src_origin = double(Src);
+Ref_origin = double(Ref);
+%}
+
 Src = double(Src) / 255.0;
 Ref = double(Ref) / 255.0;
 
+%{
 labTransformation = makecform('srgb2lab');
 Src_lab = applycform(Src,labTransformation);
 Ref_lab = applycform(Ref,labTransformation);
-
+%}
 
 %% Set an empty options struct
 NRDC_Options = [];
@@ -103,7 +111,7 @@ end
 if isempty(DCF)
     disp('No matching has been found.')
 else
-    [DCF, Confidence] = dcfDisp(DCF, size(Ref), Confidence);
+    [Corr, Con] = dcfDisp_modi(DCF, size(Ref), Confidence);
     % Display Dense correspondence field:
     %figure; imshow(dcfDisp(DCF, size(Ref), Confidence));
 
@@ -121,4 +129,6 @@ else
 
     % Display the global result:
     %figure; imshow(GlobalClrTrnsResult);
+end
+
 end

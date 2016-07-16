@@ -97,7 +97,22 @@ ref = zeros(size(src, 1), 2, 1);
 temp1 = control_p.x;
 temp2 = control_p.y;
 
-ref(:, 1) = Au*temp1(:);
-ref(:, 2) = Av*temp2(:);
+if (ux+uy+vx+vy) == 0
+	ref(:, 1) = Au*temp1(:);
+	ref(:, 2) = Av*temp2(:);
+else
+	if ux ~= 0
+		ref(:,1) = Au*(temp1-repmat((1:h)'-2, 1, w))+1/30;
+	end
+	if uy ~= 0
+		ref(:,1) = Au*(temp1-repmat((1:h)'-2, 1, w));
+	end
+	if vx ~= 0
+		ref(:,2) = Av*(temp2-repmat((1:w)-2, h, 1));
+	end
+	if vy ~= 0
+		ref(:,2) = Av*(temp2-repmat((1:w)-2, h, 1))+1/30;
+	end
+end
 
 end

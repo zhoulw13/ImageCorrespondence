@@ -1,0 +1,12 @@
+b-spline:
+b-spline 控制点的个数问题
+superpixel的像素缺省影响结果吗
+
+merge:
+无法渠道合适的阈值达到论文中被子图片的效果
+
+extension:
+论文中的矩阵变换有误？
+bilinear interpolation是干了什么
+
+用demo运行被子图像得不到论文中那样的结果，是阈值有变化吗？

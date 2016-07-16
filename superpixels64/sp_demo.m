@@ -1,11 +1,12 @@
 % sp_demo.m
+function [Sp, Seg, Sp2] = sp_demo(I)
 %
 % See instructions in README.
 
 
 
 %I = im2double(imread('img1.ppm'));
-I = im2double(Src);
+%I = im2double(Src);
 
 N = size(I,1);
 M = size(I,2);
@@ -66,3 +67,4 @@ fprintf(' took %.2f minutes\n',etime(clock,st)/60);
 
 
 
+end

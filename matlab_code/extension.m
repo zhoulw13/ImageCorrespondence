@@ -31,6 +31,8 @@ errors = [];
 
 for i=1:surface_amount
     modified = true;
+    temp_sx = sp_set(i).val(:, 1);
+    temp_sy = sp_set(i).val(:, 2);
     while modified == true
         modified = false;
         superpixel = sp_set(i).val;
@@ -39,16 +41,17 @@ for i=1:surface_amount
         single_ref_set = bspline(superpixel, sp_bspline, bound);
         
         %% find adjacency area within 5 pixels
-        omega = superpixel+repmat([0, 0], size(superpixel, 1), 1);
+        changed = double([temp_sx, temp_sy]);
+        omega = changed+repmat([0, 0], size(changed, 1), 1);
         for j= -5:5
             for k= abs(j)-5:5-abs(j)
-                set = superpixel+repmat([j, k], size(superpixel, 1), 1);
+                set = changed+repmat([j, k], size(changed, 1), 1);
                 omega = sortrows(omega);
                 omega = union(omega, sortrows(set), 'rows');
             end
         end
         omega = sortrows(omega);
-        omega = setdiff(omega, sortrows(superpixel), 'rows');
+        omega = setdiff(omega, sortrows(changed), 'rows');
         omega(omega(:,1)<1 | omega(:,2)<1 | omega(:, 1)>x | omega(:, 2)>y, :) = [];
         temp = omega(:, 1)+(omega(:, 2)-1)*x;
         omega(Sp_new(temp)~=0, :) = [];
@@ -71,12 +74,13 @@ for i=1:surface_amount
             %% compute temp correspondence
             ref_q = single_ref_set(ind, :);
             ref_p = ref_q + (bspline_single(superpixel(ind, :), sp_bspline, bound, 1,0,0,1)).*(omega(j, :) - superpixel(ind,:));
-            offset_p = ref_p - omega(j, :);
+            offset_p = ref_p.*[x y] ;%- omega(j, :);
             
             %% compute patch transformation jacobian matirx
             [temp1] = bspline_single(superpixel(ind, :), sp_bspline, bound ,1,0,1,0);
             [temp2] = bspline_single(superpixel(ind, :), sp_bspline, bound ,0,1,0,1);
             jacobian = [temp1(1, 1), temp2(1, 1); temp1(1, 2), temp2(1, 2)];
+            jacobian = jacobian.*[x x; y y];
             
             %% minimize error            
             error = 10000000;
@@ -91,25 +95,26 @@ for i=1:surface_amount
                         for delta_y=[-1,0,1]
                             M = [jacobian_d, offset_p'+[delta_x; delta_y]; 0,0,1];
                             Np = patch + repmat([omega(j,:)';0], 1, 49);
-                            Np_ref = M*Np;
+                            Np_ref = M*patch;
                             
-                            Np = int32(Np);
-                            Np(Np<1)=1;
-                            Np(1, Np(1, :)>x)=x;
-                            Np(2, Np(2, :)>y)=y;
+                            Np(1, :) = Np(1, :)/x;
+                            Np(2, :) = Np(2, :)/y;
+                            Np(Np<0)=0;
+                            Np(Np>1)=1;
                             
-                            Np_ref = int32(Np_ref);
-                            Np_ref(Np_ref<1)=1;
-                            Np_ref(1, Np_ref(1, :)>x)=x;
-                            Np_ref(2, Np_ref(2, :)>y)=y;
+                            Np_ref(1, :) = Np_ref(1, :)/x;
+                            Np_ref(2, :) = Np_ref(2, :)/y;
+                            Np_ref(Np_ref<0)=0;
+                            Np_ref(Np_ref>1)=1;
     
                             Ps = getPixelsValue(Src_lab, Np');
                             Pt = getPixelsValue(Ref_lab, Np_ref');
                             
                             Ps = (Ps - repmat(mean(Ps), 49, 1))./(repmat(std(Ps), 49, 1));
                             Pt = (Pt - repmat(mean(Pt), 49, 1))./(repmat(std(Pt), 49, 1));
-
-                            
+%{
+                            Ps = Ps./(repmat(std(Ps), 49, 1));
+                            Pt = Pt./(repmat(std(Pt), 49, 1));
                             t1 = sqrt(sum(Ps.^2));
                             t2 = sqrt(sum(Pt.^2));
                             Ps(:, 1) = Ps(:, 1)./t1(1);
@@ -118,7 +123,7 @@ for i=1:surface_amount
                             Pt(:, 1) = Pt(:, 1)./t2(1);
                             Pt(:, 2) = Pt(:, 2)./t2(2);
                             Pt(:, 3) = Pt(:, 3)./t2(3);
-                            
+%}                          
                             e = sum(sum((Ps - Pt).^2));
                             if e < error
                                 error = e;
@@ -129,13 +134,14 @@ for i=1:surface_amount
                 end
             end
             errors = [errors; error];
-            if error < 10
+            if error < 50
                 modified = true;
                 
                 temp_sx = [temp_sx; omega(j,1)];
                 temp_sy = [temp_sy; omega(j,2)];
                 Sp_new(omega(j,1), omega(j,2)) = i;
-                refp = refp + offset_p + omega(j, :);
+                %refp = refp + offset_p + omega(j, :);
+                refp = (refp+offset_p)./[x y];
                 temp_rx = [temp_rx; refp(1,1)];
                 temp_ry = [temp_ry; refp(1,2)];
                 

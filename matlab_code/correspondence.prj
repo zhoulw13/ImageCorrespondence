@@ -248,10 +248,7 @@
         <param.CustomInclude />
         <param.CustomSource />
         <param.CustomLibrary />
-        <param.CodeReplacementLibrary />
         <param.SameHardware />
-        <param.HardwareVendor.Production />
-        <param.HardwareType.Production />
         <var.instance.enabled.Production />
         <param.HardwareSizeChar.Production />
         <param.HardwareSizeShort.Production />
@@ -263,10 +260,7 @@
         <param.HardwareSizeWord.Production />
         <param.HardwareSizePointer.Production />
         <param.HardwareEndianness.Production />
-        <param.HardwareAtomicIntegerSize.Production />
         <param.HardwareAtomicFloatSize.Production />
-        <param.HardwareVendor.Target />
-        <param.HardwareType.Target />
         <var.instance.enabled.Target />
         <param.HardwareSizeChar.Target />
         <param.HardwareSizeShort.Target />
@@ -278,10 +272,7 @@
         <param.HardwareSizeWord.Target />
         <param.HardwareSizePointer.Target />
         <param.HardwareEndianness.Target />
-        <param.HardwareAtomicIntegerSize.Target />
         <param.HardwareAtomicFloatSize.Target />
-        <param.Toolchain />
-        <param.BuildConfiguration />
         <param.CustomToolchainOptions />
         <param.ConstantFoldingTimeout />
         <param.RecursionLimit />
@@ -594,14 +585,6 @@
             <Complex>false</Complex>
           </Input>
           <Input Name="DCF">
-            <Class>double</Class>
-            <Size>:inf x :inf x 3</Size>
-            <Value />
-            <InitialValue />
-            <UserDefined>true</UserDefined>
-            <Complex>false</Complex>
-          </Input>
-          <Input Name="Ref">
             <Class>double</Class>
             <Size>:inf x :inf x 3</Size>
             <Value />

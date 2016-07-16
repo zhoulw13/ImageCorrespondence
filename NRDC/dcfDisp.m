@@ -1,4 +1,4 @@
-function [ DCF_disp , Corr_Confidence ] = dcfDisp( DCF, refSize, Confidence)
+function [ DCF_disp ] = dcfDisp( DCF, refSize, Confidence)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -9,18 +9,17 @@ function [ DCF_disp , Corr_Confidence ] = dcfDisp( DCF, refSize, Confidence)
     
     [DCF, Corr_Confidence] = moveToCenter(DCF, patch_w, Confidence);
     
-    DCF_disp = zeros(size(DCF,1),size(DCF,2),3);
-    DCF_disp(:,:,1:2) = int32(DCF(:,:,1:2));
+    DCF_disp = double(zeros(size(DCF,1),size(DCF,2),3));
+    DCF_disp(:,:,1:2) = DCF(:,:,1:2);
     
-    %DCF_disp(:,:,1) = DCF_disp(:,:,1) / refSize(2);
-    %DCF_disp(:,:,2) = DCF_disp(:,:,2) / refSize(1);
-    
+    DCF_disp(:,:,1) = DCF_disp(:,:,1) / refSize(2);
+    DCF_disp(:,:,2) = DCF_disp(:,:,2) / refSize(1);
     DCF_disp(:,:,3)=0;
         
     if exist('Corr_Confidence', 'var') && ~isempty(Corr_Confidence)
         Corr_Confidence(Corr_Confidence >= 0.5) = 1;
         Corr_Confidence(Corr_Confidence < 0.5) = 0;
-        DCF_disp = DCF_disp .* repmat(Corr_Confidence, [1,1,3]);
+        DCF_disp = DCF_disp .*  repmat(Corr_Confidence, [1,1,3]);
     end
 end
 

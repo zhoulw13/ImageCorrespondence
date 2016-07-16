@@ -19,6 +19,7 @@ coder.varsize('ref_set2');
 coder.varsize('ref_set2(:).val');
 coder.varsize('point_x');
 coder.varsize('point_y');
+coder.varsize('ref_point');
 
 [x, y] = size(Sp2);
 sp_set = struct('val', []);
@@ -55,7 +56,7 @@ for i = 1:surface_amount
     for j = 1:point_amount
         point = [sp_set(i).val(j,1), sp_set(i).val(j,2)];
         ref_pos = DCF(point(1), point(2), : );
-        if (ref_pos(1) > 0) && (ref_pos(1) <= y) && (ref_pos(2) > 0) && (ref_pos(2) <= x)
+        if (ref_pos(1) > 0) && (ref_pos(1) <= 1) && (ref_pos(2) > 0) && (ref_pos(2) <= 1) && Confidence(point(1), point(2)) >= 0.6
             point_x = [point_x; point(1)];
             point_y = [point_y; point(2)];
         end
@@ -75,7 +76,7 @@ for i = 1:surface_amount
         con = con + Confidence(sp_set(i).val(j,1), sp_set(i).val(j,2));
     end
     con = con/point_amount;
-    if con >= 0.8
+    if con >= 0.6
         sp_set2 = [sp_set2, sp_set(i)];
         sp_val2 = [sp_val2; sp_val(i)];
     end
@@ -102,24 +103,24 @@ for i = 1:surface_amount
        ref_point = [ref_point;[ref_pos(2), ref_pos(1)]];
    end
    
-   ref_point(ref_point<1)=1;
-   ref_point(ref_point(:, 1)>x, 1)=x;
-   ref_point(ref_point(:, 2)>y, 2)=y;
+   ref_point(ref_point<0)=0;
+   ref_point(ref_point>1)=1;
    item = struct('val', ref_point);
    ref_set = [ref_set, item];
    
    [control_p, error] = bspline_inv(sp_set(i).val, ref_point);
    item = struct('x', control_p(:,:,1), 'y', control_p(:,:,2));
    
+   
    bound = min(sp_set(i).val, [], 1);
-   ref_p = int32(bspline(sp_set(i).val, item, bound));
-   ref_p(ref_p<1)=1;
-   ref_p(ref_p(:, 1)>x, 1)=x;
-   ref_p(ref_p(:, 2)>y, 2)=y;
+   ref_p = (bspline(sp_set(i).val, item, bound));
+   ref_p(ref_p<0)=0;
+   ref_p(ref_p>1)=1;
    
    val_p = getPixelsValue(Ref, ref_p);
    val_o = getPixelsValue(Ref, ref_point);
    error_set(i) = sum(sum((val_p - val_o).^2)) / point_amount;
+   %error_set(i) = error;
    
    bspline_set = [bspline_set, item];
    
@@ -128,7 +129,7 @@ end
 bspline_set(1) = [];
 ref_set(1) = [];
 
-
+%{
 %% remove surfaces with too big error
 error_set2 = [];
 sp_set2 = struct('val', []);
@@ -137,7 +138,7 @@ ref_set2 = struct('val', []);
 bspline_set2 = struct('x', [], 'y', []);
 
 for i=1:surface_amount
-    if error_set(i) < 100
+    if error_set(i) < 1000
         error_set2 = [error_set2; error_set(i)];
         sp_set2 = [sp_set2, sp_set(i)];
         
@@ -145,7 +146,6 @@ for i=1:surface_amount
         
         sp_val2 = [sp_val2; sp_val(i)];
         ref_set2 = [ref_set2, ref_set(i)];
-        
     end
 end
 
@@ -159,6 +159,17 @@ sp_val = sp_val2;
 bspline_set = bspline_set2;
 error = sum(error_set)/size(error_set,1);
 ref_set = ref_set2;
+%}
+
+surface_amount = size(sp_set, 2);
+ref_set = struct('val', []);
+for i=1:surface_amount
+    bound = min(sp_set(i).val, [], 1);
+    ref = (bspline(sp_set(i).val, bspline_set(i), bound));
+    item = struct('val', ref);
+    ref_set = [ref_set, item];
+end
+ref_set(1) = [];
 
        
 %{
