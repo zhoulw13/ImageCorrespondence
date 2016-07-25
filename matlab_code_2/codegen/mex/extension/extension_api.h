@@ -3,7 +3,7 @@
  *
  * Code generation for function 'extension_api'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:29 2016
  *
  */
 
@@ -23,6 +23,6 @@
 #include "extension_types.h"
 
 /* Function Declarations */
-extern void extension_api(emlrtStack *sp, const mxArray * const prhs[5], const mxArray *plhs[4]);
+extern void extension_api(emlrtStack *sp, const mxArray * const prhs[5], const mxArray *plhs[5]);
 #endif
 /* End of code generation (extension_api.h) */

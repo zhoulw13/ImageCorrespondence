@@ -2,17 +2,14 @@ function [sp_set, bspline_set, ref_set, adjacency_graph] = merging(sp_set, sp_va
 %#codegen
 coder.inline('never')
 
-labTransformation = makecform('srgb2lab');
-Ref_lab = applycform(Ref,labTransformation);
-Ref = Ref_lab;
-
 
 %% initialize adjacency graph
-surface_amount = size(sp_set, 2);
-adjacency_graph = zeros(surface_amount, surface_amount, 1);
+m = max(max(Sp2));
+adjacency_graph = zeros(m, m, 1);
 
 [x, y] = size(Sp2);
 
+%{
 for i=1:surface_amount
     %area_i = find(Sp2==sp_val(i));
     area_i = sp_set(i).val(:,1)+(x-1)*sp_set(i).val(:,2);
@@ -27,8 +24,47 @@ for i=1:surface_amount
         end
     end
 end
+%}
 
+[Fx, Fy] = gradient(Sp2);
+diffx = find(Fx~=0);
+sx = size(diffx, 1);
+for i=1:sx
+    b = Sp2(diffx(i));
+    pos = diffx(i)+x;
+    if pos < x*y && Sp2(pos) ~= Sp2(diffx(i))
+        a = Sp2(pos);
+        adjacency_graph(a, b) = 1;
+        adjacency_graph(b, a) = 1;
+    end
+    pos = diffx(i)-x;
+    if pos > 0 && Sp2(pos) ~= Sp2(diffx(i))
+        a = Sp2(pos);
+        adjacency_graph(a, b) = 1;
+        adjacency_graph(b, a) = 1;
+    end
+end
 
+diffy = find(Fy~=0);
+sy = size(diffy, 1);
+for i=1:sy
+    b = Sp2(diffy(i));
+    pos = diffy(i)+1;
+    if mod(pos, x) ~= 1 && Sp2(pos) ~= Sp2(diffy(i))
+        a = Sp2(pos);
+        adjacency_graph(a, b) = 1;
+        adjacency_graph(b, a) = 1;
+    end
+    pos = diffy(i)-1;
+    if mod(pos, x) ~= 0 && Sp2(pos) ~= Sp2(diffy(i))
+        a = Sp2(pos);
+        adjacency_graph(a, b) = 1;
+        adjacency_graph(b, a) = 1;
+    end
+end
+
+adjacency_graph = adjacency_graph(sp_val, sp_val);
+adjacency_graph = triu(adjacency_graph, 1);
 
 %% merge superpixels with similiar bspline
 Dt = [];

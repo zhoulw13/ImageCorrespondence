@@ -3,7 +3,7 @@
  *
  * Code generation for function 'extension'
  *
- * C source code generated on: Thu Jul 14 16:54:47 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -23,6 +23,6 @@
 #include "extension_types.h"
 
 /* Function Declarations */
-extern void extension(const emlrtStack *sp, emxArray_struct_T *sp_set, emxArray_b_struct_T *bspline_set, const emxArray_real_T *Sp2, const emxArray_real_T *Src_lab, const emxArray_real_T *Ref_lab, emxArray_real_T *errors, emxArray_real_T *Corr);
+extern void extension(const emlrtStack *sp, emxArray_struct_T *sp_set, emxArray_b_struct_T *bspline_set, const emxArray_real_T *Sp2, const emxArray_real_T *Src_lab, const emxArray_real_T *Ref_lab, emxArray_real_T *errors, emxArray_struct_T *ref_set, emxArray_real_T *Corr);
 #endif
 /* End of code generation (extension.h) */

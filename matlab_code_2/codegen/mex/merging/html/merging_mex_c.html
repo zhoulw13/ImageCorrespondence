@@ -15,7 +15,7 @@
 <a name="3"><font color="#888888 "><i>    3   </i></font></a><font color="#117755"><I> *</i></font>
 <a name="4"><font color="#888888 "><i>    4   </i></font></a><font color="#117755"><I> * Code generation for function 'merging'</i></font>
 <a name="5"><font color="#888888 "><i>    5   </i></font></a><font color="#117755"><I> *</i></font>
-<a name="6"><font color="#888888 "><i>    6   </i></font></a><font color="#117755"><I> * C source code generated on: Thu Jun 30 18:28:11 2016</i></font>
+<a name="6"><font color="#888888 "><i>    6   </i></font></a><font color="#117755"><I> * C source code generated on: Fri Jul 22 15:48:58 2016</i></font>
 <a name="7"><font color="#888888 "><i>    7   </i></font></a><font color="#117755"><I> *</i></font>
 <a name="8"><font color="#888888 "><i>    8   </i></font></a><font color="#117755"><I> */</i></font>
 <a name="9"><font color="#888888 "><i>    9   </i></font></a>
@@ -35,7 +35,7 @@
 <a name="23"><font color="#888888 "><i>   23   </i></font></a><font color="#117755"><i>/* Function Definitions */</i></font>
 <a name="24"><font color="#888888 "><i>   24   </i></font></a><font color="#112266"><b>static</b></font> <font color="#112266"><b>void</b></font> <a name="fcn_merging_mexFunction">merging_mexFunction</a>(<font color="#112266"><b>int</b></font> nlhs, mxArray *plhs[], <font color="#112266"><b>int</b></font> nrhs, <font color="#112266"><b>const</b></font> mxArray *prhs[])
 <a name="25"><font color="#888888 "><i>   25   </i></font></a><b>{</b>
-<a name="26"><font color="#888888 "><i>   26   </i></font></a>  mxArray *outputs[3];
+<a name="26"><font color="#888888 "><i>   26   </i></font></a>  mxArray *outputs[4];
 <a name="27"><font color="#888888 "><i>   27   </i></font></a>  mxArray *inputs[6];
 <a name="28"><font color="#888888 "><i>   28   </i></font></a>  <font color="#112266"><b>int</b></font> n = 0;
 <a name="29"><font color="#888888 "><i>   29   </i></font></a>  <font color="#112266"><b>int</b></font> nOutputs = (nlhs &lt; 1 ? 1 : nlhs);
@@ -46,7 +46,7 @@
 <a name="34"><font color="#888888 "><i>   34   </i></font></a>  <font color="#117755"><i>/* Check for proper number of arguments. */</i></font>
 <a name="35"><font color="#888888 "><i>   35   </i></font></a>  <font color="#112266"><b>if</b></font> (nrhs != 6) <b>{</b>
 <a name="36"><font color="#888888 "><i>   36   </i></font></a>    emlrtErrMsgIdAndTxt(<a href="#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, <font color="#1122ff">&quot;EMLRT:runTime:WrongNumberOfInputs&quot;</font>, 5, mxINT32_CLASS, 6, mxCHAR_CLASS, 7, <font color="#1122ff">&quot;merging&quot;</font>);
-<a name="37"><font color="#888888 "><i>   37   </i></font></a>  <b>}</b> <font color="#112266"><b>else</b></font> <font color="#112266"><b>if</b></font> (nlhs &gt; 3) <b>{</b>
+<a name="37"><font color="#888888 "><i>   37   </i></font></a>  <b>}</b> <font color="#112266"><b>else</b></font> <font color="#112266"><b>if</b></font> (nlhs &gt; 4) <b>{</b>
 <a name="38"><font color="#888888 "><i>   38   </i></font></a>    emlrtErrMsgIdAndTxt(<a href="#var_emlrtRootTLSGlobal" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRootTLSGlobal');" target="rtwreport_document_frame"><font color="#1122aa">emlrtRootTLSGlobal</font></a>, <font color="#1122ff">&quot;EMLRT:runTime:TooManyOutputArguments&quot;</font>, 3, mxCHAR_CLASS, 7, <font color="#1122ff">&quot;merging&quot;</font>);
 <a name="39"><font color="#888888 "><i>   39   </i></font></a>  <b>}</b>
 <a name="40"><font color="#888888 "><i>   40   </i></font></a>  <font color="#117755"><i>/* Temporary copy for mex inputs. */</i></font>

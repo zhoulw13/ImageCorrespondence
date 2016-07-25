@@ -3,7 +3,7 @@
  *
  * Code generation for function 'sum'
  *
- * C source code generated on: Thu Jun 30 18:28:11 2016
+ * C source code generated on: Fri Jul 22 15:48:57 2016
  *
  */
 
@@ -16,22 +16,22 @@
 #include "merging_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo kc_emlrtRSI = { 17, "sum",
+static emlrtRSInfo wd_emlrtRSI = { 17, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
-static emlrtRSInfo lc_emlrtRSI = { 61, "sum",
+static emlrtRSInfo xd_emlrtRSI = { 61, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
-static emlrtRSInfo jr_emlrtRSI = { 73, "sum",
+static emlrtRSInfo ms_emlrtRSI = { 73, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
-static emlrtRSInfo kr_emlrtRSI = { 76, "sum",
+static emlrtRSInfo ns_emlrtRSI = { 76, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
-static emlrtRSInfo lr_emlrtRSI = { 77, "sum",
+static emlrtRSInfo os_emlrtRSI = { 77, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
-static emlrtRSInfo mr_emlrtRSI = { 80, "sum",
+static emlrtRSInfo ps_emlrtRSI = { 80, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
 static emlrtMCInfo k_emlrtMCI = { 18, 9, "sum",
@@ -46,13 +46,13 @@ static emlrtMCInfo m_emlrtMCI = { 23, 9, "sum",
 static emlrtMCInfo n_emlrtMCI = { 20, 19, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
-static emlrtRSInfo ts_emlrtRSI = { 20, "sum",
+static emlrtRSInfo wt_emlrtRSI = { 20, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
-static emlrtRSInfo ft_emlrtRSI = { 23, "sum",
+static emlrtRSInfo ju_emlrtRSI = { 23, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
-static emlrtRSInfo gt_emlrtRSI = { 18, "sum",
+static emlrtRSInfo ku_emlrtRSI = { 18, "sum",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sum.m" };
 
 /* Function Definitions */
@@ -78,11 +78,11 @@ void b_sum(const emlrtStack *sp, const emxArray_real_T *x, real_T y[3])
     ix = -1;
     iy = -1;
     for (i = 0; i < 3; i++) {
-      st.site = &jr_emlrtRSI;
+      st.site = &ms_emlrtRSI;
       ixstart = ix + 1;
       ix++;
       s = x->data[ixstart];
-      st.site = &kr_emlrtRSI;
+      st.site = &ns_emlrtRSI;
       if (2 > x->size[0]) {
         overflow = FALSE;
       } else {
@@ -90,17 +90,17 @@ void b_sum(const emlrtStack *sp, const emxArray_real_T *x, real_T y[3])
       }
 
       if (overflow) {
-        b_st.site = &qb_emlrtRSI;
+        b_st.site = &ub_emlrtRSI;
         check_forloop_overflow_error(&b_st);
       }
 
       for (ixstart = 2; ixstart <= x->size[0]; ixstart++) {
-        st.site = &lr_emlrtRSI;
+        st.site = &os_emlrtRSI;
         ix++;
         s += x->data[ix];
       }
 
-      st.site = &mr_emlrtRSI;
+      st.site = &ps_emlrtRSI;
       iy++;
       y[iy] = s;
     }
@@ -126,21 +126,21 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
   boolean_T p;
   int32_T i;
   int32_T exitg1;
-  int32_T i1;
+  int32_T i0;
   const mxArray *b_y;
-  static const int32_T iv4[2] = { 1, 30 };
+  static const int32_T iv2[2] = { 1, 30 };
 
-  const mxArray *m2;
-  char_T cv8[30];
-  static const char_T cv9[30] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
+  const mxArray *m1;
+  char_T cv4[30];
+  static const char_T cv5[30] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
     'l', 'b', 'o', 'x', ':', 's', 'u', 'm', '_', 's', 'p', 'e', 'c', 'i', 'a',
     'l', 'E', 'm', 'p', 't', 'y' };
 
   const mxArray *c_y;
-  static const int32_T iv5[2] = { 1, 36 };
+  static const int32_T iv3[2] = { 1, 36 };
 
-  char_T cv10[36];
-  static const char_T cv11[36] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
+  char_T cv6[36];
+  static const char_T cv7[36] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
     'l', 'b', 'o', 'x', ':', 'a', 'u', 't', 'o', 'D', 'i', 'm', 'I', 'n', 'c',
     'o', 'm', 'p', 'a', 't', 'i', 'b', 'i', 'l', 'i', 't', 'y' };
 
@@ -153,7 +153,7 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
   b_st.tls = st.tls;
   c_st.prev = sp;
   c_st.tls = sp->tls;
-  st.site = &kc_emlrtRSI;
+  st.site = &wd_emlrtRSI;
   overflow = FALSE;
   p = FALSE;
   i = 0;
@@ -161,12 +161,12 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
     exitg1 = 0;
     if (i < 2) {
       if (i + 1 <= 1) {
-        i1 = x->size[0];
+        i0 = x->size[0];
       } else {
-        i1 = 1;
+        i0 = 1;
       }
 
-      if (i1 != 0) {
+      if (i0 != 0) {
         exitg1 = 1;
       } else {
         i++;
@@ -185,15 +185,15 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
   if (!overflow) {
   } else {
     b_y = NULL;
-    m2 = mxCreateCharArray(2, iv4);
+    m1 = mxCreateCharArray(2, iv2);
     for (i = 0; i < 30; i++) {
-      cv8[i] = cv9[i];
+      cv4[i] = cv5[i];
     }
 
-    emlrtInitCharArrayR2013a(sp, 30, m2, cv8);
-    emlrtAssign(&b_y, m2);
-    st.site = &kc_emlrtRSI;
-    c_st.site = &gt_emlrtRSI;
+    emlrtInitCharArrayR2013a(sp, 30, m1, cv4);
+    emlrtAssign(&b_y, m1);
+    st.site = &wd_emlrtRSI;
+    c_st.site = &ku_emlrtRSI;
     error(&st, message(&c_st, b_y, &k_emlrtMCI), &l_emlrtMCI);
   }
 
@@ -206,15 +206,15 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
   if (overflow) {
   } else {
     c_y = NULL;
-    m2 = mxCreateCharArray(2, iv5);
+    m1 = mxCreateCharArray(2, iv3);
     for (i = 0; i < 36; i++) {
-      cv10[i] = cv11[i];
+      cv6[i] = cv7[i];
     }
 
-    emlrtInitCharArrayR2013a(sp, 36, m2, cv10);
-    emlrtAssign(&c_y, m2);
-    st.site = &ts_emlrtRSI;
-    c_st.site = &ft_emlrtRSI;
+    emlrtInitCharArrayR2013a(sp, 36, m1, cv6);
+    emlrtAssign(&c_y, m1);
+    st.site = &wt_emlrtRSI;
+    c_st.site = &ju_emlrtRSI;
     error(&st, message(&c_st, c_y, &m_emlrtMCI), &n_emlrtMCI);
   }
 
@@ -222,7 +222,7 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
     y = 0.0;
   } else {
     y = x->data[0];
-    st.site = &lc_emlrtRSI;
+    st.site = &xd_emlrtRSI;
     if (2 > x->size[0]) {
       overflow = FALSE;
     } else {
@@ -230,7 +230,7 @@ real_T sum(const emlrtStack *sp, const emxArray_real_T *x)
     }
 
     if (overflow) {
-      b_st.site = &qb_emlrtRSI;
+      b_st.site = &ub_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deployment-project plugin="plugin.matlabcoder" plugin-version="R2013a">
-  <configuration target="target.matlab.coder" target-name="MEX, C, and C++ Code Generation" name="merging" location="F:\Git\correspondence\matlab_code" file="F:\Git\correspondence\matlab_code\merging.prj" build-checksum="1211362832">
+  <configuration target="target.matlab.coder" target-name="MEX, C, and C++ Code Generation" name="merging" location="F:\Git\correspondence\matlab_code_2" file="F:\Git\correspondence\matlab_code_2\merging.prj" build-checksum="3937886983">
     <profile key="profile.mex">
       <param.MergeInstrumentationResults>false</param.MergeInstrumentationResults>
       <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
@@ -320,7 +320,7 @@
     <param.outputfile>${PROJECT_ROOT}\merging_mex.mexw64</param.outputfile>
     <param.version>R2012a</param.version>
     <param.HasECoderFeatures>false</param.HasECoderFeatures>
-    <param.mex.mainhtml>F:\Git\correspondence\matlab_code\codegen\mex\merging\html\index.html</param.mex.mainhtml>
+    <param.mex.mainhtml>F:\Git\correspondence\matlab_code_2\codegen\mex\merging\html\index.html</param.mex.mainhtml>
     <param.grt.mainhtml />
     <param.CallGeneratedCodeFromTest>true</param.CallGeneratedCodeFromTest>
     <param.VerificationMode>option.VerificationMode.None</param.VerificationMode>
@@ -519,7 +519,7 @@
     <fileset.testbench />
     <fileset.package />
     <build-deliverables>
-      <file name="merging_mex.mexw64" location="F:\Git\correspondence\matlab_code" optional="false">F:\Git\correspondence\matlab_code\merging_mex.mexw64</file>
+      <file name="merging_mex.mexw64" location="F:\Git\correspondence\matlab_code_2" optional="false">F:\Git\correspondence\matlab_code_2\merging_mex.mexw64</file>
     </build-deliverables>
     <workflow />
     <matlab>

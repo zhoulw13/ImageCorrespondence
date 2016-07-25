@@ -15,7 +15,7 @@ c = Con >= 0.8;
 %show result
 I = zeros(h,w,3);
 I(:,:,1) = newCorr(:,:,1) / w1;
-I(:,:,2) = newCorr(:,:,2) / h1;
+%I(:,:,2) = newCorr(:,:,2) / h1;
 %imwrite(I, 'Corr.png');
 figure;
 imshow(I);

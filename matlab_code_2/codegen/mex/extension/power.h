@@ -3,7 +3,7 @@
  *
  * Code generation for function 'power'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -28,11 +28,7 @@ extern real_T c_power(real_T a);
 #ifdef __WATCOMC__
 #pragma aux c_power value [8087];
 #endif
-extern real_T d_power(real_T a);
-#ifdef __WATCOMC__
-#pragma aux d_power value [8087];
-#endif
-extern void e_power(const real_T a[147], real_T y[147]);
+extern void d_power(const real_T a[147], real_T y[147]);
 extern void power(const emlrtStack *sp, const emxArray_real_T *a, emxArray_real_T *y);
 #endif
 /* End of code generation (power.h) */

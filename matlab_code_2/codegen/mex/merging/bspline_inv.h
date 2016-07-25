@@ -3,7 +3,7 @@
  *
  * Code generation for function 'bspline_inv'
  *
- * C source code generated on: Thu Jun 30 18:28:11 2016
+ * C source code generated on: Fri Jul 22 15:48:57 2016
  *
  */
 
@@ -23,6 +23,6 @@
 #include "merging_types.h"
 
 /* Function Declarations */
-extern void bspline_inv(const emlrtStack *sp, const emxArray_real_T *src, const emxArray_real_T *ref, emxArray_real_T *control_p);
+extern void bspline_inv(const emlrtStack *sp, const emxArray_real_T *src, const emxArray_real_T *ref, emxArray_real_T *control_p, real_T *b_error);
 #endif
 /* End of code generation (bspline_inv.h) */

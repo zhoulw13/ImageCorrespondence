@@ -1,4 +1,4 @@
-START_DIR = F:\Git\correspondence\matlab_code
+START_DIR = F:\Git\correspondence\matlab_code_2
 
 MATLAB_ROOT = D:\Program Files\MATLAB\R2013b
 MAKEFILE = merging_mex.mk
@@ -13,17 +13,18 @@ SRC_FILES =  \
 	merging_terminate.c \
 	merging.c \
 	eml_int_forloop_overflow_check.c \
-	repmat.c \
-	abs.c \
-	sum.c \
-	mod.c \
+	gradient.c \
 	rdivide.c \
+	mod.c \
+	triu.c \
+	floor.c \
+	sum.c \
 	ceil.c \
 	bspline_inv.c \
-	floor.c \
 	power.c \
 	pinv.c \
 	eml_error.c \
+	abs.c \
 	sqrt.c \
 	bspline.c \
 	getPixelsValue.c \

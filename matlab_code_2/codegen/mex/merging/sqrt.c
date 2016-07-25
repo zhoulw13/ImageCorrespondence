@@ -3,7 +3,7 @@
  *
  * Code generation for function 'sqrt'
  *
- * C source code generated on: Thu Jun 30 18:28:11 2016
+ * C source code generated on: Fri Jul 22 15:48:57 2016
  *
  */
 
@@ -14,7 +14,7 @@
 #include "eml_error.h"
 
 /* Variable Definitions */
-static emlrtRSInfo do_emlrtRSI = { 14, "sqrt",
+static emlrtRSInfo wo_emlrtRSI = { 14, "sqrt",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elfun/sqrt.m" };
 
 /* Function Definitions */
@@ -24,7 +24,7 @@ void b_sqrt(const emlrtStack *sp, real_T *x)
   st.prev = sp;
   st.tls = sp->tls;
   if (*x < 0.0) {
-    st.site = &do_emlrtRSI;
+    st.site = &wo_emlrtRSI;
     c_eml_error(&st);
   }
 

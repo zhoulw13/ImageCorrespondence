@@ -3,7 +3,7 @@
  *
  * Code generation for function 'merging'
  *
- * C source code generated on: Thu Jun 30 18:28:11 2016
+ * C source code generated on: Fri Jul 22 15:48:58 2016
  *
  */
 
@@ -23,7 +23,7 @@ void *emlrtRootTLSGlobal = NULL;
 /* Function Definitions */
 static void merging_mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 {
-  mxArray *outputs[3];
+  mxArray *outputs[4];
   mxArray *inputs[6];
   int n = 0;
   int nOutputs = (nlhs < 1 ? 1 : nlhs);
@@ -34,7 +34,7 @@ static void merging_mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArr
   /* Check for proper number of arguments. */
   if (nrhs != 6) {
     emlrtErrMsgIdAndTxt(emlrtRootTLSGlobal, "EMLRT:runTime:WrongNumberOfInputs", 5, mxINT32_CLASS, 6, mxCHAR_CLASS, 7, "merging");
-  } else if (nlhs > 3) {
+  } else if (nlhs > 4) {
     emlrtErrMsgIdAndTxt(emlrtRootTLSGlobal, "EMLRT:runTime:TooManyOutputArguments", 3, mxCHAR_CLASS, 7, "merging");
   }
   /* Temporary copy for mex inputs. */

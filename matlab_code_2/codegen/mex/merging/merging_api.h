@@ -3,7 +3,7 @@
  *
  * Code generation for function 'merging_api'
  *
- * C source code generated on: Thu Jun 30 18:28:11 2016
+ * C source code generated on: Fri Jul 22 15:48:58 2016
  *
  */
 
@@ -23,6 +23,6 @@
 #include "merging_types.h"
 
 /* Function Declarations */
-extern void merging_api(emlrtStack *sp, const mxArray * const prhs[6], const mxArray *plhs[3]);
+extern void merging_api(emlrtStack *sp, const mxArray * const prhs[6], const mxArray *plhs[4]);
 #endif
 /* End of code generation (merging_api.h) */

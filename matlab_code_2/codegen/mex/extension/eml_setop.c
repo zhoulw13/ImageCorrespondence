@@ -3,7 +3,7 @@
  *
  * Code generation for function 'eml_setop'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -125,13 +125,13 @@ static emlrtRTEInfo v_emlrtRTEI = { 591, 1, "eml_setop",
 static emlrtRTEInfo w_emlrtRTEI = { 537, 22, "eml_setop",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/eml_setop.m" };
 
-static emlrtRSInfo yy_emlrtRSI = { 811, "eml_setop",
+static emlrtRSInfo ey_emlrtRSI = { 811, "eml_setop",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/eml_setop.m" };
 
-static emlrtRSInfo aab_emlrtRSI = { 806, "eml_setop",
+static emlrtRSInfo fy_emlrtRSI = { 806, "eml_setop",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/eml_setop.m" };
 
-static emlrtRSInfo bab_emlrtRSI = { 814, "eml_setop",
+static emlrtRSInfo gy_emlrtRSI = { 814, "eml_setop",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/eml_setop.m" };
 
 /* Function Declarations */
@@ -529,7 +529,7 @@ void b_do_rows(const emlrtStack *sp, const emxArray_real_T *a, const
     y = NULL;
     m5 = mxCreateString("Assertion failed.");
     emlrtAssign(&y, m5);
-    st.site = &aab_emlrtRSI;
+    st.site = &fy_emlrtRSI;
     error(&st, y, &o_emlrtMCI);
   }
 
@@ -538,7 +538,7 @@ void b_do_rows(const emlrtStack *sp, const emxArray_real_T *a, const
     b_y = NULL;
     m5 = mxCreateString("Assertion failed.");
     emlrtAssign(&b_y, m5);
-    st.site = &yy_emlrtRSI;
+    st.site = &ey_emlrtRSI;
     error(&st, b_y, &p_emlrtMCI);
   }
 
@@ -756,7 +756,7 @@ void do_rows(const emlrtStack *sp, const emxArray_real_T *a, const
     y = NULL;
     m4 = mxCreateString("Assertion failed.");
     emlrtAssign(&y, m4);
-    st.site = &aab_emlrtRSI;
+    st.site = &fy_emlrtRSI;
     error(&st, y, &o_emlrtMCI);
   }
 
@@ -765,7 +765,7 @@ void do_rows(const emlrtStack *sp, const emxArray_real_T *a, const
     b_y = NULL;
     m4 = mxCreateString("Assertion failed.");
     emlrtAssign(&b_y, m4);
-    st.site = &yy_emlrtRSI;
+    st.site = &ey_emlrtRSI;
     error(&st, b_y, &p_emlrtMCI);
   }
 
@@ -799,7 +799,7 @@ void do_rows(const emlrtStack *sp, const emxArray_real_T *a, const
     c_y = NULL;
     m4 = mxCreateString("Assertion failed.");
     emlrtAssign(&c_y, m4);
-    st.site = &bab_emlrtRSI;
+    st.site = &gy_emlrtRSI;
     error(&st, c_y, &q_emlrtMCI);
   }
 

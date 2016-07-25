@@ -3,7 +3,7 @@
  *
  * Code generation for function 'merging'
  *
- * C source code generated on: Thu Jun 30 18:28:11 2016
+ * C source code generated on: Fri Jul 22 15:48:57 2016
  *
  */
 
@@ -23,6 +23,6 @@
 #include "merging_types.h"
 
 /* Function Declarations */
-extern void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const emxArray_real_T *sp_val, emxArray_b_struct_T *bspline_set, emxArray_struct_T *ref_set, const emxArray_real_T *Sp2, const emxArray_real_T *Ref);
+extern void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const emxArray_real_T *sp_val, emxArray_b_struct_T *bspline_set, emxArray_struct_T *ref_set, const emxArray_real_T *Sp2, const emxArray_real_T *Ref, emxArray_real_T *adjacency_graph);
 #endif
 /* End of code generation (merging.h) */

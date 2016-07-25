@@ -3,7 +3,7 @@
  *
  * Code generation for function 'sortrows'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -116,10 +116,10 @@ static emlrtRTEInfo r_emlrtRTEI = { 1, 20, "eml_sort_idx",
 static emlrtRTEInfo s_emlrtRTEI = { 145, 5, "eml_sort_idx",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_sort_idx.m" };
 
-static emlrtRTEInfo cd_emlrtRTEI = { 61, 1, "sortrows",
+static emlrtRTEInfo ad_emlrtRTEI = { 61, 1, "sortrows",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sortrows.m" };
 
-static emlrtRTEInfo dd_emlrtRTEI = { 26, 5, "sortrows",
+static emlrtRTEInfo bd_emlrtRTEI = { 26, 5, "sortrows",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/sortrows.m" };
 
 /* Function Declarations */
@@ -501,9 +501,9 @@ void b_sortrows(const emlrtStack *sp, emxArray_real_T *y)
   emxArray_int32_T *idx;
   emxArray_real_T *ycol;
   int32_T b_m;
-  boolean_T b14;
+  boolean_T b13;
   int32_T i;
-  boolean_T b15;
+  boolean_T b14;
   emlrtStack st;
   emlrtStack b_st;
   emlrtStack c_st;
@@ -519,8 +519,8 @@ void b_sortrows(const emlrtStack *sp, emxArray_real_T *y)
     col[k] = k + 1;
   }
 
-  emxInit_int32_T(sp, &idx, 1, &dd_emlrtRTEI, TRUE);
-  b_emxInit_real_T(sp, &ycol, 1, &cd_emlrtRTEI, TRUE);
+  emxInit_int32_T(sp, &idx, 1, &bd_emlrtRTEI, TRUE);
+  b_emxInit_real_T(sp, &ycol, 1, &ad_emlrtRTEI, TRUE);
   st.site = &of_emlrtRSI;
   b_eml_sort_idx(&st, y, col, idx);
   st.site = &pf_emlrtRSI;
@@ -529,16 +529,16 @@ void b_sortrows(const emlrtStack *sp, emxArray_real_T *y)
   k = ycol->size[0];
   ycol->size[0] = col[0];
   emxEnsureCapacity(&st, (emxArray__common *)ycol, k, (int32_T)sizeof(real_T),
-                    &cd_emlrtRTEI);
+                    &ad_emlrtRTEI);
   for (k = 0; k < 2; k++) {
     b_st.site = &eg_emlrtRSI;
     if (1 > b_m) {
-      b14 = FALSE;
+      b13 = FALSE;
     } else {
-      b14 = (b_m > 2147483646);
+      b13 = (b_m > 2147483646);
     }
 
-    if (b14) {
+    if (b13) {
       c_st.site = &uc_emlrtRSI;
       check_forloop_overflow_error(&c_st);
     }
@@ -558,12 +558,12 @@ void b_sortrows(const emlrtStack *sp, emxArray_real_T *y)
   st.site = &qf_emlrtRSI;
   b_st.site = &tc_emlrtRSI;
   if (1 > m) {
-    b15 = FALSE;
+    b14 = FALSE;
   } else {
-    b15 = (m > 2147483646);
+    b14 = (m > 2147483646);
   }
 
-  if (b15) {
+  if (b14) {
     b_st.site = &uc_emlrtRSI;
     check_forloop_overflow_error(&b_st);
   }
@@ -580,8 +580,8 @@ void sortrows(const emlrtStack *sp, emxArray_real_T *y)
   emxArray_real_T *ycol;
   int32_T b_m;
   int32_T i;
+  boolean_T b11;
   boolean_T b12;
-  boolean_T b13;
   emlrtStack st;
   emlrtStack b_st;
   emlrtStack c_st;
@@ -599,8 +599,8 @@ void sortrows(const emlrtStack *sp, emxArray_real_T *y)
     col_data[k] = k + 1;
   }
 
-  emxInit_int32_T(sp, &idx, 1, &dd_emlrtRTEI, TRUE);
-  b_emxInit_real_T(sp, &ycol, 1, &cd_emlrtRTEI, TRUE);
+  emxInit_int32_T(sp, &idx, 1, &bd_emlrtRTEI, TRUE);
+  b_emxInit_real_T(sp, &ycol, 1, &ad_emlrtRTEI, TRUE);
   st.site = &of_emlrtRSI;
   eml_sort_idx(&st, y, col_data, idx);
   st.site = &pf_emlrtRSI;
@@ -609,17 +609,17 @@ void sortrows(const emlrtStack *sp, emxArray_real_T *y)
   i = ycol->size[0];
   ycol->size[0] = k;
   emxEnsureCapacity(&st, (emxArray__common *)ycol, i, (int32_T)sizeof(real_T),
-                    &cd_emlrtRTEI);
+                    &ad_emlrtRTEI);
   b_st.site = &dg_emlrtRSI;
   for (k = 0; k < 2; k++) {
     b_st.site = &eg_emlrtRSI;
     if (1 > b_m) {
-      b12 = FALSE;
+      b11 = FALSE;
     } else {
-      b12 = (b_m > 2147483646);
+      b11 = (b_m > 2147483646);
     }
 
-    if (b12) {
+    if (b11) {
       c_st.site = &uc_emlrtRSI;
       check_forloop_overflow_error(&c_st);
     }
@@ -639,12 +639,12 @@ void sortrows(const emlrtStack *sp, emxArray_real_T *y)
   st.site = &qf_emlrtRSI;
   b_st.site = &tc_emlrtRSI;
   if (1 > m) {
-    b13 = FALSE;
+    b12 = FALSE;
   } else {
-    b13 = (m > 2147483646);
+    b12 = (m > 2147483646);
   }
 
-  if (b13) {
+  if (b12) {
     b_st.site = &uc_emlrtRSI;
     check_forloop_overflow_error(&b_st);
   }

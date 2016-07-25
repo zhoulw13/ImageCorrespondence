@@ -3,7 +3,7 @@
  *
  * Code generation for function 'sqrt'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -21,7 +21,7 @@ void b_sqrt(const emlrtStack *sp, real_T *x)
   st.prev = sp;
   st.tls = sp->tls;
   if (*x < 0.0) {
-    st.site = &ln_emlrtRSI;
+    st.site = &hm_emlrtRSI;
     c_eml_error(&st);
   }
 

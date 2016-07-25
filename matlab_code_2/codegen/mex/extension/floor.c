@@ -3,7 +3,7 @@
  *
  * Code generation for function 'floor'
  *
- * C source code generated on: Thu Jul 14 16:54:47 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -20,10 +20,10 @@ void b_floor(real_T *x)
 
 void c_floor(emxArray_real_T *x)
 {
-  int32_T i30;
+  int32_T i34;
   int32_T k;
-  i30 = x->size[0];
-  for (k = 0; k < i30; k++) {
+  i34 = x->size[0];
+  for (k = 0; k < i34; k++) {
     x->data[k] = muDoubleScalarFloor(x->data[k]);
   }
 }

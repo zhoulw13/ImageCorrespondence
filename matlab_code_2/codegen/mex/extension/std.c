@@ -3,7 +3,7 @@
  *
  * Code generation for function 'std'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -15,7 +15,7 @@
 #include "extension_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo ym_emlrtRSI = { 12, "std",
+static emlrtRSInfo ul_emlrtRSI = { 12, "std",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/datafun/std.m" };
 
 /* Function Definitions */
@@ -35,7 +35,7 @@ void b_std(const emlrtStack *sp, const real_T varargin_1[147], real_T y[3])
   st.tls = sp->tls;
   b_st.prev = &st;
   b_st.tls = st.tls;
-  st.site = &ym_emlrtRSI;
+  st.site = &ul_emlrtRSI;
   ix = -48;
   iy = -1;
   for (i = 0; i < 3; i++) {
@@ -62,10 +62,10 @@ void b_std(const emlrtStack *sp, const real_T varargin_1[147], real_T y[3])
     y[iy] = b_y;
   }
 
-  st.site = &ym_emlrtRSI;
+  st.site = &ul_emlrtRSI;
   for (k = 0; k < 3; k++) {
     if (y[k] < 0.0) {
-      b_st.site = &ln_emlrtRSI;
+      b_st.site = &hm_emlrtRSI;
       c_eml_error(&b_st);
     }
   }

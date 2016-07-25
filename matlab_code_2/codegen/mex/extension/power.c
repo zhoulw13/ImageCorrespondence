@@ -3,7 +3,7 @@
  *
  * Code generation for function 'power'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -12,15 +12,10 @@
 #include "extension.h"
 #include "power.h"
 #include "extension_emxutil.h"
+#include "extension_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo fe_emlrtRSI = { 42, "power",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/power.m" };
-
 static emlrtRSInfo ge_emlrtRSI = { 51, "power",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/power.m" };
-
-static emlrtRSInfo he_emlrtRSI = { 58, "power",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/power.m" };
 
 static emlrtRTEInfo m_emlrtRTEI = { 15, 9, "eml_scalexp_alloc",
@@ -56,12 +51,7 @@ real_T c_power(real_T a)
   return a * a;
 }
 
-real_T d_power(real_T a)
-{
-  return muDoubleScalarPower(a, 3.0);
-}
-
-void e_power(const real_T a[147], real_T y[147])
+void d_power(const real_T a[147], real_T y[147])
 {
   int32_T k;
   for (k = 0; k < 147; k++) {

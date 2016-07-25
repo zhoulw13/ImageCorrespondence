@@ -3,7 +3,7 @@
  *
  * Code generation for function 'abs'
  *
- * C source code generated on: Thu Jun 30 18:28:11 2016
+ * C source code generated on: Fri Jul 22 15:48:57 2016
  *
  */
 
@@ -23,10 +23,9 @@
 #include "merging_types.h"
 
 /* Function Declarations */
-extern void b_abs(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y);
-extern real_T c_abs(real_T x);
+extern real_T b_abs(real_T x);
 #ifdef __WATCOMC__
-#pragma aux c_abs value [8087];
+#pragma aux b_abs value [8087];
 #endif
 #endif
 /* End of code generation (abs.h) */

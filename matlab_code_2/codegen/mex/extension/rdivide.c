@@ -3,7 +3,7 @@
  *
  * Code generation for function 'rdivide'
  *
- * C source code generated on: Thu Jul 14 16:54:47 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -27,7 +27,7 @@ void b_rdivide(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T
   emlrtStack st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &kb_emlrtRSI;
+  st.site = &lb_emlrtRSI;
   i4 = z->size[0];
   z->size[0] = x->size[0];
   emxEnsureCapacity(&st, (emxArray__common *)z, i4, (int32_T)sizeof(real_T),
@@ -40,9 +40,9 @@ void b_rdivide(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T
 
 void c_rdivide(const real_T x[147], const real_T y[147], real_T z[147])
 {
-  int32_T i15;
-  for (i15 = 0; i15 < 147; i15++) {
-    z[i15] = x[i15] / y[i15];
+  int32_T i19;
+  for (i19 = 0; i19 < 147; i19++) {
+    z[i19] = x[i19] / y[i19];
   }
 }
 

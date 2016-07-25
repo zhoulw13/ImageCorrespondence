@@ -1,4 +1,4 @@
-function [errors, sp_set, bspline_set, Corr] = extension(sp_set, bspline_set, Sp2, Src_lab, Ref_lab)
+function [errors, sp_set, ref_set, bspline_set, Corr] = extension(sp_set, bspline_set, Sp2, Src_lab, Ref_lab)
 
 %#codegen
 coder.inline('never')
@@ -7,8 +7,8 @@ coder.varsize('temp_sx');
 coder.varsize('temp_sy');
 coder.varsize('temp_rx');
 coder.varsize('temp_ry');
-
-
+coder.varsize('ref_set');
+coder.varsize('ref_set(:).val');
 
 surface_amount = size(sp_set, 2);
 [x, y] = size(Sp2);
@@ -19,7 +19,7 @@ for i=1:surface_amount
     point_amount = size(sp_set(i).val, 1);
     for j=1:point_amount
         Sp_new(sp_set(i).val(j, 1), sp_set(i).val(j, 2)) = i;
-    end    
+    end
 end
 
 %% adjacent patch
@@ -31,11 +31,11 @@ patch(3, :) = ones(1, 49);
 %% extension
 errors = [];
 
-for i=1:surface_amount
+for i=2:surface_amount
     modified = true;
     temp_sx = sp_set(i).val(:, 1);
     temp_sy = sp_set(i).val(:, 2);
-    ref_set = bspline(sp_set(i).val, bspline_set(i), min(sp_set(i).val));
+    temp_ref_set = bspline(sp_set(i).val, bspline_set(i), min(sp_set(i).val));
     
     while modified == true
         modified = false;
@@ -134,7 +134,7 @@ for i=1:surface_amount
                     end
                 end
             end
-            if error < 150
+            if error < 200
                 modified = true;
                 
                 temp_sx = [temp_sx; omega(j,1)];
@@ -158,10 +158,10 @@ for i=1:surface_amount
             sp_set(i).val = [sp_set(i).val; double([temp_sx, temp_sy])];
             %single_ref_set = [single_ref_set; double([temp_rx, temp_ry])];
             single_ref_set = [];
-            ref_set = [ref_set; double([temp_rx, temp_ry])];
+            temp_ref_set = [temp_ref_set; double([temp_rx, temp_ry])];
             %sp_set(i).val = superpixel;
             
-            [control_p, error] = bspline_inv(sp_set(i).val, ref_set);
+            [control_p, error] = bspline_inv(sp_set(i).val, temp_ref_set);
             errors = [errors; error];
             item = struct('x', control_p(:,:,1), 'y', control_p(:,:,2));
             bspline_set(i) = item;
@@ -172,12 +172,16 @@ end
 Corr = zeros(x, y, 2);
 surface_amount = size(sp_set, 2);
 
+ref_set = struct('val', []);
 for i=1:surface_amount
     point_amount = size(sp_set(i).val, 1);
-    ref_set = bspline(sp_set(i).val, bspline_set(i), min(sp_set(i).val));
+    single_ref_set = bspline(sp_set(i).val, bspline_set(i), min(sp_set(i).val));
+    item = struct('val', single_ref_set);
+    ref_set = [ref_set, item];
     for j=1:point_amount
-        Corr(sp_set(i).val(j, 1), sp_set(i).val(j, 2), :) = [ref_set(2), ref_set(1)];
+        Corr(sp_set(i).val(j, 1), sp_set(i).val(j, 2), :) = [single_ref_set(j, 2), single_ref_set(j, 1)];
     end    
 end 
+ref_set(1) = [];
 
 end

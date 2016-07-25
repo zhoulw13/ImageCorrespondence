@@ -3,7 +3,7 @@
  *
  * Code generation for function 'getPixelsValue'
  *
- * C source code generated on: Thu Jun 30 18:28:11 2016
+ * C source code generated on: Fri Jul 22 15:48:58 2016
  *
  */
 
@@ -23,7 +23,6 @@
 #include "merging_types.h"
 
 /* Function Declarations */
-extern void eml_li_find(const emlrtStack *sp, const emxArray_boolean_T *x, emxArray_int32_T *y);
-extern void getPixelsValue(const emlrtStack *sp, const emxArray_real_T *img, emxArray_real_T *b_index, emxArray_real_T *val);
+extern void getPixelsValue(const emlrtStack *sp, const emxArray_real_T *img, const emxArray_real_T *b_index, emxArray_real_T *val);
 #endif
 /* End of code generation (getPixelsValue.h) */

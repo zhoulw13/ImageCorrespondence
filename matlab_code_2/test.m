@@ -225,30 +225,31 @@ end
 figure;
 imshow(result);
 
-%{
+
 result = zeros(x, y, 1);
 for o=1:surface_amount
     point_amount = size(sp_set(o).val, 1);
+    t_ref_set = bspline(sp_set(o).val, bspline_set(o), min(sp_set(o).val));
     for w=1:point_amount
-        result(sp_set(o).val(w,1), sp_set(o).val(w,2), :) = ref_set(o).val(w, 1)/x;
+        result(sp_set(o).val(w,1), sp_set(o).val(w,2), :) = t_ref_set(w, 2)/y;
     end
     %subplot(1,surface_amount+1,o+1);
 end
 figure;
 imagesc(result);
 colorbar;
-%}
 
 
 
-%{
-a = 200;
+
+
+a = 100;
 point = [round(temp_sx(a)), round(temp_sy(a))];
 point_amount = size(superpixel, 1);
 temp = abs(repmat(point, point_amount, 1) - superpixel);
 [val, ind] = min(temp(:, 1) + temp(:, 2));
 
-I1 = imread('s1\bei_src.jpg');
+I1 = imread('card.png');
 p = patch + repmat([point';0], 1, 49);
 for o=1:49
 	I1(p(1, o), p(2, o), :) = [255, 0, 0];
@@ -260,7 +261,7 @@ end
 figure;
 imshow(I1);
 
-I2 = imread('s1\bei_ref.jpg');
+I2 = imread('card_ref.png');
 p = patch + repmat([round(temp_rx(a)); round(temp_ry(a));0], 1, 49);
 for o=1:49
 	I2(p(1, o), p(2, o), :) = [255, 0, 0];
@@ -271,7 +272,7 @@ for o=1:49
 end
 figure;
 imshow(I2);
-%}
+
 
 %{
 o=4;

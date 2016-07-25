@@ -3,7 +3,7 @@
  *
  * Code generation for function 'getPixelsValue'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -15,61 +15,61 @@
 #include "extension_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo ul_emlrtRSI = { 8, "getPixelsValue",
+static emlrtRSInfo pk_emlrtRSI = { 8, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo vl_emlrtRSI = { 9, "getPixelsValue",
+static emlrtRSInfo qk_emlrtRSI = { 9, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo wl_emlrtRSI = { 10, "getPixelsValue",
+static emlrtRSInfo rk_emlrtRSI = { 10, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo xl_emlrtRSI = { 11, "getPixelsValue",
+static emlrtRSInfo sk_emlrtRSI = { 11, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo yl_emlrtRSI = { 13, "getPixelsValue",
+static emlrtRSInfo tk_emlrtRSI = { 13, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo am_emlrtRSI = { 14, "getPixelsValue",
+static emlrtRSInfo uk_emlrtRSI = { 14, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo bm_emlrtRSI = { 15, "getPixelsValue",
+static emlrtRSInfo vk_emlrtRSI = { 15, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo cm_emlrtRSI = { 16, "getPixelsValue",
+static emlrtRSInfo wk_emlrtRSI = { 16, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo dm_emlrtRSI = { 17, "getPixelsValue",
+static emlrtRSInfo xk_emlrtRSI = { 17, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo em_emlrtRSI = { 18, "getPixelsValue",
+static emlrtRSInfo yk_emlrtRSI = { 18, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo fm_emlrtRSI = { 19, "getPixelsValue",
+static emlrtRSInfo al_emlrtRSI = { 19, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo gm_emlrtRSI = { 20, "getPixelsValue",
+static emlrtRSInfo bl_emlrtRSI = { 20, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo hm_emlrtRSI = { 27, "getPixelsValue",
+static emlrtRSInfo cl_emlrtRSI = { 27, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo im_emlrtRSI = { 29, "getPixelsValue",
+static emlrtRSInfo dl_emlrtRSI = { 29, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo jm_emlrtRSI = { 31, "getPixelsValue",
+static emlrtRSInfo el_emlrtRSI = { 31, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo km_emlrtRSI = { 32, "getPixelsValue",
+static emlrtRSInfo fl_emlrtRSI = { 32, "getPixelsValue",
   "F:/Git/correspondence/matlab_code_2/getPixelsValue.m" };
 
-static emlrtRSInfo mm_emlrtRSI = { 11, "eml_li_find",
+static emlrtRSInfo hl_emlrtRSI = { 11, "eml_li_find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_li_find.m" };
 
-static emlrtRSInfo nm_emlrtRSI = { 29, "eml_li_find",
+static emlrtRSInfo il_emlrtRSI = { 29, "eml_li_find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_li_find.m" };
 
-static emlrtMCInfo bb_emlrtMCI = { 14, 5, "eml_li_find",
+static emlrtMCInfo y_emlrtMCI = { 14, 5, "eml_li_find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_li_find.m" };
 
 static emlrtDCInfo emlrtDCI = { 25, 25, "getPixelsValue",
@@ -183,7 +183,7 @@ static emlrtBCInfo lb_emlrtBCI = { -1, -1, 32, 95, "img", "getPixelsValue",
 static emlrtDCInfo s_emlrtDCI = { 20, 34, "eml_li_find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_li_find.m", 4 };
 
-static emlrtRSInfo xy_emlrtRSI = { 14, "eml_li_find",
+static emlrtRSInfo dy_emlrtRSI = { 14, "eml_li_find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_li_find.m" };
 
 /* Function Declarations */
@@ -201,7 +201,7 @@ static void eml_li_find(const emlrtStack *sp, const boolean_T x[49], int32_T
   emlrtStack st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &mm_emlrtRSI;
+  st.site = &hl_emlrtRSI;
   k = 0;
   for (i = 0; i < 49; i++) {
     if (x[i]) {
@@ -214,8 +214,8 @@ static void eml_li_find(const emlrtStack *sp, const boolean_T x[49], int32_T
     y = NULL;
     m8 = mxCreateString("Assertion failed.");
     emlrtAssign(&y, m8);
-    st.site = &xy_emlrtRSI;
-    error(&st, y, &bb_emlrtMCI);
+    st.site = &dy_emlrtRSI;
+    error(&st, y, &y_emlrtMCI);
   }
 
   emlrtNonNegativeCheckFastR2012b(k, &s_emlrtDCI, sp);
@@ -224,7 +224,7 @@ static void eml_li_find(const emlrtStack *sp, const boolean_T x[49], int32_T
   for (i = 0; i < 49; i++) {
     if (x[i]) {
       y_data[k] = i + 1;
-      st.site = &nm_emlrtRSI;
+      st.site = &il_emlrtRSI;
       k++;
     }
   }
@@ -242,7 +242,7 @@ void getPixelsValue(const emlrtStack *sp, const emxArray_real_T *img, const
   int32_T i;
   int32_T tmp_size[1];
   int32_T tmp_data[49];
-  int32_T i14;
+  int32_T i18;
   int32_T b_ly;
   real_T b;
   real_T b_b;
@@ -256,25 +256,25 @@ void getPixelsValue(const emlrtStack *sp, const emxArray_real_T *img, const
   /* index(:,1) = index(:,1)*x; */
   /* index(:,2) = index(:,2)*y; */
   /* index = round(index); */
-  st.site = &ul_emlrtRSI;
+  st.site = &pk_emlrtRSI;
   memcpy(&lx[0], &b_index[0], 49U * sizeof(real_T));
   for (k = 0; k < 49; k++) {
     lx[k] = muDoubleScalarFloor(lx[k]);
   }
 
-  st.site = &vl_emlrtRSI;
+  st.site = &qk_emlrtRSI;
   memcpy(&ly[0], &b_index[49], 49U * sizeof(real_T));
   for (k = 0; k < 49; k++) {
     ly[k] = muDoubleScalarFloor(ly[k]);
   }
 
-  st.site = &wl_emlrtRSI;
+  st.site = &rk_emlrtRSI;
   memcpy(&rx[0], &b_index[0], 49U * sizeof(real_T));
   for (k = 0; k < 49; k++) {
     rx[k] = muDoubleScalarCeil(rx[k]);
   }
 
-  st.site = &xl_emlrtRSI;
+  st.site = &sk_emlrtRSI;
   memcpy(&ry[0], &b_index[49], 49U * sizeof(real_T));
   for (k = 0; k < 49; k++) {
     ry[k] = muDoubleScalarCeil(ry[k]);
@@ -284,220 +284,220 @@ void getPixelsValue(const emlrtStack *sp, const emxArray_real_T *img, const
     b_lx[i] = (lx[i] < 1.0);
   }
 
-  st.site = &yl_emlrtRSI;
+  st.site = &tk_emlrtRSI;
   eml_li_find(&st, b_lx, tmp_data, tmp_size);
   k = tmp_size[0];
-  for (i14 = 0; i14 < k; i14++) {
-    lx[tmp_data[i14] - 1] = 1.0;
+  for (i18 = 0; i18 < k; i18++) {
+    lx[tmp_data[i18] - 1] = 1.0;
   }
 
   for (i = 0; i < 49; i++) {
     b_lx[i] = (ly[i] < 1.0);
   }
 
-  st.site = &am_emlrtRSI;
+  st.site = &uk_emlrtRSI;
   eml_li_find(&st, b_lx, tmp_data, tmp_size);
   k = tmp_size[0];
-  for (i14 = 0; i14 < k; i14++) {
-    ly[tmp_data[i14] - 1] = 1.0;
+  for (i18 = 0; i18 < k; i18++) {
+    ly[tmp_data[i18] - 1] = 1.0;
   }
 
   for (i = 0; i < 49; i++) {
     b_lx[i] = (rx[i] < 1.0);
   }
 
-  st.site = &bm_emlrtRSI;
+  st.site = &vk_emlrtRSI;
   eml_li_find(&st, b_lx, tmp_data, tmp_size);
   k = tmp_size[0];
-  for (i14 = 0; i14 < k; i14++) {
-    rx[tmp_data[i14] - 1] = 1.0;
+  for (i18 = 0; i18 < k; i18++) {
+    rx[tmp_data[i18] - 1] = 1.0;
   }
 
   for (i = 0; i < 49; i++) {
     b_lx[i] = (ry[i] < 1.0);
   }
 
-  st.site = &cm_emlrtRSI;
+  st.site = &wk_emlrtRSI;
   eml_li_find(&st, b_lx, tmp_data, tmp_size);
   k = tmp_size[0];
-  for (i14 = 0; i14 < k; i14++) {
-    ry[tmp_data[i14] - 1] = 1.0;
+  for (i18 = 0; i18 < k; i18++) {
+    ry[tmp_data[i18] - 1] = 1.0;
   }
 
   k = img->size[0];
-  for (i14 = 0; i14 < 49; i14++) {
-    b_lx[i14] = (lx[i14] > k);
+  for (i18 = 0; i18 < 49; i18++) {
+    b_lx[i18] = (lx[i18] > k);
   }
 
-  st.site = &dm_emlrtRSI;
+  st.site = &xk_emlrtRSI;
   eml_li_find(&st, b_lx, tmp_data, tmp_size);
   k = tmp_size[0];
-  for (i14 = 0; i14 < k; i14++) {
-    lx[tmp_data[i14] - 1] = img->size[0];
+  for (i18 = 0; i18 < k; i18++) {
+    lx[tmp_data[i18] - 1] = img->size[0];
   }
 
   k = img->size[1];
-  for (i14 = 0; i14 < 49; i14++) {
-    b_lx[i14] = (ly[i14] > k);
+  for (i18 = 0; i18 < 49; i18++) {
+    b_lx[i18] = (ly[i18] > k);
   }
 
-  st.site = &em_emlrtRSI;
+  st.site = &yk_emlrtRSI;
   eml_li_find(&st, b_lx, tmp_data, tmp_size);
   k = tmp_size[0];
-  for (i14 = 0; i14 < k; i14++) {
-    ly[tmp_data[i14] - 1] = img->size[1];
+  for (i18 = 0; i18 < k; i18++) {
+    ly[tmp_data[i18] - 1] = img->size[1];
   }
 
   k = img->size[0];
-  for (i14 = 0; i14 < 49; i14++) {
-    b_lx[i14] = (rx[i14] > k);
+  for (i18 = 0; i18 < 49; i18++) {
+    b_lx[i18] = (rx[i18] > k);
   }
 
-  st.site = &fm_emlrtRSI;
+  st.site = &al_emlrtRSI;
   eml_li_find(&st, b_lx, tmp_data, tmp_size);
   k = tmp_size[0];
-  for (i14 = 0; i14 < k; i14++) {
-    rx[tmp_data[i14] - 1] = img->size[0];
+  for (i18 = 0; i18 < k; i18++) {
+    rx[tmp_data[i18] - 1] = img->size[0];
   }
 
   k = img->size[1];
-  for (i14 = 0; i14 < 49; i14++) {
-    b_lx[i14] = (ry[i14] > k);
+  for (i18 = 0; i18 < 49; i18++) {
+    b_lx[i18] = (ry[i18] > k);
   }
 
-  st.site = &gm_emlrtRSI;
+  st.site = &bl_emlrtRSI;
   eml_li_find(&st, b_lx, tmp_data, tmp_size);
   k = tmp_size[0];
-  for (i14 = 0; i14 < k; i14++) {
-    ry[tmp_data[i14] - 1] = img->size[1];
+  for (i18 = 0; i18 < k; i18++) {
+    ry[tmp_data[i18] - 1] = img->size[1];
   }
 
   memset(&val[0], 0, 147U * sizeof(real_T));
   for (i = 0; i < 49; i++) {
     if ((lx[i] == rx[i]) && (ly[i] == ry[i])) {
-      i14 = img->size[1];
+      i18 = img->size[1];
       k = (int32_T)emlrtIntegerCheckFastR2012b(ly[i], &b_emlrtDCI, sp);
-      b_ly = emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &u_emlrtBCI, sp);
-      i14 = img->size[0];
+      b_ly = emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &u_emlrtBCI, sp);
+      i18 = img->size[0];
       k = (int32_T)emlrtIntegerCheckFastR2012b(lx[i], &emlrtDCI, sp);
-      k = emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &t_emlrtBCI, sp);
-      for (i14 = 0; i14 < 3; i14++) {
-        val[i + 49 * i14] = img->data[((k + img->size[0] * (b_ly - 1)) +
-          img->size[0] * img->size[1] * i14) - 1];
+      k = emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &t_emlrtBCI, sp);
+      for (i18 = 0; i18 < 3; i18++) {
+        val[i + 49 * i18] = img->data[((k + img->size[0] * (b_ly - 1)) +
+          img->size[0] * img->size[1] * i18) - 1];
       }
     } else if (lx[i] == rx[i]) {
-      st.site = &hm_emlrtRSI;
-      i14 = img->size[0];
+      st.site = &cl_emlrtRSI;
+      i18 = img->size[0];
       k = (int32_T)emlrtIntegerCheckFastR2012b(lx[i], &c_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &v_emlrtBCI, &st);
-      i14 = img->size[1];
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &v_emlrtBCI, &st);
+      i18 = img->size[1];
       k = (int32_T)emlrtIntegerCheckFastR2012b(ly[i], &d_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &w_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &w_emlrtBCI, &st);
       b = ry[i] - b_index[49 + i];
-      st.site = &hm_emlrtRSI;
-      i14 = img->size[0];
+      st.site = &cl_emlrtRSI;
+      i18 = img->size[0];
       k = (int32_T)emlrtIntegerCheckFastR2012b(lx[i], &e_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &x_emlrtBCI, &st);
-      i14 = img->size[1];
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &x_emlrtBCI, &st);
+      i18 = img->size[1];
       k = (int32_T)emlrtIntegerCheckFastR2012b(ry[i], &f_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &y_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &y_emlrtBCI, &st);
       b_b = b_index[49 + i] - ly[i];
-      for (i14 = 0; i14 < 3; i14++) {
-        val[i + 49 * i14] = img->data[(((int32_T)lx[i] + img->size[0] *
-          ((int32_T)ly[i] - 1)) + img->size[0] * img->size[1] * i14) - 1] * b +
+      for (i18 = 0; i18 < 3; i18++) {
+        val[i + 49 * i18] = img->data[(((int32_T)lx[i] + img->size[0] *
+          ((int32_T)ly[i] - 1)) + img->size[0] * img->size[1] * i18) - 1] * b +
           img->data[(((int32_T)lx[i] + img->size[0] * ((int32_T)ry[i] - 1)) +
-                     img->size[0] * img->size[1] * i14) - 1] * b_b;
+                     img->size[0] * img->size[1] * i18) - 1] * b_b;
       }
     } else if (ly[i] == ry[i]) {
-      st.site = &im_emlrtRSI;
-      i14 = img->size[0];
+      st.site = &dl_emlrtRSI;
+      i18 = img->size[0];
       k = (int32_T)emlrtIntegerCheckFastR2012b(lx[i], &g_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &ab_emlrtBCI, &st);
-      i14 = img->size[1];
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &ab_emlrtBCI, &st);
+      i18 = img->size[1];
       k = (int32_T)emlrtIntegerCheckFastR2012b(ly[i], &h_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &bb_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &bb_emlrtBCI, &st);
       b = rx[i] - b_index[i];
-      st.site = &im_emlrtRSI;
-      i14 = img->size[0];
+      st.site = &dl_emlrtRSI;
+      i18 = img->size[0];
       k = (int32_T)emlrtIntegerCheckFastR2012b(rx[i], &i_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &cb_emlrtBCI, &st);
-      i14 = img->size[1];
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &cb_emlrtBCI, &st);
+      i18 = img->size[1];
       k = (int32_T)emlrtIntegerCheckFastR2012b(ly[i], &j_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &db_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &db_emlrtBCI, &st);
       b_b = b_index[i] - lx[i];
-      for (i14 = 0; i14 < 3; i14++) {
-        val[i + 49 * i14] = img->data[(((int32_T)lx[i] + img->size[0] *
-          ((int32_T)ly[i] - 1)) + img->size[0] * img->size[1] * i14) - 1] * b +
+      for (i18 = 0; i18 < 3; i18++) {
+        val[i + 49 * i18] = img->data[(((int32_T)lx[i] + img->size[0] *
+          ((int32_T)ly[i] - 1)) + img->size[0] * img->size[1] * i18) - 1] * b +
           img->data[(((int32_T)rx[i] + img->size[0] * ((int32_T)ly[i] - 1)) +
-                     img->size[0] * img->size[1] * i14) - 1] * b_b;
+                     img->size[0] * img->size[1] * i18) - 1] * b_b;
       }
     } else {
-      st.site = &jm_emlrtRSI;
-      i14 = img->size[0];
+      st.site = &el_emlrtRSI;
+      i18 = img->size[0];
       k = (int32_T)emlrtIntegerCheckFastR2012b(lx[i], &k_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &eb_emlrtBCI, &st);
-      i14 = img->size[1];
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &eb_emlrtBCI, &st);
+      i18 = img->size[1];
       k = (int32_T)emlrtIntegerCheckFastR2012b(ly[i], &l_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &fb_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &fb_emlrtBCI, &st);
       b = ry[i] - b_index[49 + i];
-      st.site = &jm_emlrtRSI;
-      i14 = img->size[0];
+      st.site = &el_emlrtRSI;
+      i18 = img->size[0];
       k = (int32_T)emlrtIntegerCheckFastR2012b(lx[i], &m_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &gb_emlrtBCI, &st);
-      i14 = img->size[1];
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &gb_emlrtBCI, &st);
+      i18 = img->size[1];
       k = (int32_T)emlrtIntegerCheckFastR2012b(ry[i], &n_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &hb_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &hb_emlrtBCI, &st);
       b_b = b_index[49 + i] - ly[i];
-      st.site = &jm_emlrtRSI;
+      st.site = &el_emlrtRSI;
       c_b = rx[i] - b_index[i];
-      for (i14 = 0; i14 < 3; i14++) {
-        x[i14] = (img->data[(((int32_T)lx[i] + img->size[0] * ((int32_T)ly[i] -
-          1)) + img->size[0] * img->size[1] * i14) - 1] * b + img->data
+      for (i18 = 0; i18 < 3; i18++) {
+        x[i18] = (img->data[(((int32_T)lx[i] + img->size[0] * ((int32_T)ly[i] -
+          1)) + img->size[0] * img->size[1] * i18) - 1] * b + img->data
                   [(((int32_T)lx[i] + img->size[0] * ((int32_T)ry[i] - 1)) +
-                    img->size[0] * img->size[1] * i14) - 1] * b_b) * c_b;
+                    img->size[0] * img->size[1] * i18) - 1] * b_b) * c_b;
       }
 
-      st.site = &jm_emlrtRSI;
+      st.site = &el_emlrtRSI;
       for (k = 0; k < 3; k++) {
         y[k] = x[k];
       }
 
-      for (i14 = 0; i14 < 3; i14++) {
-        val[i + 49 * i14] = y[i14];
+      for (i18 = 0; i18 < 3; i18++) {
+        val[i + 49 * i18] = y[i18];
       }
 
-      st.site = &km_emlrtRSI;
-      i14 = img->size[0];
+      st.site = &fl_emlrtRSI;
+      i18 = img->size[0];
       k = (int32_T)emlrtIntegerCheckFastR2012b(rx[i], &o_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &ib_emlrtBCI, &st);
-      i14 = img->size[1];
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &ib_emlrtBCI, &st);
+      i18 = img->size[1];
       k = (int32_T)emlrtIntegerCheckFastR2012b(ly[i], &p_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &jb_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &jb_emlrtBCI, &st);
       b = ry[i] - b_index[49 + i];
-      st.site = &km_emlrtRSI;
-      i14 = img->size[0];
+      st.site = &fl_emlrtRSI;
+      i18 = img->size[0];
       k = (int32_T)emlrtIntegerCheckFastR2012b(rx[i], &q_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &kb_emlrtBCI, &st);
-      i14 = img->size[1];
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &kb_emlrtBCI, &st);
+      i18 = img->size[1];
       k = (int32_T)emlrtIntegerCheckFastR2012b(ry[i], &r_emlrtDCI, &st);
-      emlrtDynamicBoundsCheckFastR2012b(k, 1, i14, &lb_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckFastR2012b(k, 1, i18, &lb_emlrtBCI, &st);
       b_b = b_index[49 + i] - ly[i];
-      st.site = &km_emlrtRSI;
+      st.site = &fl_emlrtRSI;
       c_b = b_index[i] - lx[i];
-      for (i14 = 0; i14 < 3; i14++) {
-        x[i14] = (img->data[(((int32_T)rx[i] + img->size[0] * ((int32_T)ly[i] -
-          1)) + img->size[0] * img->size[1] * i14) - 1] * b + img->data
+      for (i18 = 0; i18 < 3; i18++) {
+        x[i18] = (img->data[(((int32_T)rx[i] + img->size[0] * ((int32_T)ly[i] -
+          1)) + img->size[0] * img->size[1] * i18) - 1] * b + img->data
                   [(((int32_T)rx[i] + img->size[0] * ((int32_T)ry[i] - 1)) +
-                    img->size[0] * img->size[1] * i14) - 1] * b_b) * c_b;
+                    img->size[0] * img->size[1] * i18) - 1] * b_b) * c_b;
       }
 
-      st.site = &km_emlrtRSI;
+      st.site = &fl_emlrtRSI;
       for (k = 0; k < 3; k++) {
         y[k] = x[k];
       }
 
-      for (i14 = 0; i14 < 3; i14++) {
-        val[i + 49 * i14] += y[i14];
+      for (i18 = 0; i18 < 3; i18++) {
+        val[i + 49 * i18] += y[i18];
       }
     }
 

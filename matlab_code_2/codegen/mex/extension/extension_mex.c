@@ -3,7 +3,7 @@
  *
  * Code generation for function 'extension'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:29 2016
  *
  */
 
@@ -23,7 +23,7 @@ void *emlrtRootTLSGlobal = NULL;
 /* Function Definitions */
 static void extension_mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 {
-  mxArray *outputs[4];
+  mxArray *outputs[5];
   mxArray *inputs[5];
   int n = 0;
   int nOutputs = (nlhs < 1 ? 1 : nlhs);
@@ -34,7 +34,7 @@ static void extension_mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxA
   /* Check for proper number of arguments. */
   if (nrhs != 5) {
     emlrtErrMsgIdAndTxt(emlrtRootTLSGlobal, "EMLRT:runTime:WrongNumberOfInputs", 5, mxINT32_CLASS, 5, mxCHAR_CLASS, 9, "extension");
-  } else if (nlhs > 4) {
+  } else if (nlhs > 5) {
     emlrtErrMsgIdAndTxt(emlrtRootTLSGlobal, "EMLRT:runTime:TooManyOutputArguments", 3, mxCHAR_CLASS, 9, "extension");
   }
   /* Temporary copy for mex inputs. */

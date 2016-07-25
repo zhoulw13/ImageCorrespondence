@@ -3,261 +3,256 @@
  *
  * Code generation for function 'merging'
  *
- * C source code generated on: Thu Jun 30 18:28:10 2016
+ * C source code generated on: Fri Jul 22 15:48:57 2016
  *
  */
 
 /* Include files */
 #include "rt_nonfinite.h"
 #include "merging.h"
-#include "mod.h"
 #include "ceil.h"
 #include "sum.h"
+#include "mod.h"
 #include "merging_emxutil.h"
 #include "eml_int_forloop_overflow_check.h"
-#include "abs.h"
-#include "repmat.h"
 #include "power.h"
 #include "getPixelsValue.h"
 #include "bspline.h"
 #include "bspline_inv.h"
+#include "triu.h"
+#include "gradient.h"
 #include "merging_mexutil.h"
 #include "merging_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo emlrtRSI = { 12, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo emlrtRSI = { 7, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo b_emlrtRSI = { 15, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo b_emlrtRSI = { 29, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo c_emlrtRSI = { 17, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo c_emlrtRSI = { 30, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo d_emlrtRSI = { 18, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo d_emlrtRSI = { 35, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo e_emlrtRSI = { 27, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo e_emlrtRSI = { 48, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo f_emlrtRSI = { 28, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo f_emlrtRSI = { 53, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo g_emlrtRSI = { 30, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo g_emlrtRSI = { 59, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo h_emlrtRSI = { 31, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo h_emlrtRSI = { 67, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo i_emlrtRSI = { 34, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo i_emlrtRSI = { 71, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo j_emlrtRSI = { 36, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo j_emlrtRSI = { 72, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo k_emlrtRSI = { 37, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo k_emlrtRSI = { 74, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo l_emlrtRSI = { 38, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo l_emlrtRSI = { 75, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo m_emlrtRSI = { 42, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo m_emlrtRSI = { 78, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo n_emlrtRSI = { 43, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo n_emlrtRSI = { 80, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo o_emlrtRSI = { 45, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo o_emlrtRSI = { 81, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo p_emlrtRSI = { 46, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo p_emlrtRSI = { 82, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo q_emlrtRSI = { 47, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo q_emlrtRSI = { 87, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo r_emlrtRSI = { 48, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo r_emlrtRSI = { 88, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo s_emlrtRSI = { 50, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo s_emlrtRSI = { 90, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo t_emlrtRSI = { 51, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo t_emlrtRSI = { 91, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo u_emlrtRSI = { 54, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo u_emlrtRSI = { 93, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo v_emlrtRSI = { 55, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo v_emlrtRSI = { 94, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo w_emlrtRSI = { 57, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo w_emlrtRSI = { 96, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo x_emlrtRSI = { 58, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo x_emlrtRSI = { 97, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo y_emlrtRSI = { 59, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo y_emlrtRSI = { 99, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo ab_emlrtRSI = { 60, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo ab_emlrtRSI = { 100, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo bb_emlrtRSI = { 62, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo bb_emlrtRSI = { 101, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo cb_emlrtRSI = { 63, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo cb_emlrtRSI = { 111, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo db_emlrtRSI = { 65, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo db_emlrtRSI = { 112, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo eb_emlrtRSI = { 66, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo eb_emlrtRSI = { 114, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo fb_emlrtRSI = { 67, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo fb_emlrtRSI = { 117, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo gb_emlrtRSI = { 74, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo gb_emlrtRSI = { 120, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo hb_emlrtRSI = { 75, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo hb_emlrtRSI = { 122, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRSInfo ib_emlrtRSI = { 77, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo kb_emlrtRSI = { 93, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
 
-static emlrtRSInfo jb_emlrtRSI = { 79, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo lb_emlrtRSI = { 94, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
 
-static emlrtRSInfo kb_emlrtRSI = { 82, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo mb_emlrtRSI = { 97, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
 
-static emlrtRSInfo lb_emlrtRSI = { 84, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRSInfo nb_emlrtRSI = { 99, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
 
-static emlrtRSInfo mb_emlrtRSI = { 41, "find",
+static emlrtRSInfo ob_emlrtRSI = { 100, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
+
+static emlrtRSInfo pb_emlrtRSI = { 101, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
+
+static emlrtRSInfo qb_emlrtRSI = { 105, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
+
+static emlrtRSInfo rb_emlrtRSI = { 16, "eml_matrix_npages",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_matrix_npages.m"
+};
+
+static emlrtRSInfo wb_emlrtRSI = { 223, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
+
+static emlrtRSInfo ac_emlrtRSI = { 197, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
+
+static emlrtRSInfo dc_emlrtRSI = { 177, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
+
+static emlrtRSInfo ec_emlrtRSI = { 178, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
+
+static emlrtRSInfo fd_emlrtRSI = { 41, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
-static emlrtRSInfo nb_emlrtRSI = { 230, "find",
+static emlrtRSInfo gd_emlrtRSI = { 230, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
-static emlrtRSInfo ob_emlrtRSI = { 232, "find",
+static emlrtRSInfo hd_emlrtRSI = { 232, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
-static emlrtRSInfo vc_emlrtRSI = { 1, "mrdivide",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/mrdivide.p" };
-
-static emlrtRSInfo yp_emlrtRSI = { 93, "eml_min_or_max",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
-
-static emlrtRSInfo aq_emlrtRSI = { 99, "eml_min_or_max",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
-
-static emlrtRSInfo bq_emlrtRSI = { 100, "eml_min_or_max",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
-
-static emlrtRSInfo cq_emlrtRSI = { 101, "eml_min_or_max",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
-
-static emlrtRSInfo dq_emlrtRSI = { 105, "eml_min_or_max",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
-
-static emlrtRSInfo fq_emlrtRSI = { 223, "eml_min_or_max",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
-
-static emlrtRSInfo gq_emlrtRSI = { 197, "eml_min_or_max",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
-
-static emlrtRSInfo hq_emlrtRSI = { 177, "eml_min_or_max",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
-
-static emlrtRSInfo iq_emlrtRSI = { 178, "eml_min_or_max",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
-
-static emlrtRSInfo nr_emlrtRSI = { 15, "eml_null_assignment",
+static emlrtRSInfo qs_emlrtRSI = { 15, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo or_emlrtRSI = { 16, "eml_null_assignment",
+static emlrtRSInfo rs_emlrtRSI = { 16, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo pr_emlrtRSI = { 52, "eml_null_assignment",
+static emlrtRSInfo ss_emlrtRSI = { 52, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo sr_emlrtRSI = { 172, "eml_null_assignment",
+static emlrtRSInfo vs_emlrtRSI = { 172, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo tr_emlrtRSI = { 173, "eml_null_assignment",
+static emlrtRSInfo ws_emlrtRSI = { 173, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo ur_emlrtRSI = { 174, "eml_null_assignment",
+static emlrtRSInfo xs_emlrtRSI = { 174, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo vr_emlrtRSI = { 175, "eml_null_assignment",
+static emlrtRSInfo ys_emlrtRSI = { 175, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo wr_emlrtRSI = { 18, "eml_null_assignment",
+static emlrtRSInfo at_emlrtRSI = { 18, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo xr_emlrtRSI = { 19, "eml_null_assignment",
+static emlrtRSInfo bt_emlrtRSI = { 19, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo yr_emlrtRSI = { 207, "eml_null_assignment",
+static emlrtRSInfo ct_emlrtRSI = { 207, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo as_emlrtRSI = { 208, "eml_null_assignment",
+static emlrtRSInfo dt_emlrtRSI = { 208, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo bs_emlrtRSI = { 209, "eml_null_assignment",
+static emlrtRSInfo et_emlrtRSI = { 209, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo cs_emlrtRSI = { 210, "eml_null_assignment",
+static emlrtRSInfo ft_emlrtRSI = { 210, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo ds_emlrtRSI = { 10, "eml_null_assignment",
+static emlrtRSInfo gt_emlrtRSI = { 10, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo es_emlrtRSI = { 11, "eml_null_assignment",
+static emlrtRSInfo ht_emlrtRSI = { 11, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo fs_emlrtRSI = { 56, "eml_null_assignment",
+static emlrtRSInfo it_emlrtRSI = { 56, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo gs_emlrtRSI = { 116, "eml_null_assignment",
+static emlrtRSInfo jt_emlrtRSI = { 116, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo hs_emlrtRSI = { 117, "eml_null_assignment",
+static emlrtRSInfo kt_emlrtRSI = { 117, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo is_emlrtRSI = { 118, "eml_null_assignment",
+static emlrtRSInfo lt_emlrtRSI = { 118, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtMCInfo b_emlrtMCI = { 123, 9, "find",
+static emlrtMCInfo h_emlrtMCI = { 123, 9, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
-static emlrtMCInfo c_emlrtMCI = { 122, 19, "find",
+static emlrtMCInfo i_emlrtMCI = { 122, 19, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
-static emlrtMCInfo d_emlrtMCI = { 239, 9, "find",
+static emlrtMCInfo j_emlrtMCI = { 239, 9, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
 static emlrtMCInfo ab_emlrtMCI = { 53, 9, "eml_null_assignment",
@@ -288,290 +283,398 @@ static emlrtMCInfo gb_emlrtMCI = { 125, 9, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRTEInfo emlrtRTEI = { 1, 43, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo emlrtRTEI = { 1, 60, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo tb_emlrtRTEI = { 1, 14, "eml_null_assignment",
+static emlrtRTEInfo ac_emlrtRTEI = { 1, 14, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRTEInfo vb_emlrtRTEI = { 127, 5, "find",
+static emlrtRTEInfo cc_emlrtRTEI = { 83, 1, "eml_min_or_max",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_min_or_max.m" };
+
+static emlrtRTEInfo dc_emlrtRTEI = { 127, 5, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
-static emlrtRTEInfo wb_emlrtRTEI = { 43, 37, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo ec_emlrtRTEI = { 88, 37, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo xb_emlrtRTEI = { 55, 37, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo fc_emlrtRTEI = { 94, 37, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo yb_emlrtRTEI = { 81, 9, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo gc_emlrtRTEI = { 116, 9, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo ac_emlrtRTEI = { 7, 1, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo hc_emlrtRTEI = { 30, 1, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo bc_emlrtRTEI = { 15, 9, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo ic_emlrtRTEI = { 76, 5, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo cc_emlrtRTEI = { 17, 9, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo jc_emlrtRTEI = { 77, 5, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo dc_emlrtRTEI = { 27, 1, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo kc_emlrtRTEI = { 87, 5, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo ec_emlrtRTEI = { 32, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo lc_emlrtRTEI = { 88, 5, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo fc_emlrtRTEI = { 33, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo mc_emlrtRTEI = { 90, 5, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo gc_emlrtRTEI = { 34, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo nc_emlrtRTEI = { 91, 5, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo hc_emlrtRTEI = { 42, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo oc_emlrtRTEI = { 96, 5, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo ic_emlrtRTEI = { 43, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtRTEInfo pc_emlrtRTEI = { 97, 5, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtRTEInfo jc_emlrtRTEI = { 50, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
-
-static emlrtRTEInfo kc_emlrtRTEI = { 51, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
-
-static emlrtRTEInfo lc_emlrtRTEI = { 62, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
-
-static emlrtRTEInfo mc_emlrtRTEI = { 63, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
-
-static emlrtRTEInfo nc_emlrtRTEI = { 33, 6, "find",
+static emlrtRTEInfo qc_emlrtRTEI = { 33, 6, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
-static emlrtRTEInfo oc_emlrtRTEI = { 118, 9, "eml_null_assignment",
+static emlrtRTEInfo rc_emlrtRTEI = { 118, 9, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRTEInfo uc_emlrtRTEI = { 14, 5, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtBCInfo vd_emlrtBCI = { -1, -1, 33, 9, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo fb_emlrtECI = { 2, 17, 19, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtBCInfo wd_emlrtBCI = { -1, -1, 36, 13, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo gb_emlrtECI = { 2, 18, 21, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtBCInfo xd_emlrtBCI = { -1, -1, 42, 13, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo bb_emlrtBCI = { -1, -1, 30, 13, "pairs", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo yd_emlrtBCI = { -1, -1, 51, 9, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo cb_emlrtBCI = { -1, -1, 31, 14, "pairs", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ae_emlrtBCI = { -1, -1, 52, 11, "diffy", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo db_emlrtBCI = { -1, -1, 37, 18, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo be_emlrtBCI = { -1, -1, 54, 13, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo eb_emlrtBCI = { -1, -1, 38, 18, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ce_emlrtBCI = { -1, -1, 58, 11, "diffy", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo fb_emlrtBCI = { -1, -1, 40, 19, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo de_emlrtBCI = { -1, -1, 60, 13, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo gb_emlrtBCI = { -1, -1, 53, 19, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ee_emlrtBCI = { -1, -1, 74, 13, "pairs", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo hb_emlrtECI = { 2, 65, 22, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtBCInfo fe_emlrtBCI = { -1, -1, 75, 14, "pairs", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo ib_emlrtECI = { 2, 66, 22, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtBCInfo ge_emlrtBCI = { -1, -1, 81, 18, "sp_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo hb_emlrtBCI = { -1, -1, 71, 51, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo he_emlrtBCI = { -1, -1, 82, 18, "sp_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo ib_emlrtBCI = { -1, -1, 71, 54, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtECInfo db_emlrtECI = { 2, 99, 22, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtBCInfo jb_emlrtBCI = { -1, -1, 71, 77, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtECInfo eb_emlrtECI = { 2, 100, 22, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtBCInfo kb_emlrtBCI = { -1, -1, 71, 82, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ie_emlrtBCI = { -1, -1, 108, 51, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo jb_emlrtECI = { 2, 71, 35, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtBCInfo je_emlrtBCI = { -1, -1, 108, 54, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo lb_emlrtBCI = { -1, -1, 71, 25, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ke_emlrtBCI = { -1, -1, 108, 77, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo mb_emlrtBCI = { -1, -1, 71, 28, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo le_emlrtBCI = { -1, -1, 108, 82, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo kb_emlrtECI = { -1, 71, 9, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtECInfo fb_emlrtECI = { 2, 108, 35, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtBCInfo nb_emlrtBCI = { -1, -1, 72, 51, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo me_emlrtBCI = { -1, -1, 108, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo ob_emlrtBCI = { -1, -1, 72, 56, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ne_emlrtBCI = { -1, -1, 108, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo pb_emlrtBCI = { -1, -1, 72, 77, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtECInfo gb_emlrtECI = { -1, 108, 9, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtBCInfo qb_emlrtBCI = { -1, -1, 72, 82, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo oe_emlrtBCI = { -1, -1, 109, 51, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo lb_emlrtECI = { -1, 72, 35, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtBCInfo pe_emlrtBCI = { -1, -1, 109, 56, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo rb_emlrtBCI = { -1, -1, 72, 25, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo qe_emlrtBCI = { -1, -1, 109, 77, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo sb_emlrtBCI = { -1, -1, 72, 30, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo re_emlrtBCI = { -1, -1, 109, 82, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo mb_emlrtECI = { -1, 72, 9, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtECInfo hb_emlrtECI = { -1, 109, 35, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtBCInfo tb_emlrtBCI = { -1, -1, 73, 53, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo se_emlrtBCI = { -1, -1, 109, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo ub_emlrtBCI = { -1, -1, 73, 56, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo te_emlrtBCI = { -1, -1, 109, 30, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo vb_emlrtBCI = { -1, -1, 73, 81, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtECInfo ib_emlrtECI = { -1, 109, 9, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtBCInfo wb_emlrtBCI = { -1, -1, 73, 84, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ue_emlrtBCI = { -1, -1, 110, 53, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo nb_emlrtECI = { 2, 73, 37, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtBCInfo ve_emlrtBCI = { -1, -1, 110, 56, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo xb_emlrtBCI = { -1, -1, 73, 25, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo we_emlrtBCI = { -1, -1, 110, 81, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo yb_emlrtBCI = { -1, -1, 73, 28, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo xe_emlrtBCI = { -1, -1, 110, 84, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtECInfo ob_emlrtECI = { -1, 73, 9, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m" };
+static emlrtECInfo jb_emlrtECI = { 2, 110, 37, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtBCInfo ac_emlrtBCI = { -1, -1, 42, 23, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ye_emlrtBCI = { -1, -1, 110, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo bc_emlrtBCI = { -1, -1, 43, 37, "bspline_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo af_emlrtBCI = { -1, -1, 110, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo cc_emlrtBCI = { -1, -1, 43, 22, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtECInfo kb_emlrtECI = { -1, 110, 9, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m" };
 
-static emlrtBCInfo dc_emlrtBCI = { -1, -1, 45, 5, "ref_it", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtDCInfo ab_emlrtDCI = { 8, 25, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
 
-static emlrtBCInfo ec_emlrtBCI = { -1, -1, 46, 5, "ref_it", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtDCInfo bb_emlrtDCI = { 8, 25, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 4 };
 
-static emlrtBCInfo fc_emlrtBCI = { -1, -1, 47, 5, "ref_i", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtDCInfo cb_emlrtDCI = { 8, 28, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
 
-static emlrtBCInfo gc_emlrtBCI = { -1, -1, 48, 5, "ref_i", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtDCInfo db_emlrtDCI = { 8, 28, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 4 };
 
-static emlrtBCInfo hc_emlrtBCI = { -1, -1, 54, 23, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo bf_emlrtBCI = { -1, -1, 66, 35, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo ic_emlrtBCI = { -1, -1, 55, 37, "bspline_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtDCInfo eb_emlrtDCI = { 66, 35, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
 
-static emlrtBCInfo jc_emlrtBCI = { -1, -1, 55, 22, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo cf_emlrtBCI = { -1, -1, 66, 43, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo kc_emlrtBCI = { -1, -1, 57, 5, "ref_jt", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtDCInfo fb_emlrtDCI = { 66, 43, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
 
-static emlrtBCInfo lc_emlrtBCI = { -1, -1, 58, 5, "ref_jt", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo df_emlrtBCI = { -1, -1, 87, 23, "sp_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo mc_emlrtBCI = { -1, -1, 59, 5, "ref_j", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ef_emlrtBCI = { -1, -1, 88, 37, "bspline_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo nc_emlrtBCI = { -1, -1, 60, 5, "ref_j", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo ff_emlrtBCI = { -1, -1, 88, 22, "sp_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo oc_emlrtBCI = { -1, -1, 69, 21, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo gf_emlrtBCI = { -1, -1, 93, 23, "sp_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo pc_emlrtBCI = { -1, -1, 69, 24, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo hf_emlrtBCI = { -1, -1, 94, 37, "bspline_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo qc_emlrtBCI = { -1, -1, 76, 9, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo if_emlrtBCI = { -1, -1, 94, 22, "sp_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo rc_emlrtBCI = { -1, -1, 78, 9, "ref_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo jf_emlrtBCI = { -1, -1, 106, 21, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo sc_emlrtBCI = { -1, -1, 81, 9, "bspline_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo kf_emlrtBCI = { -1, -1, 106, 24, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo tc_emlrtBCI = { -1, -1, 12, 24, "sp_val", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo lf_emlrtBCI = { -1, -1, 113, 9, "sp_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo uc_emlrtBCI = { -1, -1, 15, 28, "sp_val", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo mf_emlrtBCI = { -1, -1, 116, 9, "bspline_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo vc_emlrtBCI = { -1, -1, 19, 29, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo nf_emlrtBCI = { -1, -1, 118, 3, "ref_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo wc_emlrtBCI = { -1, -1, 19, 32, "adjacency_graph", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo of_emlrtBCI = { -1, -1, 51, 13, "diffy", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo xc_emlrtBCI = { -1, -1, 32, 17, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo pf_emlrtBCI = { -1, -1, 53, 28, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtDCInfo j_emlrtDCI = { 32, 17, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 1 };
+static emlrtBCInfo qf_emlrtBCI = { -1, -1, 53, 40, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo yc_emlrtBCI = { -1, -1, 32, 32, "sp_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo rf_emlrtBCI = { -1, -1, 53, 44, "diffy", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtDCInfo k_emlrtDCI = { 32, 32, "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 1 };
+static emlrtBCInfo sf_emlrtBCI = { -1, -1, 55, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtBCInfo ad_emlrtBCI = { -1, -1, 33, 18, "ref_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtDCInfo gb_emlrtDCI = { 55, 25, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
 
-static emlrtBCInfo bd_emlrtBCI = { -1, -1, 33, 34, "ref_set", "merging",
-  "F:/Git/correspondence/matlab_code/merging.m", 0 };
+static emlrtBCInfo tf_emlrtBCI = { -1, -1, 55, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
 
-static emlrtRSInfo js_emlrtRSI = { 125, "eml_null_assignment",
+static emlrtDCInfo hb_emlrtDCI = { 55, 28, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
+
+static emlrtBCInfo uf_emlrtBCI = { -1, -1, 56, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo vf_emlrtBCI = { -1, -1, 56, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo wf_emlrtBCI = { -1, -1, 59, 28, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo xf_emlrtBCI = { -1, -1, 59, 40, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo yf_emlrtBCI = { -1, -1, 59, 44, "diffy", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo ag_emlrtBCI = { -1, -1, 61, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtDCInfo ib_emlrtDCI = { 61, 25, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
+
+static emlrtBCInfo bg_emlrtBCI = { -1, -1, 61, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtDCInfo jb_emlrtDCI = { 61, 28, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
+
+static emlrtBCInfo cg_emlrtBCI = { -1, -1, 62, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo dg_emlrtBCI = { -1, -1, 62, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo eg_emlrtBCI = { -1, -1, 33, 13, "diffx", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo fg_emlrtBCI = { -1, -1, 34, 11, "diffx", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo gg_emlrtBCI = { -1, -1, 35, 21, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo hg_emlrtBCI = { -1, -1, 35, 33, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo ig_emlrtBCI = { -1, -1, 35, 37, "diffx", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo jg_emlrtBCI = { -1, -1, 37, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtDCInfo kb_emlrtDCI = { 37, 25, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
+
+static emlrtBCInfo kg_emlrtBCI = { -1, -1, 37, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtDCInfo lb_emlrtDCI = { 37, 28, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
+
+static emlrtBCInfo lg_emlrtBCI = { -1, -1, 38, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo mg_emlrtBCI = { -1, -1, 38, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo ng_emlrtBCI = { -1, -1, 40, 11, "diffx", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo og_emlrtBCI = { -1, -1, 41, 19, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo pg_emlrtBCI = { -1, -1, 41, 31, "Sp2", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo qg_emlrtBCI = { -1, -1, 41, 35, "diffx", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo rg_emlrtBCI = { -1, -1, 43, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtDCInfo mb_emlrtDCI = { 43, 25, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
+
+static emlrtBCInfo sg_emlrtBCI = { -1, -1, 43, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtDCInfo nb_emlrtDCI = { 43, 28, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
+
+static emlrtBCInfo tg_emlrtBCI = { -1, -1, 44, 25, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo ug_emlrtBCI = { -1, -1, 44, 28, "adjacency_graph", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo vg_emlrtBCI = { -1, -1, 76, 17, "sp_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtDCInfo ob_emlrtDCI = { 76, 17, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
+
+static emlrtBCInfo wg_emlrtBCI = { -1, -1, 76, 32, "sp_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtDCInfo pb_emlrtDCI = { 76, 32, "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 1 };
+
+static emlrtBCInfo xg_emlrtBCI = { -1, -1, 77, 18, "ref_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtBCInfo yg_emlrtBCI = { -1, -1, 77, 34, "ref_set", "merging",
+  "F:/Git/correspondence/matlab_code_2/merging.m", 0 };
+
+static emlrtRSInfo mt_emlrtRSI = { 125, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo ks_emlrtRSI = { 231, "eml_null_assignment",
+static emlrtRSInfo nt_emlrtRSI = { 231, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo ls_emlrtRSI = { 196, "eml_null_assignment",
+static emlrtRSInfo ot_emlrtRSI = { 196, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo ms_emlrtRSI = { 239, "find",
+static emlrtRSInfo pt_emlrtRSI = { 239, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
-static emlrtRSInfo ns_emlrtRSI = { 122, "find",
+static emlrtRSInfo qt_emlrtRSI = { 122, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
-static emlrtRSInfo ws_emlrtRSI = { 57, "eml_null_assignment",
+static emlrtRSInfo au_emlrtRSI = { 57, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo xs_emlrtRSI = { 53, "eml_null_assignment",
+static emlrtRSInfo bu_emlrtRSI = { 53, "eml_null_assignment",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/eml_null_assignment.m"
 };
 
-static emlrtRSInfo ys_emlrtRSI = { 123, "find",
+static emlrtRSInfo cu_emlrtRSI = { 123, "find",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elmat/find.m" };
 
 /* Function Declarations */
@@ -590,19 +693,19 @@ static void b_eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x,
   real_T idx)
 {
   const mxArray *y;
-  static const int32_T iv89[2] = { 1, 31 };
+  static const int32_T iv88[2] = { 1, 31 };
 
   const mxArray *m14;
-  char_T cv33[31];
+  char_T cv34[31];
   int32_T i;
-  static const char_T cv34[31] = { 'C', 'o', 'd', 'e', 'r', ':', 'M', 'A', 'T',
+  static const char_T cv35[31] = { 'C', 'o', 'd', 'e', 'r', ':', 'M', 'A', 'T',
     'L', 'A', 'B', ':', 's', 'u', 'b', 's', 'd', 'e', 'l', 'd', 'i', 'm', 'm',
     'i', 's', 'm', 'a', 't', 'c', 'h' };
 
   emxArray_real_T *b_x;
   int32_T j;
   int32_T loop_ub;
-  int32_T i26;
+  int32_T i24;
   boolean_T overflow;
   const mxArray *b_y;
   emxArray_real_T *c_x;
@@ -619,40 +722,40 @@ static void b_eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x,
   d_st.prev = &b_st;
   d_st.tls = b_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b(sp);
-  st.site = &wr_emlrtRSI;
-  b_st.site = &pr_emlrtRSI;
+  st.site = &at_emlrtRSI;
+  b_st.site = &ss_emlrtRSI;
   if (is_valid_idx(x, idx, 2.0)) {
   } else {
     y = NULL;
-    m14 = mxCreateCharArray(2, iv89);
+    m14 = mxCreateCharArray(2, iv88);
     for (i = 0; i < 31; i++) {
-      cv33[i] = cv34[i];
+      cv34[i] = cv35[i];
     }
 
-    emlrtInitCharArrayR2013a(&st, 31, m14, cv33);
+    emlrtInitCharArrayR2013a(&st, 31, m14, cv34);
     emlrtAssign(&y, m14);
-    b_st.site = &pr_emlrtRSI;
-    c_st.site = &xs_emlrtRSI;
+    b_st.site = &ss_emlrtRSI;
+    c_st.site = &bu_emlrtRSI;
     error(&b_st, message(&c_st, y, &ab_emlrtMCI), &bb_emlrtMCI);
   }
 
-  emxInit_real_T(&st, &b_x, 2, &tb_emlrtRTEI, TRUE);
-  st.site = &xr_emlrtRSI;
+  emxInit_real_T(&st, &b_x, 2, &ac_emlrtRTEI, TRUE);
+  st.site = &bt_emlrtRSI;
   j = b_x->size[0] * b_x->size[1];
   b_x->size[0] = x->size[0];
   b_x->size[1] = x->size[1];
   emxEnsureCapacity(&st, (emxArray__common *)b_x, j, (int32_T)sizeof(real_T),
-                    &tb_emlrtRTEI);
+                    &ac_emlrtRTEI);
   loop_ub = x->size[1];
   for (j = 0; j < loop_ub; j++) {
     i = x->size[0];
-    for (i26 = 0; i26 < i; i26++) {
-      b_x->data[i26 + b_x->size[0] * j] = x->data[i26 + x->size[0] * j];
+    for (i24 = 0; i24 < i; i24++) {
+      b_x->data[i24 + b_x->size[0] * j] = x->data[i24 + x->size[0] * j];
     }
   }
 
-  b_st.site = &yr_emlrtRSI;
-  b_st.site = &as_emlrtRSI;
+  b_st.site = &ct_emlrtRSI;
+  b_st.site = &dt_emlrtRSI;
   if ((int32_T)idx > x->size[1] - 1) {
     overflow = FALSE;
   } else {
@@ -660,15 +763,15 @@ static void b_eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x,
   }
 
   if (overflow) {
-    d_st.site = &qb_emlrtRSI;
+    d_st.site = &ub_emlrtRSI;
     check_forloop_overflow_error(&d_st);
   }
 
   for (j = (int32_T)idx; j < x->size[1]; j++) {
     loop_ub = b_x->size[0];
-    b_st.site = &bs_emlrtRSI;
+    b_st.site = &et_emlrtRSI;
     for (i = 0; i + 1 <= loop_ub; i++) {
-      b_st.site = &cs_emlrtRSI;
+      b_st.site = &ft_emlrtRSI;
       b_x->data[i + b_x->size[0] * (j - 1)] = b_x->data[i + b_x->size[0] * j];
     }
   }
@@ -678,7 +781,7 @@ static void b_eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x,
     b_y = NULL;
     m14 = mxCreateString("Assertion failed.");
     emlrtAssign(&b_y, m14);
-    b_st.site = &ks_emlrtRSI;
+    b_st.site = &nt_emlrtRSI;
     error(&b_st, b_y, &db_emlrtMCI);
   }
 
@@ -688,16 +791,16 @@ static void b_eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x,
     loop_ub = x->size[1] - 1;
   }
 
-  emxInit_real_T(&st, &c_x, 2, &tb_emlrtRTEI, TRUE);
+  emxInit_real_T(&st, &c_x, 2, &ac_emlrtRTEI, TRUE);
   i = b_x->size[0];
   j = c_x->size[0] * c_x->size[1];
   c_x->size[0] = i;
   c_x->size[1] = loop_ub;
   emxEnsureCapacity(&st, (emxArray__common *)c_x, j, (int32_T)sizeof(real_T),
-                    &tb_emlrtRTEI);
+                    &ac_emlrtRTEI);
   for (j = 0; j < loop_ub; j++) {
-    for (i26 = 0; i26 < i; i26++) {
-      c_x->data[i26 + c_x->size[0] * j] = b_x->data[i26 + b_x->size[0] * j];
+    for (i24 = 0; i24 < i; i24++) {
+      c_x->data[i24 + c_x->size[0] * j] = b_x->data[i24 + b_x->size[0] * j];
     }
   }
 
@@ -705,12 +808,12 @@ static void b_eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x,
   b_x->size[0] = c_x->size[0];
   b_x->size[1] = c_x->size[1];
   emxEnsureCapacity(&st, (emxArray__common *)b_x, j, (int32_T)sizeof(real_T),
-                    &tb_emlrtRTEI);
+                    &ac_emlrtRTEI);
   loop_ub = c_x->size[1];
   for (j = 0; j < loop_ub; j++) {
     i = c_x->size[0];
-    for (i26 = 0; i26 < i; i26++) {
-      b_x->data[i26 + b_x->size[0] * j] = c_x->data[i26 + c_x->size[0] * j];
+    for (i24 = 0; i24 < i; i24++) {
+      b_x->data[i24 + b_x->size[0] * j] = c_x->data[i24 + c_x->size[0] * j];
     }
   }
 
@@ -719,12 +822,12 @@ static void b_eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x,
   x->size[0] = b_x->size[0];
   x->size[1] = b_x->size[1];
   emxEnsureCapacity(sp, (emxArray__common *)x, j, (int32_T)sizeof(real_T),
-                    &tb_emlrtRTEI);
+                    &ac_emlrtRTEI);
   loop_ub = b_x->size[1];
   for (j = 0; j < loop_ub; j++) {
     i = b_x->size[0];
-    for (i26 = 0; i26 < i; i26++) {
-      x->data[i26 + x->size[0] * j] = b_x->data[i26 + b_x->size[0] * j];
+    for (i24 = 0; i24 < i; i24++) {
+      x->data[i24 + x->size[0] * j] = b_x->data[i24 + b_x->size[0] * j];
     }
   }
 
@@ -738,12 +841,12 @@ static void c_eml_null_assignment(const emlrtStack *sp, emxArray_struct_T *x,
   boolean_T overflow;
   boolean_T guard1 = FALSE;
   const mxArray *y;
-  static const int32_T iv90[2] = { 1, 31 };
+  static const int32_T iv89[2] = { 1, 31 };
 
   const mxArray *m15;
-  char_T cv35[31];
+  char_T cv36[31];
   int32_T i;
-  static const char_T cv36[31] = { 'C', 'o', 'd', 'e', 'r', ':', 'M', 'A', 'T',
+  static const char_T cv37[31] = { 'C', 'o', 'd', 'e', 'r', ':', 'M', 'A', 'T',
     'L', 'A', 'B', ':', 's', 'u', 'b', 's', 'd', 'e', 'l', 'd', 'i', 'm', 'm',
     'i', 's', 'm', 'a', 't', 'c', 'h' };
 
@@ -763,8 +866,8 @@ static void c_eml_null_assignment(const emlrtStack *sp, emxArray_struct_T *x,
   d_st.prev = &st;
   d_st.tls = st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b(sp);
-  st.site = &ds_emlrtRSI;
-  b_st.site = &fs_emlrtRSI;
+  st.site = &gt_emlrtRSI;
+  b_st.site = &it_emlrtRSI;
   overflow = TRUE;
   guard1 = FALSE;
   if (idx < 1.0) {
@@ -784,22 +887,22 @@ static void c_eml_null_assignment(const emlrtStack *sp, emxArray_struct_T *x,
   if (overflow) {
   } else {
     y = NULL;
-    m15 = mxCreateCharArray(2, iv90);
+    m15 = mxCreateCharArray(2, iv89);
     for (i = 0; i < 31; i++) {
-      cv35[i] = cv36[i];
+      cv36[i] = cv37[i];
     }
 
-    emlrtInitCharArrayR2013a(&st, 31, m15, cv35);
+    emlrtInitCharArrayR2013a(&st, 31, m15, cv36);
     emlrtAssign(&y, m15);
-    b_st.site = &fs_emlrtRSI;
-    d_st.site = &ws_emlrtRSI;
+    b_st.site = &it_emlrtRSI;
+    d_st.site = &au_emlrtRSI;
     error(&b_st, message(&d_st, y, &eb_emlrtMCI), &fb_emlrtMCI);
   }
 
-  st.site = &es_emlrtRSI;
+  st.site = &ht_emlrtRSI;
   i = x->size[1] - 1;
-  b_st.site = &gs_emlrtRSI;
-  b_st.site = &hs_emlrtRSI;
+  b_st.site = &jt_emlrtRSI;
+  b_st.site = &kt_emlrtRSI;
   if ((int32_T)idx > x->size[1] - 1) {
     overflow = FALSE;
   } else {
@@ -807,13 +910,13 @@ static void c_eml_null_assignment(const emlrtStack *sp, emxArray_struct_T *x,
   }
 
   if (overflow) {
-    c_st.site = &qb_emlrtRSI;
+    c_st.site = &ub_emlrtRSI;
     check_forloop_overflow_error(&c_st);
   }
 
   for (k = (int32_T)idx; k <= i; k++) {
-    b_st.site = &is_emlrtRSI;
-    emxCopyStruct_struct_T(&st, &x->data[k - 1], &x->data[k], &oc_emlrtRTEI);
+    b_st.site = &lt_emlrtRSI;
+    emxCopyStruct_struct_T(&st, &x->data[k - 1], &x->data[k], &rc_emlrtRTEI);
   }
 
   if (i <= i + 1) {
@@ -821,7 +924,7 @@ static void c_eml_null_assignment(const emlrtStack *sp, emxArray_struct_T *x,
     b_y = NULL;
     m15 = mxCreateString("Assertion failed.");
     emlrtAssign(&b_y, m15);
-    b_st.site = &js_emlrtRSI;
+    b_st.site = &mt_emlrtRSI;
     error(&b_st, b_y, &gb_emlrtMCI);
   }
 
@@ -829,24 +932,24 @@ static void c_eml_null_assignment(const emlrtStack *sp, emxArray_struct_T *x,
     i = 0;
   }
 
-  emxInit_struct_T(&st, &b_x, 2, &tb_emlrtRTEI, TRUE);
+  emxInit_struct_T(&st, &b_x, 2, &ac_emlrtRTEI, TRUE);
   k = b_x->size[0] * b_x->size[1];
   b_x->size[0] = 1;
   b_x->size[1] = i;
-  emxEnsureCapacity_struct_T(&st, b_x, k, &tb_emlrtRTEI);
+  emxEnsureCapacity_struct_T(&st, b_x, k, &ac_emlrtRTEI);
   for (k = 0; k < i; k++) {
     emxCopyStruct_struct_T(&st, &b_x->data[b_x->size[0] * k], &x->data[k],
-      &tb_emlrtRTEI);
+      &ac_emlrtRTEI);
   }
 
   k = x->size[0] * x->size[1];
   x->size[0] = 1;
   x->size[1] = b_x->size[1];
-  emxEnsureCapacity_struct_T(&st, x, k, &tb_emlrtRTEI);
+  emxEnsureCapacity_struct_T(&st, x, k, &ac_emlrtRTEI);
   i = b_x->size[1];
   for (k = 0; k < i; k++) {
     emxCopyStruct_struct_T(&st, &x->data[x->size[0] * k], &b_x->data[b_x->size[0]
-      * k], &tb_emlrtRTEI);
+      * k], &ac_emlrtRTEI);
   }
 
   emxFree_struct_T(&b_x);
@@ -859,12 +962,12 @@ static void d_eml_null_assignment(const emlrtStack *sp, emxArray_b_struct_T *x,
   boolean_T overflow;
   boolean_T guard1 = FALSE;
   const mxArray *y;
-  static const int32_T iv91[2] = { 1, 31 };
+  static const int32_T iv90[2] = { 1, 31 };
 
   const mxArray *m16;
-  char_T cv37[31];
+  char_T cv38[31];
   int32_T i;
-  static const char_T cv38[31] = { 'C', 'o', 'd', 'e', 'r', ':', 'M', 'A', 'T',
+  static const char_T cv39[31] = { 'C', 'o', 'd', 'e', 'r', ':', 'M', 'A', 'T',
     'L', 'A', 'B', ':', 's', 'u', 'b', 's', 'd', 'e', 'l', 'd', 'i', 'm', 'm',
     'i', 's', 'm', 'a', 't', 'c', 'h' };
 
@@ -884,8 +987,8 @@ static void d_eml_null_assignment(const emlrtStack *sp, emxArray_b_struct_T *x,
   d_st.prev = &st;
   d_st.tls = st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b(sp);
-  st.site = &ds_emlrtRSI;
-  b_st.site = &fs_emlrtRSI;
+  st.site = &gt_emlrtRSI;
+  b_st.site = &it_emlrtRSI;
   overflow = TRUE;
   guard1 = FALSE;
   if (idx < 1.0) {
@@ -905,22 +1008,22 @@ static void d_eml_null_assignment(const emlrtStack *sp, emxArray_b_struct_T *x,
   if (overflow) {
   } else {
     y = NULL;
-    m16 = mxCreateCharArray(2, iv91);
+    m16 = mxCreateCharArray(2, iv90);
     for (i = 0; i < 31; i++) {
-      cv37[i] = cv38[i];
+      cv38[i] = cv39[i];
     }
 
-    emlrtInitCharArrayR2013a(&st, 31, m16, cv37);
+    emlrtInitCharArrayR2013a(&st, 31, m16, cv38);
     emlrtAssign(&y, m16);
-    b_st.site = &fs_emlrtRSI;
-    d_st.site = &ws_emlrtRSI;
+    b_st.site = &it_emlrtRSI;
+    d_st.site = &au_emlrtRSI;
     error(&b_st, message(&d_st, y, &eb_emlrtMCI), &fb_emlrtMCI);
   }
 
-  st.site = &es_emlrtRSI;
+  st.site = &ht_emlrtRSI;
   i = x->size[1] - 1;
-  b_st.site = &gs_emlrtRSI;
-  b_st.site = &hs_emlrtRSI;
+  b_st.site = &jt_emlrtRSI;
+  b_st.site = &kt_emlrtRSI;
   if ((int32_T)idx > x->size[1] - 1) {
     overflow = FALSE;
   } else {
@@ -928,13 +1031,13 @@ static void d_eml_null_assignment(const emlrtStack *sp, emxArray_b_struct_T *x,
   }
 
   if (overflow) {
-    c_st.site = &qb_emlrtRSI;
+    c_st.site = &ub_emlrtRSI;
     check_forloop_overflow_error(&c_st);
   }
 
   for (k = (int32_T)idx; k <= i; k++) {
-    b_st.site = &is_emlrtRSI;
-    b_emxCopyStruct_struct_T(&st, &x->data[k - 1], &x->data[k], &oc_emlrtRTEI);
+    b_st.site = &lt_emlrtRSI;
+    b_emxCopyStruct_struct_T(&st, &x->data[k - 1], &x->data[k], &rc_emlrtRTEI);
   }
 
   if (i <= i + 1) {
@@ -942,7 +1045,7 @@ static void d_eml_null_assignment(const emlrtStack *sp, emxArray_b_struct_T *x,
     b_y = NULL;
     m16 = mxCreateString("Assertion failed.");
     emlrtAssign(&b_y, m16);
-    b_st.site = &js_emlrtRSI;
+    b_st.site = &mt_emlrtRSI;
     error(&b_st, b_y, &gb_emlrtMCI);
   }
 
@@ -950,24 +1053,24 @@ static void d_eml_null_assignment(const emlrtStack *sp, emxArray_b_struct_T *x,
     i = 0;
   }
 
-  b_emxInit_struct_T(&st, &b_x, 2, &tb_emlrtRTEI, TRUE);
+  b_emxInit_struct_T(&st, &b_x, 2, &ac_emlrtRTEI, TRUE);
   k = b_x->size[0] * b_x->size[1];
   b_x->size[0] = 1;
   b_x->size[1] = i;
-  b_emxEnsureCapacity_struct_T(&st, b_x, k, &tb_emlrtRTEI);
+  b_emxEnsureCapacity_struct_T(&st, b_x, k, &ac_emlrtRTEI);
   for (k = 0; k < i; k++) {
     b_emxCopyStruct_struct_T(&st, &b_x->data[b_x->size[0] * k], &x->data[k],
-      &tb_emlrtRTEI);
+      &ac_emlrtRTEI);
   }
 
   k = x->size[0] * x->size[1];
   x->size[0] = 1;
   x->size[1] = b_x->size[1];
-  b_emxEnsureCapacity_struct_T(&st, x, k, &tb_emlrtRTEI);
+  b_emxEnsureCapacity_struct_T(&st, x, k, &ac_emlrtRTEI);
   i = b_x->size[1];
   for (k = 0; k < i; k++) {
     b_emxCopyStruct_struct_T(&st, &x->data[x->size[0] * k], &b_x->data[b_x->
-      size[0] * k], &tb_emlrtRTEI);
+      size[0] * k], &ac_emlrtRTEI);
   }
 
   b_emxFree_struct_T(&b_x);
@@ -978,12 +1081,12 @@ static void eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x, real_T
   idx)
 {
   const mxArray *y;
-  static const int32_T iv88[2] = { 1, 31 };
+  static const int32_T iv87[2] = { 1, 31 };
 
   const mxArray *m13;
-  char_T cv31[31];
+  char_T cv32[31];
   int32_T i;
-  static const char_T cv32[31] = { 'C', 'o', 'd', 'e', 'r', ':', 'M', 'A', 'T',
+  static const char_T cv33[31] = { 'C', 'o', 'd', 'e', 'r', ':', 'M', 'A', 'T',
     'L', 'A', 'B', ':', 's', 'u', 'b', 's', 'd', 'e', 'l', 'd', 'i', 'm', 'm',
     'i', 's', 'm', 'a', 't', 'c', 'h' };
 
@@ -1007,28 +1110,28 @@ static void eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x, real_T
   d_st.prev = &b_st;
   d_st.tls = b_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b(sp);
-  st.site = &nr_emlrtRSI;
-  b_st.site = &pr_emlrtRSI;
+  st.site = &qs_emlrtRSI;
+  b_st.site = &ss_emlrtRSI;
   if (is_valid_idx(x, idx, 1.0)) {
   } else {
     y = NULL;
-    m13 = mxCreateCharArray(2, iv88);
+    m13 = mxCreateCharArray(2, iv87);
     for (i = 0; i < 31; i++) {
-      cv31[i] = cv32[i];
+      cv32[i] = cv33[i];
     }
 
-    emlrtInitCharArrayR2013a(&st, 31, m13, cv31);
+    emlrtInitCharArrayR2013a(&st, 31, m13, cv32);
     emlrtAssign(&y, m13);
-    b_st.site = &pr_emlrtRSI;
-    c_st.site = &xs_emlrtRSI;
+    b_st.site = &ss_emlrtRSI;
+    c_st.site = &bu_emlrtRSI;
     error(&b_st, message(&c_st, y, &ab_emlrtMCI), &bb_emlrtMCI);
   }
 
-  st.site = &or_emlrtRSI;
-  b_st.site = &sr_emlrtRSI;
+  st.site = &rs_emlrtRSI;
+  b_st.site = &vs_emlrtRSI;
   a = x->size[0] - 1;
   b = x->size[1];
-  b_st.site = &tr_emlrtRSI;
+  b_st.site = &ws_emlrtRSI;
   if (1 > x->size[1]) {
     overflow = FALSE;
   } else {
@@ -1036,12 +1139,12 @@ static void eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x, real_T
   }
 
   if (overflow) {
-    d_st.site = &qb_emlrtRSI;
+    d_st.site = &ub_emlrtRSI;
     check_forloop_overflow_error(&d_st);
   }
 
   for (j = 0; j + 1 <= b; j++) {
-    b_st.site = &ur_emlrtRSI;
+    b_st.site = &xs_emlrtRSI;
     if ((int32_T)idx > a) {
       b_idx = FALSE;
     } else {
@@ -1049,12 +1152,12 @@ static void eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x, real_T
     }
 
     if (b_idx) {
-      d_st.site = &qb_emlrtRSI;
+      d_st.site = &ub_emlrtRSI;
       check_forloop_overflow_error(&d_st);
     }
 
     for (i = (int32_T)idx; i <= a; i++) {
-      b_st.site = &vr_emlrtRSI;
+      b_st.site = &ys_emlrtRSI;
       x->data[(i + x->size[0] * j) - 1] = x->data[i + x->size[0] * j];
     }
   }
@@ -1064,7 +1167,7 @@ static void eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x, real_T
     b_y = NULL;
     m13 = mxCreateString("Assertion failed.");
     emlrtAssign(&b_y, m13);
-    b_st.site = &ls_emlrtRSI;
+    b_st.site = &ot_emlrtRSI;
     error(&b_st, b_y, &cb_emlrtMCI);
   }
 
@@ -1072,13 +1175,13 @@ static void eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x, real_T
     a = 0;
   }
 
-  emxInit_real_T(&st, &b_x, 2, &tb_emlrtRTEI, TRUE);
+  emxInit_real_T(&st, &b_x, 2, &ac_emlrtRTEI, TRUE);
   i = x->size[1];
   b = b_x->size[0] * b_x->size[1];
   b_x->size[0] = a;
   b_x->size[1] = i;
   emxEnsureCapacity(&st, (emxArray__common *)b_x, b, (int32_T)sizeof(real_T),
-                    &tb_emlrtRTEI);
+                    &ac_emlrtRTEI);
   for (b = 0; b < i; b++) {
     for (j = 0; j < a; j++) {
       b_x->data[j + b_x->size[0] * b] = x->data[j + x->size[0] * b];
@@ -1089,7 +1192,7 @@ static void eml_null_assignment(const emlrtStack *sp, emxArray_real_T *x, real_T
   x->size[0] = b_x->size[0];
   x->size[1] = b_x->size[1];
   emxEnsureCapacity(&st, (emxArray__common *)x, b, (int32_T)sizeof(real_T),
-                    &tb_emlrtRTEI);
+                    &ac_emlrtRTEI);
   a = b_x->size[1];
   for (b = 0; b < a; b++) {
     i = b_x->size[0];
@@ -1128,100 +1231,102 @@ static boolean_T is_valid_idx(const emxArray_real_T *x, real_T idx, real_T dim)
 void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const
              emxArray_real_T *sp_val, emxArray_b_struct_T *bspline_set,
              emxArray_struct_T *ref_set, const emxArray_real_T *Sp2, const
-             emxArray_real_T *Ref)
+             emxArray_real_T *Ref, emxArray_real_T *adjacency_graph)
 {
-  emxArray_real_T *adjacency_graph;
-  int32_T ix;
-  int32_T i22;
-  int32_T loop_ub;
-  int32_T i;
-  emxArray_real_T *area_j;
-  emxArray_real_T *dif;
-  emxArray_real_T *pairs;
-  emxArray_real_T *r24;
-  emxArray_boolean_T *r25;
-  emxArray_boolean_T *x;
-  emxArray_int32_T *ii;
-  emxArray_real_T *r26;
-  emxArray_real_T *b_ii;
-  emxArray_real_T *b_dif;
-  emxArray_int32_T *c_ii;
-  emxArray_int32_T *d_ii;
-  emxArray_int32_T *e_ii;
-  real_T D_sp1;
-  int32_T nx;
-  int32_T idx;
-  boolean_T b7;
+  boolean_T overflow;
   const mxArray *y;
-  static const int32_T iv77[2] = { 1, 36 };
+  static const int32_T iv74[2] = { 1, 36 };
 
   const mxArray *m12;
   char_T cv27[36];
+  int32_T i;
   static const char_T cv28[36] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
+    'l', 'b', 'o', 'x', ':', 'a', 'u', 't', 'o', 'D', 'i', 'm', 'I', 'n', 'c',
+    'o', 'm', 'p', 'a', 't', 'i', 'b', 'i', 'l', 'i', 't', 'y' };
+
+  const mxArray *b_y;
+  static const int32_T iv75[2] = { 1, 39 };
+
+  char_T cv29[39];
+  static const char_T cv30[39] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
+    'l', 'b', 'o', 'x', ':', 'e', 'm', 'l', '_', 'm', 'i', 'n', '_', 'o', 'r',
+    '_', 'm', 'a', 'x', '_', 'v', 'a', 'r', 'D', 'i', 'm', 'Z', 'e', 'r', 'o' };
+
+  real_T outsz[2];
+  int32_T i20;
+  emxArray_real_T *varargin_1;
+  int32_T ix;
+  int32_T iy;
+  int32_T ixstart;
+  int32_T ixstop;
+  real_T D_sp1;
+  boolean_T b_ix;
+  int32_T c_ix;
+  boolean_T exitg9;
+  boolean_T b_ixstart;
+  const mxArray *c_y;
+  static const int32_T iv76[2] = { 1, 36 };
+
+  const mxArray *d_y;
+  static const int32_T iv77[2] = { 1, 39 };
+
+  boolean_T exitg8;
+  real_T D_sp2;
+  emxArray_real_T *Fx;
+  emxArray_real_T *Fy;
+  emxArray_boolean_T *x;
+  const mxArray *e_y;
+  static const int32_T iv78[2] = { 1, 36 };
+
+  static const char_T cv31[36] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
     'l', 'b', 'o', 'x', ':', 'f', 'i', 'n', 'd', '_', 'i', 'n', 'c', 'o', 'm',
     'p', 'a', 't', 'i', 'b', 'l', 'e', 'S', 'h', 'a', 'p', 'e' };
 
-  boolean_T b8;
-  boolean_T exitg8;
-  boolean_T guard5 = FALSE;
-  const mxArray *b_y;
-  int32_T ixstop;
-  real_T j;
-  int32_T i23;
-  int32_T i24;
-  const mxArray *c_y;
-  static const int32_T iv78[2] = { 1, 36 };
-
-  boolean_T b9;
+  emxArray_int32_T *ii;
+  boolean_T b5;
   boolean_T exitg7;
   boolean_T guard4 = FALSE;
-  const mxArray *d_y;
-  int32_T val_it[2];
-  int32_T iv79[2];
-  const mxArray *e_y;
-  static const int32_T iv80[2] = { 1, 36 };
+  const mxArray *f_y;
+  emxArray_int32_T *b_ii;
+  emxArray_real_T *diffx;
+  int32_T i21;
+  int32_T i22;
+  const mxArray *g_y;
+  static const int32_T iv79[2] = { 1, 36 };
 
-  boolean_T b10;
+  boolean_T b6;
   boolean_T exitg6;
   boolean_T guard3 = FALSE;
-  const mxArray *f_y;
-  const mxArray *g_y;
-  static const int32_T iv81[2] = { 1, 36 };
+  const mxArray *h_y;
+  emxArray_int32_T *c_ii;
+  emxArray_real_T *b_adjacency_graph;
+  const mxArray *i_y;
+  static const int32_T iv80[2] = { 1, 36 };
 
-  boolean_T b11;
+  boolean_T b7;
   boolean_T exitg5;
   boolean_T guard2 = FALSE;
-  const mxArray *h_y;
-  emxArray_int32_T *f_ii;
+  const mxArray *j_y;
+  emxArray_int32_T *d_ii;
   emxArray_real_T *union_ij;
   emxArray_real_T *ref_union;
-  emxArray_real_T *control_p;
   emxArray_real_T *ref_it;
   emxArray_real_T *ref_i;
-  emxArray_real_T *b_val_it;
+  emxArray_real_T *val_it;
   emxArray_real_T *val_i;
   emxArray_real_T *val_jt;
   emxArray_real_T *val_j;
-  emxArray_real_T *r27;
+  emxArray_real_T *control_p;
   emxArray_real_T *t0_x;
   emxArray_real_T *t0_y;
   emxArray_real_T *t1_x;
   emxArray_real_T *t1_y;
-  emxArray_real_T *r28;
+  emxArray_real_T *r10;
   struct_T expl_temp;
   struct_T b_expl_temp;
   struct_T c_expl_temp;
   emxArray_real_T *b_val_jt;
-  emxArray_real_T *c_val_it;
-  emxArray_boolean_T *b_ref_i;
-  emxArray_boolean_T *c_ref_i;
-  emxArray_boolean_T *b_ref_it;
-  emxArray_boolean_T *c_ref_it;
-  emxArray_boolean_T *d_ref_i;
-  emxArray_boolean_T *e_ref_i;
-  emxArray_boolean_T *d_ref_it;
-  emxArray_boolean_T *e_ref_it;
-  emxArray_real_T *b_adjacency_graph;
+  emxArray_real_T *b_val_it;
   emxArray_real_T *c_adjacency_graph;
   emxArray_real_T *d_adjacency_graph;
   emxArray_real_T *e_adjacency_graph;
@@ -1230,53 +1335,49 @@ void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const
   emxArray_real_T *h_adjacency_graph;
   emxArray_real_T *i_adjacency_graph;
   emxArray_real_T *j_adjacency_graph;
+  emxArray_real_T *k_adjacency_graph;
   b_struct_T b_sp_set;
   b_struct_T c_sp_set;
   b_struct_T b_ref_set;
   b_struct_T c_ref_set;
-  emxArray_int32_T *g_ii;
+  emxArray_int32_T *e_ii;
   real_T b_i;
-  int32_T b_ix;
-  const mxArray *i_y;
+  real_T j;
+  real_T b_error;
+  const mxArray *k_y;
+  static const int32_T iv81[2] = { 1, 39 };
+
+  boolean_T d_ix;
+  boolean_T exitg4;
+  boolean_T c_ixstart;
+  const mxArray *l_y;
   static const int32_T iv82[2] = { 1, 39 };
 
-  char_T cv29[39];
-  static const char_T cv30[39] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
-    'l', 'b', 'o', 'x', ':', 'e', 'm', 'l', '_', 'm', 'i', 'n', '_', 'o', 'r',
-    '_', 'm', 'a', 'x', '_', 'v', 'a', 'r', 'D', 'i', 'm', 'Z', 'e', 'r', 'o' };
-
-  real_T bound1[2];
-  boolean_T c_ix;
-  boolean_T exitg4;
-  boolean_T b_idx;
-  const mxArray *j_y;
+  real_T bound2[2];
+  boolean_T e_ix;
+  boolean_T exitg3;
+  boolean_T d_ixstart;
+  const mxArray *m_y;
   static const int32_T iv83[2] = { 1, 39 };
 
-  real_T bound2[2];
-  boolean_T d_ix;
-  boolean_T exitg3;
-  boolean_T c_idx;
-  const mxArray *k_y;
-  static const int32_T iv84[2] = { 1, 39 };
-
   real_T bound3[2];
-  boolean_T e_ix;
+  boolean_T f_ix;
   boolean_T exitg2;
-  boolean_T d_idx;
+  boolean_T e_ixstart;
+  int32_T c_val_it[2];
   int32_T b_val_i[2];
   real_T dv0[3];
-  real_T D_sp2;
+  int32_T iv84[2];
+  int32_T f_ii[1];
+  int32_T l_adjacency_graph[1];
   int32_T iv85[2];
-  int32_T h_ii[1];
-  int32_T k_adjacency_graph[1];
-  int32_T iv86[2];
-  const mxArray *l_y;
-  static const int32_T iv87[2] = { 1, 36 };
+  const mxArray *n_y;
+  static const int32_T iv86[2] = { 1, 36 };
 
-  boolean_T b12;
+  boolean_T b8;
   boolean_T exitg1;
   boolean_T guard1 = FALSE;
-  const mxArray *m_y;
+  const mxArray *o_y;
   emlrtStack st;
   emlrtStack b_st;
   emlrtStack c_st;
@@ -1292,600 +1393,834 @@ void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  d_st.prev = &b_st;
-  d_st.tls = b_st.tls;
+  d_st.prev = &c_st;
+  d_st.tls = c_st.tls;
   e_st.prev = &c_st;
   e_st.tls = c_st.tls;
-  f_st.prev = &c_st;
-  f_st.tls = c_st.tls;
-  g_st.prev = &e_st;
-  g_st.tls = e_st.tls;
-  h_st.prev = &g_st;
-  h_st.tls = g_st.tls;
+  f_st.prev = &d_st;
+  f_st.tls = d_st.tls;
+  g_st.prev = &f_st;
+  g_st.tls = f_st.tls;
+  h_st.prev = &b_st;
+  h_st.tls = b_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b(sp);
-  emxInit_real_T(sp, &adjacency_graph, 2, &ac_emlrtRTEI, TRUE);
 
   /* % initialize adjacency graph */
-  ix = sp_set->size[1];
-  i22 = adjacency_graph->size[0] * adjacency_graph->size[1];
-  adjacency_graph->size[0] = ix;
-  emxEnsureCapacity(sp, (emxArray__common *)adjacency_graph, i22, (int32_T)
+  st.site = &emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  c_st.site = &jb_emlrtRSI;
+  if (((Sp2->size[0] == 1) && (Sp2->size[1] == 1)) || (Sp2->size[0] != 1)) {
+    overflow = TRUE;
+  } else {
+    overflow = FALSE;
+  }
+
+  if (overflow) {
+  } else {
+    y = NULL;
+    m12 = mxCreateCharArray(2, iv74);
+    for (i = 0; i < 36; i++) {
+      cv27[i] = cv28[i];
+    }
+
+    emlrtInitCharArrayR2013a(&c_st, 36, m12, cv27);
+    emlrtAssign(&y, m12);
+    d_st.site = &st_emlrtRSI;
+    e_st.site = &eu_emlrtRSI;
+    error(&d_st, message(&e_st, y, &emlrtMCI), &b_emlrtMCI);
+  }
+
+  if (Sp2->size[0] > 0) {
+  } else {
+    b_y = NULL;
+    m12 = mxCreateCharArray(2, iv75);
+    for (i = 0; i < 39; i++) {
+      cv29[i] = cv30[i];
+    }
+
+    emlrtInitCharArrayR2013a(&c_st, 39, m12, cv29);
+    emlrtAssign(&b_y, m12);
+    d_st.site = &rt_emlrtRSI;
+    e_st.site = &du_emlrtRSI;
+    error(&d_st, message(&e_st, b_y, &c_emlrtMCI), &d_emlrtMCI);
+  }
+
+  for (i20 = 0; i20 < 2; i20++) {
+    outsz[i20] = Sp2->size[i20];
+  }
+
+  emxInit_real_T(&c_st, &varargin_1, 2, &emlrtRTEI, TRUE);
+  i20 = varargin_1->size[0] * varargin_1->size[1];
+  varargin_1->size[0] = 1;
+  varargin_1->size[1] = (int32_T)outsz[1];
+  emxEnsureCapacity(&c_st, (emxArray__common *)varargin_1, i20, (int32_T)sizeof
+                    (real_T), &cc_emlrtRTEI);
+  d_st.site = &kb_emlrtRSI;
+  d_st.site = &kb_emlrtRSI;
+  d_st.site = &lb_emlrtRSI;
+  f_st.site = &rb_emlrtRSI;
+  ix = 0;
+  iy = -1;
+  d_st.site = &mb_emlrtRSI;
+  f_st.site = &tb_emlrtRSI;
+  if (1 > Sp2->size[1]) {
+    overflow = FALSE;
+  } else {
+    overflow = (Sp2->size[1] > 2147483646);
+  }
+
+  if (overflow) {
+    f_st.site = &ub_emlrtRSI;
+    check_forloop_overflow_error(&f_st);
+  }
+
+  for (i = 1; i <= Sp2->size[1]; i++) {
+    d_st.site = &nb_emlrtRSI;
+    d_st.site = &ob_emlrtRSI;
+    ixstart = ix;
+    f_st.site = &ec_emlrtRSI;
+    f_st.site = &ec_emlrtRSI;
+    f_st.site = &dc_emlrtRSI;
+    ixstop = ix + Sp2->size[0];
+    D_sp1 = Sp2->data[ix];
+    if (Sp2->size[0] > 1) {
+      f_st.site = &cc_emlrtRSI;
+      if (muDoubleScalarIsNaN(Sp2->data[ix])) {
+        f_st.site = &bc_emlrtRSI;
+        f_st.site = &bc_emlrtRSI;
+        if (ix + 2 > ixstop) {
+          b_ix = FALSE;
+        } else {
+          b_ix = (ixstop > 2147483646);
+        }
+
+        if (b_ix) {
+          g_st.site = &ub_emlrtRSI;
+          check_forloop_overflow_error(&g_st);
+        }
+
+        c_ix = ix + 1;
+        exitg9 = FALSE;
+        while ((exitg9 == FALSE) && (c_ix + 1 <= ixstop)) {
+          f_st.site = &ac_emlrtRSI;
+          ixstart = c_ix;
+          f_st.site = &yb_emlrtRSI;
+          if (!muDoubleScalarIsNaN(Sp2->data[c_ix])) {
+            D_sp1 = Sp2->data[c_ix];
+            exitg9 = TRUE;
+          } else {
+            c_ix++;
+          }
+        }
+      }
+
+      if (ixstart + 1 < ixstop) {
+        f_st.site = &xb_emlrtRSI;
+        f_st.site = &xb_emlrtRSI;
+        if (ixstart + 2 > ixstop) {
+          b_ixstart = FALSE;
+        } else {
+          b_ixstart = (ixstop > 2147483646);
+        }
+
+        if (b_ixstart) {
+          g_st.site = &ub_emlrtRSI;
+          check_forloop_overflow_error(&g_st);
+        }
+
+        for (c_ix = ixstart + 1; c_ix + 1 <= ixstop; c_ix++) {
+          f_st.site = &wb_emlrtRSI;
+          f_st.site = &vb_emlrtRSI;
+          if (Sp2->data[c_ix] > D_sp1) {
+            D_sp1 = Sp2->data[c_ix];
+          }
+        }
+      }
+    }
+
+    d_st.site = &pb_emlrtRSI;
+    iy++;
+    varargin_1->data[iy] = D_sp1;
+    d_st.site = &qb_emlrtRSI;
+    ix += Sp2->size[0];
+  }
+
+  st.site = &emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  c_st.site = &jb_emlrtRSI;
+  if ((varargin_1->size[1] == 1) || (varargin_1->size[1] != 1)) {
+    overflow = TRUE;
+  } else {
+    overflow = FALSE;
+  }
+
+  if (overflow) {
+  } else {
+    c_y = NULL;
+    m12 = mxCreateCharArray(2, iv76);
+    for (i = 0; i < 36; i++) {
+      cv27[i] = cv28[i];
+    }
+
+    emlrtInitCharArrayR2013a(&c_st, 36, m12, cv27);
+    emlrtAssign(&c_y, m12);
+    d_st.site = &st_emlrtRSI;
+    e_st.site = &eu_emlrtRSI;
+    error(&d_st, message(&e_st, c_y, &emlrtMCI), &b_emlrtMCI);
+  }
+
+  if (varargin_1->size[1] > 0) {
+  } else {
+    d_y = NULL;
+    m12 = mxCreateCharArray(2, iv77);
+    for (i = 0; i < 39; i++) {
+      cv29[i] = cv30[i];
+    }
+
+    emlrtInitCharArrayR2013a(&c_st, 39, m12, cv29);
+    emlrtAssign(&d_y, m12);
+    d_st.site = &rt_emlrtRSI;
+    e_st.site = &du_emlrtRSI;
+    error(&d_st, message(&e_st, d_y, &c_emlrtMCI), &d_emlrtMCI);
+  }
+
+  d_st.site = &fc_emlrtRSI;
+  ixstart = 1;
+  D_sp1 = varargin_1->data[0];
+  if (varargin_1->size[1] > 1) {
+    f_st.site = &cc_emlrtRSI;
+    if (muDoubleScalarIsNaN(varargin_1->data[0])) {
+      f_st.site = &bc_emlrtRSI;
+      if (2 > varargin_1->size[1]) {
+        overflow = FALSE;
+      } else {
+        overflow = (varargin_1->size[1] > 2147483646);
+      }
+
+      if (overflow) {
+        g_st.site = &ub_emlrtRSI;
+        check_forloop_overflow_error(&g_st);
+      }
+
+      ix = 2;
+      exitg8 = FALSE;
+      while ((exitg8 == FALSE) && (ix <= varargin_1->size[1])) {
+        ixstart = ix;
+        f_st.site = &yb_emlrtRSI;
+        if (!muDoubleScalarIsNaN(varargin_1->data[ix - 1])) {
+          D_sp1 = varargin_1->data[ix - 1];
+          exitg8 = TRUE;
+        } else {
+          ix++;
+        }
+      }
+    }
+
+    if (ixstart < varargin_1->size[1]) {
+      f_st.site = &xb_emlrtRSI;
+      f_st.site = &xb_emlrtRSI;
+      if (ixstart + 1 > varargin_1->size[1]) {
+        overflow = FALSE;
+      } else {
+        overflow = (varargin_1->size[1] > 2147483646);
+      }
+
+      if (overflow) {
+        g_st.site = &ub_emlrtRSI;
+        check_forloop_overflow_error(&g_st);
+      }
+
+      while (ixstart + 1 <= varargin_1->size[1]) {
+        f_st.site = &vb_emlrtRSI;
+        if (varargin_1->data[ixstart] > D_sp1) {
+          D_sp1 = varargin_1->data[ixstart];
+        }
+
+        ixstart++;
+      }
+    }
+  }
+
+  i20 = adjacency_graph->size[0] * adjacency_graph->size[1];
+  D_sp2 = emlrtNonNegativeCheckFastR2012b(D_sp1, &bb_emlrtDCI, sp);
+  adjacency_graph->size[0] = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2,
+    &ab_emlrtDCI, sp);
+  D_sp2 = emlrtNonNegativeCheckFastR2012b(D_sp1, &db_emlrtDCI, sp);
+  adjacency_graph->size[1] = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2,
+    &cb_emlrtDCI, sp);
+  emxEnsureCapacity(sp, (emxArray__common *)adjacency_graph, i20, (int32_T)
                     sizeof(real_T), &emlrtRTEI);
-  ix = sp_set->size[1];
-  i22 = adjacency_graph->size[0] * adjacency_graph->size[1];
-  adjacency_graph->size[1] = ix;
-  emxEnsureCapacity(sp, (emxArray__common *)adjacency_graph, i22, (int32_T)
-                    sizeof(real_T), &emlrtRTEI);
-  loop_ub = sp_set->size[1] * sp_set->size[1];
-  for (i22 = 0; i22 < loop_ub; i22++) {
-    adjacency_graph->data[i22] = 0.0;
+  D_sp2 = emlrtNonNegativeCheckFastR2012b(D_sp1, &bb_emlrtDCI, sp);
+  D_sp1 = emlrtNonNegativeCheckFastR2012b(D_sp1, &db_emlrtDCI, sp);
+  i = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &ab_emlrtDCI, sp) * (int32_T)
+    emlrtIntegerCheckFastR2012b(D_sp1, &cb_emlrtDCI, sp);
+  for (i20 = 0; i20 < i; i20++) {
+    adjacency_graph->data[i20] = 0.0;
+  }
+
+  emxInit_real_T(sp, &Fx, 2, &emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &Fy, 2, &emlrtRTEI, TRUE);
+  b_emxInit_boolean_T(sp, &x, 2, &emlrtRTEI, TRUE);
+
+  /* { */
+  /* for i=1:surface_amount */
+  /*     %area_i = find(Sp2==sp_val(i)); */
+  /*     area_i = sp_set(i).val(:,1)+(x-1)*sp_set(i).val(:,2); */
+  /*     size_i = size(area_i, 1); */
+  /*     for j=(i+1):surface_amount */
+  /*         %area_j = find(Sp2==sp_val(j)); */
+  /*         area_j = sp_set(j).val(:,1)+(x-1)*sp_set(j).val(:,2); */
+  /*         size_j = size(area_j, 1); */
+  /*         dif = abs(repmat(area_i, 1, size_j) - repmat(area_j, 1, size_i)'); */
+  /*         if sum(find(dif == 1 | dif == x)) ~= 0 */
+  /*             adjacency_graph(i, j) = 1; */
+  /*         end */
+  /*     end */
+  /* end */
+  /* } */
+  st.site = &b_emlrtRSI;
+  gradient(&st, Sp2, Fx, Fy);
+  st.site = &c_emlrtRSI;
+  i20 = x->size[0] * x->size[1];
+  x->size[0] = Fx->size[0];
+  x->size[1] = Fx->size[1];
+  emxEnsureCapacity(&st, (emxArray__common *)x, i20, (int32_T)sizeof(boolean_T),
+                    &emlrtRTEI);
+  i = Fx->size[0] * Fx->size[1];
+  for (i20 = 0; i20 < i; i20++) {
+    x->data[i20] = (Fx->data[i20] != 0.0);
+  }
+
+  emxFree_real_T(&Fx);
+  b_st.site = &fd_emlrtRSI;
+  iy = x->size[0] * x->size[1];
+  ixstart = 0;
+  if ((!((x->size[0] == 1) || (x->size[1] == 1))) || (x->size[0] != 1) ||
+      (x->size[1] <= 1)) {
+    overflow = TRUE;
+  } else {
+    overflow = FALSE;
+  }
+
+  if (overflow) {
+  } else {
+    e_y = NULL;
+    m12 = mxCreateCharArray(2, iv78);
+    for (i = 0; i < 36; i++) {
+      cv27[i] = cv31[i];
+    }
+
+    emlrtInitCharArrayR2013a(&b_st, 36, m12, cv27);
+    emlrtAssign(&e_y, m12);
+    c_st.site = &qt_emlrtRSI;
+    h_st.site = &cu_emlrtRSI;
+    error(&c_st, message(&h_st, e_y, &h_emlrtMCI), &i_emlrtMCI);
+  }
+
+  emxInit_int32_T(&b_st, &ii, 1, &qc_emlrtRTEI, TRUE);
+  i20 = ii->size[0];
+  ii->size[0] = iy;
+  emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof(int32_T),
+                    &dc_emlrtRTEI);
+  c_st.site = &gd_emlrtRSI;
+  d_st.site = &tb_emlrtRSI;
+  if (1 > iy) {
+    b5 = FALSE;
+  } else {
+    b5 = (iy > 2147483646);
+  }
+
+  if (b5) {
+    d_st.site = &ub_emlrtRSI;
+    check_forloop_overflow_error(&d_st);
+  }
+
+  ix = 1;
+  exitg7 = FALSE;
+  while ((exitg7 == FALSE) && (ix <= iy)) {
+    guard4 = FALSE;
+    if (x->data[ix - 1]) {
+      c_st.site = &hd_emlrtRSI;
+      ixstart++;
+      ii->data[ixstart - 1] = ix;
+      if (ixstart >= iy) {
+        exitg7 = TRUE;
+      } else {
+        guard4 = TRUE;
+      }
+    } else {
+      guard4 = TRUE;
+    }
+
+    if (guard4 == TRUE) {
+      ix++;
+    }
+  }
+
+  if (ixstart <= iy) {
+  } else {
+    f_y = NULL;
+    m12 = mxCreateString("Assertion failed.");
+    emlrtAssign(&f_y, m12);
+    c_st.site = &pt_emlrtRSI;
+    error(&c_st, f_y, &j_emlrtMCI);
+  }
+
+  if (iy == 1) {
+    if (ixstart == 0) {
+      i20 = ii->size[0];
+      ii->size[0] = 0;
+      emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof
+                        (int32_T), &emlrtRTEI);
+    }
+  } else {
+    if (1 > ixstart) {
+      i = 0;
+    } else {
+      i = ixstart;
+    }
+
+    emxInit_int32_T(&b_st, &b_ii, 1, &emlrtRTEI, TRUE);
+    i20 = b_ii->size[0];
+    b_ii->size[0] = i;
+    emxEnsureCapacity(&b_st, (emxArray__common *)b_ii, i20, (int32_T)sizeof
+                      (int32_T), &emlrtRTEI);
+    for (i20 = 0; i20 < i; i20++) {
+      b_ii->data[i20] = ii->data[i20];
+    }
+
+    i20 = ii->size[0];
+    ii->size[0] = b_ii->size[0];
+    emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof
+                      (int32_T), &emlrtRTEI);
+    i = b_ii->size[0];
+    for (i20 = 0; i20 < i; i20++) {
+      ii->data[i20] = b_ii->data[i20];
+    }
+
+    emxFree_int32_T(&b_ii);
+  }
+
+  b_emxInit_real_T(&b_st, &diffx, 1, &hc_emlrtRTEI, TRUE);
+  i20 = diffx->size[0];
+  diffx->size[0] = ii->size[0];
+  emxEnsureCapacity(&st, (emxArray__common *)diffx, i20, (int32_T)sizeof(real_T),
+                    &emlrtRTEI);
+  i = ii->size[0];
+  for (i20 = 0; i20 < i; i20++) {
+    diffx->data[i20] = ii->data[i20];
   }
 
   i = 0;
-  b_emxInit_real_T(sp, &area_j, 1, &bc_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &dif, 2, &cc_emlrtRTEI, TRUE);
-  b_emxInit_real_T(sp, &pairs, 1, &dc_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &r24, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &r25, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &x, 2, &emlrtRTEI, TRUE);
-  emxInit_int32_T(sp, &ii, 1, &nc_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &r26, 2, &emlrtRTEI, TRUE);
-  b_emxInit_real_T(sp, &b_ii, 1, &emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &b_dif, 2, &emlrtRTEI, TRUE);
-  emxInit_int32_T(sp, &c_ii, 1, &emlrtRTEI, TRUE);
-  emxInit_int32_T(sp, &d_ii, 1, &emlrtRTEI, TRUE);
-  emxInit_int32_T(sp, &e_ii, 1, &emlrtRTEI, TRUE);
-  while (i <= sp_set->size[1] - 1) {
-    st.site = &emlrtRSI;
-    i22 = x->size[0] * x->size[1];
-    x->size[0] = Sp2->size[0];
-    x->size[1] = Sp2->size[1];
-    emxEnsureCapacity(&st, (emxArray__common *)x, i22, (int32_T)sizeof(boolean_T),
-                      &emlrtRTEI);
-    i22 = sp_val->size[0];
-    D_sp1 = sp_val->data[emlrtDynamicBoundsCheckFastR2012b(i + 1, 1, i22,
-      &tc_emlrtBCI, &st) - 1];
-    loop_ub = Sp2->size[0] * Sp2->size[1];
-    for (i22 = 0; i22 < loop_ub; i22++) {
-      x->data[i22] = (Sp2->data[i22] == D_sp1);
-    }
-
-    b_st.site = &mb_emlrtRSI;
-    nx = x->size[0] * x->size[1];
-    idx = 0;
-    if ((!((x->size[0] == 1) || (x->size[1] == 1))) || (x->size[0] != 1) ||
-        (x->size[1] <= 1)) {
-      b7 = TRUE;
-    } else {
-      b7 = FALSE;
-    }
-
-    if (b7) {
-    } else {
-      y = NULL;
-      m12 = mxCreateCharArray(2, iv77);
-      for (ix = 0; ix < 36; ix++) {
-        cv27[ix] = cv28[ix];
-      }
-
-      emlrtInitCharArrayR2013a(&b_st, 36, m12, cv27);
-      emlrtAssign(&y, m12);
-      c_st.site = &ns_emlrtRSI;
-      d_st.site = &ys_emlrtRSI;
-      error(&c_st, message(&d_st, y, &b_emlrtMCI), &c_emlrtMCI);
-    }
-
-    i22 = ii->size[0];
-    ii->size[0] = nx;
-    emxEnsureCapacity(&b_st, (emxArray__common *)ii, i22, (int32_T)sizeof
-                      (int32_T), &vb_emlrtRTEI);
-    c_st.site = &nb_emlrtRSI;
-    e_st.site = &pb_emlrtRSI;
-    if (1 > nx) {
-      b8 = FALSE;
-    } else {
-      b8 = (nx > 2147483646);
-    }
-
-    if (b8) {
-      e_st.site = &qb_emlrtRSI;
-      check_forloop_overflow_error(&e_st);
-    }
-
-    ix = 1;
-    exitg8 = FALSE;
-    while ((exitg8 == FALSE) && (ix <= nx)) {
-      guard5 = FALSE;
-      if (x->data[ix - 1]) {
-        c_st.site = &ob_emlrtRSI;
-        idx++;
-        ii->data[idx - 1] = ix;
-        if (idx >= nx) {
-          exitg8 = TRUE;
-        } else {
-          guard5 = TRUE;
-        }
-      } else {
-        guard5 = TRUE;
-      }
-
-      if (guard5 == TRUE) {
-        ix++;
-      }
-    }
-
-    if (idx <= nx) {
-    } else {
-      b_y = NULL;
-      m12 = mxCreateString("Assertion failed.");
-      emlrtAssign(&b_y, m12);
-      c_st.site = &ms_emlrtRSI;
-      error(&c_st, b_y, &d_emlrtMCI);
-    }
-
-    if (nx == 1) {
-      if (idx == 0) {
-        i22 = ii->size[0];
-        ii->size[0] = 0;
-        emxEnsureCapacity(&b_st, (emxArray__common *)ii, i22, (int32_T)sizeof
-                          (int32_T), &emlrtRTEI);
-      }
-    } else {
-      if (1 > idx) {
-        loop_ub = 0;
-      } else {
-        loop_ub = idx;
-      }
-
-      i22 = c_ii->size[0];
-      c_ii->size[0] = loop_ub;
-      emxEnsureCapacity(&b_st, (emxArray__common *)c_ii, i22, (int32_T)sizeof
-                        (int32_T), &emlrtRTEI);
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        c_ii->data[i22] = ii->data[i22];
-      }
-
-      i22 = ii->size[0];
-      ii->size[0] = c_ii->size[0];
-      emxEnsureCapacity(&b_st, (emxArray__common *)ii, i22, (int32_T)sizeof
-                        (int32_T), &emlrtRTEI);
-      loop_ub = c_ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        ii->data[i22] = c_ii->data[i22];
-      }
-    }
-
-    i22 = pairs->size[0];
-    pairs->size[0] = ii->size[0];
-    emxEnsureCapacity(&st, (emxArray__common *)pairs, i22, (int32_T)sizeof
-                      (real_T), &emlrtRTEI);
-    loop_ub = ii->size[0];
-    for (i22 = 0; i22 < loop_ub; i22++) {
-      pairs->data[i22] = ii->data[i22];
-    }
-
-    i22 = (int32_T)((real_T)sp_set->size[1] + (1.0 - ((1.0 + (real_T)i) + 1.0)));
-    emlrtForLoopVectorCheckR2012b((1.0 + (real_T)i) + 1.0, 1.0, sp_set->size[1],
-      mxDOUBLE_CLASS, i22, &uc_emlrtRTEI, sp);
-    ixstop = 0;
-    while (ixstop <= i22 - 1) {
-      j = ((1.0 + (real_T)i) + 1.0) + (real_T)ixstop;
-      st.site = &b_emlrtRSI;
-      i23 = x->size[0] * x->size[1];
-      x->size[0] = Sp2->size[0];
-      x->size[1] = Sp2->size[1];
-      emxEnsureCapacity(&st, (emxArray__common *)x, i23, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      i23 = sp_val->size[0];
-      i24 = (int32_T)j;
-      D_sp1 = sp_val->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23,
-        &uc_emlrtBCI, &st) - 1];
-      loop_ub = Sp2->size[0] * Sp2->size[1];
-      for (i23 = 0; i23 < loop_ub; i23++) {
-        x->data[i23] = (Sp2->data[i23] == D_sp1);
-      }
-
-      b_st.site = &mb_emlrtRSI;
-      nx = x->size[0] * x->size[1];
-      idx = 0;
-      if ((!((x->size[0] == 1) || (x->size[1] == 1))) || (x->size[0] != 1) ||
-          (x->size[1] <= 1)) {
-        b7 = TRUE;
-      } else {
-        b7 = FALSE;
-      }
-
-      if (b7) {
-      } else {
-        c_y = NULL;
-        m12 = mxCreateCharArray(2, iv78);
-        for (ix = 0; ix < 36; ix++) {
-          cv27[ix] = cv28[ix];
-        }
-
-        emlrtInitCharArrayR2013a(&b_st, 36, m12, cv27);
-        emlrtAssign(&c_y, m12);
-        c_st.site = &ns_emlrtRSI;
-        d_st.site = &ys_emlrtRSI;
-        error(&c_st, message(&d_st, c_y, &b_emlrtMCI), &c_emlrtMCI);
-      }
-
-      i23 = ii->size[0];
-      ii->size[0] = nx;
-      emxEnsureCapacity(&b_st, (emxArray__common *)ii, i23, (int32_T)sizeof
-                        (int32_T), &vb_emlrtRTEI);
-      c_st.site = &nb_emlrtRSI;
-      e_st.site = &pb_emlrtRSI;
-      if (1 > nx) {
-        b9 = FALSE;
-      } else {
-        b9 = (nx > 2147483646);
-      }
-
-      if (b9) {
-        e_st.site = &qb_emlrtRSI;
-        check_forloop_overflow_error(&e_st);
-      }
-
-      ix = 1;
-      exitg7 = FALSE;
-      while ((exitg7 == FALSE) && (ix <= nx)) {
-        guard4 = FALSE;
-        if (x->data[ix - 1]) {
-          c_st.site = &ob_emlrtRSI;
-          idx++;
-          ii->data[idx - 1] = ix;
-          if (idx >= nx) {
-            exitg7 = TRUE;
-          } else {
-            guard4 = TRUE;
-          }
-        } else {
-          guard4 = TRUE;
-        }
-
-        if (guard4 == TRUE) {
-          ix++;
-        }
-      }
-
-      if (idx <= nx) {
-      } else {
-        d_y = NULL;
-        m12 = mxCreateString("Assertion failed.");
-        emlrtAssign(&d_y, m12);
-        c_st.site = &ms_emlrtRSI;
-        error(&c_st, d_y, &d_emlrtMCI);
-      }
-
-      if (nx == 1) {
-        if (idx == 0) {
-          i23 = ii->size[0];
-          ii->size[0] = 0;
-          emxEnsureCapacity(&b_st, (emxArray__common *)ii, i23, (int32_T)sizeof
-                            (int32_T), &emlrtRTEI);
-        }
-      } else {
-        if (1 > idx) {
-          loop_ub = 0;
-        } else {
-          loop_ub = idx;
-        }
-
-        i23 = d_ii->size[0];
-        d_ii->size[0] = loop_ub;
-        emxEnsureCapacity(&b_st, (emxArray__common *)d_ii, i23, (int32_T)sizeof
-                          (int32_T), &emlrtRTEI);
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          d_ii->data[i23] = ii->data[i23];
-        }
-
-        i23 = ii->size[0];
-        ii->size[0] = d_ii->size[0];
-        emxEnsureCapacity(&b_st, (emxArray__common *)ii, i23, (int32_T)sizeof
-                          (int32_T), &emlrtRTEI);
-        loop_ub = d_ii->size[0];
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          ii->data[i23] = d_ii->data[i23];
-        }
-      }
-
-      i23 = area_j->size[0];
-      area_j->size[0] = ii->size[0];
-      emxEnsureCapacity(&st, (emxArray__common *)area_j, i23, (int32_T)sizeof
-                        (real_T), &emlrtRTEI);
-      loop_ub = ii->size[0];
-      for (i23 = 0; i23 < loop_ub; i23++) {
-        area_j->data[i23] = ii->data[i23];
-      }
-
-      st.site = &c_emlrtRSI;
-      repmat(&st, pairs, area_j->size[0], dif);
-      st.site = &c_emlrtRSI;
-      repmat(&st, area_j, pairs->size[0], r26);
-      i23 = r24->size[0] * r24->size[1];
-      r24->size[0] = r26->size[1];
-      r24->size[1] = r26->size[0];
-      emxEnsureCapacity(sp, (emxArray__common *)r24, i23, (int32_T)sizeof(real_T),
-                        &emlrtRTEI);
-      loop_ub = r26->size[0];
-      for (i23 = 0; i23 < loop_ub; i23++) {
-        ix = r26->size[1];
-        for (i24 = 0; i24 < ix; i24++) {
-          r24->data[i24 + r24->size[0] * i23] = r26->data[i23 + r26->size[0] *
-            i24];
-        }
-      }
-
-      for (i23 = 0; i23 < 2; i23++) {
-        val_it[i23] = dif->size[i23];
-      }
-
-      for (i23 = 0; i23 < 2; i23++) {
-        iv79[i23] = r24->size[i23];
-      }
-
-      emlrtSizeEqCheck2DFastR2012b(val_it, iv79, &fb_emlrtECI, sp);
-      i23 = b_dif->size[0] * b_dif->size[1];
-      b_dif->size[0] = dif->size[0];
-      b_dif->size[1] = dif->size[1];
-      emxEnsureCapacity(sp, (emxArray__common *)b_dif, i23, (int32_T)sizeof
-                        (real_T), &emlrtRTEI);
-      loop_ub = dif->size[0] * dif->size[1];
-      for (i23 = 0; i23 < loop_ub; i23++) {
-        b_dif->data[i23] = dif->data[i23] - r24->data[i23];
-      }
-
-      st.site = &c_emlrtRSI;
-      b_abs(&st, b_dif, dif);
-      i23 = x->size[0] * x->size[1];
-      x->size[0] = dif->size[0];
-      x->size[1] = dif->size[1];
-      emxEnsureCapacity(sp, (emxArray__common *)x, i23, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      loop_ub = dif->size[0] * dif->size[1];
-      for (i23 = 0; i23 < loop_ub; i23++) {
-        x->data[i23] = (dif->data[i23] == 1.0);
-      }
-
-      i23 = r25->size[0] * r25->size[1];
-      r25->size[0] = dif->size[0];
-      r25->size[1] = dif->size[1];
-      emxEnsureCapacity(sp, (emxArray__common *)r25, i23, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      ix = Sp2->size[0];
-      loop_ub = dif->size[0] * dif->size[1];
-      for (i23 = 0; i23 < loop_ub; i23++) {
-        r25->data[i23] = (dif->data[i23] == ix);
-      }
-
-      for (i23 = 0; i23 < 2; i23++) {
-        val_it[i23] = x->size[i23];
-      }
-
-      for (i23 = 0; i23 < 2; i23++) {
-        iv79[i23] = r25->size[i23];
-      }
-
-      emlrtSizeEqCheck2DFastR2012b(val_it, iv79, &gb_emlrtECI, sp);
-      st.site = &d_emlrtRSI;
-      i23 = x->size[0] * x->size[1];
-      emxEnsureCapacity(&st, (emxArray__common *)x, i23, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      ix = x->size[0];
-      nx = x->size[1];
-      loop_ub = ix * nx;
-      for (i23 = 0; i23 < loop_ub; i23++) {
-        x->data[i23] = (x->data[i23] || r25->data[i23]);
-      }
-
-      b_st.site = &mb_emlrtRSI;
-      nx = x->size[0] * x->size[1];
-      idx = 0;
-      if ((!((x->size[0] == 1) || (x->size[1] == 1))) || (x->size[0] != 1) ||
-          (x->size[1] <= 1)) {
-        b7 = TRUE;
-      } else {
-        b7 = FALSE;
-      }
-
-      if (b7) {
-      } else {
-        e_y = NULL;
-        m12 = mxCreateCharArray(2, iv80);
-        for (ix = 0; ix < 36; ix++) {
-          cv27[ix] = cv28[ix];
-        }
-
-        emlrtInitCharArrayR2013a(&b_st, 36, m12, cv27);
-        emlrtAssign(&e_y, m12);
-        c_st.site = &ns_emlrtRSI;
-        d_st.site = &ys_emlrtRSI;
-        error(&c_st, message(&d_st, e_y, &b_emlrtMCI), &c_emlrtMCI);
-      }
-
-      i23 = ii->size[0];
-      ii->size[0] = nx;
-      emxEnsureCapacity(&b_st, (emxArray__common *)ii, i23, (int32_T)sizeof
-                        (int32_T), &vb_emlrtRTEI);
-      c_st.site = &nb_emlrtRSI;
-      e_st.site = &pb_emlrtRSI;
-      if (1 > nx) {
-        b10 = FALSE;
-      } else {
-        b10 = (nx > 2147483646);
-      }
-
-      if (b10) {
-        e_st.site = &qb_emlrtRSI;
-        check_forloop_overflow_error(&e_st);
-      }
-
-      ix = 1;
-      exitg6 = FALSE;
-      while ((exitg6 == FALSE) && (ix <= nx)) {
-        guard3 = FALSE;
-        if (x->data[ix - 1]) {
-          c_st.site = &ob_emlrtRSI;
-          idx++;
-          ii->data[idx - 1] = ix;
-          if (idx >= nx) {
-            exitg6 = TRUE;
-          } else {
-            guard3 = TRUE;
-          }
-        } else {
-          guard3 = TRUE;
-        }
-
-        if (guard3 == TRUE) {
-          ix++;
-        }
-      }
-
-      if (idx <= nx) {
-      } else {
-        f_y = NULL;
-        m12 = mxCreateString("Assertion failed.");
-        emlrtAssign(&f_y, m12);
-        c_st.site = &ms_emlrtRSI;
-        error(&c_st, f_y, &d_emlrtMCI);
-      }
-
-      if (nx == 1) {
-        if (idx == 0) {
-          i23 = ii->size[0];
-          ii->size[0] = 0;
-          emxEnsureCapacity(&b_st, (emxArray__common *)ii, i23, (int32_T)sizeof
-                            (int32_T), &emlrtRTEI);
-        }
-      } else {
-        if (1 > idx) {
-          loop_ub = 0;
-        } else {
-          loop_ub = idx;
-        }
-
-        i23 = e_ii->size[0];
-        e_ii->size[0] = loop_ub;
-        emxEnsureCapacity(&b_st, (emxArray__common *)e_ii, i23, (int32_T)sizeof
-                          (int32_T), &emlrtRTEI);
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          e_ii->data[i23] = ii->data[i23];
-        }
-
-        i23 = ii->size[0];
-        ii->size[0] = e_ii->size[0];
-        emxEnsureCapacity(&b_st, (emxArray__common *)ii, i23, (int32_T)sizeof
-                          (int32_T), &emlrtRTEI);
-        loop_ub = e_ii->size[0];
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          ii->data[i23] = e_ii->data[i23];
-        }
-      }
-
-      i23 = b_ii->size[0];
-      b_ii->size[0] = ii->size[0];
-      emxEnsureCapacity(sp, (emxArray__common *)b_ii, i23, (int32_T)sizeof
-                        (real_T), &emlrtRTEI);
-      loop_ub = ii->size[0];
-      for (i23 = 0; i23 < loop_ub; i23++) {
-        b_ii->data[i23] = ii->data[i23];
-      }
-
-      st.site = &d_emlrtRSI;
-      if (sum(&st, b_ii) != 0.0) {
-        i23 = adjacency_graph->size[0];
-        i24 = adjacency_graph->size[1];
-        idx = (int32_T)j;
-        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i + 1, 1, i23,
-          &vc_emlrtBCI, sp) + adjacency_graph->size[0] *
-          (emlrtDynamicBoundsCheckFastR2012b(idx, 1, i24, &wc_emlrtBCI, sp) - 1))
+  while (i <= diffx->size[0] - 1) {
+    i20 = Sp2->size[0] * Sp2->size[1];
+    i21 = diffx->size[0];
+    i21 = (int32_T)diffx->data[emlrtDynamicBoundsCheckFastR2012b(i + 1, 1, i21,
+      &eg_emlrtBCI, sp) - 1];
+    emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &vd_emlrtBCI, sp);
+    i20 = diffx->size[0];
+    D_sp1 = diffx->data[emlrtDynamicBoundsCheckFastR2012b(i + 1, 1, i20,
+      &fg_emlrtBCI, sp) - 1] + (real_T)Sp2->size[0];
+    st.site = &d_emlrtRSI;
+    if (D_sp1 < (real_T)Sp2->size[0] * (real_T)Sp2->size[1]) {
+      i20 = Sp2->size[0] * Sp2->size[1];
+      i21 = (int32_T)D_sp1;
+      c_ix = Sp2->size[0] * Sp2->size[1];
+      i22 = diffx->size[0];
+      i22 = (int32_T)diffx->data[emlrtDynamicBoundsCheckFastR2012b(i + 1, 1, i22,
+        &ig_emlrtBCI, sp) - 1];
+      if (Sp2->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &gg_emlrtBCI,
+           sp) - 1] != Sp2->data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix,
+           &hg_emlrtBCI, sp) - 1]) {
+        i20 = Sp2->size[0] * Sp2->size[1];
+        i21 = (int32_T)D_sp1;
+        emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &wd_emlrtBCI, sp);
+        i20 = adjacency_graph->size[0];
+        D_sp2 = Sp2->data[(int32_T)D_sp1 - 1];
+        i21 = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &kb_emlrtDCI, sp);
+        c_ix = adjacency_graph->size[1];
+        D_sp2 = Sp2->data[(int32_T)diffx->data[i] - 1];
+        i22 = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &lb_emlrtDCI, sp);
+        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+          &jg_emlrtBCI, sp) + adjacency_graph->size[0] *
+          (emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &kg_emlrtBCI, sp) - 1))
+          - 1] = 1.0;
+        i20 = adjacency_graph->size[0];
+        i21 = (int32_T)Sp2->data[(int32_T)diffx->data[i] - 1];
+        c_ix = adjacency_graph->size[1];
+        i22 = (int32_T)Sp2->data[(int32_T)D_sp1 - 1];
+        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+          &lg_emlrtBCI, sp) + adjacency_graph->size[0] *
+          (emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &mg_emlrtBCI, sp) - 1))
           - 1] = 1.0;
       }
+    }
 
-      ixstop++;
-      emlrtBreakCheckFastR2012b(emlrtBreakCheckR2012bFlagVar, sp);
+    i20 = diffx->size[0];
+    D_sp1 = diffx->data[emlrtDynamicBoundsCheckFastR2012b(i + 1, 1, i20,
+      &ng_emlrtBCI, sp) - 1] - (real_T)Sp2->size[0];
+    if (D_sp1 > 0.0) {
+      i20 = Sp2->size[0] * Sp2->size[1];
+      i21 = (int32_T)D_sp1;
+      c_ix = Sp2->size[0] * Sp2->size[1];
+      i22 = diffx->size[0];
+      i22 = (int32_T)diffx->data[emlrtDynamicBoundsCheckFastR2012b(i + 1, 1, i22,
+        &qg_emlrtBCI, sp) - 1];
+      if (Sp2->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &og_emlrtBCI,
+           sp) - 1] != Sp2->data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix,
+           &pg_emlrtBCI, sp) - 1]) {
+        i20 = Sp2->size[0] * Sp2->size[1];
+        i21 = (int32_T)D_sp1;
+        emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &xd_emlrtBCI, sp);
+        i20 = adjacency_graph->size[0];
+        D_sp2 = Sp2->data[(int32_T)D_sp1 - 1];
+        i21 = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &mb_emlrtDCI, sp);
+        c_ix = adjacency_graph->size[1];
+        D_sp2 = Sp2->data[(int32_T)diffx->data[i] - 1];
+        i22 = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &nb_emlrtDCI, sp);
+        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+          &rg_emlrtBCI, sp) + adjacency_graph->size[0] *
+          (emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &sg_emlrtBCI, sp) - 1))
+          - 1] = 1.0;
+        i20 = adjacency_graph->size[0];
+        i21 = (int32_T)Sp2->data[(int32_T)diffx->data[i] - 1];
+        c_ix = adjacency_graph->size[1];
+        i22 = (int32_T)Sp2->data[(int32_T)D_sp1 - 1];
+        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+          &tg_emlrtBCI, sp) + adjacency_graph->size[0] *
+          (emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &ug_emlrtBCI, sp) - 1))
+          - 1] = 1.0;
+      }
     }
 
     i++;
     emlrtBreakCheckFastR2012b(emlrtBreakCheckR2012bFlagVar, sp);
   }
 
-  emxFree_int32_T(&e_ii);
-  emxFree_int32_T(&d_ii);
-  emxFree_int32_T(&c_ii);
-  emxFree_real_T(&b_dif);
-  emxFree_real_T(&b_ii);
-  emxFree_real_T(&r26);
-  emxFree_boolean_T(&r25);
-  emxFree_real_T(&r24);
-  emxFree_real_T(&dif);
-  emxFree_real_T(&area_j);
-
-  /* % merge superpixels with similiar bspline */
   st.site = &e_emlrtRSI;
-  i22 = x->size[0] * x->size[1];
-  x->size[0] = adjacency_graph->size[0];
-  x->size[1] = adjacency_graph->size[1];
-  emxEnsureCapacity(&st, (emxArray__common *)x, i22, (int32_T)sizeof(boolean_T),
+  i20 = x->size[0] * x->size[1];
+  x->size[0] = Fy->size[0];
+  x->size[1] = Fy->size[1];
+  emxEnsureCapacity(&st, (emxArray__common *)x, i20, (int32_T)sizeof(boolean_T),
                     &emlrtRTEI);
-  loop_ub = adjacency_graph->size[0] * adjacency_graph->size[1];
-  for (i22 = 0; i22 < loop_ub; i22++) {
-    x->data[i22] = (adjacency_graph->data[i22] != 0.0);
+  i = Fy->size[0] * Fy->size[1];
+  for (i20 = 0; i20 < i; i20++) {
+    x->data[i20] = (Fy->data[i20] != 0.0);
   }
 
-  b_st.site = &mb_emlrtRSI;
-  nx = x->size[0] * x->size[1];
-  idx = 0;
+  emxFree_real_T(&Fy);
+  b_st.site = &fd_emlrtRSI;
+  iy = x->size[0] * x->size[1];
+  ixstart = 0;
   if ((!((x->size[0] == 1) || (x->size[1] == 1))) || (x->size[0] != 1) ||
       (x->size[1] <= 1)) {
-    b7 = TRUE;
+    overflow = TRUE;
   } else {
-    b7 = FALSE;
+    overflow = FALSE;
   }
 
-  if (b7) {
+  if (overflow) {
   } else {
     g_y = NULL;
-    m12 = mxCreateCharArray(2, iv81);
+    m12 = mxCreateCharArray(2, iv79);
     for (i = 0; i < 36; i++) {
-      cv27[i] = cv28[i];
+      cv27[i] = cv31[i];
     }
 
     emlrtInitCharArrayR2013a(&b_st, 36, m12, cv27);
     emlrtAssign(&g_y, m12);
-    c_st.site = &ns_emlrtRSI;
-    d_st.site = &ys_emlrtRSI;
-    error(&c_st, message(&d_st, g_y, &b_emlrtMCI), &c_emlrtMCI);
+    c_st.site = &qt_emlrtRSI;
+    h_st.site = &cu_emlrtRSI;
+    error(&c_st, message(&h_st, g_y, &h_emlrtMCI), &i_emlrtMCI);
   }
 
-  i22 = ii->size[0];
-  ii->size[0] = nx;
-  emxEnsureCapacity(&b_st, (emxArray__common *)ii, i22, (int32_T)sizeof(int32_T),
-                    &vb_emlrtRTEI);
-  c_st.site = &nb_emlrtRSI;
-  e_st.site = &pb_emlrtRSI;
-  if (1 > nx) {
-    b11 = FALSE;
+  i20 = ii->size[0];
+  ii->size[0] = iy;
+  emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof(int32_T),
+                    &dc_emlrtRTEI);
+  c_st.site = &gd_emlrtRSI;
+  d_st.site = &tb_emlrtRSI;
+  if (1 > iy) {
+    b6 = FALSE;
   } else {
-    b11 = (nx > 2147483646);
+    b6 = (iy > 2147483646);
   }
 
-  if (b11) {
-    e_st.site = &qb_emlrtRSI;
-    check_forloop_overflow_error(&e_st);
+  if (b6) {
+    d_st.site = &ub_emlrtRSI;
+    check_forloop_overflow_error(&d_st);
+  }
+
+  ix = 1;
+  exitg6 = FALSE;
+  while ((exitg6 == FALSE) && (ix <= iy)) {
+    guard3 = FALSE;
+    if (x->data[ix - 1]) {
+      c_st.site = &hd_emlrtRSI;
+      ixstart++;
+      ii->data[ixstart - 1] = ix;
+      if (ixstart >= iy) {
+        exitg6 = TRUE;
+      } else {
+        guard3 = TRUE;
+      }
+    } else {
+      guard3 = TRUE;
+    }
+
+    if (guard3 == TRUE) {
+      ix++;
+    }
+  }
+
+  if (ixstart <= iy) {
+  } else {
+    h_y = NULL;
+    m12 = mxCreateString("Assertion failed.");
+    emlrtAssign(&h_y, m12);
+    c_st.site = &pt_emlrtRSI;
+    error(&c_st, h_y, &j_emlrtMCI);
+  }
+
+  if (iy == 1) {
+    if (ixstart == 0) {
+      i20 = ii->size[0];
+      ii->size[0] = 0;
+      emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof
+                        (int32_T), &emlrtRTEI);
+    }
+  } else {
+    if (1 > ixstart) {
+      i = 0;
+    } else {
+      i = ixstart;
+    }
+
+    emxInit_int32_T(&b_st, &c_ii, 1, &emlrtRTEI, TRUE);
+    i20 = c_ii->size[0];
+    c_ii->size[0] = i;
+    emxEnsureCapacity(&b_st, (emxArray__common *)c_ii, i20, (int32_T)sizeof
+                      (int32_T), &emlrtRTEI);
+    for (i20 = 0; i20 < i; i20++) {
+      c_ii->data[i20] = ii->data[i20];
+    }
+
+    i20 = ii->size[0];
+    ii->size[0] = c_ii->size[0];
+    emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof
+                      (int32_T), &emlrtRTEI);
+    i = c_ii->size[0];
+    for (i20 = 0; i20 < i; i20++) {
+      ii->data[i20] = c_ii->data[i20];
+    }
+
+    emxFree_int32_T(&c_ii);
+  }
+
+  i20 = diffx->size[0];
+  diffx->size[0] = ii->size[0];
+  emxEnsureCapacity(&st, (emxArray__common *)diffx, i20, (int32_T)sizeof(real_T),
+                    &emlrtRTEI);
+  i = ii->size[0];
+  for (i20 = 0; i20 < i; i20++) {
+    diffx->data[i20] = ii->data[i20];
+  }
+
+  i = 0;
+  while (i <= diffx->size[0] - 1) {
+    i20 = Sp2->size[0] * Sp2->size[1];
+    i21 = diffx->size[0];
+    c_ix = 1 + i;
+    i21 = (int32_T)diffx->data[emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, i21,
+      &of_emlrtBCI, sp) - 1];
+    emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &yd_emlrtBCI, sp);
+    i20 = diffx->size[0];
+    i21 = i + 1;
+    emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &ae_emlrtBCI, sp);
+    st.site = &f_emlrtRSI;
+    if (b_mod(diffx->data[i] + 1.0, Sp2->size[0]) != 1.0) {
+      i20 = Sp2->size[0] * Sp2->size[1];
+      i21 = (int32_T)(diffx->data[i] + 1.0);
+      c_ix = Sp2->size[0] * Sp2->size[1];
+      i22 = diffx->size[0];
+      ixstop = 1 + i;
+      i22 = (int32_T)diffx->data[emlrtDynamicBoundsCheckFastR2012b(ixstop, 1,
+        i22, &rf_emlrtBCI, sp) - 1];
+      if (Sp2->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &pf_emlrtBCI,
+           sp) - 1] != Sp2->data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix,
+           &qf_emlrtBCI, sp) - 1]) {
+        i20 = Sp2->size[0] * Sp2->size[1];
+        i21 = (int32_T)(diffx->data[i] + 1.0);
+        emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &be_emlrtBCI, sp);
+        i20 = adjacency_graph->size[0];
+        D_sp2 = Sp2->data[(int32_T)(diffx->data[i] + 1.0) - 1];
+        i21 = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &gb_emlrtDCI, sp);
+        c_ix = adjacency_graph->size[1];
+        D_sp2 = Sp2->data[(int32_T)diffx->data[i] - 1];
+        i22 = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &hb_emlrtDCI, sp);
+        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+          &sf_emlrtBCI, sp) + adjacency_graph->size[0] *
+          (emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &tf_emlrtBCI, sp) - 1))
+          - 1] = 1.0;
+        i20 = adjacency_graph->size[0];
+        i21 = (int32_T)Sp2->data[(int32_T)diffx->data[i] - 1];
+        c_ix = adjacency_graph->size[1];
+        i22 = (int32_T)Sp2->data[(int32_T)(diffx->data[i] + 1.0) - 1];
+        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+          &uf_emlrtBCI, sp) + adjacency_graph->size[0] *
+          (emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &vf_emlrtBCI, sp) - 1))
+          - 1] = 1.0;
+      }
+    }
+
+    i20 = diffx->size[0];
+    i21 = i + 1;
+    emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &ce_emlrtBCI, sp);
+    st.site = &g_emlrtRSI;
+    if (b_mod(diffx->data[i] - 1.0, Sp2->size[0]) != 0.0) {
+      i20 = Sp2->size[0] * Sp2->size[1];
+      i21 = (int32_T)(diffx->data[i] - 1.0);
+      c_ix = Sp2->size[0] * Sp2->size[1];
+      i22 = diffx->size[0];
+      ixstop = 1 + i;
+      i22 = (int32_T)diffx->data[emlrtDynamicBoundsCheckFastR2012b(ixstop, 1,
+        i22, &yf_emlrtBCI, sp) - 1];
+      if (Sp2->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &wf_emlrtBCI,
+           sp) - 1] != Sp2->data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix,
+           &xf_emlrtBCI, sp) - 1]) {
+        i20 = Sp2->size[0] * Sp2->size[1];
+        i21 = (int32_T)(diffx->data[i] - 1.0);
+        emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &de_emlrtBCI, sp);
+        i20 = adjacency_graph->size[0];
+        D_sp2 = Sp2->data[(int32_T)(diffx->data[i] - 1.0) - 1];
+        i21 = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &ib_emlrtDCI, sp);
+        c_ix = adjacency_graph->size[1];
+        D_sp2 = Sp2->data[(int32_T)diffx->data[i] - 1];
+        i22 = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &jb_emlrtDCI, sp);
+        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+          &ag_emlrtBCI, sp) + adjacency_graph->size[0] *
+          (emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &bg_emlrtBCI, sp) - 1))
+          - 1] = 1.0;
+        i20 = adjacency_graph->size[0];
+        i21 = (int32_T)Sp2->data[(int32_T)diffx->data[i] - 1];
+        c_ix = adjacency_graph->size[1];
+        i22 = (int32_T)Sp2->data[(int32_T)(diffx->data[i] - 1.0) - 1];
+        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+          &cg_emlrtBCI, sp) + adjacency_graph->size[0] *
+          (emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &dg_emlrtBCI, sp) - 1))
+          - 1] = 1.0;
+      }
+    }
+
+    i++;
+    emlrtBreakCheckFastR2012b(emlrtBreakCheckR2012bFlagVar, sp);
+  }
+
+  emxInit_real_T(sp, &b_adjacency_graph, 2, &emlrtRTEI, TRUE);
+  ix = adjacency_graph->size[0];
+  iy = adjacency_graph->size[1];
+  i20 = b_adjacency_graph->size[0] * b_adjacency_graph->size[1];
+  b_adjacency_graph->size[0] = sp_val->size[0];
+  b_adjacency_graph->size[1] = sp_val->size[0];
+  emxEnsureCapacity(sp, (emxArray__common *)b_adjacency_graph, i20, (int32_T)
+                    sizeof(real_T), &emlrtRTEI);
+  i = sp_val->size[0];
+  for (i20 = 0; i20 < i; i20++) {
+    ixstart = sp_val->size[0];
+    for (i21 = 0; i21 < ixstart; i21++) {
+      D_sp2 = sp_val->data[i21];
+      c_ix = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &eb_emlrtDCI, sp);
+      D_sp2 = sp_val->data[i20];
+      i22 = (int32_T)emlrtIntegerCheckFastR2012b(D_sp2, &fb_emlrtDCI, sp);
+      b_adjacency_graph->data[i21 + b_adjacency_graph->size[0] * i20] =
+        adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, ix,
+        &bf_emlrtBCI, sp) + adjacency_graph->size[0] *
+        (emlrtDynamicBoundsCheckFastR2012b(i22, 1, iy, &cf_emlrtBCI, sp) - 1)) -
+        1];
+    }
+  }
+
+  i20 = adjacency_graph->size[0] * adjacency_graph->size[1];
+  adjacency_graph->size[0] = b_adjacency_graph->size[0];
+  adjacency_graph->size[1] = b_adjacency_graph->size[1];
+  emxEnsureCapacity(sp, (emxArray__common *)adjacency_graph, i20, (int32_T)
+                    sizeof(real_T), &emlrtRTEI);
+  i = b_adjacency_graph->size[1];
+  for (i20 = 0; i20 < i; i20++) {
+    ixstart = b_adjacency_graph->size[0];
+    for (i21 = 0; i21 < ixstart; i21++) {
+      adjacency_graph->data[i21 + adjacency_graph->size[0] * i20] =
+        b_adjacency_graph->data[i21 + b_adjacency_graph->size[0] * i20];
+    }
+  }
+
+  emxFree_real_T(&b_adjacency_graph);
+  st.site = &h_emlrtRSI;
+  triu(&st, adjacency_graph);
+
+  /* % merge superpixels with similiar bspline */
+  st.site = &i_emlrtRSI;
+  i20 = x->size[0] * x->size[1];
+  x->size[0] = adjacency_graph->size[0];
+  x->size[1] = adjacency_graph->size[1];
+  emxEnsureCapacity(&st, (emxArray__common *)x, i20, (int32_T)sizeof(boolean_T),
+                    &emlrtRTEI);
+  i = adjacency_graph->size[0] * adjacency_graph->size[1];
+  for (i20 = 0; i20 < i; i20++) {
+    x->data[i20] = (adjacency_graph->data[i20] != 0.0);
+  }
+
+  b_st.site = &fd_emlrtRSI;
+  iy = x->size[0] * x->size[1];
+  ixstart = 0;
+  if ((!((x->size[0] == 1) || (x->size[1] == 1))) || (x->size[0] != 1) ||
+      (x->size[1] <= 1)) {
+    overflow = TRUE;
+  } else {
+    overflow = FALSE;
+  }
+
+  if (overflow) {
+  } else {
+    i_y = NULL;
+    m12 = mxCreateCharArray(2, iv80);
+    for (i = 0; i < 36; i++) {
+      cv27[i] = cv31[i];
+    }
+
+    emlrtInitCharArrayR2013a(&b_st, 36, m12, cv27);
+    emlrtAssign(&i_y, m12);
+    c_st.site = &qt_emlrtRSI;
+    h_st.site = &cu_emlrtRSI;
+    error(&c_st, message(&h_st, i_y, &h_emlrtMCI), &i_emlrtMCI);
+  }
+
+  i20 = ii->size[0];
+  ii->size[0] = iy;
+  emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof(int32_T),
+                    &dc_emlrtRTEI);
+  c_st.site = &gd_emlrtRSI;
+  d_st.site = &tb_emlrtRSI;
+  if (1 > iy) {
+    b7 = FALSE;
+  } else {
+    b7 = (iy > 2147483646);
+  }
+
+  if (b7) {
+    d_st.site = &ub_emlrtRSI;
+    check_forloop_overflow_error(&d_st);
   }
 
   ix = 1;
   exitg5 = FALSE;
-  while ((exitg5 == FALSE) && (ix <= nx)) {
+  while ((exitg5 == FALSE) && (ix <= iy)) {
     guard2 = FALSE;
     if (x->data[ix - 1]) {
-      c_st.site = &ob_emlrtRSI;
-      idx++;
-      ii->data[idx - 1] = ix;
-      if (idx >= nx) {
+      c_st.site = &hd_emlrtRSI;
+      ixstart++;
+      ii->data[ixstart - 1] = ix;
+      if (ixstart >= iy) {
         exitg5 = TRUE;
       } else {
         guard2 = TRUE;
@@ -1899,352 +2234,250 @@ void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const
     }
   }
 
-  if (idx <= nx) {
+  if (ixstart <= iy) {
   } else {
-    h_y = NULL;
+    j_y = NULL;
     m12 = mxCreateString("Assertion failed.");
-    emlrtAssign(&h_y, m12);
-    c_st.site = &ms_emlrtRSI;
-    error(&c_st, h_y, &d_emlrtMCI);
+    emlrtAssign(&j_y, m12);
+    c_st.site = &pt_emlrtRSI;
+    error(&c_st, j_y, &j_emlrtMCI);
   }
 
-  if (nx == 1) {
-    if (idx == 0) {
-      i22 = ii->size[0];
+  if (iy == 1) {
+    if (ixstart == 0) {
+      i20 = ii->size[0];
       ii->size[0] = 0;
-      emxEnsureCapacity(&b_st, (emxArray__common *)ii, i22, (int32_T)sizeof
+      emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof
                         (int32_T), &emlrtRTEI);
     }
   } else {
-    if (1 > idx) {
-      loop_ub = 0;
+    if (1 > ixstart) {
+      i = 0;
     } else {
-      loop_ub = idx;
+      i = ixstart;
     }
 
-    emxInit_int32_T(&b_st, &f_ii, 1, &emlrtRTEI, TRUE);
-    i22 = f_ii->size[0];
-    f_ii->size[0] = loop_ub;
-    emxEnsureCapacity(&b_st, (emxArray__common *)f_ii, i22, (int32_T)sizeof
+    emxInit_int32_T(&b_st, &d_ii, 1, &emlrtRTEI, TRUE);
+    i20 = d_ii->size[0];
+    d_ii->size[0] = i;
+    emxEnsureCapacity(&b_st, (emxArray__common *)d_ii, i20, (int32_T)sizeof
                       (int32_T), &emlrtRTEI);
-    for (i22 = 0; i22 < loop_ub; i22++) {
-      f_ii->data[i22] = ii->data[i22];
+    for (i20 = 0; i20 < i; i20++) {
+      d_ii->data[i20] = ii->data[i20];
     }
 
-    i22 = ii->size[0];
-    ii->size[0] = f_ii->size[0];
-    emxEnsureCapacity(&b_st, (emxArray__common *)ii, i22, (int32_T)sizeof
+    i20 = ii->size[0];
+    ii->size[0] = d_ii->size[0];
+    emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof
                       (int32_T), &emlrtRTEI);
-    loop_ub = f_ii->size[0];
-    for (i22 = 0; i22 < loop_ub; i22++) {
-      ii->data[i22] = f_ii->data[i22];
+    i = d_ii->size[0];
+    for (i20 = 0; i20 < i; i20++) {
+      ii->data[i20] = d_ii->data[i20];
     }
 
-    emxFree_int32_T(&f_ii);
+    emxFree_int32_T(&d_ii);
   }
 
-  i22 = pairs->size[0];
-  pairs->size[0] = ii->size[0];
-  emxEnsureCapacity(&st, (emxArray__common *)pairs, i22, (int32_T)sizeof(real_T),
+  i20 = diffx->size[0];
+  diffx->size[0] = ii->size[0];
+  emxEnsureCapacity(&st, (emxArray__common *)diffx, i20, (int32_T)sizeof(real_T),
                     &emlrtRTEI);
-  loop_ub = ii->size[0];
-  for (i22 = 0; i22 < loop_ub; i22++) {
-    pairs->data[i22] = ii->data[i22];
+  i = ii->size[0];
+  for (i20 = 0; i20 < i; i20++) {
+    diffx->data[i20] = ii->data[i20];
   }
 
-  emxInit_real_T(sp, &union_ij, 2, &ec_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &ref_union, 2, &fc_emlrtRTEI, TRUE);
-  c_emxInit_real_T(sp, &control_p, 3, &gc_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &ref_it, 2, &hc_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &ref_i, 2, &ic_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &b_val_it, 2, &jc_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &val_i, 2, &kc_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &val_jt, 2, &lc_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &val_j, 2, &mc_emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &r27, 2, &emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &union_ij, 2, &ic_emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &ref_union, 2, &jc_emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &ref_it, 2, &kc_emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &ref_i, 2, &lc_emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &val_it, 2, &mc_emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &val_i, 2, &nc_emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &val_jt, 2, &oc_emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &val_j, 2, &pc_emlrtRTEI, TRUE);
+  c_emxInit_real_T(sp, &control_p, 3, &emlrtRTEI, TRUE);
   emxInit_real_T(sp, &t0_x, 2, &emlrtRTEI, TRUE);
   emxInit_real_T(sp, &t0_y, 2, &emlrtRTEI, TRUE);
   emxInit_real_T(sp, &t1_x, 2, &emlrtRTEI, TRUE);
   emxInit_real_T(sp, &t1_y, 2, &emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &r28, 2, &emlrtRTEI, TRUE);
-  b_emxInitStruct_struct_T(sp, &expl_temp, &xb_emlrtRTEI, TRUE);
-  b_emxInitStruct_struct_T(sp, &b_expl_temp, &wb_emlrtRTEI, TRUE);
-  b_emxInitStruct_struct_T(sp, &c_expl_temp, &yb_emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &r10, 2, &emlrtRTEI, TRUE);
+  b_emxInitStruct_struct_T(sp, &expl_temp, &fc_emlrtRTEI, TRUE);
+  b_emxInitStruct_struct_T(sp, &b_expl_temp, &ec_emlrtRTEI, TRUE);
+  b_emxInitStruct_struct_T(sp, &c_expl_temp, &gc_emlrtRTEI, TRUE);
   emxInit_real_T(sp, &b_val_jt, 2, &emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &c_val_it, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &b_ref_i, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &c_ref_i, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &b_ref_it, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &c_ref_it, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &d_ref_i, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &e_ref_i, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &d_ref_it, 2, &emlrtRTEI, TRUE);
-  b_emxInit_boolean_T(sp, &e_ref_it, 2, &emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &b_adjacency_graph, 2, &emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &b_val_it, 2, &emlrtRTEI, TRUE);
   emxInit_real_T(sp, &c_adjacency_graph, 2, &emlrtRTEI, TRUE);
   emxInit_real_T(sp, &d_adjacency_graph, 2, &emlrtRTEI, TRUE);
-  b_emxInit_real_T(sp, &e_adjacency_graph, 1, &emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &e_adjacency_graph, 2, &emlrtRTEI, TRUE);
   b_emxInit_real_T(sp, &f_adjacency_graph, 1, &emlrtRTEI, TRUE);
-  emxInit_real_T(sp, &g_adjacency_graph, 2, &emlrtRTEI, TRUE);
+  b_emxInit_real_T(sp, &g_adjacency_graph, 1, &emlrtRTEI, TRUE);
   emxInit_real_T(sp, &h_adjacency_graph, 2, &emlrtRTEI, TRUE);
   emxInit_real_T(sp, &i_adjacency_graph, 2, &emlrtRTEI, TRUE);
   emxInit_real_T(sp, &j_adjacency_graph, 2, &emlrtRTEI, TRUE);
+  emxInit_real_T(sp, &k_adjacency_graph, 2, &emlrtRTEI, TRUE);
   emxInitStruct_struct_T(sp, &b_sp_set, &emlrtRTEI, TRUE);
   emxInitStruct_struct_T(sp, &c_sp_set, &emlrtRTEI, TRUE);
   emxInitStruct_struct_T(sp, &b_ref_set, &emlrtRTEI, TRUE);
   emxInitStruct_struct_T(sp, &c_ref_set, &emlrtRTEI, TRUE);
-  emxInit_int32_T(sp, &g_ii, 1, &emlrtRTEI, TRUE);
+  emxInit_int32_T(sp, &e_ii, 1, &emlrtRTEI, TRUE);
   do {
     exitg11 = 0;
-    st.site = &f_emlrtRSI;
-    if (sum(&st, pairs) > 0.0) {
-      i22 = pairs->size[0];
-      emlrtDynamicBoundsCheckFastR2012b(1, 1, i22, &bb_emlrtBCI, sp);
-      st.site = &g_emlrtRSI;
-      b_i = b_mod(pairs->data[0], sp_set->size[1]);
-      i22 = pairs->size[0];
-      emlrtDynamicBoundsCheckFastR2012b(1, 1, i22, &cb_emlrtBCI, sp);
-      st.site = &h_emlrtRSI;
+    st.site = &j_emlrtRSI;
+    if (sum(&st, diffx) > 0.0) {
+      i20 = diffx->size[0];
+      emlrtDynamicBoundsCheckFastR2012b(1, 1, i20, &ee_emlrtBCI, sp);
+      st.site = &k_emlrtRSI;
+      b_i = b_mod(diffx->data[0], sp_set->size[1]);
+      i20 = diffx->size[0];
+      emlrtDynamicBoundsCheckFastR2012b(1, 1, i20, &fe_emlrtBCI, sp);
+      st.site = &l_emlrtRSI;
       b_st.site = &vc_emlrtRSI;
       c_st.site = &wc_emlrtRSI;
-      j = pairs->data[0] / (real_T)sp_set->size[1];
-      st.site = &h_emlrtRSI;
+      j = diffx->data[0] / (real_T)sp_set->size[1];
+      st.site = &l_emlrtRSI;
       b_ceil(&j);
-      i22 = union_ij->size[0] * union_ij->size[1];
-      i23 = sp_set->size[1];
-      i24 = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &j_emlrtDCI, sp);
-      idx = sp_set->size[1];
-      nx = (int32_T)emlrtIntegerCheckFastR2012b(j, &k_emlrtDCI, sp);
-      union_ij->size[0] = sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1,
-        i23, &xc_emlrtBCI, sp) - 1].val->size[0] + sp_set->
-        data[emlrtDynamicBoundsCheckFastR2012b(nx, 1, idx, &yc_emlrtBCI, sp) - 1]
-        .val->size[0];
+      i20 = union_ij->size[0] * union_ij->size[1];
+      i21 = sp_set->size[1];
+      c_ix = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &ob_emlrtDCI, sp);
+      i22 = sp_set->size[1];
+      ixstop = (int32_T)emlrtIntegerCheckFastR2012b(j, &pb_emlrtDCI, sp);
+      union_ij->size[0] = sp_set->data[emlrtDynamicBoundsCheckFastR2012b(c_ix, 1,
+        i21, &vg_emlrtBCI, sp) - 1].val->size[0] + sp_set->
+        data[emlrtDynamicBoundsCheckFastR2012b(ixstop, 1, i22, &wg_emlrtBCI, sp)
+        - 1].val->size[0];
       union_ij->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)union_ij, i22, (int32_T)sizeof
+      emxEnsureCapacity(sp, (emxArray__common *)union_ij, i20, (int32_T)sizeof
                         (real_T), &emlrtRTEI);
-      for (i22 = 0; i22 < 2; i22++) {
-        i23 = sp_set->size[1];
-        i24 = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &j_emlrtDCI, sp);
-        loop_ub = sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23,
-          &xc_emlrtBCI, sp) - 1].val->size[0];
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          i24 = sp_set->size[1];
-          idx = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &j_emlrtDCI, sp);
-          nx = sp_set->size[1];
-          ix = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &j_emlrtDCI, sp);
-          union_ij->data[i23 + union_ij->size[0] * i22] = sp_set->
-            data[emlrtDynamicBoundsCheckFastR2012b(idx, 1, i24, &xc_emlrtBCI, sp)
-            - 1].val->data[i23 + sp_set->data[emlrtDynamicBoundsCheckFastR2012b
-            (ix, 1, nx, &xc_emlrtBCI, sp) - 1].val->size[0] * i22];
-        }
-      }
-
-      for (i22 = 0; i22 < 2; i22++) {
-        i23 = sp_set->size[1];
-        i24 = (int32_T)emlrtIntegerCheckFastR2012b(j, &k_emlrtDCI, sp);
-        loop_ub = sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23,
-          &yc_emlrtBCI, sp) - 1].val->size[0];
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          i24 = sp_set->size[1];
-          idx = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &j_emlrtDCI, sp);
-          nx = sp_set->size[1];
-          ix = (int32_T)emlrtIntegerCheckFastR2012b(j, &k_emlrtDCI, sp);
+      for (i20 = 0; i20 < 2; i20++) {
+        i21 = sp_set->size[1];
+        c_ix = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &ob_emlrtDCI, sp);
+        i = sp_set->data[emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, i21,
+          &vg_emlrtBCI, sp) - 1].val->size[0];
+        for (i21 = 0; i21 < i; i21++) {
+          c_ix = sp_set->size[1];
+          i22 = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &ob_emlrtDCI, sp);
           ixstop = sp_set->size[1];
-          b_ix = (int32_T)emlrtIntegerCheckFastR2012b(j, &k_emlrtDCI, sp);
-          union_ij->data[(i23 + sp_set->data[emlrtDynamicBoundsCheckFastR2012b
-                          (idx, 1, i24, &xc_emlrtBCI, sp) - 1].val->size[0]) +
-            union_ij->size[0] * i22] = sp_set->
-            data[emlrtDynamicBoundsCheckFastR2012b(ix, 1, nx, &yc_emlrtBCI, sp)
-            - 1].val->data[i23 + sp_set->data[emlrtDynamicBoundsCheckFastR2012b
-            (b_ix, 1, ixstop, &yc_emlrtBCI, sp) - 1].val->size[0] * i22];
+          ix = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &ob_emlrtDCI, sp);
+          union_ij->data[i21 + union_ij->size[0] * i20] = sp_set->
+            data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &vg_emlrtBCI,
+            sp) - 1].val->data[i21 + sp_set->
+            data[emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &vg_emlrtBCI,
+            sp) - 1].val->size[0] * i20];
         }
       }
 
-      i22 = ref_union->size[0] * ref_union->size[1];
-      i23 = ref_set->size[1];
-      i24 = (int32_T)b_i;
-      idx = ref_set->size[1];
-      nx = (int32_T)j;
-      ref_union->size[0] = ref_set->data[emlrtDynamicBoundsCheckFastR2012b(i24,
-        1, i23, &ad_emlrtBCI, sp) - 1].val->size[0] + ref_set->
-        data[emlrtDynamicBoundsCheckFastR2012b(nx, 1, idx, &bd_emlrtBCI, sp) - 1]
-        .val->size[0];
+      for (i20 = 0; i20 < 2; i20++) {
+        i21 = sp_set->size[1];
+        c_ix = (int32_T)emlrtIntegerCheckFastR2012b(j, &pb_emlrtDCI, sp);
+        i = sp_set->data[emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, i21,
+          &wg_emlrtBCI, sp) - 1].val->size[0];
+        for (i21 = 0; i21 < i; i21++) {
+          c_ix = sp_set->size[1];
+          i22 = (int32_T)emlrtIntegerCheckFastR2012b(b_i, &ob_emlrtDCI, sp);
+          ixstop = sp_set->size[1];
+          ix = (int32_T)emlrtIntegerCheckFastR2012b(j, &pb_emlrtDCI, sp);
+          iy = sp_set->size[1];
+          ixstart = (int32_T)emlrtIntegerCheckFastR2012b(j, &pb_emlrtDCI, sp);
+          union_ij->data[(i21 + sp_set->data[emlrtDynamicBoundsCheckFastR2012b
+                          (i22, 1, c_ix, &vg_emlrtBCI, sp) - 1].val->size[0]) +
+            union_ij->size[0] * i20] = sp_set->
+            data[emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &wg_emlrtBCI,
+            sp) - 1].val->data[i21 + sp_set->
+            data[emlrtDynamicBoundsCheckFastR2012b(ixstart, 1, iy, &wg_emlrtBCI,
+            sp) - 1].val->size[0] * i20];
+        }
+      }
+
+      i20 = ref_union->size[0] * ref_union->size[1];
+      i21 = ref_set->size[1];
+      c_ix = (int32_T)b_i;
+      i22 = ref_set->size[1];
+      ixstop = (int32_T)j;
+      ref_union->size[0] = ref_set->data[emlrtDynamicBoundsCheckFastR2012b(c_ix,
+        1, i21, &xg_emlrtBCI, sp) - 1].val->size[0] + ref_set->
+        data[emlrtDynamicBoundsCheckFastR2012b(ixstop, 1, i22, &yg_emlrtBCI, sp)
+        - 1].val->size[0];
       ref_union->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)ref_union, i22, (int32_T)sizeof
+      emxEnsureCapacity(sp, (emxArray__common *)ref_union, i20, (int32_T)sizeof
                         (real_T), &emlrtRTEI);
-      for (i22 = 0; i22 < 2; i22++) {
-        i23 = ref_set->size[1];
-        i24 = (int32_T)b_i;
-        loop_ub = ref_set->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23,
-          &ad_emlrtBCI, sp) - 1].val->size[0];
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          i24 = ref_set->size[1];
-          idx = (int32_T)b_i;
-          nx = ref_set->size[1];
-          ix = (int32_T)b_i;
-          ref_union->data[i23 + ref_union->size[0] * i22] = ref_set->
-            data[emlrtDynamicBoundsCheckFastR2012b(idx, 1, i24, &ad_emlrtBCI, sp)
-            - 1].val->data[i23 + ref_set->data[emlrtDynamicBoundsCheckFastR2012b
-            (ix, 1, nx, &ad_emlrtBCI, sp) - 1].val->size[0] * i22];
-        }
-      }
-
-      for (i22 = 0; i22 < 2; i22++) {
-        i23 = ref_set->size[1];
-        i24 = (int32_T)j;
-        loop_ub = ref_set->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23,
-          &bd_emlrtBCI, sp) - 1].val->size[0];
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          i24 = ref_set->size[1];
-          idx = (int32_T)b_i;
-          nx = ref_set->size[1];
-          ix = (int32_T)j;
+      for (i20 = 0; i20 < 2; i20++) {
+        i21 = ref_set->size[1];
+        c_ix = (int32_T)b_i;
+        i = ref_set->data[emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, i21,
+          &xg_emlrtBCI, sp) - 1].val->size[0];
+        for (i21 = 0; i21 < i; i21++) {
+          c_ix = ref_set->size[1];
+          i22 = (int32_T)b_i;
           ixstop = ref_set->size[1];
-          b_ix = (int32_T)j;
-          ref_union->data[(i23 + ref_set->data[emlrtDynamicBoundsCheckFastR2012b
-                           (idx, 1, i24, &ad_emlrtBCI, sp) - 1].val->size[0]) +
-            ref_union->size[0] * i22] = ref_set->
-            data[emlrtDynamicBoundsCheckFastR2012b(ix, 1, nx, &bd_emlrtBCI, sp)
-            - 1].val->data[i23 + ref_set->data[emlrtDynamicBoundsCheckFastR2012b
-            (b_ix, 1, ixstop, &bd_emlrtBCI, sp) - 1].val->size[0] * i22];
+          ix = (int32_T)b_i;
+          ref_union->data[i21 + ref_union->size[0] * i20] = ref_set->
+            data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &xg_emlrtBCI,
+            sp) - 1].val->data[i21 + ref_set->
+            data[emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &xg_emlrtBCI,
+            sp) - 1].val->size[0] * i20];
         }
       }
 
-      st.site = &i_emlrtRSI;
-      bspline_inv(&st, union_ij, ref_union, control_p);
-      st.site = &j_emlrtRSI;
-      b_st.site = &td_emlrtRSI;
-      c_st.site = &ud_emlrtRSI;
+      for (i20 = 0; i20 < 2; i20++) {
+        i21 = ref_set->size[1];
+        c_ix = (int32_T)j;
+        i = ref_set->data[emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, i21,
+          &yg_emlrtBCI, sp) - 1].val->size[0];
+        for (i21 = 0; i21 < i; i21++) {
+          c_ix = ref_set->size[1];
+          i22 = (int32_T)b_i;
+          ixstop = ref_set->size[1];
+          ix = (int32_T)j;
+          iy = ref_set->size[1];
+          ixstart = (int32_T)j;
+          ref_union->data[(i21 + ref_set->data[emlrtDynamicBoundsCheckFastR2012b
+                           (i22, 1, c_ix, &xg_emlrtBCI, sp) - 1].val->size[0]) +
+            ref_union->size[0] * i20] = ref_set->
+            data[emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &yg_emlrtBCI,
+            sp) - 1].val->data[i21 + ref_set->
+            data[emlrtDynamicBoundsCheckFastR2012b(ixstart, 1, iy, &yg_emlrtBCI,
+            sp) - 1].val->size[0] * i20];
+        }
+      }
+
+      st.site = &m_emlrtRSI;
+      bspline_inv(&st, union_ij, ref_union, control_p, &b_error);
+      st.site = &n_emlrtRSI;
+      b_st.site = &we_emlrtRSI;
+      c_st.site = &jb_emlrtRSI;
       if (union_ij->size[0] > 0) {
       } else {
-        i_y = NULL;
-        m12 = mxCreateCharArray(2, iv82);
+        k_y = NULL;
+        m12 = mxCreateCharArray(2, iv81);
         for (i = 0; i < 39; i++) {
           cv29[i] = cv30[i];
         }
 
         emlrtInitCharArrayR2013a(&c_st, 39, m12, cv29);
-        emlrtAssign(&i_y, m12);
-        e_st.site = &os_emlrtRSI;
-        f_st.site = &at_emlrtRSI;
-        error(&e_st, message(&f_st, i_y, &q_emlrtMCI), &r_emlrtMCI);
+        emlrtAssign(&k_y, m12);
+        d_st.site = &rt_emlrtRSI;
+        e_st.site = &du_emlrtRSI;
+        error(&d_st, message(&e_st, k_y, &c_emlrtMCI), &d_emlrtMCI);
       }
 
-      e_st.site = &yp_emlrtRSI;
-      e_st.site = &yp_emlrtRSI;
+      d_st.site = &kb_emlrtRSI;
+      d_st.site = &kb_emlrtRSI;
       ix = 0;
-      nx = -1;
+      iy = -1;
       for (i = 0; i < 2; i++) {
-        e_st.site = &aq_emlrtRSI;
-        e_st.site = &bq_emlrtRSI;
-        idx = ix;
-        g_st.site = &iq_emlrtRSI;
-        g_st.site = &iq_emlrtRSI;
-        g_st.site = &hq_emlrtRSI;
+        d_st.site = &nb_emlrtRSI;
+        d_st.site = &ob_emlrtRSI;
+        ixstart = ix;
+        f_st.site = &ec_emlrtRSI;
+        f_st.site = &ec_emlrtRSI;
+        f_st.site = &dc_emlrtRSI;
         ixstop = ix + union_ij->size[0];
         D_sp1 = union_ij->data[ix];
         if (union_ij->size[0] > 1) {
-          g_st.site = &be_emlrtRSI;
+          f_st.site = &cc_emlrtRSI;
           if (muDoubleScalarIsNaN(union_ij->data[ix])) {
-            g_st.site = &ae_emlrtRSI;
-            g_st.site = &ae_emlrtRSI;
-            if (ix + 2 > ixstop) {
-              c_ix = FALSE;
-            } else {
-              c_ix = (ixstop > 2147483646);
-            }
-
-            if (c_ix) {
-              h_st.site = &qb_emlrtRSI;
-              check_forloop_overflow_error(&h_st);
-            }
-
-            b_ix = ix + 1;
-            exitg4 = FALSE;
-            while ((exitg4 == FALSE) && (b_ix + 1 <= ixstop)) {
-              g_st.site = &gq_emlrtRSI;
-              idx = b_ix;
-              g_st.site = &yd_emlrtRSI;
-              if (!muDoubleScalarIsNaN(union_ij->data[b_ix])) {
-                D_sp1 = union_ij->data[b_ix];
-                exitg4 = TRUE;
-              } else {
-                b_ix++;
-              }
-            }
-          }
-
-          if (idx + 1 < ixstop) {
-            g_st.site = &xd_emlrtRSI;
-            g_st.site = &xd_emlrtRSI;
-            if (idx + 2 > ixstop) {
-              b_idx = FALSE;
-            } else {
-              b_idx = (ixstop > 2147483646);
-            }
-
-            if (b_idx) {
-              h_st.site = &qb_emlrtRSI;
-              check_forloop_overflow_error(&h_st);
-            }
-
-            for (b_ix = idx + 1; b_ix + 1 <= ixstop; b_ix++) {
-              g_st.site = &fq_emlrtRSI;
-              g_st.site = &wd_emlrtRSI;
-              if (union_ij->data[b_ix] < D_sp1) {
-                D_sp1 = union_ij->data[b_ix];
-              }
-            }
-          }
-        }
-
-        e_st.site = &cq_emlrtRSI;
-        nx++;
-        bound1[nx] = D_sp1;
-        e_st.site = &dq_emlrtRSI;
-        ix += union_ij->size[0];
-      }
-
-      st.site = &k_emlrtRSI;
-      i22 = sp_set->size[1];
-      i23 = (int32_T)b_i;
-      emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &db_emlrtBCI, &st);
-      b_st.site = &td_emlrtRSI;
-      c_st.site = &ud_emlrtRSI;
-      if (sp_set->data[(int32_T)b_i - 1].val->size[0] > 0) {
-      } else {
-        j_y = NULL;
-        m12 = mxCreateCharArray(2, iv83);
-        for (i = 0; i < 39; i++) {
-          cv29[i] = cv30[i];
-        }
-
-        emlrtInitCharArrayR2013a(&c_st, 39, m12, cv29);
-        emlrtAssign(&j_y, m12);
-        e_st.site = &os_emlrtRSI;
-        f_st.site = &at_emlrtRSI;
-        error(&e_st, message(&f_st, j_y, &q_emlrtMCI), &r_emlrtMCI);
-      }
-
-      e_st.site = &yp_emlrtRSI;
-      e_st.site = &yp_emlrtRSI;
-      ix = 0;
-      nx = -1;
-      for (i = 0; i < 2; i++) {
-        e_st.site = &aq_emlrtRSI;
-        e_st.site = &bq_emlrtRSI;
-        idx = ix;
-        g_st.site = &iq_emlrtRSI;
-        g_st.site = &iq_emlrtRSI;
-        g_st.site = &hq_emlrtRSI;
-        ixstop = ix + sp_set->data[(int32_T)b_i - 1].val->size[0];
-        D_sp1 = sp_set->data[(int32_T)b_i - 1].val->data[ix];
-        if (sp_set->data[(int32_T)b_i - 1].val->size[0] > 1) {
-          g_st.site = &be_emlrtRSI;
-          if (muDoubleScalarIsNaN(sp_set->data[(int32_T)b_i - 1].val->data[ix]))
-          {
-            g_st.site = &ae_emlrtRSI;
-            g_st.site = &ae_emlrtRSI;
+            f_st.site = &bc_emlrtRSI;
+            f_st.site = &bc_emlrtRSI;
             if (ix + 2 > ixstop) {
               d_ix = FALSE;
             } else {
@@ -2252,96 +2485,96 @@ void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const
             }
 
             if (d_ix) {
-              h_st.site = &qb_emlrtRSI;
-              check_forloop_overflow_error(&h_st);
+              g_st.site = &ub_emlrtRSI;
+              check_forloop_overflow_error(&g_st);
             }
 
-            b_ix = ix + 1;
-            exitg3 = FALSE;
-            while ((exitg3 == FALSE) && (b_ix + 1 <= ixstop)) {
-              g_st.site = &gq_emlrtRSI;
-              idx = b_ix;
-              g_st.site = &yd_emlrtRSI;
-              if (!muDoubleScalarIsNaN(sp_set->data[(int32_T)b_i - 1].val->
-                   data[b_ix])) {
-                D_sp1 = sp_set->data[(int32_T)b_i - 1].val->data[b_ix];
-                exitg3 = TRUE;
+            c_ix = ix + 1;
+            exitg4 = FALSE;
+            while ((exitg4 == FALSE) && (c_ix + 1 <= ixstop)) {
+              f_st.site = &ac_emlrtRSI;
+              ixstart = c_ix;
+              f_st.site = &yb_emlrtRSI;
+              if (!muDoubleScalarIsNaN(union_ij->data[c_ix])) {
+                D_sp1 = union_ij->data[c_ix];
+                exitg4 = TRUE;
               } else {
-                b_ix++;
+                c_ix++;
               }
             }
           }
 
-          if (idx + 1 < ixstop) {
-            g_st.site = &xd_emlrtRSI;
-            g_st.site = &xd_emlrtRSI;
-            if (idx + 2 > ixstop) {
-              c_idx = FALSE;
+          if (ixstart + 1 < ixstop) {
+            f_st.site = &xb_emlrtRSI;
+            f_st.site = &xb_emlrtRSI;
+            if (ixstart + 2 > ixstop) {
+              c_ixstart = FALSE;
             } else {
-              c_idx = (ixstop > 2147483646);
+              c_ixstart = (ixstop > 2147483646);
             }
 
-            if (c_idx) {
-              h_st.site = &qb_emlrtRSI;
-              check_forloop_overflow_error(&h_st);
+            if (c_ixstart) {
+              g_st.site = &ub_emlrtRSI;
+              check_forloop_overflow_error(&g_st);
             }
 
-            for (b_ix = idx + 1; b_ix + 1 <= ixstop; b_ix++) {
-              g_st.site = &fq_emlrtRSI;
-              g_st.site = &wd_emlrtRSI;
-              if (sp_set->data[(int32_T)b_i - 1].val->data[b_ix] < D_sp1) {
-                D_sp1 = sp_set->data[(int32_T)b_i - 1].val->data[b_ix];
+            for (c_ix = ixstart + 1; c_ix + 1 <= ixstop; c_ix++) {
+              f_st.site = &wb_emlrtRSI;
+              f_st.site = &vb_emlrtRSI;
+              if (union_ij->data[c_ix] < D_sp1) {
+                D_sp1 = union_ij->data[c_ix];
               }
             }
           }
         }
 
-        e_st.site = &cq_emlrtRSI;
-        nx++;
-        bound2[nx] = D_sp1;
-        e_st.site = &dq_emlrtRSI;
-        ix += sp_set->data[(int32_T)b_i - 1].val->size[0];
+        d_st.site = &pb_emlrtRSI;
+        iy++;
+        outsz[iy] = D_sp1;
+        d_st.site = &qb_emlrtRSI;
+        ix += union_ij->size[0];
       }
 
-      st.site = &l_emlrtRSI;
-      i22 = sp_set->size[1];
-      i23 = (int32_T)j;
-      emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &eb_emlrtBCI, &st);
-      b_st.site = &td_emlrtRSI;
-      c_st.site = &ud_emlrtRSI;
-      if (sp_set->data[(int32_T)j - 1].val->size[0] > 0) {
+      st.site = &o_emlrtRSI;
+      i20 = sp_set->size[1];
+      i21 = (int32_T)b_i;
+      emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &ge_emlrtBCI, &st);
+      b_st.site = &we_emlrtRSI;
+      c_st.site = &jb_emlrtRSI;
+      if (sp_set->data[(int32_T)b_i - 1].val->size[0] > 0) {
       } else {
-        k_y = NULL;
-        m12 = mxCreateCharArray(2, iv84);
+        l_y = NULL;
+        m12 = mxCreateCharArray(2, iv82);
         for (i = 0; i < 39; i++) {
           cv29[i] = cv30[i];
         }
 
         emlrtInitCharArrayR2013a(&c_st, 39, m12, cv29);
-        emlrtAssign(&k_y, m12);
-        e_st.site = &os_emlrtRSI;
-        f_st.site = &at_emlrtRSI;
-        error(&e_st, message(&f_st, k_y, &q_emlrtMCI), &r_emlrtMCI);
+        emlrtAssign(&l_y, m12);
+        d_st.site = &rt_emlrtRSI;
+        e_st.site = &du_emlrtRSI;
+        error(&d_st, message(&e_st, l_y, &c_emlrtMCI), &d_emlrtMCI);
       }
 
-      e_st.site = &yp_emlrtRSI;
-      e_st.site = &yp_emlrtRSI;
+      d_st.site = &kb_emlrtRSI;
+      d_st.site = &kb_emlrtRSI;
       ix = 0;
-      nx = -1;
+      iy = -1;
       for (i = 0; i < 2; i++) {
-        e_st.site = &aq_emlrtRSI;
-        e_st.site = &bq_emlrtRSI;
-        idx = ix;
-        g_st.site = &iq_emlrtRSI;
-        g_st.site = &iq_emlrtRSI;
-        g_st.site = &hq_emlrtRSI;
-        ixstop = ix + sp_set->data[(int32_T)j - 1].val->size[0];
-        D_sp1 = sp_set->data[(int32_T)j - 1].val->data[ix];
-        if (sp_set->data[(int32_T)j - 1].val->size[0] > 1) {
-          g_st.site = &be_emlrtRSI;
-          if (muDoubleScalarIsNaN(sp_set->data[(int32_T)j - 1].val->data[ix])) {
-            g_st.site = &ae_emlrtRSI;
-            g_st.site = &ae_emlrtRSI;
+        d_st.site = &nb_emlrtRSI;
+        d_st.site = &ob_emlrtRSI;
+        ixstart = ix;
+        f_st.site = &ec_emlrtRSI;
+        f_st.site = &ec_emlrtRSI;
+        f_st.site = &dc_emlrtRSI;
+        ixstop = ix + sp_set->data[(int32_T)b_i - 1].val->size[0];
+        D_sp1 = sp_set->data[(int32_T)b_i - 1].val->data[ix];
+        if (sp_set->data[(int32_T)b_i - 1].val->size[0] > 1) {
+          f_st.site = &cc_emlrtRSI;
+          if (muDoubleScalarIsNaN(sp_set->data[(int32_T)b_i - 1].val->data[ix]))
+          {
+            f_st.site = &bc_emlrtRSI;
+            f_st.site = &bc_emlrtRSI;
             if (ix + 2 > ixstop) {
               e_ix = FALSE;
             } else {
@@ -2349,911 +2582,841 @@ void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const
             }
 
             if (e_ix) {
-              h_st.site = &qb_emlrtRSI;
-              check_forloop_overflow_error(&h_st);
+              g_st.site = &ub_emlrtRSI;
+              check_forloop_overflow_error(&g_st);
             }
 
-            b_ix = ix + 1;
-            exitg2 = FALSE;
-            while ((exitg2 == FALSE) && (b_ix + 1 <= ixstop)) {
-              g_st.site = &gq_emlrtRSI;
-              idx = b_ix;
-              g_st.site = &yd_emlrtRSI;
-              if (!muDoubleScalarIsNaN(sp_set->data[(int32_T)j - 1].val->
-                   data[b_ix])) {
-                D_sp1 = sp_set->data[(int32_T)j - 1].val->data[b_ix];
-                exitg2 = TRUE;
+            c_ix = ix + 1;
+            exitg3 = FALSE;
+            while ((exitg3 == FALSE) && (c_ix + 1 <= ixstop)) {
+              f_st.site = &ac_emlrtRSI;
+              ixstart = c_ix;
+              f_st.site = &yb_emlrtRSI;
+              if (!muDoubleScalarIsNaN(sp_set->data[(int32_T)b_i - 1].val->
+                   data[c_ix])) {
+                D_sp1 = sp_set->data[(int32_T)b_i - 1].val->data[c_ix];
+                exitg3 = TRUE;
               } else {
-                b_ix++;
+                c_ix++;
               }
             }
           }
 
-          if (idx + 1 < ixstop) {
-            g_st.site = &xd_emlrtRSI;
-            g_st.site = &xd_emlrtRSI;
-            if (idx + 2 > ixstop) {
-              d_idx = FALSE;
+          if (ixstart + 1 < ixstop) {
+            f_st.site = &xb_emlrtRSI;
+            f_st.site = &xb_emlrtRSI;
+            if (ixstart + 2 > ixstop) {
+              d_ixstart = FALSE;
             } else {
-              d_idx = (ixstop > 2147483646);
+              d_ixstart = (ixstop > 2147483646);
             }
 
-            if (d_idx) {
-              h_st.site = &qb_emlrtRSI;
-              check_forloop_overflow_error(&h_st);
+            if (d_ixstart) {
+              g_st.site = &ub_emlrtRSI;
+              check_forloop_overflow_error(&g_st);
             }
 
-            for (b_ix = idx + 1; b_ix + 1 <= ixstop; b_ix++) {
-              g_st.site = &fq_emlrtRSI;
-              g_st.site = &wd_emlrtRSI;
-              if (sp_set->data[(int32_T)j - 1].val->data[b_ix] < D_sp1) {
-                D_sp1 = sp_set->data[(int32_T)j - 1].val->data[b_ix];
+            for (c_ix = ixstart + 1; c_ix + 1 <= ixstop; c_ix++) {
+              f_st.site = &wb_emlrtRSI;
+              f_st.site = &vb_emlrtRSI;
+              if (sp_set->data[(int32_T)b_i - 1].val->data[c_ix] < D_sp1) {
+                D_sp1 = sp_set->data[(int32_T)b_i - 1].val->data[c_ix];
               }
             }
           }
         }
 
-        e_st.site = &cq_emlrtRSI;
-        nx++;
-        bound3[nx] = D_sp1;
-        e_st.site = &dq_emlrtRSI;
-        ix += sp_set->data[(int32_T)j - 1].val->size[0];
-      }
-
-      i22 = sp_set->size[1];
-      i23 = (int32_T)b_i;
-      emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &fb_emlrtBCI, sp);
-      loop_ub = control_p->size[0];
-      ix = control_p->size[1];
-      i22 = t1_x->size[0] * t1_x->size[1];
-      t1_x->size[0] = loop_ub;
-      t1_x->size[1] = ix;
-      emxEnsureCapacity(sp, (emxArray__common *)t1_x, i22, (int32_T)sizeof
-                        (real_T), &emlrtRTEI);
-      for (i22 = 0; i22 < ix; i22++) {
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          t1_x->data[i23 + t1_x->size[0] * i22] = control_p->data[i23 +
-            control_p->size[0] * i22];
-        }
-      }
-
-      loop_ub = control_p->size[0];
-      ix = control_p->size[1];
-      i22 = t1_y->size[0] * t1_y->size[1];
-      t1_y->size[0] = loop_ub;
-      t1_y->size[1] = ix;
-      emxEnsureCapacity(sp, (emxArray__common *)t1_y, i22, (int32_T)sizeof
-                        (real_T), &emlrtRTEI);
-      for (i22 = 0; i22 < ix; i22++) {
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          t1_y->data[i23 + t1_y->size[0] * i22] = control_p->data[(i23 +
-            control_p->size[0] * i22) + control_p->size[0] * control_p->size[1]];
-        }
-      }
-
-      i22 = sp_set->size[1];
-      i23 = (int32_T)b_i;
-      st.site = &m_emlrtRSI;
-      bspline(&st, sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22,
-               &ac_emlrtBCI, sp) - 1].val, t1_x, t1_y, bound1, ref_it);
-      i22 = bspline_set->size[1];
-      i23 = (int32_T)b_i;
-      b_emxCopyStruct_struct_T(sp, &b_expl_temp, &bspline_set->
-        data[emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &bc_emlrtBCI, sp) -
-        1], &wb_emlrtRTEI);
-      i22 = sp_set->size[1];
-      i23 = (int32_T)b_i;
-      st.site = &n_emlrtRSI;
-      bspline(&st, sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22,
-               &cc_emlrtBCI, sp) - 1].val, b_expl_temp.x, b_expl_temp.y, bound2,
-              ref_i);
-      i22 = e_ref_it->size[0] * e_ref_it->size[1];
-      e_ref_it->size[0] = ref_it->size[0];
-      e_ref_it->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)e_ref_it, i22, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      loop_ub = ref_it->size[0] * ref_it->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        e_ref_it->data[i22] = (ref_it->data[i22] < 0.0);
-      }
-
-      st.site = &o_emlrtRSI;
-      eml_li_find(&st, e_ref_it, ii);
-      ix = ref_it->size[0];
-      loop_ub = ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        i23 = ix << 1;
-        i24 = ii->data[i22];
-        ref_it->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &dc_emlrtBCI,
-          sp) - 1] = 0.0;
-      }
-
-      i22 = d_ref_it->size[0] * d_ref_it->size[1];
-      d_ref_it->size[0] = ref_it->size[0];
-      d_ref_it->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)d_ref_it, i22, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      loop_ub = ref_it->size[0] * ref_it->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        d_ref_it->data[i22] = (ref_it->data[i22] > 1.0);
+        d_st.site = &pb_emlrtRSI;
+        iy++;
+        bound2[iy] = D_sp1;
+        d_st.site = &qb_emlrtRSI;
+        ix += sp_set->data[(int32_T)b_i - 1].val->size[0];
       }
 
       st.site = &p_emlrtRSI;
-      eml_li_find(&st, d_ref_it, ii);
-      ix = ref_it->size[0];
-      loop_ub = ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        i23 = ix << 1;
-        i24 = ii->data[i22];
-        ref_it->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &ec_emlrtBCI,
-          sp) - 1] = 1.0;
+      i20 = sp_set->size[1];
+      i21 = (int32_T)j;
+      emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &he_emlrtBCI, &st);
+      b_st.site = &we_emlrtRSI;
+      c_st.site = &jb_emlrtRSI;
+      if (sp_set->data[(int32_T)j - 1].val->size[0] > 0) {
+      } else {
+        m_y = NULL;
+        m12 = mxCreateCharArray(2, iv83);
+        for (i = 0; i < 39; i++) {
+          cv29[i] = cv30[i];
+        }
+
+        emlrtInitCharArrayR2013a(&c_st, 39, m12, cv29);
+        emlrtAssign(&m_y, m12);
+        d_st.site = &rt_emlrtRSI;
+        e_st.site = &du_emlrtRSI;
+        error(&d_st, message(&e_st, m_y, &c_emlrtMCI), &d_emlrtMCI);
       }
 
-      i22 = e_ref_i->size[0] * e_ref_i->size[1];
-      e_ref_i->size[0] = ref_i->size[0];
-      e_ref_i->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)e_ref_i, i22, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      loop_ub = ref_i->size[0] * ref_i->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        e_ref_i->data[i22] = (ref_i->data[i22] < 0.0);
+      d_st.site = &kb_emlrtRSI;
+      d_st.site = &kb_emlrtRSI;
+      ix = 0;
+      iy = -1;
+      for (i = 0; i < 2; i++) {
+        d_st.site = &nb_emlrtRSI;
+        d_st.site = &ob_emlrtRSI;
+        ixstart = ix;
+        f_st.site = &ec_emlrtRSI;
+        f_st.site = &ec_emlrtRSI;
+        f_st.site = &dc_emlrtRSI;
+        ixstop = ix + sp_set->data[(int32_T)j - 1].val->size[0];
+        D_sp1 = sp_set->data[(int32_T)j - 1].val->data[ix];
+        if (sp_set->data[(int32_T)j - 1].val->size[0] > 1) {
+          f_st.site = &cc_emlrtRSI;
+          if (muDoubleScalarIsNaN(sp_set->data[(int32_T)j - 1].val->data[ix])) {
+            f_st.site = &bc_emlrtRSI;
+            f_st.site = &bc_emlrtRSI;
+            if (ix + 2 > ixstop) {
+              f_ix = FALSE;
+            } else {
+              f_ix = (ixstop > 2147483646);
+            }
+
+            if (f_ix) {
+              g_st.site = &ub_emlrtRSI;
+              check_forloop_overflow_error(&g_st);
+            }
+
+            c_ix = ix + 1;
+            exitg2 = FALSE;
+            while ((exitg2 == FALSE) && (c_ix + 1 <= ixstop)) {
+              f_st.site = &ac_emlrtRSI;
+              ixstart = c_ix;
+              f_st.site = &yb_emlrtRSI;
+              if (!muDoubleScalarIsNaN(sp_set->data[(int32_T)j - 1].val->
+                   data[c_ix])) {
+                D_sp1 = sp_set->data[(int32_T)j - 1].val->data[c_ix];
+                exitg2 = TRUE;
+              } else {
+                c_ix++;
+              }
+            }
+          }
+
+          if (ixstart + 1 < ixstop) {
+            f_st.site = &xb_emlrtRSI;
+            f_st.site = &xb_emlrtRSI;
+            if (ixstart + 2 > ixstop) {
+              e_ixstart = FALSE;
+            } else {
+              e_ixstart = (ixstop > 2147483646);
+            }
+
+            if (e_ixstart) {
+              g_st.site = &ub_emlrtRSI;
+              check_forloop_overflow_error(&g_st);
+            }
+
+            for (c_ix = ixstart + 1; c_ix + 1 <= ixstop; c_ix++) {
+              f_st.site = &wb_emlrtRSI;
+              f_st.site = &vb_emlrtRSI;
+              if (sp_set->data[(int32_T)j - 1].val->data[c_ix] < D_sp1) {
+                D_sp1 = sp_set->data[(int32_T)j - 1].val->data[c_ix];
+              }
+            }
+          }
+        }
+
+        d_st.site = &pb_emlrtRSI;
+        iy++;
+        bound3[iy] = D_sp1;
+        d_st.site = &qb_emlrtRSI;
+        ix += sp_set->data[(int32_T)j - 1].val->size[0];
       }
 
+      i = control_p->size[0];
+      ixstart = control_p->size[1];
+      i20 = t1_x->size[0] * t1_x->size[1];
+      t1_x->size[0] = i;
+      t1_x->size[1] = ixstart;
+      emxEnsureCapacity(sp, (emxArray__common *)t1_x, i20, (int32_T)sizeof
+                        (real_T), &emlrtRTEI);
+      for (i20 = 0; i20 < ixstart; i20++) {
+        for (i21 = 0; i21 < i; i21++) {
+          t1_x->data[i21 + t1_x->size[0] * i20] = control_p->data[i21 +
+            control_p->size[0] * i20];
+        }
+      }
+
+      i = control_p->size[0];
+      ixstart = control_p->size[1];
+      i20 = t1_y->size[0] * t1_y->size[1];
+      t1_y->size[0] = i;
+      t1_y->size[1] = ixstart;
+      emxEnsureCapacity(sp, (emxArray__common *)t1_y, i20, (int32_T)sizeof
+                        (real_T), &emlrtRTEI);
+      for (i20 = 0; i20 < ixstart; i20++) {
+        for (i21 = 0; i21 < i; i21++) {
+          t1_y->data[i21 + t1_y->size[0] * i20] = control_p->data[(i21 +
+            control_p->size[0] * i20) + control_p->size[0] * control_p->size[1]];
+        }
+      }
+
+      i20 = sp_set->size[1];
+      i21 = (int32_T)b_i;
       st.site = &q_emlrtRSI;
-      eml_li_find(&st, e_ref_i, ii);
-      ix = ref_i->size[0];
-      loop_ub = ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        i23 = ix << 1;
-        i24 = ii->data[i22];
-        ref_i->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &fc_emlrtBCI,
-          sp) - 1] = 0.0;
-      }
-
-      i22 = d_ref_i->size[0] * d_ref_i->size[1];
-      d_ref_i->size[0] = ref_i->size[0];
-      d_ref_i->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)d_ref_i, i22, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      loop_ub = ref_i->size[0] * ref_i->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        d_ref_i->data[i22] = (ref_i->data[i22] > 1.0);
-      }
-
+      bspline(&st, sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+               &df_emlrtBCI, sp) - 1].val, t1_x, t1_y, outsz, ref_it);
+      i20 = bspline_set->size[1];
+      i21 = (int32_T)b_i;
+      b_emxCopyStruct_struct_T(sp, &b_expl_temp, &bspline_set->
+        data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &ef_emlrtBCI, sp) -
+        1], &ec_emlrtRTEI);
+      i20 = sp_set->size[1];
+      i21 = (int32_T)b_i;
       st.site = &r_emlrtRSI;
-      eml_li_find(&st, d_ref_i, ii);
-      ix = ref_i->size[0];
-      loop_ub = ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        i23 = ix << 1;
-        i24 = ii->data[i22];
-        ref_i->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &gc_emlrtBCI,
-          sp) - 1] = 1.0;
-      }
-
+      bspline(&st, sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+               &ff_emlrtBCI, sp) - 1].val, b_expl_temp.x, b_expl_temp.y, bound2,
+              ref_i);
       st.site = &s_emlrtRSI;
-      getPixelsValue(&st, Ref, ref_it, b_val_it);
+      getPixelsValue(&st, Ref, ref_it, val_it);
       st.site = &t_emlrtRSI;
       getPixelsValue(&st, Ref, ref_i, val_i);
-      i22 = sp_set->size[1];
-      i23 = (int32_T)j;
-      emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &gb_emlrtBCI, sp);
-      i22 = sp_set->size[1];
-      i23 = (int32_T)j;
+      i20 = sp_set->size[1];
+      i21 = (int32_T)j;
       st.site = &u_emlrtRSI;
-      bspline(&st, sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22,
-               &hc_emlrtBCI, sp) - 1].val, t1_x, t1_y, bound1, ref_it);
-      i22 = bspline_set->size[1];
-      i23 = (int32_T)j;
+      bspline(&st, sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+               &gf_emlrtBCI, sp) - 1].val, t1_x, t1_y, outsz, ref_it);
+      i20 = bspline_set->size[1];
+      i21 = (int32_T)j;
       b_emxCopyStruct_struct_T(sp, &expl_temp, &bspline_set->
-        data[emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &ic_emlrtBCI, sp) -
-        1], &xb_emlrtRTEI);
-      i22 = sp_set->size[1];
-      i23 = (int32_T)j;
+        data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &hf_emlrtBCI, sp) -
+        1], &fc_emlrtRTEI);
+      i20 = sp_set->size[1];
+      i21 = (int32_T)j;
       st.site = &v_emlrtRSI;
-      bspline(&st, sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22,
-               &jc_emlrtBCI, sp) - 1].val, expl_temp.x, expl_temp.y, bound3,
+      bspline(&st, sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+               &if_emlrtBCI, sp) - 1].val, expl_temp.x, expl_temp.y, bound3,
               ref_i);
-      i22 = c_ref_it->size[0] * c_ref_it->size[1];
-      c_ref_it->size[0] = ref_it->size[0];
-      c_ref_it->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)c_ref_it, i22, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      loop_ub = ref_it->size[0] * ref_it->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        c_ref_it->data[i22] = (ref_it->data[i22] < 0.0);
-      }
-
       st.site = &w_emlrtRSI;
-      eml_li_find(&st, c_ref_it, ii);
-      ix = ref_it->size[0];
-      loop_ub = ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        i23 = ix << 1;
-        i24 = ii->data[i22];
-        ref_it->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &kc_emlrtBCI,
-          sp) - 1] = 0.0;
-      }
-
-      i22 = b_ref_it->size[0] * b_ref_it->size[1];
-      b_ref_it->size[0] = ref_it->size[0];
-      b_ref_it->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)b_ref_it, i22, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      loop_ub = ref_it->size[0] * ref_it->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        b_ref_it->data[i22] = (ref_it->data[i22] > 1.0);
-      }
-
+      getPixelsValue(&st, Ref, ref_it, val_jt);
       st.site = &x_emlrtRSI;
-      eml_li_find(&st, b_ref_it, ii);
-      ix = ref_it->size[0];
-      loop_ub = ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        i23 = ix << 1;
-        i24 = ii->data[i22];
-        ref_it->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &lc_emlrtBCI,
-          sp) - 1] = 1.0;
+      getPixelsValue(&st, Ref, ref_i, val_j);
+      for (i20 = 0; i20 < 2; i20++) {
+        c_val_it[i20] = val_it->size[i20];
       }
 
-      i22 = c_ref_i->size[0] * c_ref_i->size[1];
-      c_ref_i->size[0] = ref_i->size[0];
-      c_ref_i->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)c_ref_i, i22, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      loop_ub = ref_i->size[0] * ref_i->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        c_ref_i->data[i22] = (ref_i->data[i22] < 0.0);
+      for (i20 = 0; i20 < 2; i20++) {
+        b_val_i[i20] = val_i->size[i20];
+      }
+
+      emlrtSizeEqCheck2DFastR2012b(c_val_it, b_val_i, &db_emlrtECI, sp);
+      i20 = b_val_it->size[0] * b_val_it->size[1];
+      b_val_it->size[0] = val_it->size[0];
+      b_val_it->size[1] = 3;
+      emxEnsureCapacity(sp, (emxArray__common *)b_val_it, i20, (int32_T)sizeof
+                        (real_T), &emlrtRTEI);
+      i = val_it->size[0] * val_it->size[1];
+      for (i20 = 0; i20 < i; i20++) {
+        b_val_it->data[i20] = val_it->data[i20] - val_i->data[i20];
       }
 
       st.site = &y_emlrtRSI;
-      eml_li_find(&st, c_ref_i, ii);
-      ix = ref_i->size[0];
-      loop_ub = ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        i23 = ix << 1;
-        i24 = ii->data[i22];
-        ref_i->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &mc_emlrtBCI,
-          sp) - 1] = 0.0;
+      c_power(&st, b_val_it, val_it);
+      st.site = &y_emlrtRSI;
+      b_sum(&st, val_it, dv0);
+      st.site = &y_emlrtRSI;
+      D_sp1 = c_sum(dv0);
+      for (i20 = 0; i20 < 2; i20++) {
+        c_val_it[i20] = val_jt->size[i20];
       }
 
-      i22 = b_ref_i->size[0] * b_ref_i->size[1];
-      b_ref_i->size[0] = ref_i->size[0];
-      b_ref_i->size[1] = 2;
-      emxEnsureCapacity(sp, (emxArray__common *)b_ref_i, i22, (int32_T)sizeof
-                        (boolean_T), &emlrtRTEI);
-      loop_ub = ref_i->size[0] * ref_i->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        b_ref_i->data[i22] = (ref_i->data[i22] > 1.0);
+      for (i20 = 0; i20 < 2; i20++) {
+        b_val_i[i20] = val_j->size[i20];
+      }
+
+      emlrtSizeEqCheck2DFastR2012b(c_val_it, b_val_i, &eb_emlrtECI, sp);
+      i20 = b_val_jt->size[0] * b_val_jt->size[1];
+      b_val_jt->size[0] = val_jt->size[0];
+      b_val_jt->size[1] = 3;
+      emxEnsureCapacity(sp, (emxArray__common *)b_val_jt, i20, (int32_T)sizeof
+                        (real_T), &emlrtRTEI);
+      i = val_jt->size[0] * val_jt->size[1];
+      for (i20 = 0; i20 < i; i20++) {
+        b_val_jt->data[i20] = val_jt->data[i20] - val_j->data[i20];
       }
 
       st.site = &ab_emlrtRSI;
-      eml_li_find(&st, b_ref_i, ii);
-      ix = ref_i->size[0];
-      loop_ub = ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        i23 = ix << 1;
-        i24 = ii->data[i22];
-        ref_i->data[emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &nc_emlrtBCI,
-          sp) - 1] = 1.0;
-      }
-
-      st.site = &bb_emlrtRSI;
-      getPixelsValue(&st, Ref, ref_it, val_jt);
-      st.site = &cb_emlrtRSI;
-      getPixelsValue(&st, Ref, ref_i, val_j);
-      for (i22 = 0; i22 < 2; i22++) {
-        val_it[i22] = b_val_it->size[i22];
-      }
-
-      for (i22 = 0; i22 < 2; i22++) {
-        b_val_i[i22] = val_i->size[i22];
-      }
-
-      emlrtSizeEqCheck2DFastR2012b(val_it, b_val_i, &hb_emlrtECI, sp);
-      i22 = c_val_it->size[0] * c_val_it->size[1];
-      c_val_it->size[0] = b_val_it->size[0];
-      c_val_it->size[1] = 3;
-      emxEnsureCapacity(sp, (emxArray__common *)c_val_it, i22, (int32_T)sizeof
-                        (real_T), &emlrtRTEI);
-      loop_ub = b_val_it->size[0] * b_val_it->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        c_val_it->data[i22] = b_val_it->data[i22] - val_i->data[i22];
-      }
-
-      st.site = &db_emlrtRSI;
-      c_power(&st, c_val_it, b_val_it);
-      st.site = &db_emlrtRSI;
-      b_sum(&st, b_val_it, dv0);
-      st.site = &db_emlrtRSI;
-      D_sp1 = c_sum(dv0);
-      for (i22 = 0; i22 < 2; i22++) {
-        val_it[i22] = val_jt->size[i22];
-      }
-
-      for (i22 = 0; i22 < 2; i22++) {
-        b_val_i[i22] = val_j->size[i22];
-      }
-
-      emlrtSizeEqCheck2DFastR2012b(val_it, b_val_i, &ib_emlrtECI, sp);
-      i22 = b_val_jt->size[0] * b_val_jt->size[1];
-      b_val_jt->size[0] = val_jt->size[0];
-      b_val_jt->size[1] = 3;
-      emxEnsureCapacity(sp, (emxArray__common *)b_val_jt, i22, (int32_T)sizeof
-                        (real_T), &emlrtRTEI);
-      loop_ub = val_jt->size[0] * val_jt->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        b_val_jt->data[i22] = val_jt->data[i22] - val_j->data[i22];
-      }
-
-      st.site = &eb_emlrtRSI;
-      c_power(&st, b_val_jt, b_val_it);
-      st.site = &eb_emlrtRSI;
-      b_sum(&st, b_val_it, dv0);
-      st.site = &eb_emlrtRSI;
+      c_power(&st, b_val_jt, val_it);
+      st.site = &ab_emlrtRSI;
+      b_sum(&st, val_it, dv0);
+      st.site = &ab_emlrtRSI;
       D_sp2 = c_sum(dv0);
-      st.site = &fb_emlrtRSI;
+      st.site = &bb_emlrtRSI;
       b_st.site = &vc_emlrtRSI;
       c_st.site = &wc_emlrtRSI;
-      i22 = adjacency_graph->size[0];
-      i23 = (int32_T)b_i;
-      i24 = adjacency_graph->size[1];
-      idx = (int32_T)j;
-      adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22,
-        &oc_emlrtBCI, sp) + adjacency_graph->size[0] *
-        (emlrtDynamicBoundsCheckFastR2012b(idx, 1, i24, &pc_emlrtBCI, sp) - 1))
+
+      /* D_sp = error; */
+      i20 = adjacency_graph->size[0];
+      i21 = (int32_T)b_i;
+      c_ix = adjacency_graph->size[1];
+      i22 = (int32_T)j;
+      adjacency_graph->data[(emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20,
+        &jf_emlrtBCI, sp) + adjacency_graph->size[0] *
+        (emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &kf_emlrtBCI, sp) - 1))
         - 1] = 0.0;
       if ((D_sp1 + D_sp2) / (real_T)union_ij->size[0] < 10.0) {
         if (b_i > j) {
+          i20 = 0;
+          i21 = 0;
+        } else {
+          i20 = adjacency_graph->size[1];
+          i21 = (int32_T)b_i;
+          i20 = emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &je_emlrtBCI, sp)
+            - 1;
+          i21 = adjacency_graph->size[1];
+          c_ix = (int32_T)j;
+          i21 = emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, i21, &je_emlrtBCI, sp);
+        }
+
+        if (b_i > j) {
+          c_ix = 0;
           i22 = 0;
-          i23 = 0;
+        } else {
+          c_ix = adjacency_graph->size[0];
+          i22 = (int32_T)b_i;
+          c_ix = emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &ke_emlrtBCI,
+            sp) - 1;
+          i22 = adjacency_graph->size[0];
+          ixstop = (int32_T)j;
+          i22 = emlrtDynamicBoundsCheckFastR2012b(ixstop, 1, i22, &ke_emlrtBCI,
+            sp);
+        }
+
+        ixstop = adjacency_graph->size[0];
+        ix = (int32_T)b_i;
+        emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &ie_emlrtBCI, sp);
+        ixstop = adjacency_graph->size[1];
+        ix = (int32_T)j;
+        ix = emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &le_emlrtBCI, sp);
+        ixstop = varargin_1->size[0] * varargin_1->size[1];
+        varargin_1->size[0] = 1;
+        varargin_1->size[1] = i22 - c_ix;
+        emxEnsureCapacity(sp, (emxArray__common *)varargin_1, ixstop, (int32_T)
+                          sizeof(real_T), &emlrtRTEI);
+        i = i22 - c_ix;
+        for (i22 = 0; i22 < i; i22++) {
+          varargin_1->data[varargin_1->size[0] * i22] = adjacency_graph->data
+            [(c_ix + i22) + adjacency_graph->size[0] * (ix - 1)];
+        }
+
+        c_ix = c_adjacency_graph->size[0] * c_adjacency_graph->size[1];
+        c_adjacency_graph->size[0] = 1;
+        c_adjacency_graph->size[1] = i21 - i20;
+        emxEnsureCapacity(sp, (emxArray__common *)c_adjacency_graph, c_ix,
+                          (int32_T)sizeof(real_T), &emlrtRTEI);
+        i = i21 - i20;
+        for (c_ix = 0; c_ix < i; c_ix++) {
+          c_adjacency_graph->data[c_adjacency_graph->size[0] * c_ix] =
+            adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
+            (i20 + c_ix)) - 1];
+        }
+
+        for (c_ix = 0; c_ix < 2; c_ix++) {
+          b_val_i[c_ix] = c_adjacency_graph->size[c_ix];
+        }
+
+        for (c_ix = 0; c_ix < 2; c_ix++) {
+          c_val_it[c_ix] = varargin_1->size[c_ix];
+        }
+
+        emlrtSizeEqCheck2DFastR2012b(b_val_i, c_val_it, &fb_emlrtECI, sp);
+        if (b_i > j) {
+          c_ix = 0;
+          i22 = 0;
+        } else {
+          c_ix = adjacency_graph->size[1];
+          i22 = (int32_T)b_i;
+          c_ix = emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &ne_emlrtBCI,
+            sp) - 1;
+          i22 = adjacency_graph->size[1];
+          ixstop = (int32_T)j;
+          i22 = emlrtDynamicBoundsCheckFastR2012b(ixstop, 1, i22, &ne_emlrtBCI,
+            sp);
+        }
+
+        ixstop = adjacency_graph->size[0];
+        ix = (int32_T)b_i;
+        emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &me_emlrtBCI, sp);
+        ixstop = ii->size[0];
+        ii->size[0] = i22 - c_ix;
+        emxEnsureCapacity(sp, (emxArray__common *)ii, ixstop, (int32_T)sizeof
+                          (int32_T), &emlrtRTEI);
+        i = i22 - c_ix;
+        for (i22 = 0; i22 < i; i22++) {
+          ii->data[i22] = c_ix + i22;
+        }
+
+        iv84[0] = 1;
+        iv84[1] = ii->size[0];
+        c_ix = d_adjacency_graph->size[0] * d_adjacency_graph->size[1];
+        d_adjacency_graph->size[0] = 1;
+        d_adjacency_graph->size[1] = i21 - i20;
+        emxEnsureCapacity(sp, (emxArray__common *)d_adjacency_graph, c_ix,
+                          (int32_T)sizeof(real_T), &emlrtRTEI);
+        i = i21 - i20;
+        for (c_ix = 0; c_ix < i; c_ix++) {
+          d_adjacency_graph->data[d_adjacency_graph->size[0] * c_ix] =
+            adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
+            (i20 + c_ix)) - 1];
+        }
+
+        for (c_ix = 0; c_ix < 2; c_ix++) {
+          b_val_i[c_ix] = d_adjacency_graph->size[c_ix];
+        }
+
+        emlrtSubAssignSizeCheckR2012b(iv84, 2, b_val_i, 2, &gb_emlrtECI, sp);
+        c_ix = e_adjacency_graph->size[0] * e_adjacency_graph->size[1];
+        e_adjacency_graph->size[0] = 1;
+        e_adjacency_graph->size[1] = i21 - i20;
+        emxEnsureCapacity(sp, (emxArray__common *)e_adjacency_graph, c_ix,
+                          (int32_T)sizeof(real_T), &emlrtRTEI);
+        i = i21 - i20;
+        for (i21 = 0; i21 < i; i21++) {
+          e_adjacency_graph->data[e_adjacency_graph->size[0] * i21] =
+            adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
+            (i20 + i21)) - 1] + varargin_1->data[varargin_1->size[0] * i21];
+        }
+
+        i = e_adjacency_graph->size[1];
+        for (i20 = 0; i20 < i; i20++) {
+          adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
+            ii->data[i20]) - 1] = e_adjacency_graph->data
+            [e_adjacency_graph->size[0] * i20];
+        }
+
+        if (1.0 > b_i) {
+          i = 0;
+        } else {
+          i20 = adjacency_graph->size[0];
+          emlrtDynamicBoundsCheckFastR2012b(1, 1, i20, &oe_emlrtBCI, sp);
+          i20 = adjacency_graph->size[0];
+          i21 = (int32_T)b_i;
+          i = emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &oe_emlrtBCI, sp);
+        }
+
+        if (1.0 > b_i) {
+          i20 = 0;
+        } else {
+          i20 = adjacency_graph->size[0];
+          emlrtDynamicBoundsCheckFastR2012b(1, 1, i20, &qe_emlrtBCI, sp);
+          i20 = adjacency_graph->size[0];
+          i21 = (int32_T)b_i;
+          i20 = emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &qe_emlrtBCI, sp);
+        }
+
+        i21 = adjacency_graph->size[1];
+        c_ix = (int32_T)b_i;
+        emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, i21, &pe_emlrtBCI, sp);
+        i21 = adjacency_graph->size[1];
+        c_ix = (int32_T)j;
+        emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, i21, &re_emlrtBCI, sp);
+        emlrtSizeEqCheck1DFastR2012b(i, i20, &hb_emlrtECI, sp);
+        if (1.0 > b_i) {
+          ixstart = 0;
+        } else {
+          i20 = adjacency_graph->size[0];
+          emlrtDynamicBoundsCheckFastR2012b(1, 1, i20, &se_emlrtBCI, sp);
+          i20 = adjacency_graph->size[0];
+          i21 = (int32_T)b_i;
+          ixstart = emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &se_emlrtBCI,
+            sp);
+        }
+
+        i20 = ii->size[0];
+        ii->size[0] = ixstart;
+        emxEnsureCapacity(sp, (emxArray__common *)ii, i20, (int32_T)sizeof
+                          (int32_T), &emlrtRTEI);
+        for (i20 = 0; i20 < ixstart; i20++) {
+          ii->data[i20] = i20;
+        }
+
+        i20 = adjacency_graph->size[1];
+        i21 = (int32_T)b_i;
+        emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &te_emlrtBCI, sp);
+        f_ii[0] = ii->size[0];
+        i20 = f_adjacency_graph->size[0];
+        f_adjacency_graph->size[0] = i;
+        emxEnsureCapacity(sp, (emxArray__common *)f_adjacency_graph, i20,
+                          (int32_T)sizeof(real_T), &emlrtRTEI);
+        for (i20 = 0; i20 < i; i20++) {
+          f_adjacency_graph->data[i20] = adjacency_graph->data[i20 +
+            adjacency_graph->size[0] * ((int32_T)b_i - 1)];
+        }
+
+        l_adjacency_graph[0] = f_adjacency_graph->size[0];
+        emlrtSubAssignSizeCheckR2012b(f_ii, 1, l_adjacency_graph, 1,
+          &ib_emlrtECI, sp);
+        i20 = g_adjacency_graph->size[0];
+        g_adjacency_graph->size[0] = i;
+        emxEnsureCapacity(sp, (emxArray__common *)g_adjacency_graph, i20,
+                          (int32_T)sizeof(real_T), &emlrtRTEI);
+        for (i20 = 0; i20 < i; i20++) {
+          g_adjacency_graph->data[i20] = adjacency_graph->data[i20 +
+            adjacency_graph->size[0] * ((int32_T)b_i - 1)] +
+            adjacency_graph->data[i20 + adjacency_graph->size[0] * ((int32_T)j -
+            1)];
+        }
+
+        i = g_adjacency_graph->size[0];
+        for (i20 = 0; i20 < i; i20++) {
+          adjacency_graph->data[ii->data[i20] + adjacency_graph->size[0] *
+            ((int32_T)b_i - 1)] = g_adjacency_graph->data[i20];
+        }
+
+        if ((int32_T)j > adjacency_graph->size[1]) {
+          i20 = 0;
+          i21 = 0;
+        } else {
+          i20 = adjacency_graph->size[1];
+          i21 = (int32_T)j;
+          i20 = emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &ve_emlrtBCI, sp)
+            - 1;
+          i21 = adjacency_graph->size[1];
+          c_ix = adjacency_graph->size[1];
+          i21 = emlrtDynamicBoundsCheckFastR2012b(c_ix, 1, i21, &ve_emlrtBCI, sp);
+        }
+
+        if ((int32_T)j > adjacency_graph->size[1]) {
+          c_ix = 0;
+          i22 = 0;
+        } else {
+          c_ix = adjacency_graph->size[1];
+          i22 = (int32_T)j;
+          c_ix = emlrtDynamicBoundsCheckFastR2012b(i22, 1, c_ix, &xe_emlrtBCI,
+            sp) - 1;
+          i22 = adjacency_graph->size[1];
+          ixstop = adjacency_graph->size[1];
+          i22 = emlrtDynamicBoundsCheckFastR2012b(ixstop, 1, i22, &xe_emlrtBCI,
+            sp);
+        }
+
+        ixstop = adjacency_graph->size[0];
+        ix = (int32_T)b_i;
+        emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &ue_emlrtBCI, sp);
+        ixstop = adjacency_graph->size[0];
+        ix = (int32_T)j;
+        emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &we_emlrtBCI, sp);
+        ixstop = h_adjacency_graph->size[0] * h_adjacency_graph->size[1];
+        h_adjacency_graph->size[0] = 1;
+        h_adjacency_graph->size[1] = i21 - i20;
+        emxEnsureCapacity(sp, (emxArray__common *)h_adjacency_graph, ixstop,
+                          (int32_T)sizeof(real_T), &emlrtRTEI);
+        i = i21 - i20;
+        for (ixstop = 0; ixstop < i; ixstop++) {
+          h_adjacency_graph->data[h_adjacency_graph->size[0] * ixstop] =
+            adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
+            (i20 + ixstop)) - 1];
+        }
+
+        for (ixstop = 0; ixstop < 2; ixstop++) {
+          b_val_i[ixstop] = h_adjacency_graph->size[ixstop];
+        }
+
+        ixstop = i_adjacency_graph->size[0] * i_adjacency_graph->size[1];
+        i_adjacency_graph->size[0] = 1;
+        i_adjacency_graph->size[1] = i22 - c_ix;
+        emxEnsureCapacity(sp, (emxArray__common *)i_adjacency_graph, ixstop,
+                          (int32_T)sizeof(real_T), &emlrtRTEI);
+        i = i22 - c_ix;
+        for (i22 = 0; i22 < i; i22++) {
+          i_adjacency_graph->data[i_adjacency_graph->size[0] * i22] =
+            adjacency_graph->data[((int32_T)j + adjacency_graph->size[0] * (c_ix
+            + i22)) - 1];
+        }
+
+        for (i22 = 0; i22 < 2; i22++) {
+          c_val_it[i22] = i_adjacency_graph->size[i22];
+        }
+
+        emlrtSizeEqCheck2DFastR2012b(b_val_i, c_val_it, &jb_emlrtECI, sp);
+        if ((int32_T)j > adjacency_graph->size[1]) {
+          i22 = 0;
+          ixstop = 0;
         } else {
           i22 = adjacency_graph->size[1];
-          i23 = (int32_T)b_i;
-          i22 = emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &ib_emlrtBCI, sp)
-            - 1;
-          i23 = adjacency_graph->size[1];
-          i24 = (int32_T)j;
-          i23 = emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &ib_emlrtBCI, sp);
+          ixstop = (int32_T)j;
+          i22 = emlrtDynamicBoundsCheckFastR2012b(ixstop, 1, i22, &af_emlrtBCI,
+            sp) - 1;
+          ixstop = adjacency_graph->size[1];
+          ix = adjacency_graph->size[1];
+          ixstop = emlrtDynamicBoundsCheckFastR2012b(ix, 1, ixstop, &af_emlrtBCI,
+            sp);
         }
 
-        if (b_i > j) {
-          i24 = 0;
-          idx = 0;
-        } else {
-          i24 = adjacency_graph->size[0];
-          idx = (int32_T)b_i;
-          i24 = emlrtDynamicBoundsCheckFastR2012b(idx, 1, i24, &jb_emlrtBCI, sp)
-            - 1;
-          idx = adjacency_graph->size[0];
-          nx = (int32_T)j;
-          idx = emlrtDynamicBoundsCheckFastR2012b(nx, 1, idx, &jb_emlrtBCI, sp);
-        }
-
-        nx = adjacency_graph->size[0];
-        ix = (int32_T)b_i;
-        emlrtDynamicBoundsCheckFastR2012b(ix, 1, nx, &hb_emlrtBCI, sp);
-        nx = adjacency_graph->size[1];
-        ix = (int32_T)j;
-        ixstop = emlrtDynamicBoundsCheckFastR2012b(ix, 1, nx, &kb_emlrtBCI, sp);
-        nx = r27->size[0] * r27->size[1];
-        r27->size[0] = 1;
-        r27->size[1] = idx - i24;
-        emxEnsureCapacity(sp, (emxArray__common *)r27, nx, (int32_T)sizeof
-                          (real_T), &emlrtRTEI);
-        loop_ub = idx - i24;
-        for (idx = 0; idx < loop_ub; idx++) {
-          r27->data[r27->size[0] * idx] = adjacency_graph->data[(i24 + idx) +
-            adjacency_graph->size[0] * (ixstop - 1)];
-        }
-
-        i24 = b_adjacency_graph->size[0] * b_adjacency_graph->size[1];
-        b_adjacency_graph->size[0] = 1;
-        b_adjacency_graph->size[1] = i23 - i22;
-        emxEnsureCapacity(sp, (emxArray__common *)b_adjacency_graph, i24,
-                          (int32_T)sizeof(real_T), &emlrtRTEI);
-        loop_ub = i23 - i22;
-        for (i24 = 0; i24 < loop_ub; i24++) {
-          b_adjacency_graph->data[b_adjacency_graph->size[0] * i24] =
-            adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
-            (i22 + i24)) - 1];
-        }
-
-        for (i24 = 0; i24 < 2; i24++) {
-          b_val_i[i24] = b_adjacency_graph->size[i24];
-        }
-
-        for (i24 = 0; i24 < 2; i24++) {
-          iv79[i24] = r27->size[i24];
-        }
-
-        emlrtSizeEqCheck2DFastR2012b(b_val_i, iv79, &jb_emlrtECI, sp);
-        if (b_i > j) {
-          i24 = 0;
-          idx = 0;
-        } else {
-          i24 = adjacency_graph->size[1];
-          idx = (int32_T)b_i;
-          i24 = emlrtDynamicBoundsCheckFastR2012b(idx, 1, i24, &mb_emlrtBCI, sp)
-            - 1;
-          idx = adjacency_graph->size[1];
-          nx = (int32_T)j;
-          idx = emlrtDynamicBoundsCheckFastR2012b(nx, 1, idx, &mb_emlrtBCI, sp);
-        }
-
-        nx = adjacency_graph->size[0];
-        ix = (int32_T)b_i;
-        emlrtDynamicBoundsCheckFastR2012b(ix, 1, nx, &lb_emlrtBCI, sp);
-        nx = ii->size[0];
-        ii->size[0] = idx - i24;
-        emxEnsureCapacity(sp, (emxArray__common *)ii, nx, (int32_T)sizeof
+        ix = adjacency_graph->size[0];
+        iy = (int32_T)b_i;
+        emlrtDynamicBoundsCheckFastR2012b(iy, 1, ix, &ye_emlrtBCI, sp);
+        ix = ii->size[0];
+        ii->size[0] = ixstop - i22;
+        emxEnsureCapacity(sp, (emxArray__common *)ii, ix, (int32_T)sizeof
                           (int32_T), &emlrtRTEI);
-        loop_ub = idx - i24;
-        for (idx = 0; idx < loop_ub; idx++) {
-          ii->data[idx] = i24 + idx;
+        i = ixstop - i22;
+        for (ixstop = 0; ixstop < i; ixstop++) {
+          ii->data[ixstop] = i22 + ixstop;
         }
 
         iv85[0] = 1;
         iv85[1] = ii->size[0];
-        i24 = c_adjacency_graph->size[0] * c_adjacency_graph->size[1];
-        c_adjacency_graph->size[0] = 1;
-        c_adjacency_graph->size[1] = i23 - i22;
-        emxEnsureCapacity(sp, (emxArray__common *)c_adjacency_graph, i24,
+        i22 = j_adjacency_graph->size[0] * j_adjacency_graph->size[1];
+        j_adjacency_graph->size[0] = 1;
+        j_adjacency_graph->size[1] = i21 - i20;
+        emxEnsureCapacity(sp, (emxArray__common *)j_adjacency_graph, i22,
                           (int32_T)sizeof(real_T), &emlrtRTEI);
-        loop_ub = i23 - i22;
-        for (i24 = 0; i24 < loop_ub; i24++) {
-          c_adjacency_graph->data[c_adjacency_graph->size[0] * i24] =
+        i = i21 - i20;
+        for (i22 = 0; i22 < i; i22++) {
+          j_adjacency_graph->data[j_adjacency_graph->size[0] * i22] =
             adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
-            (i22 + i24)) - 1];
+            (i20 + i22)) - 1];
         }
 
-        for (i24 = 0; i24 < 2; i24++) {
-          b_val_i[i24] = c_adjacency_graph->size[i24];
+        for (i22 = 0; i22 < 2; i22++) {
+          b_val_i[i22] = j_adjacency_graph->size[i22];
         }
 
         emlrtSubAssignSizeCheckR2012b(iv85, 2, b_val_i, 2, &kb_emlrtECI, sp);
-        i24 = d_adjacency_graph->size[0] * d_adjacency_graph->size[1];
-        d_adjacency_graph->size[0] = 1;
-        d_adjacency_graph->size[1] = i23 - i22;
-        emxEnsureCapacity(sp, (emxArray__common *)d_adjacency_graph, i24,
+        i22 = k_adjacency_graph->size[0] * k_adjacency_graph->size[1];
+        k_adjacency_graph->size[0] = 1;
+        k_adjacency_graph->size[1] = i21 - i20;
+        emxEnsureCapacity(sp, (emxArray__common *)k_adjacency_graph, i22,
                           (int32_T)sizeof(real_T), &emlrtRTEI);
-        loop_ub = i23 - i22;
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          d_adjacency_graph->data[d_adjacency_graph->size[0] * i23] =
+        i = i21 - i20;
+        for (i21 = 0; i21 < i; i21++) {
+          k_adjacency_graph->data[k_adjacency_graph->size[0] * i21] =
             adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
-            (i22 + i23)) - 1] + r27->data[r27->size[0] * i23];
+            (i20 + i21)) - 1] + adjacency_graph->data[((int32_T)j +
+            adjacency_graph->size[0] * (c_ix + i21)) - 1];
         }
 
-        loop_ub = d_adjacency_graph->size[1];
-        for (i22 = 0; i22 < loop_ub; i22++) {
+        i = k_adjacency_graph->size[1];
+        for (i20 = 0; i20 < i; i20++) {
           adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
-            ii->data[i22]) - 1] = d_adjacency_graph->data
-            [d_adjacency_graph->size[0] * i22];
+            ii->data[i20]) - 1] = k_adjacency_graph->data
+            [k_adjacency_graph->size[0] * i20];
         }
 
-        if (1.0 > b_i) {
-          loop_ub = 0;
-        } else {
-          i22 = adjacency_graph->size[0];
-          emlrtDynamicBoundsCheckFastR2012b(1, 1, i22, &nb_emlrtBCI, sp);
-          i22 = adjacency_graph->size[0];
-          i23 = (int32_T)b_i;
-          loop_ub = emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &nb_emlrtBCI,
-            sp);
-        }
-
-        if (1.0 > b_i) {
-          i22 = 0;
-        } else {
-          i22 = adjacency_graph->size[0];
-          emlrtDynamicBoundsCheckFastR2012b(1, 1, i22, &pb_emlrtBCI, sp);
-          i22 = adjacency_graph->size[0];
-          i23 = (int32_T)b_i;
-          i22 = emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &pb_emlrtBCI, sp);
-        }
-
-        i23 = adjacency_graph->size[1];
-        i24 = (int32_T)b_i;
-        emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &ob_emlrtBCI, sp);
-        i23 = adjacency_graph->size[1];
-        i24 = (int32_T)j;
-        emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &qb_emlrtBCI, sp);
-        emlrtSizeEqCheck1DFastR2012b(loop_ub, i22, &lb_emlrtECI, sp);
-        if (1.0 > b_i) {
-          ix = 0;
-        } else {
-          i22 = adjacency_graph->size[0];
-          emlrtDynamicBoundsCheckFastR2012b(1, 1, i22, &rb_emlrtBCI, sp);
-          i22 = adjacency_graph->size[0];
-          i23 = (int32_T)b_i;
-          ix = emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &rb_emlrtBCI, sp);
-        }
-
-        i22 = ii->size[0];
-        ii->size[0] = ix;
-        emxEnsureCapacity(sp, (emxArray__common *)ii, i22, (int32_T)sizeof
-                          (int32_T), &emlrtRTEI);
-        for (i22 = 0; i22 < ix; i22++) {
-          ii->data[i22] = i22;
-        }
-
-        i22 = adjacency_graph->size[1];
-        i23 = (int32_T)b_i;
-        emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &sb_emlrtBCI, sp);
-        h_ii[0] = ii->size[0];
-        i22 = e_adjacency_graph->size[0];
-        e_adjacency_graph->size[0] = loop_ub;
-        emxEnsureCapacity(sp, (emxArray__common *)e_adjacency_graph, i22,
-                          (int32_T)sizeof(real_T), &emlrtRTEI);
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          e_adjacency_graph->data[i22] = adjacency_graph->data[i22 +
-            adjacency_graph->size[0] * ((int32_T)b_i - 1)];
-        }
-
-        k_adjacency_graph[0] = e_adjacency_graph->size[0];
-        emlrtSubAssignSizeCheckR2012b(h_ii, 1, k_adjacency_graph, 1,
-          &mb_emlrtECI, sp);
-        i22 = f_adjacency_graph->size[0];
-        f_adjacency_graph->size[0] = loop_ub;
-        emxEnsureCapacity(sp, (emxArray__common *)f_adjacency_graph, i22,
-                          (int32_T)sizeof(real_T), &emlrtRTEI);
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          f_adjacency_graph->data[i22] = adjacency_graph->data[i22 +
-            adjacency_graph->size[0] * ((int32_T)b_i - 1)] +
-            adjacency_graph->data[i22 + adjacency_graph->size[0] * ((int32_T)j -
-            1)];
-        }
-
-        loop_ub = f_adjacency_graph->size[0];
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          adjacency_graph->data[ii->data[i22] + adjacency_graph->size[0] *
-            ((int32_T)b_i - 1)] = f_adjacency_graph->data[i22];
-        }
-
-        if ((int32_T)j > adjacency_graph->size[1]) {
-          i22 = 0;
-          i23 = 0;
-        } else {
-          i22 = adjacency_graph->size[1];
-          i23 = (int32_T)j;
-          i22 = emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &ub_emlrtBCI, sp)
-            - 1;
-          i23 = adjacency_graph->size[1];
-          i24 = adjacency_graph->size[1];
-          i23 = emlrtDynamicBoundsCheckFastR2012b(i24, 1, i23, &ub_emlrtBCI, sp);
-        }
-
-        if ((int32_T)j > adjacency_graph->size[1]) {
-          i24 = 0;
-          idx = 0;
-        } else {
-          i24 = adjacency_graph->size[1];
-          idx = (int32_T)j;
-          i24 = emlrtDynamicBoundsCheckFastR2012b(idx, 1, i24, &wb_emlrtBCI, sp)
-            - 1;
-          idx = adjacency_graph->size[1];
-          nx = adjacency_graph->size[1];
-          idx = emlrtDynamicBoundsCheckFastR2012b(nx, 1, idx, &wb_emlrtBCI, sp);
-        }
-
-        nx = adjacency_graph->size[0];
-        ix = (int32_T)b_i;
-        emlrtDynamicBoundsCheckFastR2012b(ix, 1, nx, &tb_emlrtBCI, sp);
-        nx = adjacency_graph->size[0];
-        ix = (int32_T)j;
-        emlrtDynamicBoundsCheckFastR2012b(ix, 1, nx, &vb_emlrtBCI, sp);
-        nx = g_adjacency_graph->size[0] * g_adjacency_graph->size[1];
-        g_adjacency_graph->size[0] = 1;
-        g_adjacency_graph->size[1] = i23 - i22;
-        emxEnsureCapacity(sp, (emxArray__common *)g_adjacency_graph, nx,
-                          (int32_T)sizeof(real_T), &emlrtRTEI);
-        loop_ub = i23 - i22;
-        for (nx = 0; nx < loop_ub; nx++) {
-          g_adjacency_graph->data[g_adjacency_graph->size[0] * nx] =
-            adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
-            (i22 + nx)) - 1];
-        }
-
-        for (nx = 0; nx < 2; nx++) {
-          b_val_i[nx] = g_adjacency_graph->size[nx];
-        }
-
-        nx = h_adjacency_graph->size[0] * h_adjacency_graph->size[1];
-        h_adjacency_graph->size[0] = 1;
-        h_adjacency_graph->size[1] = idx - i24;
-        emxEnsureCapacity(sp, (emxArray__common *)h_adjacency_graph, nx,
-                          (int32_T)sizeof(real_T), &emlrtRTEI);
-        loop_ub = idx - i24;
-        for (idx = 0; idx < loop_ub; idx++) {
-          h_adjacency_graph->data[h_adjacency_graph->size[0] * idx] =
-            adjacency_graph->data[((int32_T)j + adjacency_graph->size[0] * (i24
-            + idx)) - 1];
-        }
-
-        for (idx = 0; idx < 2; idx++) {
-          val_it[idx] = h_adjacency_graph->size[idx];
-        }
-
-        emlrtSizeEqCheck2DFastR2012b(b_val_i, val_it, &nb_emlrtECI, sp);
-        if ((int32_T)j > adjacency_graph->size[1]) {
-          idx = 0;
-          nx = 0;
-        } else {
-          idx = adjacency_graph->size[1];
-          nx = (int32_T)j;
-          idx = emlrtDynamicBoundsCheckFastR2012b(nx, 1, idx, &yb_emlrtBCI, sp)
-            - 1;
-          nx = adjacency_graph->size[1];
-          ix = adjacency_graph->size[1];
-          nx = emlrtDynamicBoundsCheckFastR2012b(ix, 1, nx, &yb_emlrtBCI, sp);
-        }
-
-        ix = adjacency_graph->size[0];
-        ixstop = (int32_T)b_i;
-        emlrtDynamicBoundsCheckFastR2012b(ixstop, 1, ix, &xb_emlrtBCI, sp);
-        ix = ii->size[0];
-        ii->size[0] = nx - idx;
-        emxEnsureCapacity(sp, (emxArray__common *)ii, ix, (int32_T)sizeof
-                          (int32_T), &emlrtRTEI);
-        loop_ub = nx - idx;
-        for (nx = 0; nx < loop_ub; nx++) {
-          ii->data[nx] = idx + nx;
-        }
-
-        iv86[0] = 1;
-        iv86[1] = ii->size[0];
-        idx = i_adjacency_graph->size[0] * i_adjacency_graph->size[1];
-        i_adjacency_graph->size[0] = 1;
-        i_adjacency_graph->size[1] = i23 - i22;
-        emxEnsureCapacity(sp, (emxArray__common *)i_adjacency_graph, idx,
-                          (int32_T)sizeof(real_T), &emlrtRTEI);
-        loop_ub = i23 - i22;
-        for (idx = 0; idx < loop_ub; idx++) {
-          i_adjacency_graph->data[i_adjacency_graph->size[0] * idx] =
-            adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
-            (i22 + idx)) - 1];
-        }
-
-        for (idx = 0; idx < 2; idx++) {
-          b_val_i[idx] = i_adjacency_graph->size[idx];
-        }
-
-        emlrtSubAssignSizeCheckR2012b(iv86, 2, b_val_i, 2, &ob_emlrtECI, sp);
-        idx = j_adjacency_graph->size[0] * j_adjacency_graph->size[1];
-        j_adjacency_graph->size[0] = 1;
-        j_adjacency_graph->size[1] = i23 - i22;
-        emxEnsureCapacity(sp, (emxArray__common *)j_adjacency_graph, idx,
-                          (int32_T)sizeof(real_T), &emlrtRTEI);
-        loop_ub = i23 - i22;
-        for (i23 = 0; i23 < loop_ub; i23++) {
-          j_adjacency_graph->data[j_adjacency_graph->size[0] * i23] =
-            adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
-            (i22 + i23)) - 1] + adjacency_graph->data[((int32_T)j +
-            adjacency_graph->size[0] * (i24 + i23)) - 1];
-        }
-
-        loop_ub = j_adjacency_graph->size[1];
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          adjacency_graph->data[((int32_T)b_i + adjacency_graph->size[0] *
-            ii->data[i22]) - 1] = j_adjacency_graph->data
-            [j_adjacency_graph->size[0] * i22];
-        }
-
-        st.site = &gb_emlrtRSI;
+        st.site = &cb_emlrtRSI;
         eml_null_assignment(&st, adjacency_graph, j);
-        i22 = r28->size[0] * r28->size[1];
-        r28->size[0] = adjacency_graph->size[0];
-        r28->size[1] = adjacency_graph->size[1];
-        emxEnsureCapacity(sp, (emxArray__common *)r28, i22, (int32_T)sizeof
+        i20 = r10->size[0] * r10->size[1];
+        r10->size[0] = adjacency_graph->size[0];
+        r10->size[1] = adjacency_graph->size[1];
+        emxEnsureCapacity(sp, (emxArray__common *)r10, i20, (int32_T)sizeof
                           (real_T), &emlrtRTEI);
-        loop_ub = adjacency_graph->size[0] * adjacency_graph->size[1];
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          r28->data[i22] = adjacency_graph->data[i22];
+        i = adjacency_graph->size[0] * adjacency_graph->size[1];
+        for (i20 = 0; i20 < i; i20++) {
+          r10->data[i20] = adjacency_graph->data[i20];
         }
 
-        st.site = &hb_emlrtRSI;
-        b_eml_null_assignment(&st, r28, j);
-        i22 = adjacency_graph->size[0] * adjacency_graph->size[1];
-        adjacency_graph->size[0] = r28->size[0];
-        adjacency_graph->size[1] = r28->size[1];
-        emxEnsureCapacity(sp, (emxArray__common *)adjacency_graph, i22, (int32_T)
+        st.site = &db_emlrtRSI;
+        b_eml_null_assignment(&st, r10, j);
+        i20 = adjacency_graph->size[0] * adjacency_graph->size[1];
+        adjacency_graph->size[0] = r10->size[0];
+        adjacency_graph->size[1] = r10->size[1];
+        emxEnsureCapacity(sp, (emxArray__common *)adjacency_graph, i20, (int32_T)
                           sizeof(real_T), &emlrtRTEI);
-        loop_ub = r28->size[0] * r28->size[1];
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          adjacency_graph->data[i22] = r28->data[i22];
+        i = r10->size[0] * r10->size[1];
+        for (i20 = 0; i20 < i; i20++) {
+          adjacency_graph->data[i20] = r10->data[i20];
         }
 
-        i22 = sp_set->size[1];
-        i23 = (int32_T)b_i;
-        i22 = emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &qc_emlrtBCI, sp) -
+        i20 = sp_set->size[1];
+        i21 = (int32_T)b_i;
+        i20 = emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &lf_emlrtBCI, sp) -
           1;
-        i23 = sp_set->data[i22].val->size[0] * sp_set->data[i22].val->size[1];
-        sp_set->data[i22].val->size[0] = union_ij->size[0];
-        emxEnsureCapacity(sp, (emxArray__common *)sp_set->data[i22].val, i23,
+        i21 = sp_set->data[i20].val->size[0] * sp_set->data[i20].val->size[1];
+        sp_set->data[i20].val->size[0] = union_ij->size[0];
+        emxEnsureCapacity(sp, (emxArray__common *)sp_set->data[i20].val, i21,
                           (int32_T)sizeof(real_T), &emlrtRTEI);
-        i22 = sp_set->size[1];
-        i23 = (int32_T)b_i;
-        i22 = emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &qc_emlrtBCI, sp) -
+        i20 = sp_set->size[1];
+        i21 = (int32_T)b_i;
+        i20 = emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &lf_emlrtBCI, sp) -
           1;
-        i23 = sp_set->data[i22].val->size[0] * sp_set->data[i22].val->size[1];
-        sp_set->data[i22].val->size[1] = 2;
-        emxEnsureCapacity(sp, (emxArray__common *)sp_set->data[i22].val, i23,
+        i21 = sp_set->data[i20].val->size[0] * sp_set->data[i20].val->size[1];
+        sp_set->data[i20].val->size[1] = 2;
+        emxEnsureCapacity(sp, (emxArray__common *)sp_set->data[i20].val, i21,
                           (int32_T)sizeof(real_T), &emlrtRTEI);
-        nx = sp_set->size[1];
+        iy = sp_set->size[1];
         ix = sp_set->size[1];
-        i22 = (int32_T)b_i;
+        i20 = (int32_T)b_i;
         emxCopyStruct_struct_T(sp, &b_sp_set, &sp_set->
-          data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, ix, &qc_emlrtBCI, sp) -
+          data[emlrtDynamicBoundsCheckFastR2012b(i20, 1, ix, &lf_emlrtBCI, sp) -
           1], &emlrtRTEI);
         ix = sp_set->size[1];
-        i22 = (int32_T)b_i;
+        i20 = (int32_T)b_i;
         emxCopyStruct_struct_T(sp, &c_sp_set, &sp_set->
-          data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, ix, &qc_emlrtBCI, sp) -
+          data[emlrtDynamicBoundsCheckFastR2012b(i20, 1, ix, &lf_emlrtBCI, sp) -
           1], &emlrtRTEI);
-        loop_ub = union_ij->size[0] * union_ij->size[1];
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          i23 = (int32_T)b_i;
-          sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i23, 1, nx,
-            &qc_emlrtBCI, sp) - 1].val->data[i22] = union_ij->data[i22];
+        i = union_ij->size[0] * union_ij->size[1];
+        for (i20 = 0; i20 < i; i20++) {
+          i21 = (int32_T)b_i;
+          sp_set->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, iy,
+            &lf_emlrtBCI, sp) - 1].val->data[i20] = union_ij->data[i20];
         }
 
-        st.site = &ib_emlrtRSI;
+        st.site = &eb_emlrtRSI;
         c_eml_null_assignment(&st, sp_set, j);
-        i22 = ref_set->size[1];
-        i23 = (int32_T)b_i;
-        i22 = emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &rc_emlrtBCI, sp) -
-          1;
-        i23 = ref_set->data[i22].val->size[0] * ref_set->data[i22].val->size[1];
-        ref_set->data[i22].val->size[0] = ref_union->size[0];
-        emxEnsureCapacity(sp, (emxArray__common *)ref_set->data[i22].val, i23,
-                          (int32_T)sizeof(real_T), &emlrtRTEI);
-        i22 = ref_set->size[1];
-        i23 = (int32_T)b_i;
-        i22 = emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &rc_emlrtBCI, sp) -
-          1;
-        i23 = ref_set->data[i22].val->size[0] * ref_set->data[i22].val->size[1];
-        ref_set->data[i22].val->size[1] = 2;
-        emxEnsureCapacity(sp, (emxArray__common *)ref_set->data[i22].val, i23,
-                          (int32_T)sizeof(real_T), &emlrtRTEI);
-        nx = ref_set->size[1];
-        ix = ref_set->size[1];
-        i22 = (int32_T)b_i;
-        emxCopyStruct_struct_T(sp, &b_ref_set, &ref_set->
-          data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, ix, &rc_emlrtBCI, sp) -
-          1], &emlrtRTEI);
-        ix = ref_set->size[1];
-        i22 = (int32_T)b_i;
-        emxCopyStruct_struct_T(sp, &c_ref_set, &ref_set->
-          data[emlrtDynamicBoundsCheckFastR2012b(i22, 1, ix, &rc_emlrtBCI, sp) -
-          1], &emlrtRTEI);
-        loop_ub = ref_union->size[0] * ref_union->size[1];
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          i23 = (int32_T)b_i;
-          ref_set->data[emlrtDynamicBoundsCheckFastR2012b(i23, 1, nx,
-            &rc_emlrtBCI, sp) - 1].val->data[i22] = ref_union->data[i22];
-        }
-
-        st.site = &jb_emlrtRSI;
-        c_eml_null_assignment(&st, ref_set, j);
-        loop_ub = control_p->size[0];
-        ix = control_p->size[1];
-        i22 = t0_x->size[0] * t0_x->size[1];
-        t0_x->size[0] = loop_ub;
-        t0_x->size[1] = ix;
-        emxEnsureCapacity(sp, (emxArray__common *)t0_x, i22, (int32_T)sizeof
+        i = control_p->size[0];
+        ixstart = control_p->size[1];
+        i20 = t0_x->size[0] * t0_x->size[1];
+        t0_x->size[0] = i;
+        t0_x->size[1] = ixstart;
+        emxEnsureCapacity(sp, (emxArray__common *)t0_x, i20, (int32_T)sizeof
                           (real_T), &emlrtRTEI);
-        for (i22 = 0; i22 < ix; i22++) {
-          for (i23 = 0; i23 < loop_ub; i23++) {
-            t0_x->data[i23 + t0_x->size[0] * i22] = control_p->data[i23 +
-              control_p->size[0] * i22];
+        for (i20 = 0; i20 < ixstart; i20++) {
+          for (i21 = 0; i21 < i; i21++) {
+            t0_x->data[i21 + t0_x->size[0] * i20] = control_p->data[i21 +
+              control_p->size[0] * i20];
           }
         }
 
-        loop_ub = control_p->size[0];
-        ix = control_p->size[1];
-        i22 = t0_y->size[0] * t0_y->size[1];
-        t0_y->size[0] = loop_ub;
-        t0_y->size[1] = ix;
-        emxEnsureCapacity(sp, (emxArray__common *)t0_y, i22, (int32_T)sizeof
+        i = control_p->size[0];
+        ixstart = control_p->size[1];
+        i20 = t0_y->size[0] * t0_y->size[1];
+        t0_y->size[0] = i;
+        t0_y->size[1] = ixstart;
+        emxEnsureCapacity(sp, (emxArray__common *)t0_y, i20, (int32_T)sizeof
                           (real_T), &emlrtRTEI);
-        for (i22 = 0; i22 < ix; i22++) {
-          for (i23 = 0; i23 < loop_ub; i23++) {
-            t0_y->data[i23 + t0_y->size[0] * i22] = control_p->data[(i23 +
-              control_p->size[0] * i22) + control_p->size[0] * control_p->size[1]];
+        for (i20 = 0; i20 < ixstart; i20++) {
+          for (i21 = 0; i21 < i; i21++) {
+            t0_y->data[i21 + t0_y->size[0] * i20] = control_p->data[(i21 +
+              control_p->size[0] * i20) + control_p->size[0] * control_p->size[1]];
           }
         }
 
-        i22 = c_expl_temp.x->size[0] * c_expl_temp.x->size[1];
+        i20 = c_expl_temp.x->size[0] * c_expl_temp.x->size[1];
         c_expl_temp.x->size[0] = t0_x->size[0];
         c_expl_temp.x->size[1] = t0_x->size[1];
-        emxEnsureCapacity(sp, (emxArray__common *)c_expl_temp.x, i22, (int32_T)
+        emxEnsureCapacity(sp, (emxArray__common *)c_expl_temp.x, i20, (int32_T)
                           sizeof(real_T), &emlrtRTEI);
-        loop_ub = t0_x->size[0] * t0_x->size[1];
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          c_expl_temp.x->data[i22] = t0_x->data[i22];
+        i = t0_x->size[0] * t0_x->size[1];
+        for (i20 = 0; i20 < i; i20++) {
+          c_expl_temp.x->data[i20] = t0_x->data[i20];
         }
 
-        i22 = c_expl_temp.y->size[0] * c_expl_temp.y->size[1];
+        i20 = c_expl_temp.y->size[0] * c_expl_temp.y->size[1];
         c_expl_temp.y->size[0] = t0_y->size[0];
         c_expl_temp.y->size[1] = t0_y->size[1];
-        emxEnsureCapacity(sp, (emxArray__common *)c_expl_temp.y, i22, (int32_T)
+        emxEnsureCapacity(sp, (emxArray__common *)c_expl_temp.y, i20, (int32_T)
                           sizeof(real_T), &emlrtRTEI);
-        loop_ub = t0_y->size[0] * t0_y->size[1];
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          c_expl_temp.y->data[i22] = t0_y->data[i22];
+        i = t0_y->size[0] * t0_y->size[1];
+        for (i20 = 0; i20 < i; i20++) {
+          c_expl_temp.y->data[i20] = t0_y->data[i20];
         }
 
-        i22 = bspline_set->size[1];
-        i23 = (int32_T)b_i;
+        i20 = bspline_set->size[1];
+        i21 = (int32_T)b_i;
         b_emxCopyStruct_struct_T(sp, &bspline_set->
-          data[emlrtDynamicBoundsCheckFastR2012b(i23, 1, i22, &sc_emlrtBCI, sp)
-          - 1], &c_expl_temp, &yb_emlrtRTEI);
-        st.site = &kb_emlrtRSI;
+          data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &mf_emlrtBCI, sp)
+          - 1], &c_expl_temp, &gc_emlrtRTEI);
+        st.site = &fb_emlrtRSI;
         d_eml_null_assignment(&st, bspline_set, j);
+        i20 = ref_set->size[1];
+        i21 = (int32_T)b_i;
+        i20 = emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &nf_emlrtBCI, sp) -
+          1;
+        i21 = ref_set->data[i20].val->size[0] * ref_set->data[i20].val->size[1];
+        ref_set->data[i20].val->size[0] = ref_union->size[0];
+        emxEnsureCapacity(sp, (emxArray__common *)ref_set->data[i20].val, i21,
+                          (int32_T)sizeof(real_T), &emlrtRTEI);
+        i20 = ref_set->size[1];
+        i21 = (int32_T)b_i;
+        i20 = emlrtDynamicBoundsCheckFastR2012b(i21, 1, i20, &nf_emlrtBCI, sp) -
+          1;
+        i21 = ref_set->data[i20].val->size[0] * ref_set->data[i20].val->size[1];
+        ref_set->data[i20].val->size[1] = 2;
+        emxEnsureCapacity(sp, (emxArray__common *)ref_set->data[i20].val, i21,
+                          (int32_T)sizeof(real_T), &emlrtRTEI);
+        iy = ref_set->size[1];
+        ix = ref_set->size[1];
+        i20 = (int32_T)b_i;
+        emxCopyStruct_struct_T(sp, &b_ref_set, &ref_set->
+          data[emlrtDynamicBoundsCheckFastR2012b(i20, 1, ix, &nf_emlrtBCI, sp) -
+          1], &emlrtRTEI);
+        ix = ref_set->size[1];
+        i20 = (int32_T)b_i;
+        emxCopyStruct_struct_T(sp, &c_ref_set, &ref_set->
+          data[emlrtDynamicBoundsCheckFastR2012b(i20, 1, ix, &nf_emlrtBCI, sp) -
+          1], &emlrtRTEI);
+        i = ref_union->size[0] * ref_union->size[1];
+        for (i20 = 0; i20 < i; i20++) {
+          i21 = (int32_T)b_i;
+          ref_set->data[emlrtDynamicBoundsCheckFastR2012b(i21, 1, iy,
+            &nf_emlrtBCI, sp) - 1].val->data[i20] = ref_union->data[i20];
+        }
+
+        /* ref_set(i).val = bspline(sp_set(i).val, item, bound1); */
+        st.site = &gb_emlrtRSI;
+        c_eml_null_assignment(&st, ref_set, j);
       }
 
-      st.site = &lb_emlrtRSI;
-      i22 = x->size[0] * x->size[1];
+      st.site = &hb_emlrtRSI;
+      i20 = x->size[0] * x->size[1];
       x->size[0] = adjacency_graph->size[0];
       x->size[1] = adjacency_graph->size[1];
-      emxEnsureCapacity(&st, (emxArray__common *)x, i22, (int32_T)sizeof
+      emxEnsureCapacity(&st, (emxArray__common *)x, i20, (int32_T)sizeof
                         (boolean_T), &emlrtRTEI);
-      loop_ub = adjacency_graph->size[0] * adjacency_graph->size[1];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        x->data[i22] = (adjacency_graph->data[i22] != 0.0);
+      i = adjacency_graph->size[0] * adjacency_graph->size[1];
+      for (i20 = 0; i20 < i; i20++) {
+        x->data[i20] = (adjacency_graph->data[i20] != 0.0);
       }
 
-      b_st.site = &mb_emlrtRSI;
-      nx = x->size[0] * x->size[1];
-      idx = 0;
+      b_st.site = &fd_emlrtRSI;
+      iy = x->size[0] * x->size[1];
+      ixstart = 0;
       if ((!((x->size[0] == 1) || (x->size[1] == 1))) || (x->size[0] != 1) ||
           (x->size[1] <= 1)) {
-        b7 = TRUE;
+        overflow = TRUE;
       } else {
-        b7 = FALSE;
+        overflow = FALSE;
       }
 
-      if (b7) {
+      if (overflow) {
       } else {
-        l_y = NULL;
-        m12 = mxCreateCharArray(2, iv87);
+        n_y = NULL;
+        m12 = mxCreateCharArray(2, iv86);
         for (i = 0; i < 36; i++) {
-          cv27[i] = cv28[i];
+          cv27[i] = cv31[i];
         }
 
         emlrtInitCharArrayR2013a(&b_st, 36, m12, cv27);
-        emlrtAssign(&l_y, m12);
-        c_st.site = &ns_emlrtRSI;
-        d_st.site = &ys_emlrtRSI;
-        error(&c_st, message(&d_st, l_y, &b_emlrtMCI), &c_emlrtMCI);
+        emlrtAssign(&n_y, m12);
+        c_st.site = &qt_emlrtRSI;
+        h_st.site = &cu_emlrtRSI;
+        error(&c_st, message(&h_st, n_y, &h_emlrtMCI), &i_emlrtMCI);
       }
 
-      i22 = ii->size[0];
-      ii->size[0] = nx;
-      emxEnsureCapacity(&b_st, (emxArray__common *)ii, i22, (int32_T)sizeof
-                        (int32_T), &vb_emlrtRTEI);
-      c_st.site = &nb_emlrtRSI;
-      e_st.site = &pb_emlrtRSI;
-      if (1 > nx) {
-        b12 = FALSE;
+      i20 = ii->size[0];
+      ii->size[0] = iy;
+      emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof
+                        (int32_T), &dc_emlrtRTEI);
+      c_st.site = &gd_emlrtRSI;
+      d_st.site = &tb_emlrtRSI;
+      if (1 > iy) {
+        b8 = FALSE;
       } else {
-        b12 = (nx > 2147483646);
+        b8 = (iy > 2147483646);
       }
 
-      if (b12) {
-        e_st.site = &qb_emlrtRSI;
-        check_forloop_overflow_error(&e_st);
+      if (b8) {
+        d_st.site = &ub_emlrtRSI;
+        check_forloop_overflow_error(&d_st);
       }
 
       ix = 1;
       exitg1 = FALSE;
-      while ((exitg1 == FALSE) && (ix <= nx)) {
+      while ((exitg1 == FALSE) && (ix <= iy)) {
         guard1 = FALSE;
         if (x->data[ix - 1]) {
-          c_st.site = &ob_emlrtRSI;
-          idx++;
-          ii->data[idx - 1] = ix;
-          if (idx >= nx) {
+          c_st.site = &hd_emlrtRSI;
+          ixstart++;
+          ii->data[ixstart - 1] = ix;
+          if (ixstart >= iy) {
             exitg1 = TRUE;
           } else {
             guard1 = TRUE;
@@ -3267,54 +3430,54 @@ void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const
         }
       }
 
-      if (idx <= nx) {
+      if (ixstart <= iy) {
       } else {
-        m_y = NULL;
+        o_y = NULL;
         m12 = mxCreateString("Assertion failed.");
-        emlrtAssign(&m_y, m12);
-        c_st.site = &ms_emlrtRSI;
-        error(&c_st, m_y, &d_emlrtMCI);
+        emlrtAssign(&o_y, m12);
+        c_st.site = &pt_emlrtRSI;
+        error(&c_st, o_y, &j_emlrtMCI);
       }
 
-      if (nx == 1) {
-        if (idx == 0) {
-          i22 = ii->size[0];
+      if (iy == 1) {
+        if (ixstart == 0) {
+          i20 = ii->size[0];
           ii->size[0] = 0;
-          emxEnsureCapacity(&b_st, (emxArray__common *)ii, i22, (int32_T)sizeof
+          emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof
                             (int32_T), &emlrtRTEI);
         }
       } else {
-        if (1 > idx) {
-          loop_ub = 0;
+        if (1 > ixstart) {
+          i = 0;
         } else {
-          loop_ub = idx;
+          i = ixstart;
         }
 
-        i22 = g_ii->size[0];
-        g_ii->size[0] = loop_ub;
-        emxEnsureCapacity(&b_st, (emxArray__common *)g_ii, i22, (int32_T)sizeof
+        i20 = e_ii->size[0];
+        e_ii->size[0] = i;
+        emxEnsureCapacity(&b_st, (emxArray__common *)e_ii, i20, (int32_T)sizeof
                           (int32_T), &emlrtRTEI);
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          g_ii->data[i22] = ii->data[i22];
+        for (i20 = 0; i20 < i; i20++) {
+          e_ii->data[i20] = ii->data[i20];
         }
 
-        i22 = ii->size[0];
-        ii->size[0] = g_ii->size[0];
-        emxEnsureCapacity(&b_st, (emxArray__common *)ii, i22, (int32_T)sizeof
+        i20 = ii->size[0];
+        ii->size[0] = e_ii->size[0];
+        emxEnsureCapacity(&b_st, (emxArray__common *)ii, i20, (int32_T)sizeof
                           (int32_T), &emlrtRTEI);
-        loop_ub = g_ii->size[0];
-        for (i22 = 0; i22 < loop_ub; i22++) {
-          ii->data[i22] = g_ii->data[i22];
+        i = e_ii->size[0];
+        for (i20 = 0; i20 < i; i20++) {
+          ii->data[i20] = e_ii->data[i20];
         }
       }
 
-      i22 = pairs->size[0];
-      pairs->size[0] = ii->size[0];
-      emxEnsureCapacity(&st, (emxArray__common *)pairs, i22, (int32_T)sizeof
+      i20 = diffx->size[0];
+      diffx->size[0] = ii->size[0];
+      emxEnsureCapacity(&st, (emxArray__common *)diffx, i20, (int32_T)sizeof
                         (real_T), &emlrtRTEI);
-      loop_ub = ii->size[0];
-      for (i22 = 0; i22 < loop_ub; i22++) {
-        pairs->data[i22] = ii->data[i22];
+      i = ii->size[0];
+      for (i20 = 0; i20 < i; i20++) {
+        diffx->data[i20] = ii->data[i20];
       }
 
       emlrtBreakCheckFastR2012b(emlrtBreakCheckR2012bFlagVar, sp);
@@ -3323,11 +3486,12 @@ void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const
     }
   } while (exitg11 == 0);
 
-  emxFree_int32_T(&g_ii);
+  emxFree_int32_T(&e_ii);
   emxFreeStruct_struct_T(&c_ref_set);
   emxFreeStruct_struct_T(&b_ref_set);
   emxFreeStruct_struct_T(&c_sp_set);
   emxFreeStruct_struct_T(&b_sp_set);
+  emxFree_real_T(&k_adjacency_graph);
   emxFree_real_T(&j_adjacency_graph);
   emxFree_real_T(&i_adjacency_graph);
   emxFree_real_T(&h_adjacency_graph);
@@ -3336,39 +3500,29 @@ void merging(const emlrtStack *sp, emxArray_struct_T *sp_set, const
   emxFree_real_T(&e_adjacency_graph);
   emxFree_real_T(&d_adjacency_graph);
   emxFree_real_T(&c_adjacency_graph);
-  emxFree_real_T(&b_adjacency_graph);
-  emxFree_boolean_T(&e_ref_it);
-  emxFree_boolean_T(&d_ref_it);
-  emxFree_boolean_T(&e_ref_i);
-  emxFree_boolean_T(&d_ref_i);
-  emxFree_boolean_T(&c_ref_it);
-  emxFree_boolean_T(&b_ref_it);
-  emxFree_boolean_T(&c_ref_i);
-  emxFree_boolean_T(&b_ref_i);
-  emxFree_real_T(&c_val_it);
+  emxFree_real_T(&b_val_it);
   emxFree_real_T(&b_val_jt);
   b_emxFreeStruct_struct_T(&c_expl_temp);
   b_emxFreeStruct_struct_T(&b_expl_temp);
   b_emxFreeStruct_struct_T(&expl_temp);
-  emxFree_real_T(&r28);
+  emxFree_real_T(&r10);
   emxFree_int32_T(&ii);
   emxFree_boolean_T(&x);
+  emxFree_real_T(&varargin_1);
   emxFree_real_T(&t1_y);
   emxFree_real_T(&t1_x);
   emxFree_real_T(&t0_y);
   emxFree_real_T(&t0_x);
-  emxFree_real_T(&r27);
+  emxFree_real_T(&control_p);
   emxFree_real_T(&val_j);
   emxFree_real_T(&val_jt);
   emxFree_real_T(&val_i);
-  emxFree_real_T(&b_val_it);
+  emxFree_real_T(&val_it);
   emxFree_real_T(&ref_i);
   emxFree_real_T(&ref_it);
-  emxFree_real_T(&control_p);
   emxFree_real_T(&ref_union);
   emxFree_real_T(&union_ij);
-  emxFree_real_T(&pairs);
-  emxFree_real_T(&adjacency_graph);
+  emxFree_real_T(&diffx);
   emlrtHeapReferenceStackLeaveFcnR2012b(sp);
 }
 

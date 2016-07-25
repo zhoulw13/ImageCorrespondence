@@ -3,7 +3,7 @@
  *
  * Code generation for function 'bspline_single'
  *
- * C source code generated on: Thu Jul 14 16:54:48 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -12,204 +12,137 @@
 #include "extension.h"
 #include "bspline_single.h"
 #include "rdivide.h"
-#include "power.h"
 #include "floor.h"
+#include "power.h"
 #include "extension_emxutil.h"
-#include "repmat.h"
 #include "extension_mexutil.h"
 #include "extension_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo uh_emlrtRSI = { 21, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
+static emlrtRSInfo ie_emlrtRSI = { 74, "power",
+  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/power.m" };
 
-static emlrtRSInfo hj_emlrtRSI = { 14, "bspline_single",
+static emlrtRSInfo dj_emlrtRSI = { 47, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo ij_emlrtRSI = { 15, "bspline_single",
+static emlrtRSInfo ej_emlrtRSI = { 48, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo jj_emlrtRSI = { 16, "bspline_single",
+static emlrtRSInfo fj_emlrtRSI = { 49, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo kj_emlrtRSI = { 17, "bspline_single",
+static emlrtRSInfo gj_emlrtRSI = { 50, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo lj_emlrtRSI = { 30, "bspline_single",
+static emlrtRSInfo hj_emlrtRSI = { 63, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo mj_emlrtRSI = { 31, "bspline_single",
+static emlrtRSInfo ij_emlrtRSI = { 64, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo nj_emlrtRSI = { 32, "bspline_single",
+static emlrtRSInfo jj_emlrtRSI = { 65, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo oj_emlrtRSI = { 38, "bspline_single",
+static emlrtRSInfo kj_emlrtRSI = { 71, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo pj_emlrtRSI = { 39, "bspline_single",
+static emlrtRSInfo lj_emlrtRSI = { 72, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo qj_emlrtRSI = { 40, "bspline_single",
+static emlrtRSInfo mj_emlrtRSI = { 73, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo rj_emlrtRSI = { 55, "bspline_single",
+static emlrtRSInfo nj_emlrtRSI = { 88, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo sj_emlrtRSI = { 56, "bspline_single",
+static emlrtRSInfo oj_emlrtRSI = { 89, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo tj_emlrtRSI = { 76, "bspline_single",
+static emlrtRSInfo pj_emlrtRSI = { 109, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo uj_emlrtRSI = { 91, "bspline_single",
+static emlrtRSInfo qj_emlrtRSI = { 124, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo vj_emlrtRSI = { 109, "bspline_single",
+static emlrtRSInfo rj_emlrtRSI = { 133, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo wj_emlrtRSI = { 110, "bspline_single",
+static emlrtRSInfo sj_emlrtRSI = { 134, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo xj_emlrtRSI = { 112, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtRSInfo yj_emlrtRSI = { 118, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtRSInfo ak_emlrtRSI = { 79, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo ck_emlrtRSI = { 282, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo dk_emlrtRSI = { 283, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo ek_emlrtRSI = { 289, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo fk_emlrtRSI = { 290, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo gk_emlrtRSI = { 291, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo hk_emlrtRSI = { 292, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo ik_emlrtRSI = { 296, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo jk_emlrtRSI = { 299, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo kk_emlrtRSI = { 293, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo lk_emlrtRSI = { 294, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo mk_emlrtRSI = { 297, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo nk_emlrtRSI = { 300, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo ok_emlrtRSI = { 301, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRSInfo xk_emlrtRSI = { 58, "mtimes",
+static emlrtRSInfo tj_emlrtRSI = { 58, "mtimes",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/mtimes.m" };
 
-static emlrtRSInfo yk_emlrtRSI = { 31, "eml_xdotu",
+static emlrtRSInfo uj_emlrtRSI = { 31, "eml_xdotu",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/blas/eml_xdotu.m" };
 
-static emlrtRSInfo al_emlrtRSI = { 28, "eml_xdot",
+static emlrtRSInfo vj_emlrtRSI = { 28, "eml_xdot",
   "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/eml/blas/eml_xdot.m" };
 
-static emlrtRSInfo kl_emlrtRSI = { 22, "bspline_single",
+static emlrtRSInfo gk_emlrtRSI = { 55, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo ll_emlrtRSI = { 23, "bspline_single",
+static emlrtRSInfo hk_emlrtRSI = { 56, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo ml_emlrtRSI = { 24, "bspline_single",
+static emlrtRSInfo ik_emlrtRSI = { 57, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo nl_emlrtRSI = { 46, "bspline_single",
+static emlrtRSInfo jk_emlrtRSI = { 79, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo ol_emlrtRSI = { 47, "bspline_single",
+static emlrtRSInfo kk_emlrtRSI = { 80, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRSInfo pl_emlrtRSI = { 48, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtRSInfo ql_emlrtRSI = { 115, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtRSInfo rl_emlrtRSI = { 121, "bspline_single",
+static emlrtRSInfo lk_emlrtRSI = { 81, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
 static emlrtRTEInfo bb_emlrtRTEI = { 1, 18, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRTEInfo cb_emlrtRTEI = { 284, 1, "colon",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/ops/colon.m" };
-
-static emlrtRTEInfo db_emlrtRTEI = { 55, 1, "bspline_single",
+static emlrtRTEInfo cb_emlrtRTEI = { 88, 1, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRTEInfo eb_emlrtRTEI = { 56, 1, "bspline_single",
+static emlrtRTEInfo db_emlrtRTEI = { 89, 1, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRTEInfo fb_emlrtRTEI = { 58, 5, "bspline_single",
+static emlrtRTEInfo eb_emlrtRTEI = { 91, 5, "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
 
-static emlrtRTEInfo gb_emlrtRTEI = { 105, 5, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtECInfo n_emlrtECI = { -1, 93, 5, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtECInfo o_emlrtECI = { -1, 78, 5, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtECInfo p_emlrtECI = { 2, 110, 13, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtECInfo q_emlrtECI = { 2, 109, 13, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtRTEInfo hd_emlrtRTEI = { 91, 43, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtRTEInfo id_emlrtRTEI = { 91, 20, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtRTEInfo jd_emlrtRTEI = { 76, 43, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtRTEInfo kd_emlrtRTEI = { 76, 20, "bspline_single",
-  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
-
-static emlrtBCInfo n_emlrtBCI = { -1, -1, 13, 17, "bound", "bspline_single",
+static emlrtBCInfo n_emlrtBCI = { -1, -1, 45, 16, "bound", "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m", 0 };
 
-static emlrtBCInfo o_emlrtBCI = { -1, -1, 12, 16, "bound", "bspline_single",
+static emlrtBCInfo o_emlrtBCI = { -1, -1, 46, 17, "bound", "bspline_single",
   "F:/Git/correspondence/matlab_code_2/bspline_single.m", 0 };
 
-static emlrtBCInfo p_emlrtBCI = { -1, -1, 76, 18, "param_matrix",
+static emlrtRTEInfo gd_emlrtRTEI = { 109, 20, "bspline_single",
+  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
+
+static emlrtRTEInfo hd_emlrtRTEI = { 109, 43, "bspline_single",
+  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
+
+static emlrtRTEInfo id_emlrtRTEI = { 124, 20, "bspline_single",
+  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
+
+static emlrtRTEInfo jd_emlrtRTEI = { 124, 43, "bspline_single",
+  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
+
+static emlrtECInfo n_emlrtECI = { -1, 111, 5, "bspline_single",
+  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
+
+static emlrtECInfo o_emlrtECI = { -1, 126, 5, "bspline_single",
+  "F:/Git/correspondence/matlab_code_2/bspline_single.m" };
+
+static emlrtBCInfo p_emlrtBCI = { -1, -1, 109, 18, "param_matrix",
   "bspline_single", "F:/Git/correspondence/matlab_code_2/bspline_single.m", 0 };
 
-static emlrtBCInfo q_emlrtBCI = { -1, -1, 76, 41, "param_matrix",
+static emlrtBCInfo q_emlrtBCI = { -1, -1, 109, 41, "param_matrix",
   "bspline_single", "F:/Git/correspondence/matlab_code_2/bspline_single.m", 0 };
 
-static emlrtBCInfo r_emlrtBCI = { -1, -1, 91, 18, "param_matrix",
+static emlrtBCInfo r_emlrtBCI = { -1, -1, 124, 18, "param_matrix",
   "bspline_single", "F:/Git/correspondence/matlab_code_2/bspline_single.m", 0 };
 
-static emlrtBCInfo s_emlrtBCI = { -1, -1, 91, 41, "param_matrix",
+static emlrtBCInfo s_emlrtBCI = { -1, -1, 124, 41, "param_matrix",
   "bspline_single", "F:/Git/correspondence/matlab_code_2/bspline_single.m", 0 };
 
 /* Function Definitions */
@@ -217,40 +150,36 @@ void b_bspline_single(const emlrtStack *sp, const real_T src[2], const
                       emxArray_real_T *control_p_x, const emxArray_real_T
                       *control_p_y, const emxArray_real_T *bound, real_T ref[2])
 {
-  int32_T i12;
+  int32_T i14;
   real_T x;
   real_T y;
-  real_T d5;
+  real_T d4;
   real_T tx;
   real_T ty;
   real_T Ax[4];
   real_T b_Ax[4];
-  int32_T absb;
+  int32_T i15;
   static const real_T b[16] = { 0.16666666666666666, -0.5, 0.5,
     -0.16666666666666666, 0.66666666666666663, 0.0, -1.0, 0.5,
     0.16666666666666666, 0.5, 0.5, -0.5, 0.0, 0.0, 0.0, 0.16666666666666666 };
 
   real_T Ay_d[4];
   emxArray_real_T *Au;
-  int32_T ndbl;
+  int32_T i;
   emxArray_real_T *Av;
   emxArray_real_T *param_matrix;
-  int32_T cdiff;
-  real_T d6;
-  real_T d7;
-  int32_T apnd;
-  int32_T i13;
+  int32_T control_p_x_idx_1;
+  real_T d5;
+  int32_T i16;
+  int32_T i17;
   emxArray_real_T *b_param_matrix;
   emxArray_int32_T *r15;
-  int32_T b_control_p_x[2];
-  int32_T c_param_matrix[2];
-  emxArray_real_T *d_param_matrix;
-  emxArray_real_T *e_param_matrix;
-  emxArray_real_T *temp2;
+  int32_T iv40[2];
+  int32_T iv41[2];
   emxArray_real_T *b_b;
   boolean_T guard4 = FALSE;
   const mxArray *b_y;
-  static const int32_T iv38[2] = { 1, 21 };
+  static const int32_T iv42[2] = { 1, 21 };
 
   const mxArray *m7;
   char_T cv20[21];
@@ -258,7 +187,7 @@ void b_bspline_single(const emlrtStack *sp, const real_T src[2], const
     'L', 'A', 'B', ':', 'i', 'n', 'n', 'e', 'r', 'd', 'i', 'm' };
 
   const mxArray *c_y;
-  static const int32_T iv39[2] = { 1, 45 };
+  static const int32_T iv43[2] = { 1, 45 };
 
   char_T cv22[45];
   static const char_T cv23[45] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
@@ -274,10 +203,10 @@ void b_bspline_single(const emlrtStack *sp, const real_T src[2], const
   double * yiy0_t;
   boolean_T guard2 = FALSE;
   const mxArray *d_y;
-  static const int32_T iv40[2] = { 1, 21 };
+  static const int32_T iv44[2] = { 1, 21 };
 
   const mxArray *e_y;
-  static const int32_T iv41[2] = { 1, 45 };
+  static const int32_T iv45[2] = { 1, 45 };
 
   boolean_T guard1 = FALSE;
   emlrtStack st;
@@ -296,491 +225,344 @@ void b_bspline_single(const emlrtStack *sp, const real_T src[2], const
 
   /*  bspline give 2d cubic uniform references of given sole point and control points */
   /*  Detailed explanation goes here */
-  i12 = bound->size[1];
-  emlrtDynamicBoundsCheckFastR2012b(1, 1, i12, &o_emlrtBCI, sp);
-  i12 = bound->size[1];
-  emlrtDynamicBoundsCheckFastR2012b(2, 1, i12, &n_emlrtBCI, sp);
-  st.site = &hj_emlrtRSI;
+  /* { */
+  /* p0 = bspline(src, control_p, bound); */
+  /* p1 = bspline(src+[1,0], control_p, bound); */
+  /* if src(1) > bound(1) */
+  /*     p2 = bspline(src-[1,0], control_p, bound); */
+  /*     diffx = (p1-p2)/2; */
+  /* else */
+  /*     diffx = p1-p0; */
+  /* end */
+  /*  */
+  /* p3 = bspline(src+[0,1], control_p, bound); */
+  /* if src(2) > bound(2) */
+  /*     p4 = bspline(src-[0,1], control_p, bound); */
+  /*     diffy = (p3-p4)/2; */
+  /* else */
+  /*     diffy = p3-p0; */
+  /* end */
+  /*  */
+  /* ref = zeros(size(src, 1), 2, 1); */
+  /* if ux ~= 0 */
+  /*     ref(1) = diffx(1); */
+  /* end */
+  /* if vx ~= 0 */
+  /*     ref(2) = diffx(2); */
+  /* end */
+  /*  */
+  /* if uy ~= 0 */
+  /*     ref(1) = diffy(1); */
+  /* end */
+  /* if vy ~= 0 */
+  /*     ref(2) = diffy(2); */
+  /* end */
+  /* } */
+  i14 = bound->size[1];
+  emlrtDynamicBoundsCheckFastR2012b(1, 1, i14, &n_emlrtBCI, sp);
+  i14 = bound->size[1];
+  emlrtDynamicBoundsCheckFastR2012b(2, 1, i14, &o_emlrtBCI, sp);
+  st.site = &dj_emlrtRSI;
   x = rdivide((src[0] - bound->data[0]) + 1.0, 30.0);
-  st.site = &ij_emlrtRSI;
+  st.site = &ej_emlrtRSI;
   y = rdivide((src[1] - bound->data[bound->size[0]]) + 1.0, 30.0);
-  d5 = x;
-  st.site = &jj_emlrtRSI;
-  b_floor(&d5);
-  tx = x - d5;
-  d5 = y;
-  st.site = &kj_emlrtRSI;
-  b_floor(&d5);
-  ty = y - d5;
+  d4 = x;
+  st.site = &fj_emlrtRSI;
+  b_floor(&d4);
+  tx = x - d4;
+  d4 = y;
+  st.site = &gj_emlrtRSI;
+  b_floor(&d4);
+  ty = y - d4;
   Ax[0] = 1.0;
   Ax[1] = tx;
-  st.site = &kl_emlrtRSI;
+  st.site = &gk_emlrtRSI;
   Ax[2] = c_power(tx);
-  st.site = &ll_emlrtRSI;
-  Ax[3] = d_power(tx);
-  st.site = &ml_emlrtRSI;
+  st.site = &hk_emlrtRSI;
+  b_st.site = &fe_emlrtRSI;
+  c_st.site = &he_emlrtRSI;
+  Ax[3] = muDoubleScalarPower(tx, 3.0);
+  st.site = &ik_emlrtRSI;
   b_st.site = &je_emlrtRSI;
   c_st.site = &ke_emlrtRSI;
-  for (i12 = 0; i12 < 4; i12++) {
-    b_Ax[i12] = 0.0;
-    for (absb = 0; absb < 4; absb++) {
-      b_Ax[i12] += Ax[absb] * b[absb + (i12 << 2)];
+  for (i14 = 0; i14 < 4; i14++) {
+    b_Ax[i14] = 0.0;
+    for (i15 = 0; i15 < 4; i15++) {
+      b_Ax[i14] += Ax[i15] * b[i15 + (i14 << 2)];
     }
   }
 
-  for (i12 = 0; i12 < 4; i12++) {
-    Ax[i12] = b_Ax[i12];
+  for (i14 = 0; i14 < 4; i14++) {
+    Ax[i14] = b_Ax[i14];
   }
 
   Ay_d[0] = 0.0;
   Ay_d[1] = 1.0;
-  st.site = &nl_emlrtRSI;
+  st.site = &jk_emlrtRSI;
   Ay_d[2] = 2.0 * ty;
-  st.site = &ol_emlrtRSI;
-  ty = c_power(ty);
-  st.site = &ol_emlrtRSI;
-  Ay_d[3] = 3.0 * ty;
-  st.site = &pl_emlrtRSI;
+  st.site = &kk_emlrtRSI;
+  b_st.site = &fe_emlrtRSI;
+  c_st.site = &he_emlrtRSI;
+  st.site = &kk_emlrtRSI;
+  Ay_d[3] = 3.0 * (ty * ty);
+  st.site = &lk_emlrtRSI;
   b_st.site = &je_emlrtRSI;
   c_st.site = &ke_emlrtRSI;
-  st.site = &pl_emlrtRSI;
-  b_st.site = &jb_emlrtRSI;
-  c_st.site = &kb_emlrtRSI;
-  for (i12 = 0; i12 < 4; i12++) {
-    d5 = 0.0;
-    for (absb = 0; absb < 4; absb++) {
-      d5 += Ay_d[absb] * b[absb + (i12 << 2)];
+  st.site = &lk_emlrtRSI;
+  b_st.site = &kb_emlrtRSI;
+  c_st.site = &lb_emlrtRSI;
+  for (i14 = 0; i14 < 4; i14++) {
+    d4 = 0.0;
+    for (i15 = 0; i15 < 4; i15++) {
+      d4 += Ay_d[i15] * b[i15 + (i14 << 2)];
     }
 
-    b_Ax[i12] = d5 / 30.0;
+    b_Ax[i14] = d4 / 30.0;
   }
 
-  for (i12 = 0; i12 < 4; i12++) {
-    Ay_d[i12] = b_Ax[i12];
+  for (i14 = 0; i14 < 4; i14++) {
+    Ay_d[i14] = b_Ax[i14];
   }
 
-  emxInit_real_T(&c_st, &Au, 2, &db_emlrtRTEI, TRUE);
-  st.site = &rj_emlrtRSI;
+  emxInit_real_T(&c_st, &Au, 2, &cb_emlrtRTEI, TRUE);
+  st.site = &nj_emlrtRSI;
   ty = (real_T)control_p_x->size[0] * (real_T)control_p_x->size[1];
-  i12 = Au->size[0] * Au->size[1];
+  i14 = Au->size[0] * Au->size[1];
   Au->size[0] = 1;
   Au->size[1] = (int32_T)ty;
-  emxEnsureCapacity(sp, (emxArray__common *)Au, i12, (int32_T)sizeof(real_T),
+  emxEnsureCapacity(sp, (emxArray__common *)Au, i14, (int32_T)sizeof(real_T),
                     &bb_emlrtRTEI);
-  ndbl = (int32_T)ty;
-  for (i12 = 0; i12 < ndbl; i12++) {
-    Au->data[i12] = 0.0;
+  i = (int32_T)ty;
+  for (i14 = 0; i14 < i; i14++) {
+    Au->data[i14] = 0.0;
   }
 
-  emxInit_real_T(sp, &Av, 2, &eb_emlrtRTEI, TRUE);
-  st.site = &sj_emlrtRSI;
+  emxInit_real_T(sp, &Av, 2, &db_emlrtRTEI, TRUE);
+  st.site = &oj_emlrtRSI;
   tx = (real_T)control_p_x->size[0] * (real_T)control_p_x->size[1];
-  i12 = Av->size[0] * Av->size[1];
+  i14 = Av->size[0] * Av->size[1];
   Av->size[0] = 1;
   Av->size[1] = (int32_T)tx;
-  emxEnsureCapacity(sp, (emxArray__common *)Av, i12, (int32_T)sizeof(real_T),
+  emxEnsureCapacity(sp, (emxArray__common *)Av, i14, (int32_T)sizeof(real_T),
                     &bb_emlrtRTEI);
-  ndbl = (int32_T)tx;
-  for (i12 = 0; i12 < ndbl; i12++) {
-    Av->data[i12] = 0.0;
+  i = (int32_T)tx;
+  for (i14 = 0; i14 < i; i14++) {
+    Av->data[i14] = 0.0;
   }
 
-  emxInit_real_T(sp, &param_matrix, 2, &fb_emlrtRTEI, TRUE);
-  ndbl = control_p_x->size[0];
-  i12 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[0] = ndbl;
-  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i12, (int32_T)sizeof
+  emxInit_real_T(sp, &param_matrix, 2, &eb_emlrtRTEI, TRUE);
+  i = control_p_x->size[0];
+  i14 = param_matrix->size[0] * param_matrix->size[1];
+  param_matrix->size[0] = i;
+  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i14, (int32_T)sizeof
                     (real_T), &bb_emlrtRTEI);
-  cdiff = control_p_x->size[1];
-  i12 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[1] = cdiff;
-  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i12, (int32_T)sizeof
+  control_p_x_idx_1 = control_p_x->size[1];
+  i14 = param_matrix->size[0] * param_matrix->size[1];
+  param_matrix->size[1] = control_p_x_idx_1;
+  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i14, (int32_T)sizeof
                     (real_T), &bb_emlrtRTEI);
-  ndbl = control_p_x->size[0] * control_p_x->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    param_matrix->data[i12] = 0.0;
+  i = control_p_x->size[0] * control_p_x->size[1];
+  for (i14 = 0; i14 < i; i14++) {
+    param_matrix->data[i14] = 0.0;
   }
 
-  d5 = x;
-  st.site = &tj_emlrtRSI;
-  b_floor(&d5);
-  d6 = x;
-  st.site = &tj_emlrtRSI;
-  b_floor(&d6);
-  if (d5 == d6) {
+  st.site = &pj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  d4 = muDoubleScalarFloor(x);
+  st.site = &pj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  if (d4 == muDoubleScalarFloor(x)) {
   } else {
-    emlrtErrorWithMessageIdR2012b(sp, &kd_emlrtRTEI,
+    emlrtErrorWithMessageIdR2012b(sp, &gd_emlrtRTEI,
       "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
   }
 
-  d6 = y;
-  st.site = &tj_emlrtRSI;
-  b_floor(&d6);
-  d7 = y;
-  st.site = &tj_emlrtRSI;
-  b_floor(&d7);
-  if (d6 == d7) {
-  } else {
-    emlrtErrorWithMessageIdR2012b(sp, &jd_emlrtRTEI,
-      "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
-  }
-
-  st.site = &tj_emlrtRSI;
-  ndbl = control_p_x->size[0];
-  cdiff = control_p_x->size[1];
-  for (i12 = 0; i12 < 4; i12++) {
-    for (absb = 0; absb < 4; absb++) {
-      apnd = (int32_T)(d5 + (1.0 + (real_T)i12));
-      i13 = (int32_T)(d6 + (1.0 + (real_T)absb));
-      param_matrix->data[(emlrtDynamicBoundsCheckFastR2012b(apnd, 1, ndbl,
-        &p_emlrtBCI, sp) + param_matrix->size[0] *
-                          (emlrtDynamicBoundsCheckFastR2012b(i13, 1, cdiff,
-        &q_emlrtBCI, sp) - 1)) - 1] = Ax[i12] * Ay_d[absb];
-    }
-  }
-
-  emxInit_real_T(sp, &b_param_matrix, 2, &fb_emlrtRTEI, TRUE);
-  ndbl = param_matrix->size[0] * param_matrix->size[1];
-  i12 = b_param_matrix->size[0] * b_param_matrix->size[1];
-  b_param_matrix->size[0] = 1;
-  b_param_matrix->size[1] = ndbl;
-  emxEnsureCapacity(sp, (emxArray__common *)b_param_matrix, i12, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  for (i12 = 0; i12 < ndbl; i12++) {
-    b_param_matrix->data[b_param_matrix->size[0] * i12] = param_matrix->data[i12];
-  }
-
-  emxInit_int32_T(sp, &r15, 1, &bb_emlrtRTEI, TRUE);
-  ndbl = (int32_T)ty;
-  i12 = r15->size[0];
-  r15->size[0] = (int32_T)ty;
-  emxEnsureCapacity(sp, (emxArray__common *)r15, i12, (int32_T)sizeof(int32_T),
-                    &bb_emlrtRTEI);
-  for (i12 = 0; i12 < ndbl; i12++) {
-    r15->data[i12] = i12;
-  }
-
-  b_control_p_x[0] = 1;
-  b_control_p_x[1] = r15->size[0];
-  emlrtSubAssignSizeCheckR2012b(b_control_p_x, 2, *(int32_T (*)[2])
-    b_param_matrix->size, 2, &o_emlrtECI, sp);
-  ndbl = b_param_matrix->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    Au->data[Au->size[0] * r15->data[i12]] = b_param_matrix->data
-      [b_param_matrix->size[0] * i12];
-  }
-
-  ndbl = control_p_x->size[0];
-  i12 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[0] = ndbl;
-  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i12, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  cdiff = control_p_x->size[1];
-  i12 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[1] = cdiff;
-  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i12, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  ndbl = control_p_x->size[0] * control_p_x->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    param_matrix->data[i12] = 0.0;
-  }
-
-  d5 = x;
-  st.site = &uj_emlrtRSI;
-  b_floor(&d5);
-  st.site = &uj_emlrtRSI;
-  b_floor(&x);
-  if (d5 == x) {
-  } else {
-    emlrtErrorWithMessageIdR2012b(sp, &id_emlrtRTEI,
-      "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
-  }
-
-  d6 = y;
-  st.site = &uj_emlrtRSI;
-  b_floor(&d6);
-  st.site = &uj_emlrtRSI;
-  b_floor(&y);
-  if (d6 == y) {
+  st.site = &pj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  d5 = muDoubleScalarFloor(y);
+  st.site = &pj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  if (d5 == muDoubleScalarFloor(y)) {
   } else {
     emlrtErrorWithMessageIdR2012b(sp, &hd_emlrtRTEI,
       "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
   }
 
-  st.site = &uj_emlrtRSI;
-  ndbl = control_p_x->size[0];
-  cdiff = control_p_x->size[1];
-  for (i12 = 0; i12 < 4; i12++) {
-    for (absb = 0; absb < 4; absb++) {
-      apnd = (int32_T)(d5 + (1.0 + (real_T)i12));
-      i13 = (int32_T)(d6 + (1.0 + (real_T)absb));
-      param_matrix->data[(emlrtDynamicBoundsCheckFastR2012b(apnd, 1, ndbl,
-        &r_emlrtBCI, sp) + param_matrix->size[0] *
-                          (emlrtDynamicBoundsCheckFastR2012b(i13, 1, cdiff,
-        &s_emlrtBCI, sp) - 1)) - 1] = Ax[i12] * Ay_d[absb];
+  st.site = &pj_emlrtRSI;
+  i = control_p_x->size[0];
+  control_p_x_idx_1 = control_p_x->size[1];
+  for (i14 = 0; i14 < 4; i14++) {
+    for (i15 = 0; i15 < 4; i15++) {
+      i16 = (int32_T)(d4 + (1.0 + (real_T)i14));
+      i17 = (int32_T)(d5 + (1.0 + (real_T)i15));
+      param_matrix->data[(emlrtDynamicBoundsCheckFastR2012b(i16, 1, i,
+        &p_emlrtBCI, sp) + param_matrix->size[0] *
+                          (emlrtDynamicBoundsCheckFastR2012b(i17, 1,
+        control_p_x_idx_1, &q_emlrtBCI, sp) - 1)) - 1] = Ax[i14] * Ay_d[i15];
     }
   }
 
-  ndbl = param_matrix->size[0] * param_matrix->size[1];
-  i12 = b_param_matrix->size[0] * b_param_matrix->size[1];
+  emxInit_real_T(sp, &b_param_matrix, 2, &eb_emlrtRTEI, TRUE);
+  i = param_matrix->size[0] * param_matrix->size[1];
+  i14 = b_param_matrix->size[0] * b_param_matrix->size[1];
   b_param_matrix->size[0] = 1;
-  b_param_matrix->size[1] = ndbl;
-  emxEnsureCapacity(sp, (emxArray__common *)b_param_matrix, i12, (int32_T)sizeof
+  b_param_matrix->size[1] = i;
+  emxEnsureCapacity(sp, (emxArray__common *)b_param_matrix, i14, (int32_T)sizeof
                     (real_T), &bb_emlrtRTEI);
-  for (i12 = 0; i12 < ndbl; i12++) {
-    b_param_matrix->data[b_param_matrix->size[0] * i12] = param_matrix->data[i12];
+  for (i14 = 0; i14 < i; i14++) {
+    b_param_matrix->data[b_param_matrix->size[0] * i14] = param_matrix->data[i14];
   }
 
-  ndbl = (int32_T)tx;
-  i12 = r15->size[0];
-  r15->size[0] = (int32_T)tx;
-  emxEnsureCapacity(sp, (emxArray__common *)r15, i12, (int32_T)sizeof(int32_T),
+  emxInit_int32_T(sp, &r15, 1, &bb_emlrtRTEI, TRUE);
+  i = (int32_T)ty;
+  i14 = r15->size[0];
+  r15->size[0] = (int32_T)ty;
+  emxEnsureCapacity(sp, (emxArray__common *)r15, i14, (int32_T)sizeof(int32_T),
                     &bb_emlrtRTEI);
-  for (i12 = 0; i12 < ndbl; i12++) {
-    r15->data[i12] = i12;
+  for (i14 = 0; i14 < i; i14++) {
+    r15->data[i14] = i14;
   }
 
-  c_param_matrix[0] = 1;
-  c_param_matrix[1] = r15->size[0];
-  emlrtSubAssignSizeCheckR2012b(c_param_matrix, 2, *(int32_T (*)[2])
-    b_param_matrix->size, 2, &n_emlrtECI, sp);
-  ndbl = b_param_matrix->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    Av->data[Av->size[0] * r15->data[i12]] = b_param_matrix->data
-      [b_param_matrix->size[0] * i12];
+  iv40[0] = 1;
+  iv40[1] = r15->size[0];
+  emlrtSubAssignSizeCheckR2012b(iv40, 2, *(int32_T (*)[2])b_param_matrix->size,
+    2, &n_emlrtECI, sp);
+  i = b_param_matrix->size[1];
+  for (i14 = 0; i14 < i; i14++) {
+    Au->data[Au->size[0] * r15->data[i14]] = b_param_matrix->data
+      [b_param_matrix->size[0] * i14];
+  }
+
+  i = control_p_x->size[0];
+  i14 = param_matrix->size[0] * param_matrix->size[1];
+  param_matrix->size[0] = i;
+  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i14, (int32_T)sizeof
+                    (real_T), &bb_emlrtRTEI);
+  control_p_x_idx_1 = control_p_x->size[1];
+  i14 = param_matrix->size[0] * param_matrix->size[1];
+  param_matrix->size[1] = control_p_x_idx_1;
+  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i14, (int32_T)sizeof
+                    (real_T), &bb_emlrtRTEI);
+  i = control_p_x->size[0] * control_p_x->size[1];
+  for (i14 = 0; i14 < i; i14++) {
+    param_matrix->data[i14] = 0.0;
+  }
+
+  st.site = &qj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  d4 = muDoubleScalarFloor(x);
+  st.site = &qj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  if (d4 == muDoubleScalarFloor(x)) {
+  } else {
+    emlrtErrorWithMessageIdR2012b(sp, &id_emlrtRTEI,
+      "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
+  }
+
+  st.site = &qj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  d5 = muDoubleScalarFloor(y);
+  st.site = &qj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  if (d5 == muDoubleScalarFloor(y)) {
+  } else {
+    emlrtErrorWithMessageIdR2012b(sp, &jd_emlrtRTEI,
+      "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
+  }
+
+  st.site = &qj_emlrtRSI;
+  i = control_p_x->size[0];
+  control_p_x_idx_1 = control_p_x->size[1];
+  for (i14 = 0; i14 < 4; i14++) {
+    for (i15 = 0; i15 < 4; i15++) {
+      i16 = (int32_T)(d4 + (1.0 + (real_T)i14));
+      i17 = (int32_T)(d5 + (1.0 + (real_T)i15));
+      param_matrix->data[(emlrtDynamicBoundsCheckFastR2012b(i16, 1, i,
+        &r_emlrtBCI, sp) + param_matrix->size[0] *
+                          (emlrtDynamicBoundsCheckFastR2012b(i17, 1,
+        control_p_x_idx_1, &s_emlrtBCI, sp) - 1)) - 1] = Ax[i14] * Ay_d[i15];
+    }
+  }
+
+  i = param_matrix->size[0] * param_matrix->size[1];
+  i14 = b_param_matrix->size[0] * b_param_matrix->size[1];
+  b_param_matrix->size[0] = 1;
+  b_param_matrix->size[1] = i;
+  emxEnsureCapacity(sp, (emxArray__common *)b_param_matrix, i14, (int32_T)sizeof
+                    (real_T), &bb_emlrtRTEI);
+  for (i14 = 0; i14 < i; i14++) {
+    b_param_matrix->data[b_param_matrix->size[0] * i14] = param_matrix->data[i14];
+  }
+
+  emxFree_real_T(&param_matrix);
+  i = (int32_T)tx;
+  i14 = r15->size[0];
+  r15->size[0] = (int32_T)tx;
+  emxEnsureCapacity(sp, (emxArray__common *)r15, i14, (int32_T)sizeof(int32_T),
+                    &bb_emlrtRTEI);
+  for (i14 = 0; i14 < i; i14++) {
+    r15->data[i14] = i14;
+  }
+
+  iv41[0] = 1;
+  iv41[1] = r15->size[0];
+  emlrtSubAssignSizeCheckR2012b(iv41, 2, *(int32_T (*)[2])b_param_matrix->size,
+    2, &o_emlrtECI, sp);
+  i = b_param_matrix->size[1];
+  for (i14 = 0; i14 < i; i14++) {
+    Av->data[Av->size[0] * r15->data[i14]] = b_param_matrix->data
+      [b_param_matrix->size[0] * i14];
   }
 
   emxFree_int32_T(&r15);
-
-  /* { */
-  /* temp1 = control_p.x; */
-  /* temp2 = control_p.y; */
-  /* ref(:, 1) = Au*temp1(:); */
-  /* ref(:, 2) = Av*temp2(:); */
-  /* } */
-  st.site = &vj_emlrtRSI;
-  b_st.site = &uh_emlrtRSI;
-  c_st.site = &ak_emlrtRSI;
-  if (control_p_x->size[0] < 1) {
-    absb = -1;
-    apnd = 0;
-  } else {
-    ndbl = (int32_T)muDoubleScalarFloor(((real_T)control_p_x->size[0] - 1.0) +
-      0.5);
-    apnd = ndbl + 1;
-    cdiff = (ndbl - control_p_x->size[0]) + 1;
-    absb = control_p_x->size[0];
-    if (muDoubleScalarAbs(cdiff) < 4.4408920985006262E-16 * (real_T)absb) {
-      ndbl++;
-      apnd = control_p_x->size[0];
-    } else if (cdiff > 0) {
-      apnd = ndbl;
-    } else {
-      ndbl++;
-    }
-
-    absb = ndbl - 1;
-  }
-
-  i12 = b_param_matrix->size[0] * b_param_matrix->size[1];
-  b_param_matrix->size[0] = 1;
-  b_param_matrix->size[1] = absb + 1;
-  emxEnsureCapacity(&c_st, (emxArray__common *)b_param_matrix, i12, (int32_T)
-                    sizeof(real_T), &cb_emlrtRTEI);
-  if (absb + 1 > 0) {
-    b_param_matrix->data[0] = 1.0;
-    if (absb + 1 > 1) {
-      b_param_matrix->data[absb] = apnd;
-      i12 = absb + (absb < 0);
-      if (i12 >= 0) {
-        ndbl = (int32_T)((uint32_T)i12 >> 1);
-      } else {
-        ndbl = ~(int32_T)((uint32_T)~i12 >> 1);
-      }
-
-      for (cdiff = 1; cdiff < ndbl; cdiff++) {
-        b_param_matrix->data[cdiff] = 1.0 + (real_T)cdiff;
-        b_param_matrix->data[absb - cdiff] = apnd - cdiff;
-      }
-
-      if (ndbl << 1 == absb) {
-        b_param_matrix->data[ndbl] = (1.0 + (real_T)apnd) / 2.0;
-      } else {
-        b_param_matrix->data[ndbl] = 1.0 + (real_T)ndbl;
-        b_param_matrix->data[ndbl + 1] = apnd - ndbl;
-      }
-    }
-  }
-
-  b_emxInit_real_T(&c_st, &d_param_matrix, 1, &bb_emlrtRTEI, TRUE);
-  i12 = d_param_matrix->size[0];
-  d_param_matrix->size[0] = b_param_matrix->size[1];
-  emxEnsureCapacity(sp, (emxArray__common *)d_param_matrix, i12, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  ndbl = b_param_matrix->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    d_param_matrix->data[i12] = b_param_matrix->data[b_param_matrix->size[0] *
-      i12] - 2.0;
-  }
-
-  st.site = &vj_emlrtRSI;
-  e_repmat(&st, d_param_matrix, control_p_x->size[1], param_matrix);
-  emxFree_real_T(&d_param_matrix);
-  for (i12 = 0; i12 < 2; i12++) {
-    b_control_p_x[i12] = control_p_x->size[i12];
-  }
-
-  for (i12 = 0; i12 < 2; i12++) {
-    c_param_matrix[i12] = param_matrix->size[i12];
-  }
-
-  emlrtSizeEqCheck2DFastR2012b(b_control_p_x, c_param_matrix, &q_emlrtECI, sp);
-  i12 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[0] = control_p_x->size[0];
-  param_matrix->size[1] = control_p_x->size[1];
-  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i12, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  ndbl = control_p_x->size[0] * control_p_x->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    param_matrix->data[i12] = control_p_x->data[i12] - param_matrix->data[i12];
-  }
-
-  st.site = &wj_emlrtRSI;
-  b_st.site = &uh_emlrtRSI;
-  c_st.site = &ak_emlrtRSI;
-  if (control_p_x->size[1] < 1) {
-    absb = -1;
-    apnd = 0;
-  } else {
-    ndbl = (int32_T)muDoubleScalarFloor(((real_T)control_p_x->size[1] - 1.0) +
-      0.5);
-    apnd = ndbl + 1;
-    cdiff = (ndbl - control_p_x->size[1]) + 1;
-    absb = control_p_x->size[1];
-    if (muDoubleScalarAbs(cdiff) < 4.4408920985006262E-16 * (real_T)absb) {
-      ndbl++;
-      apnd = control_p_x->size[1];
-    } else if (cdiff > 0) {
-      apnd = ndbl;
-    } else {
-      ndbl++;
-    }
-
-    absb = ndbl - 1;
-  }
-
-  i12 = b_param_matrix->size[0] * b_param_matrix->size[1];
-  b_param_matrix->size[0] = 1;
-  b_param_matrix->size[1] = absb + 1;
-  emxEnsureCapacity(&c_st, (emxArray__common *)b_param_matrix, i12, (int32_T)
-                    sizeof(real_T), &cb_emlrtRTEI);
-  if (absb + 1 > 0) {
-    b_param_matrix->data[0] = 1.0;
-    if (absb + 1 > 1) {
-      b_param_matrix->data[absb] = apnd;
-      i12 = absb + (absb < 0);
-      if (i12 >= 0) {
-        ndbl = (int32_T)((uint32_T)i12 >> 1);
-      } else {
-        ndbl = ~(int32_T)((uint32_T)~i12 >> 1);
-      }
-
-      for (cdiff = 1; cdiff < ndbl; cdiff++) {
-        b_param_matrix->data[cdiff] = 1.0 + (real_T)cdiff;
-        b_param_matrix->data[absb - cdiff] = apnd - cdiff;
-      }
-
-      if (ndbl << 1 == absb) {
-        b_param_matrix->data[ndbl] = (1.0 + (real_T)apnd) / 2.0;
-      } else {
-        b_param_matrix->data[ndbl] = 1.0 + (real_T)ndbl;
-        b_param_matrix->data[ndbl + 1] = apnd - ndbl;
-      }
-    }
-  }
-
-  emxInit_real_T(&c_st, &e_param_matrix, 2, &bb_emlrtRTEI, TRUE);
-  i12 = e_param_matrix->size[0] * e_param_matrix->size[1];
-  e_param_matrix->size[0] = 1;
-  e_param_matrix->size[1] = b_param_matrix->size[1];
-  emxEnsureCapacity(sp, (emxArray__common *)e_param_matrix, i12, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  ndbl = b_param_matrix->size[0] * b_param_matrix->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    e_param_matrix->data[i12] = b_param_matrix->data[i12] - 2.0;
-  }
-
   emxFree_real_T(&b_param_matrix);
-  emxInit_real_T(sp, &temp2, 2, &gb_emlrtRTEI, TRUE);
-  st.site = &wj_emlrtRSI;
-  d_repmat(&st, e_param_matrix, control_p_x->size[0], temp2);
-  emxFree_real_T(&e_param_matrix);
-  for (i12 = 0; i12 < 2; i12++) {
-    b_control_p_x[i12] = control_p_y->size[i12];
-  }
-
-  for (i12 = 0; i12 < 2; i12++) {
-    c_param_matrix[i12] = temp2->size[i12];
-  }
-
-  emlrtSizeEqCheck2DFastR2012b(b_control_p_x, c_param_matrix, &p_emlrtECI, sp);
-  i12 = temp2->size[0] * temp2->size[1];
-  temp2->size[0] = control_p_y->size[0];
-  temp2->size[1] = control_p_y->size[1];
-  emxEnsureCapacity(sp, (emxArray__common *)temp2, i12, (int32_T)sizeof(real_T),
-                    &bb_emlrtRTEI);
-  ndbl = control_p_y->size[0] * control_p_y->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    temp2->data[i12] = control_p_y->data[i12] - temp2->data[i12];
-  }
-
   b_emxInit_real_T(sp, &b_b, 1, &bb_emlrtRTEI, TRUE);
-  st.site = &ql_emlrtRSI;
-  i12 = b_b->size[0];
-  b_b->size[0] = param_matrix->size[0] * param_matrix->size[1];
-  emxEnsureCapacity(&st, (emxArray__common *)b_b, i12, (int32_T)sizeof(real_T),
+  st.site = &rj_emlrtRSI;
+  i14 = b_b->size[0];
+  b_b->size[0] = control_p_x->size[0] * control_p_x->size[1];
+  emxEnsureCapacity(&st, (emxArray__common *)b_b, i14, (int32_T)sizeof(real_T),
                     &bb_emlrtRTEI);
-  ndbl = param_matrix->size[0] * param_matrix->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    b_b->data[i12] = param_matrix->data[i12];
+  i = control_p_x->size[0] * control_p_x->size[1];
+  for (i14 = 0; i14 < i; i14++) {
+    b_b->data[i14] = control_p_x->data[i14];
   }
 
   b_st.site = &gf_emlrtRSI;
-  ndbl = param_matrix->size[0] * param_matrix->size[1];
-  if (!(Au->size[1] == ndbl)) {
+  i = control_p_x->size[0] * control_p_x->size[1];
+  if (!(Au->size[1] == i)) {
     guard4 = FALSE;
     if (Au->size[1] == 1) {
       guard4 = TRUE;
     } else {
-      ndbl = param_matrix->size[0] * param_matrix->size[1];
-      if (ndbl == 1) {
+      i = control_p_x->size[0] * control_p_x->size[1];
+      if (i == 1) {
         guard4 = TRUE;
       } else {
         b_y = NULL;
-        m7 = mxCreateCharArray(2, iv38);
-        for (ndbl = 0; ndbl < 21; ndbl++) {
-          cv20[ndbl] = cv21[ndbl];
+        m7 = mxCreateCharArray(2, iv42);
+        for (i = 0; i < 21; i++) {
+          cv20[i] = cv21[i];
         }
 
         emlrtInitCharArrayR2013a(&b_st, 21, m7, cv20);
         emlrtAssign(&b_y, m7);
-        c_st.site = &wy_emlrtRSI;
-        d_st.site = &kab_emlrtRSI;
+        c_st.site = &cy_emlrtRSI;
+        d_st.site = &qy_emlrtRSI;
         error(&c_st, b_message(&d_st, b_y, &i_emlrtMCI), &j_emlrtMCI);
       }
     }
 
     if (guard4 == TRUE) {
       c_y = NULL;
-      m7 = mxCreateCharArray(2, iv39);
-      for (ndbl = 0; ndbl < 45; ndbl++) {
-        cv22[ndbl] = cv23[ndbl];
+      m7 = mxCreateCharArray(2, iv43);
+      for (i = 0; i < 45; i++) {
+        cv22[i] = cv23[i];
       }
 
       emlrtInitCharArrayR2013a(&b_st, 45, m7, cv22);
       emlrtAssign(&c_y, m7);
-      c_st.site = &vy_emlrtRSI;
-      d_st.site = &jab_emlrtRSI;
+      c_st.site = &by_emlrtRSI;
+      d_st.site = &py_emlrtRSI;
       error(&c_st, b_message(&d_st, c_y, &g_emlrtMCI), &h_emlrtMCI);
     }
   }
@@ -789,12 +571,12 @@ void b_bspline_single(const emlrtStack *sp, const real_T src[2], const
   if (Au->size[1] == 1) {
     guard3 = TRUE;
   } else {
-    ndbl = param_matrix->size[0] * param_matrix->size[1];
-    if (ndbl == 1) {
+    i = control_p_x->size[0] * control_p_x->size[1];
+    if (i == 1) {
       guard3 = TRUE;
     } else {
-      b_st.site = &xk_emlrtRSI;
-      c_st.site = &yk_emlrtRSI;
+      b_st.site = &tj_emlrtRSI;
+      c_st.site = &uj_emlrtRSI;
       if (Au->size[1] < 1) {
         y = 0.0;
       } else {
@@ -810,60 +592,59 @@ void b_bspline_single(const emlrtStack *sp, const real_T src[2], const
 
   if (guard3 == TRUE) {
     y = 0.0;
-    for (i12 = 0; i12 < Au->size[1]; i12++) {
-      y += Au->data[Au->size[0] * i12] * param_matrix->data[i12];
+    for (i14 = 0; i14 < Au->size[1]; i14++) {
+      y += Au->data[Au->size[0] * i14] * control_p_x->data[i14];
     }
   }
 
-  emxFree_real_T(&param_matrix);
   emxFree_real_T(&Au);
   ref[0] = y;
-  st.site = &rl_emlrtRSI;
-  i12 = b_b->size[0];
-  b_b->size[0] = temp2->size[0] * temp2->size[1];
-  emxEnsureCapacity(&st, (emxArray__common *)b_b, i12, (int32_T)sizeof(real_T),
+  st.site = &sj_emlrtRSI;
+  i14 = b_b->size[0];
+  b_b->size[0] = control_p_y->size[0] * control_p_y->size[1];
+  emxEnsureCapacity(&st, (emxArray__common *)b_b, i14, (int32_T)sizeof(real_T),
                     &bb_emlrtRTEI);
-  ndbl = temp2->size[0] * temp2->size[1];
-  for (i12 = 0; i12 < ndbl; i12++) {
-    b_b->data[i12] = temp2->data[i12];
+  i = control_p_y->size[0] * control_p_y->size[1];
+  for (i14 = 0; i14 < i; i14++) {
+    b_b->data[i14] = control_p_y->data[i14];
   }
 
   b_st.site = &gf_emlrtRSI;
-  ndbl = temp2->size[0] * temp2->size[1];
-  if (!(Av->size[1] == ndbl)) {
+  i = control_p_y->size[0] * control_p_y->size[1];
+  if (!(Av->size[1] == i)) {
     guard2 = FALSE;
     if (Av->size[1] == 1) {
       guard2 = TRUE;
     } else {
-      ndbl = temp2->size[0] * temp2->size[1];
-      if (ndbl == 1) {
+      i = control_p_y->size[0] * control_p_y->size[1];
+      if (i == 1) {
         guard2 = TRUE;
       } else {
         d_y = NULL;
-        m7 = mxCreateCharArray(2, iv40);
-        for (ndbl = 0; ndbl < 21; ndbl++) {
-          cv20[ndbl] = cv21[ndbl];
+        m7 = mxCreateCharArray(2, iv44);
+        for (i = 0; i < 21; i++) {
+          cv20[i] = cv21[i];
         }
 
         emlrtInitCharArrayR2013a(&b_st, 21, m7, cv20);
         emlrtAssign(&d_y, m7);
-        c_st.site = &wy_emlrtRSI;
-        d_st.site = &kab_emlrtRSI;
+        c_st.site = &cy_emlrtRSI;
+        d_st.site = &qy_emlrtRSI;
         error(&c_st, b_message(&d_st, d_y, &i_emlrtMCI), &j_emlrtMCI);
       }
     }
 
     if (guard2 == TRUE) {
       e_y = NULL;
-      m7 = mxCreateCharArray(2, iv41);
-      for (ndbl = 0; ndbl < 45; ndbl++) {
-        cv22[ndbl] = cv23[ndbl];
+      m7 = mxCreateCharArray(2, iv45);
+      for (i = 0; i < 45; i++) {
+        cv22[i] = cv23[i];
       }
 
       emlrtInitCharArrayR2013a(&b_st, 45, m7, cv22);
       emlrtAssign(&e_y, m7);
-      c_st.site = &vy_emlrtRSI;
-      d_st.site = &jab_emlrtRSI;
+      c_st.site = &by_emlrtRSI;
+      d_st.site = &py_emlrtRSI;
       error(&c_st, b_message(&d_st, e_y, &g_emlrtMCI), &h_emlrtMCI);
     }
   }
@@ -872,12 +653,12 @@ void b_bspline_single(const emlrtStack *sp, const real_T src[2], const
   if (Av->size[1] == 1) {
     guard1 = TRUE;
   } else {
-    ndbl = temp2->size[0] * temp2->size[1];
-    if (ndbl == 1) {
+    i = control_p_y->size[0] * control_p_y->size[1];
+    if (i == 1) {
       guard1 = TRUE;
     } else {
-      b_st.site = &xk_emlrtRSI;
-      c_st.site = &yk_emlrtRSI;
+      b_st.site = &tj_emlrtRSI;
+      c_st.site = &uj_emlrtRSI;
       if (Av->size[1] < 1) {
         y = 0.0;
       } else {
@@ -893,16 +674,37 @@ void b_bspline_single(const emlrtStack *sp, const real_T src[2], const
 
   if (guard1 == TRUE) {
     y = 0.0;
-    for (i12 = 0; i12 < Av->size[1]; i12++) {
-      y += Av->data[Av->size[0] * i12] * temp2->data[i12];
+    for (i14 = 0; i14 < Av->size[1]; i14++) {
+      y += Av->data[Av->size[0] * i14] * control_p_y->data[i14];
     }
   }
 
   emxFree_real_T(&b_b);
-  emxFree_real_T(&temp2);
   emxFree_real_T(&Av);
-  ref[1] = y + 0.033333333333333333;
+  ref[1] = y;
 
+  /* { */
+  /* if (ux+uy+vx+vy) == 0 */
+  /*     temp1 = control_p.x; */
+  /*     temp2 = control_p.y; */
+  /* 	ref(:, 1) = Au*temp1(:); */
+  /* 	ref(:, 2) = Av*temp2(:); */
+  /* else */
+  /*     temp1 = control_p.x-repmat((1:h)'-2, 1, w); */
+  /*     temp2 = control_p.y-repmat((1:w)-2, h, 1); */
+  /* 	if ux ~= 0 */
+  /* 		ref(:,1) = Au*temp1(:)+1/30; */
+  /* 	end */
+  /* 	if uy ~= 0 */
+  /* 		ref(:,1) = Au*temp1(:); */
+  /* 	end */
+  /* 	if vx ~= 0 */
+  /* 		ref(:,2) = Av*temp2(:); */
+  /* 	end */
+  /* 	if vy ~= 0 */
+  /* 		ref(:,2) = Av*temp2(:)+1/30; */
+  /* 	end */
+  /* end */
   /* } */
   emlrtHeapReferenceStackLeaveFcnR2012b(sp);
 }
@@ -919,32 +721,28 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
   real_T ty;
   real_T Ax_d[4];
   real_T b_Ax_d[4];
-  int32_T absb;
+  int32_T i11;
   static const real_T b[16] = { 0.16666666666666666, -0.5, 0.5,
     -0.16666666666666666, 0.66666666666666663, 0.0, -1.0, 0.5,
     0.16666666666666666, 0.5, 0.5, -0.5, 0.0, 0.0, 0.0, 0.16666666666666666 };
 
   real_T Ay[4];
   emxArray_real_T *Au;
-  int32_T ndbl;
+  int32_T i;
   emxArray_real_T *Av;
   emxArray_real_T *param_matrix;
-  int32_T cdiff;
+  int32_T control_p_x_idx_1;
   real_T d3;
-  real_T d4;
-  int32_T apnd;
-  int32_T i11;
+  int32_T i12;
+  int32_T i13;
   emxArray_real_T *b_param_matrix;
   emxArray_int32_T *r14;
-  int32_T b_control_p_x[2];
-  int32_T c_param_matrix[2];
-  emxArray_real_T *d_param_matrix;
-  emxArray_real_T *e_param_matrix;
-  emxArray_real_T *temp2;
+  int32_T iv34[2];
+  int32_T iv35[2];
   emxArray_real_T *b_b;
   boolean_T guard4 = FALSE;
   const mxArray *b_y;
-  static const int32_T iv34[2] = { 1, 21 };
+  static const int32_T iv36[2] = { 1, 21 };
 
   const mxArray *m6;
   char_T cv16[21];
@@ -952,7 +750,7 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
     'L', 'A', 'B', ':', 'i', 'n', 'n', 'e', 'r', 'd', 'i', 'm' };
 
   const mxArray *c_y;
-  static const int32_T iv35[2] = { 1, 45 };
+  static const int32_T iv37[2] = { 1, 45 };
 
   char_T cv18[45];
   static const char_T cv19[45] = { 'C', 'o', 'd', 'e', 'r', ':', 't', 'o', 'o',
@@ -968,10 +766,10 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
   double * yiy0_t;
   boolean_T guard2 = FALSE;
   const mxArray *d_y;
-  static const int32_T iv36[2] = { 1, 21 };
+  static const int32_T iv38[2] = { 1, 21 };
 
   const mxArray *e_y;
-  static const int32_T iv37[2] = { 1, 45 };
+  static const int32_T iv39[2] = { 1, 45 };
 
   boolean_T guard1 = FALSE;
   emlrtStack st;
@@ -993,41 +791,74 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
 
   /*  bspline give 2d cubic uniform references of given sole point and control points */
   /*  Detailed explanation goes here */
+  /* { */
+  /* p0 = bspline(src, control_p, bound); */
+  /* p1 = bspline(src+[1,0], control_p, bound); */
+  /* if src(1) > bound(1) */
+  /*     p2 = bspline(src-[1,0], control_p, bound); */
+  /*     diffx = (p1-p2)/2; */
+  /* else */
+  /*     diffx = p1-p0; */
+  /* end */
+  /*  */
+  /* p3 = bspline(src+[0,1], control_p, bound); */
+  /* if src(2) > bound(2) */
+  /*     p4 = bspline(src-[0,1], control_p, bound); */
+  /*     diffy = (p3-p4)/2; */
+  /* else */
+  /*     diffy = p3-p0; */
+  /* end */
+  /*  */
+  /* ref = zeros(size(src, 1), 2, 1); */
+  /* if ux ~= 0 */
+  /*     ref(1) = diffx(1); */
+  /* end */
+  /* if vx ~= 0 */
+  /*     ref(2) = diffx(2); */
+  /* end */
+  /*  */
+  /* if uy ~= 0 */
+  /*     ref(1) = diffy(1); */
+  /* end */
+  /* if vy ~= 0 */
+  /*     ref(2) = diffy(2); */
+  /* end */
+  /* } */
   i10 = bound->size[1];
-  emlrtDynamicBoundsCheckFastR2012b(1, 1, i10, &o_emlrtBCI, sp);
+  emlrtDynamicBoundsCheckFastR2012b(1, 1, i10, &n_emlrtBCI, sp);
   i10 = bound->size[1];
-  emlrtDynamicBoundsCheckFastR2012b(2, 1, i10, &n_emlrtBCI, sp);
-  st.site = &hj_emlrtRSI;
+  emlrtDynamicBoundsCheckFastR2012b(2, 1, i10, &o_emlrtBCI, sp);
+  st.site = &dj_emlrtRSI;
   x = rdivide((src[0] - bound->data[0]) + 1.0, 30.0);
-  st.site = &ij_emlrtRSI;
+  st.site = &ej_emlrtRSI;
   y = rdivide((src[1] - bound->data[bound->size[0]]) + 1.0, 30.0);
   d2 = x;
-  st.site = &jj_emlrtRSI;
+  st.site = &fj_emlrtRSI;
   b_floor(&d2);
   tx = x - d2;
   d2 = y;
-  st.site = &kj_emlrtRSI;
+  st.site = &gj_emlrtRSI;
   b_floor(&d2);
   ty = y - d2;
   Ax_d[0] = 0.0;
   Ax_d[1] = 1.0;
-  st.site = &lj_emlrtRSI;
+  st.site = &hj_emlrtRSI;
   Ax_d[2] = 2.0 * tx;
-  st.site = &mj_emlrtRSI;
+  st.site = &ij_emlrtRSI;
   tx = c_power(tx);
-  st.site = &mj_emlrtRSI;
+  st.site = &ij_emlrtRSI;
   Ax_d[3] = 3.0 * tx;
-  st.site = &nj_emlrtRSI;
+  st.site = &jj_emlrtRSI;
   b_st.site = &je_emlrtRSI;
   c_st.site = &ke_emlrtRSI;
   d_st.site = &me_emlrtRSI;
-  st.site = &nj_emlrtRSI;
-  b_st.site = &jb_emlrtRSI;
-  c_st.site = &kb_emlrtRSI;
+  st.site = &jj_emlrtRSI;
+  b_st.site = &kb_emlrtRSI;
+  c_st.site = &lb_emlrtRSI;
   for (i10 = 0; i10 < 4; i10++) {
     d2 = 0.0;
-    for (absb = 0; absb < 4; absb++) {
-      d2 += Ax_d[absb] * b[absb + (i10 << 2)];
+    for (i11 = 0; i11 < 4; i11++) {
+      d2 += Ax_d[i11] * b[i11 + (i10 << 2)];
     }
 
     b_Ax_d[i10] = d2 / 30.0;
@@ -1039,18 +870,23 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
 
   Ay[0] = 1.0;
   Ay[1] = ty;
-  st.site = &oj_emlrtRSI;
-  Ay[2] = c_power(ty);
-  st.site = &pj_emlrtRSI;
-  Ay[3] = d_power(ty);
-  st.site = &qj_emlrtRSI;
+  st.site = &kj_emlrtRSI;
+  b_st.site = &fe_emlrtRSI;
+  c_st.site = &he_emlrtRSI;
+  d_st.site = &ie_emlrtRSI;
+  Ay[2] = ty * ty;
+  st.site = &lj_emlrtRSI;
+  b_st.site = &fe_emlrtRSI;
+  c_st.site = &he_emlrtRSI;
+  Ay[3] = muDoubleScalarPower(ty, 3.0);
+  st.site = &mj_emlrtRSI;
   b_st.site = &je_emlrtRSI;
   c_st.site = &ke_emlrtRSI;
   d_st.site = &me_emlrtRSI;
   for (i10 = 0; i10 < 4; i10++) {
     b_Ax_d[i10] = 0.0;
-    for (absb = 0; absb < 4; absb++) {
-      b_Ax_d[i10] += Ay[absb] * b[absb + (i10 << 2)];
+    for (i11 = 0; i11 < 4; i11++) {
+      b_Ax_d[i10] += Ay[i11] * b[i11 + (i10 << 2)];
     }
   }
 
@@ -1058,456 +894,245 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
     Ay[i10] = b_Ax_d[i10];
   }
 
-  emxInit_real_T(&d_st, &Au, 2, &db_emlrtRTEI, TRUE);
-  st.site = &rj_emlrtRSI;
+  emxInit_real_T(&d_st, &Au, 2, &cb_emlrtRTEI, TRUE);
+  st.site = &nj_emlrtRSI;
   tx = (real_T)control_p_x->size[0] * (real_T)control_p_x->size[1];
   i10 = Au->size[0] * Au->size[1];
   Au->size[0] = 1;
   Au->size[1] = (int32_T)tx;
   emxEnsureCapacity(sp, (emxArray__common *)Au, i10, (int32_T)sizeof(real_T),
                     &bb_emlrtRTEI);
-  ndbl = (int32_T)tx;
-  for (i10 = 0; i10 < ndbl; i10++) {
+  i = (int32_T)tx;
+  for (i10 = 0; i10 < i; i10++) {
     Au->data[i10] = 0.0;
   }
 
-  emxInit_real_T(sp, &Av, 2, &eb_emlrtRTEI, TRUE);
-  st.site = &sj_emlrtRSI;
+  emxInit_real_T(sp, &Av, 2, &db_emlrtRTEI, TRUE);
+  st.site = &oj_emlrtRSI;
   ty = (real_T)control_p_x->size[0] * (real_T)control_p_x->size[1];
   i10 = Av->size[0] * Av->size[1];
   Av->size[0] = 1;
   Av->size[1] = (int32_T)ty;
   emxEnsureCapacity(sp, (emxArray__common *)Av, i10, (int32_T)sizeof(real_T),
                     &bb_emlrtRTEI);
-  ndbl = (int32_T)ty;
-  for (i10 = 0; i10 < ndbl; i10++) {
+  i = (int32_T)ty;
+  for (i10 = 0; i10 < i; i10++) {
     Av->data[i10] = 0.0;
   }
 
-  emxInit_real_T(sp, &param_matrix, 2, &fb_emlrtRTEI, TRUE);
-  ndbl = control_p_x->size[0];
+  emxInit_real_T(sp, &param_matrix, 2, &eb_emlrtRTEI, TRUE);
+  i = control_p_x->size[0];
   i10 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[0] = ndbl;
+  param_matrix->size[0] = i;
   emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i10, (int32_T)sizeof
                     (real_T), &bb_emlrtRTEI);
-  cdiff = control_p_x->size[1];
+  control_p_x_idx_1 = control_p_x->size[1];
   i10 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[1] = cdiff;
+  param_matrix->size[1] = control_p_x_idx_1;
   emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i10, (int32_T)sizeof
                     (real_T), &bb_emlrtRTEI);
-  ndbl = control_p_x->size[0] * control_p_x->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
+  i = control_p_x->size[0] * control_p_x->size[1];
+  for (i10 = 0; i10 < i; i10++) {
     param_matrix->data[i10] = 0.0;
   }
 
-  d2 = x;
-  st.site = &tj_emlrtRSI;
-  b_floor(&d2);
-  d3 = x;
-  st.site = &tj_emlrtRSI;
-  b_floor(&d3);
-  if (d2 == d3) {
+  st.site = &pj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  d2 = muDoubleScalarFloor(x);
+  st.site = &pj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  if (d2 == muDoubleScalarFloor(x)) {
   } else {
-    emlrtErrorWithMessageIdR2012b(sp, &kd_emlrtRTEI,
+    emlrtErrorWithMessageIdR2012b(sp, &gd_emlrtRTEI,
       "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
   }
 
-  d3 = y;
-  st.site = &tj_emlrtRSI;
-  b_floor(&d3);
-  d4 = y;
-  st.site = &tj_emlrtRSI;
-  b_floor(&d4);
-  if (d3 == d4) {
-  } else {
-    emlrtErrorWithMessageIdR2012b(sp, &jd_emlrtRTEI,
-      "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
-  }
-
-  st.site = &tj_emlrtRSI;
-  ndbl = control_p_x->size[0];
-  cdiff = control_p_x->size[1];
-  for (i10 = 0; i10 < 4; i10++) {
-    for (absb = 0; absb < 4; absb++) {
-      apnd = (int32_T)(d2 + (1.0 + (real_T)i10));
-      i11 = (int32_T)(d3 + (1.0 + (real_T)absb));
-      param_matrix->data[(emlrtDynamicBoundsCheckFastR2012b(apnd, 1, ndbl,
-        &p_emlrtBCI, sp) + param_matrix->size[0] *
-                          (emlrtDynamicBoundsCheckFastR2012b(i11, 1, cdiff,
-        &q_emlrtBCI, sp) - 1)) - 1] = Ax_d[i10] * Ay[absb];
-    }
-  }
-
-  emxInit_real_T(sp, &b_param_matrix, 2, &fb_emlrtRTEI, TRUE);
-  ndbl = param_matrix->size[0] * param_matrix->size[1];
-  i10 = b_param_matrix->size[0] * b_param_matrix->size[1];
-  b_param_matrix->size[0] = 1;
-  b_param_matrix->size[1] = ndbl;
-  emxEnsureCapacity(sp, (emxArray__common *)b_param_matrix, i10, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  for (i10 = 0; i10 < ndbl; i10++) {
-    b_param_matrix->data[b_param_matrix->size[0] * i10] = param_matrix->data[i10];
-  }
-
-  emxInit_int32_T(sp, &r14, 1, &bb_emlrtRTEI, TRUE);
-  ndbl = (int32_T)tx;
-  i10 = r14->size[0];
-  r14->size[0] = (int32_T)tx;
-  emxEnsureCapacity(sp, (emxArray__common *)r14, i10, (int32_T)sizeof(int32_T),
-                    &bb_emlrtRTEI);
-  for (i10 = 0; i10 < ndbl; i10++) {
-    r14->data[i10] = i10;
-  }
-
-  b_control_p_x[0] = 1;
-  b_control_p_x[1] = r14->size[0];
-  emlrtSubAssignSizeCheckR2012b(b_control_p_x, 2, *(int32_T (*)[2])
-    b_param_matrix->size, 2, &o_emlrtECI, sp);
-  ndbl = b_param_matrix->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
-    Au->data[Au->size[0] * r14->data[i10]] = b_param_matrix->data
-      [b_param_matrix->size[0] * i10];
-  }
-
-  ndbl = control_p_x->size[0];
-  i10 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[0] = ndbl;
-  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i10, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  cdiff = control_p_x->size[1];
-  i10 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[1] = cdiff;
-  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i10, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  ndbl = control_p_x->size[0] * control_p_x->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
-    param_matrix->data[i10] = 0.0;
-  }
-
-  d2 = x;
-  st.site = &uj_emlrtRSI;
-  b_floor(&d2);
-  st.site = &uj_emlrtRSI;
-  b_floor(&x);
-  if (d2 == x) {
-  } else {
-    emlrtErrorWithMessageIdR2012b(sp, &id_emlrtRTEI,
-      "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
-  }
-
-  d3 = y;
-  st.site = &uj_emlrtRSI;
-  b_floor(&d3);
-  st.site = &uj_emlrtRSI;
-  b_floor(&y);
-  if (d3 == y) {
+  st.site = &pj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  d3 = muDoubleScalarFloor(y);
+  st.site = &pj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  if (d3 == muDoubleScalarFloor(y)) {
   } else {
     emlrtErrorWithMessageIdR2012b(sp, &hd_emlrtRTEI,
       "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
   }
 
-  st.site = &uj_emlrtRSI;
-  ndbl = control_p_x->size[0];
-  cdiff = control_p_x->size[1];
+  st.site = &pj_emlrtRSI;
+  i = control_p_x->size[0];
+  control_p_x_idx_1 = control_p_x->size[1];
   for (i10 = 0; i10 < 4; i10++) {
-    for (absb = 0; absb < 4; absb++) {
-      apnd = (int32_T)(d2 + (1.0 + (real_T)i10));
-      i11 = (int32_T)(d3 + (1.0 + (real_T)absb));
-      param_matrix->data[(emlrtDynamicBoundsCheckFastR2012b(apnd, 1, ndbl,
-        &r_emlrtBCI, sp) + param_matrix->size[0] *
-                          (emlrtDynamicBoundsCheckFastR2012b(i11, 1, cdiff,
-        &s_emlrtBCI, sp) - 1)) - 1] = Ax_d[i10] * Ay[absb];
+    for (i11 = 0; i11 < 4; i11++) {
+      i12 = (int32_T)(d2 + (1.0 + (real_T)i10));
+      i13 = (int32_T)(d3 + (1.0 + (real_T)i11));
+      param_matrix->data[(emlrtDynamicBoundsCheckFastR2012b(i12, 1, i,
+        &p_emlrtBCI, sp) + param_matrix->size[0] *
+                          (emlrtDynamicBoundsCheckFastR2012b(i13, 1,
+        control_p_x_idx_1, &q_emlrtBCI, sp) - 1)) - 1] = Ax_d[i10] * Ay[i11];
     }
   }
 
-  ndbl = param_matrix->size[0] * param_matrix->size[1];
+  emxInit_real_T(sp, &b_param_matrix, 2, &eb_emlrtRTEI, TRUE);
+  i = param_matrix->size[0] * param_matrix->size[1];
   i10 = b_param_matrix->size[0] * b_param_matrix->size[1];
   b_param_matrix->size[0] = 1;
-  b_param_matrix->size[1] = ndbl;
+  b_param_matrix->size[1] = i;
   emxEnsureCapacity(sp, (emxArray__common *)b_param_matrix, i10, (int32_T)sizeof
                     (real_T), &bb_emlrtRTEI);
-  for (i10 = 0; i10 < ndbl; i10++) {
+  for (i10 = 0; i10 < i; i10++) {
     b_param_matrix->data[b_param_matrix->size[0] * i10] = param_matrix->data[i10];
   }
 
-  ndbl = (int32_T)ty;
+  emxInit_int32_T(sp, &r14, 1, &bb_emlrtRTEI, TRUE);
+  i = (int32_T)tx;
+  i10 = r14->size[0];
+  r14->size[0] = (int32_T)tx;
+  emxEnsureCapacity(sp, (emxArray__common *)r14, i10, (int32_T)sizeof(int32_T),
+                    &bb_emlrtRTEI);
+  for (i10 = 0; i10 < i; i10++) {
+    r14->data[i10] = i10;
+  }
+
+  iv34[0] = 1;
+  iv34[1] = r14->size[0];
+  emlrtSubAssignSizeCheckR2012b(iv34, 2, *(int32_T (*)[2])b_param_matrix->size,
+    2, &n_emlrtECI, sp);
+  i = b_param_matrix->size[1];
+  for (i10 = 0; i10 < i; i10++) {
+    Au->data[Au->size[0] * r14->data[i10]] = b_param_matrix->data
+      [b_param_matrix->size[0] * i10];
+  }
+
+  i = control_p_x->size[0];
+  i10 = param_matrix->size[0] * param_matrix->size[1];
+  param_matrix->size[0] = i;
+  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i10, (int32_T)sizeof
+                    (real_T), &bb_emlrtRTEI);
+  control_p_x_idx_1 = control_p_x->size[1];
+  i10 = param_matrix->size[0] * param_matrix->size[1];
+  param_matrix->size[1] = control_p_x_idx_1;
+  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i10, (int32_T)sizeof
+                    (real_T), &bb_emlrtRTEI);
+  i = control_p_x->size[0] * control_p_x->size[1];
+  for (i10 = 0; i10 < i; i10++) {
+    param_matrix->data[i10] = 0.0;
+  }
+
+  st.site = &qj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  d2 = muDoubleScalarFloor(x);
+  st.site = &qj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  if (d2 == muDoubleScalarFloor(x)) {
+  } else {
+    emlrtErrorWithMessageIdR2012b(sp, &id_emlrtRTEI,
+      "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
+  }
+
+  st.site = &qj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  d3 = muDoubleScalarFloor(y);
+  st.site = &qj_emlrtRSI;
+  b_st.site = &ib_emlrtRSI;
+  if (d3 == muDoubleScalarFloor(y)) {
+  } else {
+    emlrtErrorWithMessageIdR2012b(sp, &jd_emlrtRTEI,
+      "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
+  }
+
+  st.site = &qj_emlrtRSI;
+  i = control_p_x->size[0];
+  control_p_x_idx_1 = control_p_x->size[1];
+  for (i10 = 0; i10 < 4; i10++) {
+    for (i11 = 0; i11 < 4; i11++) {
+      i12 = (int32_T)(d2 + (1.0 + (real_T)i10));
+      i13 = (int32_T)(d3 + (1.0 + (real_T)i11));
+      param_matrix->data[(emlrtDynamicBoundsCheckFastR2012b(i12, 1, i,
+        &r_emlrtBCI, sp) + param_matrix->size[0] *
+                          (emlrtDynamicBoundsCheckFastR2012b(i13, 1,
+        control_p_x_idx_1, &s_emlrtBCI, sp) - 1)) - 1] = Ax_d[i10] * Ay[i11];
+    }
+  }
+
+  i = param_matrix->size[0] * param_matrix->size[1];
+  i10 = b_param_matrix->size[0] * b_param_matrix->size[1];
+  b_param_matrix->size[0] = 1;
+  b_param_matrix->size[1] = i;
+  emxEnsureCapacity(sp, (emxArray__common *)b_param_matrix, i10, (int32_T)sizeof
+                    (real_T), &bb_emlrtRTEI);
+  for (i10 = 0; i10 < i; i10++) {
+    b_param_matrix->data[b_param_matrix->size[0] * i10] = param_matrix->data[i10];
+  }
+
+  emxFree_real_T(&param_matrix);
+  i = (int32_T)ty;
   i10 = r14->size[0];
   r14->size[0] = (int32_T)ty;
   emxEnsureCapacity(sp, (emxArray__common *)r14, i10, (int32_T)sizeof(int32_T),
                     &bb_emlrtRTEI);
-  for (i10 = 0; i10 < ndbl; i10++) {
+  for (i10 = 0; i10 < i; i10++) {
     r14->data[i10] = i10;
   }
 
-  c_param_matrix[0] = 1;
-  c_param_matrix[1] = r14->size[0];
-  emlrtSubAssignSizeCheckR2012b(c_param_matrix, 2, *(int32_T (*)[2])
-    b_param_matrix->size, 2, &n_emlrtECI, sp);
-  ndbl = b_param_matrix->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
+  iv35[0] = 1;
+  iv35[1] = r14->size[0];
+  emlrtSubAssignSizeCheckR2012b(iv35, 2, *(int32_T (*)[2])b_param_matrix->size,
+    2, &o_emlrtECI, sp);
+  i = b_param_matrix->size[1];
+  for (i10 = 0; i10 < i; i10++) {
     Av->data[Av->size[0] * r14->data[i10]] = b_param_matrix->data
       [b_param_matrix->size[0] * i10];
   }
 
   emxFree_int32_T(&r14);
-
-  /* { */
-  /* temp1 = control_p.x; */
-  /* temp2 = control_p.y; */
-  /* ref(:, 1) = Au*temp1(:); */
-  /* ref(:, 2) = Av*temp2(:); */
-  /* } */
-  st.site = &vj_emlrtRSI;
-  b_st.site = &uh_emlrtRSI;
-  c_st.site = &ak_emlrtRSI;
-  d_st.site = &ck_emlrtRSI;
-  if (control_p_x->size[0] < 1) {
-    absb = -1;
-    apnd = 0;
-  } else {
-    ndbl = (int32_T)muDoubleScalarFloor(((real_T)control_p_x->size[0] - 1.0) +
-      0.5);
-    apnd = ndbl + 1;
-    cdiff = (ndbl - control_p_x->size[0]) + 1;
-    absb = control_p_x->size[0];
-    if (muDoubleScalarAbs(cdiff) < 4.4408920985006262E-16 * (real_T)absb) {
-      ndbl++;
-      apnd = control_p_x->size[0];
-    } else if (cdiff > 0) {
-      apnd = ndbl;
-    } else {
-      ndbl++;
-    }
-
-    absb = ndbl - 1;
-  }
-
-  d_st.site = &dk_emlrtRSI;
-  i10 = b_param_matrix->size[0] * b_param_matrix->size[1];
-  b_param_matrix->size[0] = 1;
-  b_param_matrix->size[1] = absb + 1;
-  emxEnsureCapacity(&c_st, (emxArray__common *)b_param_matrix, i10, (int32_T)
-                    sizeof(real_T), &cb_emlrtRTEI);
-  if (absb + 1 > 0) {
-    b_param_matrix->data[0] = 1.0;
-    if (absb + 1 > 1) {
-      b_param_matrix->data[absb] = apnd;
-      d_st.site = &ek_emlrtRSI;
-      d_st.site = &fk_emlrtRSI;
-      i10 = absb + (absb < 0);
-      if (i10 >= 0) {
-        ndbl = (int32_T)((uint32_T)i10 >> 1);
-      } else {
-        ndbl = ~(int32_T)((uint32_T)~i10 >> 1);
-      }
-
-      d_st.site = &gk_emlrtRSI;
-      d_st.site = &gk_emlrtRSI;
-      for (cdiff = 1; cdiff < ndbl; cdiff++) {
-        d_st.site = &hk_emlrtRSI;
-        d_st.site = &kk_emlrtRSI;
-        b_param_matrix->data[cdiff] = 1.0 + (real_T)cdiff;
-        d_st.site = &lk_emlrtRSI;
-        b_param_matrix->data[absb - cdiff] = apnd - cdiff;
-      }
-
-      d_st.site = &ik_emlrtRSI;
-      if (ndbl << 1 == absb) {
-        d_st.site = &mk_emlrtRSI;
-        b_param_matrix->data[ndbl] = (1.0 + (real_T)apnd) / 2.0;
-      } else {
-        d_st.site = &jk_emlrtRSI;
-        d_st.site = &nk_emlrtRSI;
-        b_param_matrix->data[ndbl] = 1.0 + (real_T)ndbl;
-        d_st.site = &ok_emlrtRSI;
-        b_param_matrix->data[ndbl + 1] = apnd - ndbl;
-      }
-    }
-  }
-
-  b_emxInit_real_T(&c_st, &d_param_matrix, 1, &bb_emlrtRTEI, TRUE);
-  i10 = d_param_matrix->size[0];
-  d_param_matrix->size[0] = b_param_matrix->size[1];
-  emxEnsureCapacity(sp, (emxArray__common *)d_param_matrix, i10, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  ndbl = b_param_matrix->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
-    d_param_matrix->data[i10] = b_param_matrix->data[b_param_matrix->size[0] *
-      i10] - 2.0;
-  }
-
-  st.site = &vj_emlrtRSI;
-  e_repmat(&st, d_param_matrix, control_p_x->size[1], param_matrix);
-  emxFree_real_T(&d_param_matrix);
-  for (i10 = 0; i10 < 2; i10++) {
-    b_control_p_x[i10] = control_p_x->size[i10];
-  }
-
-  for (i10 = 0; i10 < 2; i10++) {
-    c_param_matrix[i10] = param_matrix->size[i10];
-  }
-
-  emlrtSizeEqCheck2DFastR2012b(b_control_p_x, c_param_matrix, &q_emlrtECI, sp);
-  i10 = param_matrix->size[0] * param_matrix->size[1];
-  param_matrix->size[0] = control_p_x->size[0];
-  param_matrix->size[1] = control_p_x->size[1];
-  emxEnsureCapacity(sp, (emxArray__common *)param_matrix, i10, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  ndbl = control_p_x->size[0] * control_p_x->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
-    param_matrix->data[i10] = control_p_x->data[i10] - param_matrix->data[i10];
-  }
-
-  st.site = &wj_emlrtRSI;
-  b_st.site = &uh_emlrtRSI;
-  c_st.site = &ak_emlrtRSI;
-  d_st.site = &ck_emlrtRSI;
-  if (control_p_x->size[1] < 1) {
-    absb = -1;
-    apnd = 0;
-  } else {
-    ndbl = (int32_T)muDoubleScalarFloor(((real_T)control_p_x->size[1] - 1.0) +
-      0.5);
-    apnd = ndbl + 1;
-    cdiff = (ndbl - control_p_x->size[1]) + 1;
-    absb = control_p_x->size[1];
-    if (muDoubleScalarAbs(cdiff) < 4.4408920985006262E-16 * (real_T)absb) {
-      ndbl++;
-      apnd = control_p_x->size[1];
-    } else if (cdiff > 0) {
-      apnd = ndbl;
-    } else {
-      ndbl++;
-    }
-
-    absb = ndbl - 1;
-  }
-
-  d_st.site = &dk_emlrtRSI;
-  i10 = b_param_matrix->size[0] * b_param_matrix->size[1];
-  b_param_matrix->size[0] = 1;
-  b_param_matrix->size[1] = absb + 1;
-  emxEnsureCapacity(&c_st, (emxArray__common *)b_param_matrix, i10, (int32_T)
-                    sizeof(real_T), &cb_emlrtRTEI);
-  if (absb + 1 > 0) {
-    b_param_matrix->data[0] = 1.0;
-    if (absb + 1 > 1) {
-      b_param_matrix->data[absb] = apnd;
-      d_st.site = &ek_emlrtRSI;
-      d_st.site = &fk_emlrtRSI;
-      i10 = absb + (absb < 0);
-      if (i10 >= 0) {
-        ndbl = (int32_T)((uint32_T)i10 >> 1);
-      } else {
-        ndbl = ~(int32_T)((uint32_T)~i10 >> 1);
-      }
-
-      d_st.site = &gk_emlrtRSI;
-      d_st.site = &gk_emlrtRSI;
-      for (cdiff = 1; cdiff < ndbl; cdiff++) {
-        d_st.site = &hk_emlrtRSI;
-        d_st.site = &kk_emlrtRSI;
-        b_param_matrix->data[cdiff] = 1.0 + (real_T)cdiff;
-        d_st.site = &lk_emlrtRSI;
-        b_param_matrix->data[absb - cdiff] = apnd - cdiff;
-      }
-
-      d_st.site = &ik_emlrtRSI;
-      if (ndbl << 1 == absb) {
-        d_st.site = &mk_emlrtRSI;
-        b_param_matrix->data[ndbl] = (1.0 + (real_T)apnd) / 2.0;
-      } else {
-        d_st.site = &jk_emlrtRSI;
-        d_st.site = &nk_emlrtRSI;
-        b_param_matrix->data[ndbl] = 1.0 + (real_T)ndbl;
-        d_st.site = &ok_emlrtRSI;
-        b_param_matrix->data[ndbl + 1] = apnd - ndbl;
-      }
-    }
-  }
-
-  emxInit_real_T(&c_st, &e_param_matrix, 2, &bb_emlrtRTEI, TRUE);
-  i10 = e_param_matrix->size[0] * e_param_matrix->size[1];
-  e_param_matrix->size[0] = 1;
-  e_param_matrix->size[1] = b_param_matrix->size[1];
-  emxEnsureCapacity(sp, (emxArray__common *)e_param_matrix, i10, (int32_T)sizeof
-                    (real_T), &bb_emlrtRTEI);
-  ndbl = b_param_matrix->size[0] * b_param_matrix->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
-    e_param_matrix->data[i10] = b_param_matrix->data[i10] - 2.0;
-  }
-
   emxFree_real_T(&b_param_matrix);
-  emxInit_real_T(sp, &temp2, 2, &gb_emlrtRTEI, TRUE);
-  st.site = &wj_emlrtRSI;
-  d_repmat(&st, e_param_matrix, control_p_x->size[0], temp2);
-  emxFree_real_T(&e_param_matrix);
-  for (i10 = 0; i10 < 2; i10++) {
-    b_control_p_x[i10] = control_p_y->size[i10];
-  }
-
-  for (i10 = 0; i10 < 2; i10++) {
-    c_param_matrix[i10] = temp2->size[i10];
-  }
-
-  emlrtSizeEqCheck2DFastR2012b(b_control_p_x, c_param_matrix, &p_emlrtECI, sp);
-  i10 = temp2->size[0] * temp2->size[1];
-  temp2->size[0] = control_p_y->size[0];
-  temp2->size[1] = control_p_y->size[1];
-  emxEnsureCapacity(sp, (emxArray__common *)temp2, i10, (int32_T)sizeof(real_T),
-                    &bb_emlrtRTEI);
-  ndbl = control_p_y->size[0] * control_p_y->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
-    temp2->data[i10] = control_p_y->data[i10] - temp2->data[i10];
-  }
-
   b_emxInit_real_T(sp, &b_b, 1, &bb_emlrtRTEI, TRUE);
-  st.site = &xj_emlrtRSI;
+  st.site = &rj_emlrtRSI;
   i10 = b_b->size[0];
-  b_b->size[0] = param_matrix->size[0] * param_matrix->size[1];
+  b_b->size[0] = control_p_x->size[0] * control_p_x->size[1];
   emxEnsureCapacity(&st, (emxArray__common *)b_b, i10, (int32_T)sizeof(real_T),
                     &bb_emlrtRTEI);
-  ndbl = param_matrix->size[0] * param_matrix->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
-    b_b->data[i10] = param_matrix->data[i10];
+  i = control_p_x->size[0] * control_p_x->size[1];
+  for (i10 = 0; i10 < i; i10++) {
+    b_b->data[i10] = control_p_x->data[i10];
   }
 
   b_st.site = &gf_emlrtRSI;
-  ndbl = param_matrix->size[0] * param_matrix->size[1];
-  if (!(Au->size[1] == ndbl)) {
+  i = control_p_x->size[0] * control_p_x->size[1];
+  if (!(Au->size[1] == i)) {
     guard4 = FALSE;
     if (Au->size[1] == 1) {
       guard4 = TRUE;
     } else {
-      ndbl = param_matrix->size[0] * param_matrix->size[1];
-      if (ndbl == 1) {
+      i = control_p_x->size[0] * control_p_x->size[1];
+      if (i == 1) {
         guard4 = TRUE;
       } else {
         b_y = NULL;
-        m6 = mxCreateCharArray(2, iv34);
-        for (ndbl = 0; ndbl < 21; ndbl++) {
-          cv16[ndbl] = cv17[ndbl];
+        m6 = mxCreateCharArray(2, iv36);
+        for (i = 0; i < 21; i++) {
+          cv16[i] = cv17[i];
         }
 
         emlrtInitCharArrayR2013a(&b_st, 21, m6, cv16);
         emlrtAssign(&b_y, m6);
-        c_st.site = &wy_emlrtRSI;
-        e_st.site = &kab_emlrtRSI;
+        c_st.site = &cy_emlrtRSI;
+        e_st.site = &qy_emlrtRSI;
         error(&c_st, b_message(&e_st, b_y, &i_emlrtMCI), &j_emlrtMCI);
       }
     }
 
     if (guard4 == TRUE) {
       c_y = NULL;
-      m6 = mxCreateCharArray(2, iv35);
-      for (ndbl = 0; ndbl < 45; ndbl++) {
-        cv18[ndbl] = cv19[ndbl];
+      m6 = mxCreateCharArray(2, iv37);
+      for (i = 0; i < 45; i++) {
+        cv18[i] = cv19[i];
       }
 
       emlrtInitCharArrayR2013a(&b_st, 45, m6, cv18);
       emlrtAssign(&c_y, m6);
-      c_st.site = &vy_emlrtRSI;
-      e_st.site = &jab_emlrtRSI;
+      c_st.site = &by_emlrtRSI;
+      e_st.site = &py_emlrtRSI;
       error(&c_st, b_message(&e_st, c_y, &g_emlrtMCI), &h_emlrtMCI);
     }
   }
@@ -1516,13 +1141,13 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
   if (Au->size[1] == 1) {
     guard3 = TRUE;
   } else {
-    ndbl = param_matrix->size[0] * param_matrix->size[1];
-    if (ndbl == 1) {
+    i = control_p_x->size[0] * control_p_x->size[1];
+    if (i == 1) {
       guard3 = TRUE;
     } else {
-      b_st.site = &xk_emlrtRSI;
-      c_st.site = &yk_emlrtRSI;
-      d_st.site = &al_emlrtRSI;
+      b_st.site = &tj_emlrtRSI;
+      c_st.site = &uj_emlrtRSI;
+      d_st.site = &vj_emlrtRSI;
       if (Au->size[1] < 1) {
         y = 0.0;
       } else {
@@ -1539,59 +1164,58 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
   if (guard3 == TRUE) {
     y = 0.0;
     for (i10 = 0; i10 < Au->size[1]; i10++) {
-      y += Au->data[Au->size[0] * i10] * param_matrix->data[i10];
+      y += Au->data[Au->size[0] * i10] * control_p_x->data[i10];
     }
   }
 
-  emxFree_real_T(&param_matrix);
   emxFree_real_T(&Au);
-  ref[0] = y + 0.033333333333333333;
-  st.site = &yj_emlrtRSI;
+  ref[0] = y;
+  st.site = &sj_emlrtRSI;
   i10 = b_b->size[0];
-  b_b->size[0] = temp2->size[0] * temp2->size[1];
+  b_b->size[0] = control_p_y->size[0] * control_p_y->size[1];
   emxEnsureCapacity(&st, (emxArray__common *)b_b, i10, (int32_T)sizeof(real_T),
                     &bb_emlrtRTEI);
-  ndbl = temp2->size[0] * temp2->size[1];
-  for (i10 = 0; i10 < ndbl; i10++) {
-    b_b->data[i10] = temp2->data[i10];
+  i = control_p_y->size[0] * control_p_y->size[1];
+  for (i10 = 0; i10 < i; i10++) {
+    b_b->data[i10] = control_p_y->data[i10];
   }
 
   b_st.site = &gf_emlrtRSI;
-  ndbl = temp2->size[0] * temp2->size[1];
-  if (!(Av->size[1] == ndbl)) {
+  i = control_p_y->size[0] * control_p_y->size[1];
+  if (!(Av->size[1] == i)) {
     guard2 = FALSE;
     if (Av->size[1] == 1) {
       guard2 = TRUE;
     } else {
-      ndbl = temp2->size[0] * temp2->size[1];
-      if (ndbl == 1) {
+      i = control_p_y->size[0] * control_p_y->size[1];
+      if (i == 1) {
         guard2 = TRUE;
       } else {
         d_y = NULL;
-        m6 = mxCreateCharArray(2, iv36);
-        for (ndbl = 0; ndbl < 21; ndbl++) {
-          cv16[ndbl] = cv17[ndbl];
+        m6 = mxCreateCharArray(2, iv38);
+        for (i = 0; i < 21; i++) {
+          cv16[i] = cv17[i];
         }
 
         emlrtInitCharArrayR2013a(&b_st, 21, m6, cv16);
         emlrtAssign(&d_y, m6);
-        c_st.site = &wy_emlrtRSI;
-        e_st.site = &kab_emlrtRSI;
+        c_st.site = &cy_emlrtRSI;
+        e_st.site = &qy_emlrtRSI;
         error(&c_st, b_message(&e_st, d_y, &i_emlrtMCI), &j_emlrtMCI);
       }
     }
 
     if (guard2 == TRUE) {
       e_y = NULL;
-      m6 = mxCreateCharArray(2, iv37);
-      for (ndbl = 0; ndbl < 45; ndbl++) {
-        cv18[ndbl] = cv19[ndbl];
+      m6 = mxCreateCharArray(2, iv39);
+      for (i = 0; i < 45; i++) {
+        cv18[i] = cv19[i];
       }
 
       emlrtInitCharArrayR2013a(&b_st, 45, m6, cv18);
       emlrtAssign(&e_y, m6);
-      c_st.site = &vy_emlrtRSI;
-      e_st.site = &jab_emlrtRSI;
+      c_st.site = &by_emlrtRSI;
+      e_st.site = &py_emlrtRSI;
       error(&c_st, b_message(&e_st, e_y, &g_emlrtMCI), &h_emlrtMCI);
     }
   }
@@ -1600,13 +1224,13 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
   if (Av->size[1] == 1) {
     guard1 = TRUE;
   } else {
-    ndbl = temp2->size[0] * temp2->size[1];
-    if (ndbl == 1) {
+    i = control_p_y->size[0] * control_p_y->size[1];
+    if (i == 1) {
       guard1 = TRUE;
     } else {
-      b_st.site = &xk_emlrtRSI;
-      c_st.site = &yk_emlrtRSI;
-      d_st.site = &al_emlrtRSI;
+      b_st.site = &tj_emlrtRSI;
+      c_st.site = &uj_emlrtRSI;
+      d_st.site = &vj_emlrtRSI;
       if (Av->size[1] < 1) {
         y = 0.0;
       } else {
@@ -1623,15 +1247,36 @@ void bspline_single(const emlrtStack *sp, const real_T src[2], const
   if (guard1 == TRUE) {
     y = 0.0;
     for (i10 = 0; i10 < Av->size[1]; i10++) {
-      y += Av->data[Av->size[0] * i10] * temp2->data[i10];
+      y += Av->data[Av->size[0] * i10] * control_p_y->data[i10];
     }
   }
 
   emxFree_real_T(&b_b);
-  emxFree_real_T(&temp2);
   emxFree_real_T(&Av);
   ref[1] = y;
 
+  /* { */
+  /* if (ux+uy+vx+vy) == 0 */
+  /*     temp1 = control_p.x; */
+  /*     temp2 = control_p.y; */
+  /* 	ref(:, 1) = Au*temp1(:); */
+  /* 	ref(:, 2) = Av*temp2(:); */
+  /* else */
+  /*     temp1 = control_p.x-repmat((1:h)'-2, 1, w); */
+  /*     temp2 = control_p.y-repmat((1:w)-2, h, 1); */
+  /* 	if ux ~= 0 */
+  /* 		ref(:,1) = Au*temp1(:)+1/30; */
+  /* 	end */
+  /* 	if uy ~= 0 */
+  /* 		ref(:,1) = Au*temp1(:); */
+  /* 	end */
+  /* 	if vx ~= 0 */
+  /* 		ref(:,2) = Av*temp2(:); */
+  /* 	end */
+  /* 	if vy ~= 0 */
+  /* 		ref(:,2) = Av*temp2(:)+1/30; */
+  /* 	end */
+  /* end */
   /* } */
   emlrtHeapReferenceStackLeaveFcnR2012b(sp);
 }

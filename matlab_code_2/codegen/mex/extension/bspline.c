@@ -3,7 +3,7 @@
  *
  * Code generation for function 'bspline'
  *
- * C source code generated on: Thu Jul 14 16:54:47 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -19,9 +19,6 @@
 #include "extension_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo hb_emlrtRSI = { 12, "floor",
-  "D:/Program Files/MATLAB/R2013b/toolbox/eml/lib/matlab/elfun/floor.m" };
-
 static emlrtRSInfo qd_emlrtRSI = { 15, "bspline",
   "F:/Git/correspondence/matlab_code_2/bspline.m" };
 
@@ -145,7 +142,7 @@ static emlrtBCInfo g_emlrtBCI = { -1, -1, 44, 26, "x", "bspline",
 static emlrtBCInfo h_emlrtBCI = { -1, -1, 44, 40, "x", "bspline",
   "F:/Git/correspondence/matlab_code_2/bspline.m", 0 };
 
-static emlrtRTEInfo ed_emlrtRTEI = { 44, 20, "bspline",
+static emlrtRTEInfo dd_emlrtRTEI = { 44, 20, "bspline",
   "F:/Git/correspondence/matlab_code_2/bspline.m" };
 
 static emlrtBCInfo i_emlrtBCI = { -1, -1, 44, 55, "y", "bspline",
@@ -154,7 +151,7 @@ static emlrtBCInfo i_emlrtBCI = { -1, -1, 44, 55, "y", "bspline",
 static emlrtBCInfo j_emlrtBCI = { -1, -1, 44, 69, "y", "bspline",
   "F:/Git/correspondence/matlab_code_2/bspline.m", 0 };
 
-static emlrtRTEInfo fd_emlrtRTEI = { 44, 49, "bspline",
+static emlrtRTEInfo ed_emlrtRTEI = { 44, 49, "bspline",
   "F:/Git/correspondence/matlab_code_2/bspline.m" };
 
 static emlrtBCInfo k_emlrtBCI = { -1, -1, 46, 7, "A", "bspline",
@@ -316,7 +313,7 @@ void b_bspline(const emlrtStack *sp, const emxArray_real_T *src, const
   }
 
   for (k = 0; k < x->size[0]; k++) {
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     tx->data[k] = muDoubleScalarFloor(tx->data[k]);
   }
 
@@ -344,7 +341,7 @@ void b_bspline(const emlrtStack *sp, const emxArray_real_T *src, const
   }
 
   for (k = 0; k < y->size[0]; k++) {
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     ty->data[k] = muDoubleScalarFloor(ty->data[k]);
   }
 
@@ -675,16 +672,16 @@ void b_bspline(const emlrtStack *sp, const emxArray_real_T *src, const
     i5 = x->size[0];
     i6 = i + 1;
     emlrtDynamicBoundsCheckFastR2012b(i6, 1, i5, &g_emlrtBCI, &st);
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     b_bound = muDoubleScalarFloor(x->data[i]);
     st.site = &ce_emlrtRSI;
     i5 = x->size[0];
     i6 = i + 1;
     emlrtDynamicBoundsCheckFastR2012b(i6, 1, i5, &h_emlrtBCI, &st);
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     if (b_bound == muDoubleScalarFloor(x->data[i])) {
     } else {
-      emlrtErrorWithMessageIdR2012b(sp, &ed_emlrtRTEI,
+      emlrtErrorWithMessageIdR2012b(sp, &dd_emlrtRTEI,
         "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
     }
 
@@ -692,16 +689,16 @@ void b_bspline(const emlrtStack *sp, const emxArray_real_T *src, const
     i5 = y->size[0];
     i6 = i + 1;
     emlrtDynamicBoundsCheckFastR2012b(i6, 1, i5, &i_emlrtBCI, &st);
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     d1 = muDoubleScalarFloor(y->data[i]);
     st.site = &ce_emlrtRSI;
     i5 = y->size[0];
     i6 = i + 1;
     emlrtDynamicBoundsCheckFastR2012b(i6, 1, i5, &j_emlrtBCI, &st);
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     if (d1 == muDoubleScalarFloor(y->data[i])) {
     } else {
-      emlrtErrorWithMessageIdR2012b(sp, &fd_emlrtRTEI,
+      emlrtErrorWithMessageIdR2012b(sp, &ed_emlrtRTEI,
         "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
     }
 
@@ -800,8 +797,8 @@ void b_bspline(const emlrtStack *sp, const emxArray_real_T *src, const
 
         emlrtInitCharArrayR2013a(&b_st, 21, m2, cv8);
         emlrtAssign(&b_y, m2);
-        c_st.site = &wy_emlrtRSI;
-        d_st.site = &kab_emlrtRSI;
+        c_st.site = &cy_emlrtRSI;
+        d_st.site = &qy_emlrtRSI;
         error(&c_st, b_message(&d_st, b_y, &i_emlrtMCI), &j_emlrtMCI);
       }
     }
@@ -815,8 +812,8 @@ void b_bspline(const emlrtStack *sp, const emxArray_real_T *src, const
 
       emlrtInitCharArrayR2013a(&b_st, 45, m2, cv10);
       emlrtAssign(&c_y, m2);
-      c_st.site = &vy_emlrtRSI;
-      d_st.site = &jab_emlrtRSI;
+      c_st.site = &by_emlrtRSI;
+      d_st.site = &py_emlrtRSI;
       error(&c_st, b_message(&d_st, c_y, &g_emlrtMCI), &h_emlrtMCI);
     }
   }
@@ -901,8 +898,8 @@ void b_bspline(const emlrtStack *sp, const emxArray_real_T *src, const
 
         emlrtInitCharArrayR2013a(&b_st, 21, m2, cv8);
         emlrtAssign(&d_y, m2);
-        c_st.site = &wy_emlrtRSI;
-        d_st.site = &kab_emlrtRSI;
+        c_st.site = &cy_emlrtRSI;
+        d_st.site = &qy_emlrtRSI;
         error(&c_st, b_message(&d_st, d_y, &i_emlrtMCI), &j_emlrtMCI);
       }
     }
@@ -916,8 +913,8 @@ void b_bspline(const emlrtStack *sp, const emxArray_real_T *src, const
 
       emlrtInitCharArrayR2013a(&b_st, 45, m2, cv10);
       emlrtAssign(&e_y, m2);
-      c_st.site = &vy_emlrtRSI;
-      d_st.site = &jab_emlrtRSI;
+      c_st.site = &by_emlrtRSI;
+      d_st.site = &py_emlrtRSI;
       error(&c_st, b_message(&d_st, e_y, &g_emlrtMCI), &h_emlrtMCI);
     }
   }
@@ -1125,7 +1122,7 @@ void bspline(const emlrtStack *sp, const emxArray_real_T *src, const
   }
 
   for (k = 0; k < x->size[0]; k++) {
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     tx->data[k] = muDoubleScalarFloor(tx->data[k]);
   }
 
@@ -1153,7 +1150,7 @@ void bspline(const emlrtStack *sp, const emxArray_real_T *src, const
   }
 
   for (k = 0; k < y->size[0]; k++) {
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     ty->data[k] = muDoubleScalarFloor(ty->data[k]);
   }
 
@@ -1484,16 +1481,16 @@ void bspline(const emlrtStack *sp, const emxArray_real_T *src, const
     i0 = x->size[0];
     i1 = i + 1;
     emlrtDynamicBoundsCheckFastR2012b(i1, 1, i0, &g_emlrtBCI, &st);
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     b_bound = muDoubleScalarFloor(x->data[i]);
     st.site = &ce_emlrtRSI;
     i0 = x->size[0];
     i1 = i + 1;
     emlrtDynamicBoundsCheckFastR2012b(i1, 1, i0, &h_emlrtBCI, &st);
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     if (b_bound == muDoubleScalarFloor(x->data[i])) {
     } else {
-      emlrtErrorWithMessageIdR2012b(sp, &ed_emlrtRTEI,
+      emlrtErrorWithMessageIdR2012b(sp, &dd_emlrtRTEI,
         "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
     }
 
@@ -1501,16 +1498,16 @@ void bspline(const emlrtStack *sp, const emxArray_real_T *src, const
     i0 = y->size[0];
     i1 = i + 1;
     emlrtDynamicBoundsCheckFastR2012b(i1, 1, i0, &i_emlrtBCI, &st);
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     d0 = muDoubleScalarFloor(y->data[i]);
     st.site = &ce_emlrtRSI;
     i0 = y->size[0];
     i1 = i + 1;
     emlrtDynamicBoundsCheckFastR2012b(i1, 1, i0, &j_emlrtBCI, &st);
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &ib_emlrtRSI;
     if (d0 == muDoubleScalarFloor(y->data[i])) {
     } else {
-      emlrtErrorWithMessageIdR2012b(sp, &fd_emlrtRTEI,
+      emlrtErrorWithMessageIdR2012b(sp, &ed_emlrtRTEI,
         "EMLRT:runTime:RepeatedExprWithDifferentResultsInColonIndexing", 0);
     }
 
@@ -1609,8 +1606,8 @@ void bspline(const emlrtStack *sp, const emxArray_real_T *src, const
 
         emlrtInitCharArrayR2013a(&b_st, 21, m1, cv4);
         emlrtAssign(&b_y, m1);
-        c_st.site = &wy_emlrtRSI;
-        d_st.site = &kab_emlrtRSI;
+        c_st.site = &cy_emlrtRSI;
+        d_st.site = &qy_emlrtRSI;
         error(&c_st, b_message(&d_st, b_y, &i_emlrtMCI), &j_emlrtMCI);
       }
     }
@@ -1624,8 +1621,8 @@ void bspline(const emlrtStack *sp, const emxArray_real_T *src, const
 
       emlrtInitCharArrayR2013a(&b_st, 45, m1, cv6);
       emlrtAssign(&c_y, m1);
-      c_st.site = &vy_emlrtRSI;
-      d_st.site = &jab_emlrtRSI;
+      c_st.site = &by_emlrtRSI;
+      d_st.site = &py_emlrtRSI;
       error(&c_st, b_message(&d_st, c_y, &g_emlrtMCI), &h_emlrtMCI);
     }
   }
@@ -1710,8 +1707,8 @@ void bspline(const emlrtStack *sp, const emxArray_real_T *src, const
 
         emlrtInitCharArrayR2013a(&b_st, 21, m1, cv4);
         emlrtAssign(&d_y, m1);
-        c_st.site = &wy_emlrtRSI;
-        d_st.site = &kab_emlrtRSI;
+        c_st.site = &cy_emlrtRSI;
+        d_st.site = &qy_emlrtRSI;
         error(&c_st, b_message(&d_st, d_y, &i_emlrtMCI), &j_emlrtMCI);
       }
     }
@@ -1725,8 +1722,8 @@ void bspline(const emlrtStack *sp, const emxArray_real_T *src, const
 
       emlrtInitCharArrayR2013a(&b_st, 45, m1, cv6);
       emlrtAssign(&e_y, m1);
-      c_st.site = &vy_emlrtRSI;
-      d_st.site = &jab_emlrtRSI;
+      c_st.site = &by_emlrtRSI;
+      d_st.site = &py_emlrtRSI;
       error(&c_st, b_message(&d_st, e_y, &g_emlrtMCI), &h_emlrtMCI);
     }
   }

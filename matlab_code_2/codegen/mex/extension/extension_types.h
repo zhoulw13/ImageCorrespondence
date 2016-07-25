@@ -3,7 +3,7 @@
  *
  * Code generation for function 'extension'
  *
- * C source code generated on: Thu Jul 14 16:54:47 2016
+ * C source code generated on: Sun Jul 24 09:09:28 2016
  *
  */
 
@@ -29,18 +29,6 @@ struct emxArray__common
 #define typedef_emxArray__common
 typedef struct emxArray__common emxArray__common;
 #endif /*typedef_emxArray__common*/
-#ifndef struct_emxArray_b_real_T_1x2
-#define struct_emxArray_b_real_T_1x2
-struct emxArray_b_real_T_1x2
-{
-    real_T data[2];
-    int32_T size[2];
-};
-#endif /*struct_emxArray_b_real_T_1x2*/
-#ifndef typedef_emxArray_b_real_T_1x2
-#define typedef_emxArray_b_real_T_1x2
-typedef struct emxArray_b_real_T_1x2 emxArray_b_real_T_1x2;
-#endif /*typedef_emxArray_b_real_T_1x2*/
 #ifndef struct_emxArray_real_T
 #define struct_emxArray_real_T
 struct emxArray_real_T
@@ -145,6 +133,18 @@ struct emxArray_int32_T_49
 #define typedef_emxArray_int32_T_49
 typedef struct emxArray_int32_T_49 emxArray_int32_T_49;
 #endif /*typedef_emxArray_int32_T_49*/
+#ifndef struct_emxArray_real_T_1x2
+#define struct_emxArray_real_T_1x2
+struct emxArray_real_T_1x2
+{
+    real_T data[2];
+    int32_T size[2];
+};
+#endif /*struct_emxArray_real_T_1x2*/
+#ifndef typedef_emxArray_real_T_1x2
+#define typedef_emxArray_real_T_1x2
+typedef struct emxArray_real_T_1x2 emxArray_real_T_1x2;
+#endif /*typedef_emxArray_real_T_1x2*/
 #ifndef struct_emxArray_real_T_3
 #define struct_emxArray_real_T_3
 struct emxArray_real_T_3
