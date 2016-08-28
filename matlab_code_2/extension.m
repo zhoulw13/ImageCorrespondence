@@ -31,7 +31,7 @@ patch(3, :) = ones(1, 49);
 %% extension
 errors = [];
 
-for i=2:surface_amount
+for i=1:surface_amount
     modified = true;
     temp_sx = sp_set(i).val(:, 1);
     temp_sy = sp_set(i).val(:, 2);
@@ -134,7 +134,7 @@ for i=2:surface_amount
                     end
                 end
             end
-            if error < 200
+            if error < 50
                 modified = true;
                 
                 temp_sx = [temp_sx; omega(j,1)];

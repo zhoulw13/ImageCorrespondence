@@ -9,4 +9,4 @@ extension:
 论文中的矩阵变换有误？
 bilinear interpolation是干了什么
 
-用demo运行被子图像得不到论文中那样的结果，是阈值有变化吗？
+用demo运行杯子图像得不到论文中那样的结果，是阈值有变化吗？
