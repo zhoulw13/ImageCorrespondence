@@ -1,7 +1,7 @@
 <deployment-project plugin="plugin.coder" plugin-version="R2016a">
-  <configuration build-checksum="4279322414" file="D:\Projects\ImageCorrespondence\matlab_code_2\correspondence.prj" location="D:\Projects\ImageCorrespondence\matlab_code_2" name="correspondence" target="target.unifiedcoder" target-name="MATLAB Coder">
+  <configuration build-checksum="4279322414" file="D:\Projects\ImageCorrespondence\Src\correspondence.prj" location="D:\Projects\ImageCorrespondence\Src" name="correspondence" target="target.unifiedcoder" target-name="MATLAB Coder">
     <profile key="profile.mex">
-      <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
+      <param.BuiltInstrumentedMex />
       <param.RanInstrumentedMex>false</param.RanInstrumentedMex>
       <param.WorkingFolder>option.WorkingFolder.Project</param.WorkingFolder>
       <param.SpecifiedWorkingFolder />
@@ -38,7 +38,7 @@
       <param.PostCodeGenCommand />
       <param.mex.GenCodeOnly>false</param.mex.GenCodeOnly>
       <param.ConstantFoldingTimeout>40000</param.ConstantFoldingTimeout>
-      <param.RecursionLimit>100</param.RecursionLimit>
+      <param.RecursionLimit />
       <param.PreserveVariableNames>option.PreserveVariableNames.UserNames</param.PreserveVariableNames>
       <param.TargetLang>option.TargetLang.C</param.TargetLang>
       <param.EchoExpressions>true</param.EchoExpressions>
@@ -106,48 +106,48 @@
       <param.SpecifiedBuildFolder />
       <param.SearchPaths />
       <param.SaturateOnIntegerOverflow>true</param.SaturateOnIntegerOverflow>
-      <param.PurelyIntegerCode>false</param.PurelyIntegerCode>
-      <param.SupportNonFinite>true</param.SupportNonFinite>
+      <param.PurelyIntegerCode />
+      <param.SupportNonFinite />
       <param.EnableVariableSizing>true</param.EnableVariableSizing>
       <param.DynamicMemoryAllocation>option.DynamicMemoryAllocation.Threshold</param.DynamicMemoryAllocation>
       <param.DynamicMemoryAllocationThreshold>65536</param.DynamicMemoryAllocationThreshold>
       <param.StackUsageMax>200000</param.StackUsageMax>
-      <param.MultiInstanceCode>false</param.MultiInstanceCode>
-      <param.FilePartitionMethod>option.FilePartitionMethod.MapMFileToCFile</param.FilePartitionMethod>
+      <param.MultiInstanceCode />
+      <param.FilePartitionMethod />
       <param.GenerateComments>true</param.GenerateComments>
-      <param.CommentStyle>option.CommentStyle.Auto</param.CommentStyle>
+      <param.CommentStyle />
       <param.MATLABSourceComments>false</param.MATLABSourceComments>
-      <param.MATLABFcnDesc>true</param.MATLABFcnDesc>
-      <param.DataTypeReplacement>option.DataTypeReplacement.CBuiltIn</param.DataTypeReplacement>
-      <param.ConvertIfToSwitch>false</param.ConvertIfToSwitch>
-      <param.PreserveExternInFcnDecls>true</param.PreserveExternInFcnDecls>
-      <param.EnableSignedLeftShifts>true</param.EnableSignedLeftShifts>
-      <param.EnableSignedRightShifts>true</param.EnableSignedRightShifts>
-      <param.ParenthesesLevel>option.ParenthesesLevel.Nominal</param.ParenthesesLevel>
-      <param.MaxIdLength>31</param.MaxIdLength>
-      <param.CustomSymbolStrGlobalVar>$M$N</param.CustomSymbolStrGlobalVar>
-      <param.CustomSymbolStrType>$M$N</param.CustomSymbolStrType>
-      <param.CustomSymbolStrField>$M$N</param.CustomSymbolStrField>
-      <param.CustomSymbolStrFcn>$M$N</param.CustomSymbolStrFcn>
-      <param.CustomSymbolStrTmpVar>$M$N</param.CustomSymbolStrTmpVar>
-      <param.CustomSymbolStrMacro>$M$N</param.CustomSymbolStrMacro>
-      <param.CustomSymbolStrEMXArray>emxArray_$M$N</param.CustomSymbolStrEMXArray>
-      <param.CustomSymbolStrEMXArrayFcn>emx$M$N</param.CustomSymbolStrEMXArrayFcn>
+      <param.MATLABFcnDesc />
+      <param.DataTypeReplacement />
+      <param.ConvertIfToSwitch />
+      <param.PreserveExternInFcnDecls />
+      <param.EnableSignedLeftShifts />
+      <param.EnableSignedRightShifts />
+      <param.ParenthesesLevel />
+      <param.MaxIdLength />
+      <param.CustomSymbolStrGlobalVar />
+      <param.CustomSymbolStrType />
+      <param.CustomSymbolStrField />
+      <param.CustomSymbolStrFcn />
+      <param.CustomSymbolStrTmpVar />
+      <param.CustomSymbolStrMacro />
+      <param.CustomSymbolStrEMXArray />
+      <param.CustomSymbolStrEMXArrayFcn />
       <param.ReservedNameArray />
-      <param.RuntimeChecks>false</param.RuntimeChecks>
-      <param.Verbose>false</param.Verbose>
+      <param.RuntimeChecks />
+      <param.Verbose />
       <param.GenerateReport>true</param.GenerateReport>
-      <param.GenerateCodeMetricsReport>true</param.GenerateCodeMetricsReport>
-      <param.GenerateCodeReplacementReport>false</param.GenerateCodeReplacementReport>
-      <param.HighlightPotentialDataTypeIssues>false</param.HighlightPotentialDataTypeIssues>
+      <param.GenerateCodeMetricsReport />
+      <param.GenerateCodeReplacementReport />
+      <param.HighlightPotentialDataTypeIssues />
       <param.LaunchReport>false</param.LaunchReport>
-      <param.SILDebugging>false</param.SILDebugging>
-      <param.CodeExecutionProfiling>false</param.CodeExecutionProfiling>
+      <param.SILDebugging />
+      <param.CodeExecutionProfiling />
       <param.DefaultTestFile />
       <param.MergeInstrumentationResults>false</param.MergeInstrumentationResults>
       <param.RanPilSilVerification>false</param.RanPilSilVerification>
-      <param.VerificationMode>option.VerificationMode.None</param.VerificationMode>
-      <param.VerificationStatus>option.VerificationStatus.Inactive</param.VerificationStatus>
+      <param.VerificationMode />
+      <param.VerificationStatus />
       <param.CustomSourceCode />
       <param.CustomHeaderCode />
       <param.CustomInitializer />
@@ -158,7 +158,7 @@
       <param.PostCodeGenCommand />
       <param.TargetLangStandard>C89/C90 (ANSI)</param.TargetLangStandard>
       <param.CodeReplacementLibrary>None</param.CodeReplacementLibrary>
-      <param.DeprecatedCRLFlag>false</param.DeprecatedCRLFlag>
+      <param.DeprecatedCRLFlag />
       <param.SameHardware>true</param.SameHardware>
       <param.Toolchain>Automatically locate an installed toolchain</param.Toolchain>
       <param.BuildConfiguration>Faster Builds</param.BuildConfiguration>
@@ -205,19 +205,19 @@
       <param.HardwareAtomicIntegerSize.Target>option.HardwareAtomicIntegerSize.Char</param.HardwareAtomicIntegerSize.Target>
       <param.HardwareAtomicFloatSize.Target>option.HardwareAtomicFloatSize.None</param.HardwareAtomicFloatSize.Target>
       <param.HardwareDivisionRounding.Target>option.HardwareDivisionRounding.Zero</param.HardwareDivisionRounding.Target>
-      <param.CastingMode>option.CastingMode.Nominal</param.CastingMode>
-      <param.IndentStyle>option.IndentStyle.K&amp;R</param.IndentStyle>
-      <param.IndentSize>2</param.IndentSize>
+      <param.CastingMode />
+      <param.IndentStyle />
+      <param.IndentSize />
       <param.ConstantFoldingTimeout>40000</param.ConstantFoldingTimeout>
-      <param.RecursionLimit>100</param.RecursionLimit>
-      <param.IncludeTerminateFcn>true</param.IncludeTerminateFcn>
-      <param.GenerateExampleMain>option.GenerateExampleMain.GenerateCodeOnly</param.GenerateExampleMain>
+      <param.RecursionLimit />
+      <param.IncludeTerminateFcn />
+      <param.GenerateExampleMain />
       <param.PreserveVariableNames>option.PreserveVariableNames.UserNames</param.PreserveVariableNames>
       <param.TargetLang>option.TargetLang.C</param.TargetLang>
       <param.CCompilerOptimization />
       <param.CCompilerCustomOptimizations />
-      <param.GenerateMakefile>true</param.GenerateMakefile>
-      <param.BuildToolEnable>false</param.BuildToolEnable>
+      <param.GenerateMakefile />
+      <param.BuildToolEnable />
       <param.MakeCommand />
       <param.TemplateMakefile />
       <param.BuildToolConfiguration />
@@ -228,9 +228,9 @@
       <param.MemcpyThreshold>64</param.MemcpyThreshold>
       <param.EnableOpenMP>true</param.EnableOpenMP>
       <param.InitFltsAndDblsToZero>true</param.InitFltsAndDblsToZero>
-      <param.PassStructByReference>true</param.PassStructByReference>
+      <param.PassStructByReference />
       <param.CustomLAPACKCallback />
-      <param.UseECoderFeatures>true</param.UseECoderFeatures>
+      <param.UseECoderFeatures />
       <unset>
         <param.WorkingFolder />
         <param.SpecifiedWorkingFolder />
@@ -665,20 +665,20 @@
     <param.objective>option.objective.c</param.objective>
     <param.WorkflowStep>generateCode</param.WorkflowStep>
     <param.TestSnippets />
-    <param.DefaultImportExportVariable>config</param.DefaultImportExportVariable>
+    <param.DefaultImportExportVariable />
     <param.UseGlobals>option.UseGlobals.No</param.UseGlobals>
     <param.outputfile>${PROJECT_ROOT}\Correspondence.mexw64</param.outputfile>
-    <param.version>R2012a</param.version>
+    <param.version />
     <param.HasECoderFeatures>true</param.HasECoderFeatures>
     <param.mex.mainhtml />
     <param.grt.mainhtml>F:\Git\correspondence\matlab_code\codegen\lib\correspondence\html\index.html</param.grt.mainhtml>
     <param.CallGeneratedCodeFromTest>true</param.CallGeneratedCodeFromTest>
     <param.AutoInferDefaultFile />
-    <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
-    <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
-    <param.AutoInferVariableSizeThreshold>1024</param.AutoInferVariableSizeThreshold>
-    <param.AutoInferUnboundedSizeThreshold>2048</param.AutoInferUnboundedSizeThreshold>
-    <param.EnableFixedPointStep>false</param.EnableFixedPointStep>
+    <param.AutoInferUseVariableSize />
+    <param.AutoInferUseUnboundedSize />
+    <param.AutoInferVariableSizeThreshold />
+    <param.AutoInferUnboundedSizeThreshold />
+    <param.EnableFixedPointStep />
     <param.EnableScreener>true</param.EnableScreener>
     <param.AnnotationChecksum>444827023</param.AnnotationChecksum>
     <var.LegacyTarget>target.matlab.coder</var.LegacyTarget>
@@ -691,9 +691,9 @@
     <var.gc.preBuildChecksum>4279322414</var.gc.preBuildChecksum>
     <var.cfi.lastOutputRoot />
     <var.cfi.preBuildChecksum />
-    <var.outdatedOnRestore>false</var.outdatedOnRestore>
+    <var.outdatedOnRestore />
     <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\bspline.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\bspline_inv.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\bspline_single.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\extension.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\getPixelsValue.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\merging.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\segmentation.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;3050495053&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
-    <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\bspline.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\bspline_inv.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\bspline_single.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\extension.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\getPixelsValue.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\merging.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\matlab_code_2\segmentation.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
+    <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\Src\bspline.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\Src\bspline_inv.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\Src\extension.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\Src\getPixelsValue.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\Src\merging.m&lt;/file&gt;&lt;file&gt;D:\Projects\ImageCorrespondence\Src\segmentation.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
     <param.forceMexBuild>false</param.forceMexBuild>
     <param.configImportActive>false</param.configImportActive>
     <var.boundToGui>true</var.boundToGui>
@@ -705,7 +705,7 @@
     <param.UsePreconditions>false</param.UsePreconditions>
     <param.FeatureFlags />
     <param.FixedPointMode>option.FixedPointMode.Singles</param.FixedPointMode>
-    <param.AutoScaleLoopIndexVariables>false</param.AutoScaleLoopIndexVariables>
+    <param.AutoScaleLoopIndexVariables />
     <param.ComputedFixedPointData>
       <ComputedEntities>
         <Function file="$(PROJECTDIR)\extension.m" name="extension" specialization="extension" specializationId="-1" uniqueId="extension">
@@ -4412,15 +4412,15 @@
     <param.EnableCodeEfficiencyChecks>false</param.EnableCodeEfficiencyChecks>
     <param.DefaultFixedPointSignedness>option.DefaultFixedPointSignedness.Automatic</param.DefaultFixedPointSignedness>
     <param.FixedPointTypeProposalMode>option.FixedPointTypeProposalMode.ProposeFractionLengths</param.FixedPointTypeProposalMode>
-    <param.EnableFixedPointStep>false</param.EnableFixedPointStep>
-    <var.lastFixedPointAction>option.fixedPointAction.none</var.lastFixedPointAction>
+    <param.EnableFixedPointStep />
+    <var.lastFixedPointAction />
     <var.lastSimContext />
     <var.lastVerifyContext />
     <param.fpDataRoot>D:\Projects\ImageCorrespondence\matlab_code_2\codegen\extension\fixpt/guiFpReport.mat</param.fpDataRoot>
     <param.fpUserFileChecksum />
     <var.snapshotChecksum />
     <var.functionBlockSid />
-    <param.fptSignedness>false</param.fptSignedness>
+    <param.fptSignedness />
     <unset>
       <param.DefaultImportExportVariable />
       <param.UseGlobals />
@@ -4635,7 +4635,7 @@
       </file>
     </fileset.inputtypes>
     <build-deliverables>
-      <file location="D:\Projects\ImageCorrespondence\matlab_code_2" name="Correspondence.mexw64" optional="false">D:\Projects\ImageCorrespondence\matlab_code_2\Correspondence.mexw64</file>
+      <file location="D:\Projects\ImageCorrespondence\Src" name="Correspondence.mexw64" optional="false">D:\Projects\ImageCorrespondence\Src\Correspondence.mexw64</file>
     </build-deliverables>
     <workflow />
     <matlab>

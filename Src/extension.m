@@ -1,4 +1,4 @@
-function [errors, sp_set, ref_set, bspline_set, Corr] = extension(sp_set, ref_set, bspline_set, Sp2, Src_lab, Ref_lab)
+function [errors, sp_set, ref_set, bspline_set, newCorr] = extension(sp_set, ref_set, bspline_set, Sp2, Src_lab, Ref_lab)
 
 %#codegen
 coder.inline('never')
@@ -21,6 +21,17 @@ for i=1:surface_amount
         Sp_new(sp_set(i).val(j, 1), sp_set(i).val(j, 2)) = i;
     end
 end
+
+%{
+Corr = zeros(x, y, 2);
+surface_amount = size(sp_set, 2);
+for i=1:surface_amount
+    point_amount = size(sp_set(i).val, 1);
+    for j=1:point_amount
+        Corr(sp_set(i).val(j, 1), sp_set(i).val(j, 2), :) = [ref_set(i).val(j, 2), ref_set(i).val(j, 1)];
+    end    
+end 
+%}
 
 %% adjacent patch
 patch = zeros(3, 49, 1);
@@ -82,7 +93,13 @@ for i=1:surface_amount
             [temp1] = bspline_single(superpixel(ind, :), sp_bspline, bound ,1,0,1,0);
             [temp2] = bspline_single(superpixel(ind, :), sp_bspline, bound ,0,1,0,1);
             jacobian = [temp1(1, 1), temp2(1, 1); temp1(1, 2), temp2(1, 2)];
-            %jacobian = jacobian.*[x x; y y];
+            
+            %{
+            jacobian = caljacobian(Corr, superpixel(ind, :));
+            if (jacobian(1,1) == 0 && jacobian(2,1) == 0) || (jacobian(2,1) == 0 && jacobian(2,2) == 0)
+                continue;
+            end
+            %}
             
             %% compute temp correspondence
             ref_q = single_ref_set(ind, :);
@@ -164,6 +181,7 @@ for i=1:surface_amount
                 temp_rx = [temp_rx; refp(1,1)];
                 temp_ry = [temp_ry; refp(1,2)];
                 
+                %Corr(omega(j,1), omega(j,2), :) = [refp(1,2), refp(1,1)];
                 %{
                 refp = refp + offset_p + omega(j, :);
                 superpixel = [superpixel; double(omega(j, :))];
@@ -188,7 +206,7 @@ for i=1:surface_amount
     end
 end
 
-Corr = zeros(x, y, 2);
+newCorr = zeros(x, y, 2);
 surface_amount = size(sp_set, 2);
 
 %ref_set = struct('val', []);
@@ -198,7 +216,7 @@ for i=1:surface_amount
     %item = struct('val', single_ref_set);
     %ref_set = [ref_set, item];
     for j=1:point_amount
-        Corr(sp_set(i).val(j, 1), sp_set(i).val(j, 2), :) = [ref_set(i).val(j, 2), ref_set(i).val(j, 1)];
+        newCorr(sp_set(i).val(j, 1), sp_set(i).val(j, 2), :) = [ref_set(i).val(j, 2), ref_set(i).val(j, 1)];
     end    
 end 
 %ref_set(1) = [];
